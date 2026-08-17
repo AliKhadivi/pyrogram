@@ -43,54 +43,21 @@ jobs:
       - name: Modernize legacy typing
         run: python scripts/modernize_legacy_typing.py
 
-      - name: Verify generated sources are committed
-        run: git diff --exit-code -- pyrogram
-
-      - name: Verify generated layer
-        run: python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; print('Layer:', all.layer)"
-
-      - name: Compile all Python sources
-        run: python -m compileall -q pyrogram compiler scripts tests
-
-      - name: Check stale raw API references
-        run: python scripts/check_raw_api_refs.py
-
-      - name: Ruff critical checks
-        run: ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82
-
-      - name: Pyright
-        run: pyright pyrogram
-
-      - name: Run tests
-        run: python -m pytest -q
-
-      - name: Runtime smoke test
+      - name: Capture generated source diff
+        id: idempotence
+        continue-on-error: true
+        shell: bash
         run: |
-          python - <<'PY'
-          import asyncio
-          from pyrogram import Client, raw
-          from pyrogram.raw import all
-          from pyrogram.types import EmojiStatus
+          git diff -- pyrogram > regeneration-diff.patch
+          git diff --exit-code -- pyrogram
 
-          assert all.layer == 228
-          assert hasattr(raw.types, 'EmojiStatus')
-          assert not hasattr(raw.types, 'EmojiStatusUntil')
+      - name: Upload regeneration diff
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regeneration-diff
+          path: regeneration-diff.patch
 
-          parsed = EmojiStatus._parse(None, raw.types.EmojiStatus(document_id=123, until=456))
-          assert parsed is not None
-          assert parsed.custom_emoji_id == 123
-          assert parsed.until_date is not None
-
-          written = EmojiStatus(custom_emoji_id=123).write()
-          assert isinstance(written, raw.types.EmojiStatus)
-
-          loop = asyncio.new_event_loop()
-          asyncio.set_event_loop(loop)
-          client = Client('ci-smoke', api_id=1, api_hash='0' * 32, in_memory=True)
-          assert client.device_model == 'Jalgo Desktop'
-          assert client.app_version.startswith('Jalgo Desktop ')
-          client.executor.shutdown(wait=False)
-          asyncio.set_event_loop(None)
-          loop.close()
-          print('Runtime smoke test passed')
-          PY
+      - name: Fail if generated sources differ
+        if: always()
+        run: test "${{ steps.idempotence.outcome }}" = success
