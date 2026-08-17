@@ -50,12 +50,13 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           python -m pip install -r requirements.txt -r dev-requirements.txt
 
-      - name: Regenerate raw API from Layer 228 schema
+      - name: Regenerate API and errors
         shell: bash
         run: |
           set -euxo pipefail
           python -c "from compiler.api import compiler; compiler.start()"
-          python -m compileall -q pyrogram/raw
+          python -c "from compiler.errors import compiler; compiler.start()"
+          python -m compileall -q pyrogram/raw pyrogram/errors
 
       - name: Verify Layer 228 raw API imports
         shell: bash
@@ -100,7 +101,7 @@ jobs:
           set -euxo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A compiler/api pyrogram/raw
+          git add -A compiler/api pyrogram/raw pyrogram/errors
           if git diff --cached --quiet; then
             echo 'No generated changes to commit.'
             exit 0
