@@ -4,20 +4,13 @@
 
 from typing import Union
 from pyrogram import raw
-from pyrogram.raw.core import TLObject
 
 {name} = Union[{types}]
-
-
-# noinspection PyRedeclaration
-class {name}:  # type: ignore
-    """{docstring}
-    """
-
-    QUALNAME = "pyrogram.raw.base.{qualname}"
-
-    def __init__(self):
-        raise TypeError("Base types can only be used for type checking purposes: "
-                        "you tried to use a base type instance as argument, "
-                        "but you need to instantiate one of its constructors instead. "
-                        "More info: https://docs.pyrogram.org/telegram/base/{doc_name}")
+_doc = """{docstring}"""
+try:
+    _t = type({name})
+    # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
+    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+        {name}.__doc__ = _doc
+except (AttributeError, TypeError):
+    pass
