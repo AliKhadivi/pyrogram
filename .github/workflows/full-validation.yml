@@ -1,3 +1,4 @@
+# Branch-only validation workflow
 name: Full Validation
 
 on:
