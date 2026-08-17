@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PKG = ROOT / "pyrogram"
-OPTIONAL_PREFIX = "typing.Optional["
+OPTIONAL_PREFIXES = ("typing.Optional[", "Optional[")
 
 # Matches common legacy signatures such as `foo: str = None`.
 # Horizontal whitespace is intentional: never allow a match to cross lines.
@@ -29,58 +29,102 @@ MIXIN_SELF = re.compile(
 
 
 def matching_bracket(text: str, open_index: int) -> int | None:
+    """Return the closing bracket matching ``text[open_index] == '['``."""
     depth = 0
+    quote: str | None = None
+    escaped = False
+
     for index in range(open_index, len(text)):
         char = text[index]
-        if char == "[":
+
+        if quote is not None:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == quote:
+                quote = None
+            continue
+
+        if char in {"'", '"'}:
+            quote = char
+        elif char == "[":
             depth += 1
         elif char == "]":
             depth -= 1
             if depth == 0:
                 return index
+
     return None
 
 
+def optional_at(text: str, start: int) -> tuple[int, int] | None:
+    """Return ``(open_bracket, end)`` when an Optional wrapper starts here."""
+    for prefix in OPTIONAL_PREFIXES:
+        if text.startswith(prefix, start):
+            open_index = start + len(prefix) - 1
+            close_index = matching_bracket(text, open_index)
+            if close_index is not None:
+                return open_index, close_index
+    return None
+
+
+def unwrap_full_optional(expression: str) -> str | None:
+    """Return the inner expression when the whole expression is Optional[T]."""
+    stripped = expression.strip()
+    match = optional_at(stripped, 0)
+    if match is None:
+        return None
+
+    open_index, close_index = match
+    if close_index != len(stripped) - 1:
+        return None
+    return stripped[open_index + 1:close_index].strip()
+
+
 def collapse_nested_optionals(text: str) -> str:
-    """Collapse Optional[Optional[T]] (at any nesting depth) to Optional[T]."""
-    while True:
-        changed = False
-        cursor = 0
-        pieces: list[str] = []
+    """Canonicalize Optional wrappers and collapse Optional[Optional[T]].
 
+    Both the imported spelling ``Optional[T]`` and ``typing.Optional[T]`` are
+    accepted as input. Output uses ``typing.Optional[T]`` so repeated runs are
+    deterministic and idempotent.
+    """
+    pieces: list[str] = []
+    cursor = 0
+
+    while cursor < len(text):
+        starts = [
+            position
+            for prefix in OPTIONAL_PREFIXES
+            if (position := text.find(prefix, cursor)) >= 0
+        ]
+        if not starts:
+            pieces.append(text[cursor:])
+            break
+
+        start = min(starts)
+        pieces.append(text[cursor:start])
+        match = optional_at(text, start)
+        if match is None:
+            pieces.append(text[start:])
+            break
+
+        open_index, close_index = match
+        inner = collapse_nested_optionals(text[open_index + 1:close_index].strip())
+
+        # Collapse only when the complete inner expression is another Optional.
+        # Nested optionals inside containers remain semantically distinct, e.g.
+        # Optional[List[Optional[int]]].
         while True:
-            start = text.find(OPTIONAL_PREFIX, cursor)
-            if start < 0:
-                pieces.append(text[cursor:])
+            unwrapped = unwrap_full_optional(inner)
+            if unwrapped is None:
                 break
+            inner = collapse_nested_optionals(unwrapped)
 
-            pieces.append(text[cursor:start])
-            outer_open = start + len("typing.Optional")
-            outer_close = matching_bracket(text, outer_open)
-            if outer_close is None:
-                pieces.append(text[start:])
-                break
+        pieces.append(f"typing.Optional[{inner}]")
+        cursor = close_index + 1
 
-            inner_start = outer_open + 1
-            inner = text[inner_start:outer_close].strip()
-
-            if inner.startswith(OPTIONAL_PREFIX):
-                inner_open = len("typing.Optional")
-                inner_close = matching_bracket(inner, inner_open)
-                if inner_close == len(inner) - 1:
-                    pieces.append(inner)
-                    changed = True
-                else:
-                    pieces.append(text[start:outer_close + 1])
-            else:
-                pieces.append(text[start:outer_close + 1])
-
-            cursor = outer_close + 1
-
-        updated = "".join(pieces)
-        if not changed:
-            return updated
-        text = updated
+    return "".join(pieces)
 
 
 def add_typing_import(source: str) -> str:
@@ -108,7 +152,7 @@ def normalize(path: Path) -> bool:
 
     def repl(match: re.Match[str]) -> str:
         annotation = collapse_nested_optionals(match.group("type").strip())
-        if annotation in {"Any", "typing.Any"} or "Optional[" in annotation:
+        if annotation in {"Any", "typing.Any"} or unwrap_full_optional(annotation) is not None:
             return f'{match.group("name")}: {annotation} = None{match.group("tail")}'
         return f'{match.group("name")}: typing.Optional[{annotation}] = None{match.group("tail")}'
 
