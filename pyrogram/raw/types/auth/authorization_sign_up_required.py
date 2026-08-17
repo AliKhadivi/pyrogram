@@ -68,7 +68,7 @@ class AuthorizationSignUpRequired(TLObject):
     ID = 0x44747e9a
     QUALNAME = "types.auth.AuthorizationSignUpRequired"
 
-    def __init__(self, *, terms_of_service: "raw.base.help.TermsOfService" = None) -> None:
+    def __init__(self, *, terms_of_service: Optional["raw.base.help.TermsOfService"] = None) -> None:
         self.terms_of_service = terms_of_service  # flags.0?help.TermsOfService
 
     @staticmethod

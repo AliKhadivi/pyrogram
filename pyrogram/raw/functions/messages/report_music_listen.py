@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportMusicListen(TLObject["raw.base.Bool"]):
+class ReportMusicListen(TLObject[bool]):
     """Report the listening duration of a music track (audio document without the voice flag), see here » for more info on the full flow.
 
 

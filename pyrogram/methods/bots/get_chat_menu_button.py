@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetChatMenuButton:
     async def get_chat_menu_button(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str] = None,
     ) -> "types.MenuButton":
         """Get the current value of the bot's menu button in a private chat, or the default menu button.

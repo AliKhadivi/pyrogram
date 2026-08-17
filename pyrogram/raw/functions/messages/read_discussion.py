@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReadDiscussion(TLObject["raw.base.Bool"]):
+class ReadDiscussion(TLObject[bool]):
     """Mark a thread as read
 
 

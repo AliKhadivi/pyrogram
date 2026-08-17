@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class UnbanChatMember:
     async def unban_chat_member(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         user_id: Union[int, str]
     ) -> bool:

@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class SetSendAsChat:
     async def set_send_as_chat(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         send_as_chat_id: Union[int, str]
     ) -> bool:

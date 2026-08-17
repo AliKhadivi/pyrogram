@@ -64,7 +64,7 @@ class InputStorePaymentPremiumGiftCode(TLObject):
     ID = 0xfb790393
     QUALNAME = "types.InputStorePaymentPremiumGiftCode"
 
-    def __init__(self, *, users: List["raw.base.InputUser"], currency: str, amount: int, boost_peer: "raw.base.InputPeer" = None, message: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, users: List["raw.base.InputUser"], currency: str, amount: int, boost_peer: Optional["raw.base.InputPeer"] = None, message: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.users = users  # Vector<InputUser>
         self.currency = currency  # string
         self.amount = amount  # long

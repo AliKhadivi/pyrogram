@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ConfirmPhone(TLObject["raw.base.Bool"]):
+class ConfirmPhone(TLObject[bool]):
     """Confirm a phone number to cancel account deletion, for more info click here »
 
 

@@ -28,7 +28,7 @@ log = logging.getLogger(__name__)
 
 class Invoke:
     async def invoke(
-        self: "pyrogram.Client",
+        self,
         query: TLObject,
         retries: int = Session.MAX_RETRIES,
         timeout: float = Session.WAIT_TIMEOUT,

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from pyrogram import raw, types
 from ..object import Object
 
@@ -48,8 +49,8 @@ class KeyboardButton(Object):
     def __init__(
         self,
         text: str,
-        request_contact: bool = None,
-        request_location: bool = None,
+        request_contact: typing.Optional[bool] = None,
+        request_location: typing.Optional[bool] = None,
         web_app: "types.WebAppInfo" = None
     ):
         super().__init__()

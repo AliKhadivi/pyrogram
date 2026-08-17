@@ -26,7 +26,7 @@ from pyrogram import types
 
 class GetUsers:
     async def get_users(
-        self: "pyrogram.Client",
+        self,
         user_ids: Union[int, str, Iterable[Union[int, str]]]
     ) -> Union["types.User", List["types.User"]]:
         """Get information about a user.

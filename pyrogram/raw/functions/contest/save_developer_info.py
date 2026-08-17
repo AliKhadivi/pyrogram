@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveDeveloperInfo(TLObject["raw.base.Bool"]):
+class SaveDeveloperInfo(TLObject[bool]):
     """Telegram API function.
 
     Details:

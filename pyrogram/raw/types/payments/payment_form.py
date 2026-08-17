@@ -106,7 +106,7 @@ class PaymentForm(TLObject):
     ID = 0xa0058751
     QUALNAME = "types.payments.PaymentForm"
 
-    def __init__(self, *, form_id: int, bot_id: int, title: str, description: str, invoice: "raw.base.Invoice", provider_id: int, url: str, users: List["raw.base.User"], can_save_credentials: Optional[bool] = None, password_missing: Optional[bool] = None, photo: "raw.base.WebDocument" = None, native_provider: Optional[str] = None, native_params: "raw.base.DataJSON" = None, additional_methods: Optional[List["raw.base.PaymentFormMethod"]] = None, saved_info: "raw.base.PaymentRequestedInfo" = None, saved_credentials: Optional[List["raw.base.PaymentSavedCredentials"]] = None) -> None:
+    def __init__(self, *, form_id: int, bot_id: int, title: str, description: str, invoice: "raw.base.Invoice", provider_id: int, url: str, users: List["raw.base.User"], can_save_credentials: Optional[bool] = None, password_missing: Optional[bool] = None, photo: Optional["raw.base.WebDocument"] = None, native_provider: Optional[str] = None, native_params: Optional["raw.base.DataJSON"] = None, additional_methods: Optional[List["raw.base.PaymentFormMethod"]] = None, saved_info: Optional["raw.base.PaymentRequestedInfo"] = None, saved_credentials: Optional[List["raw.base.PaymentSavedCredentials"]] = None) -> None:
         self.form_id = form_id  # long
         self.bot_id = bot_id  # long
         self.title = title  # string

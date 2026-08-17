@@ -65,7 +65,7 @@ class GetSearchResultsPositions(TLObject["raw.base.messages.SearchResultsPositio
     ID = 0x9c7f2f10
     QUALNAME = "functions.messages.GetSearchResultsPositions"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", filter: "raw.base.MessagesFilter", offset_id: int, limit: int, saved_peer_id: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", filter: "raw.base.MessagesFilter", offset_id: int, limit: int, saved_peer_id: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputPeer
         self.filter = filter  # MessagesFilter
         self.offset_id = offset_id  # int

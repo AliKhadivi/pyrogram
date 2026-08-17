@@ -25,7 +25,7 @@ from pyrogram import types
 
 class SetBotCommands:
     async def set_bot_commands(
-        self: "pyrogram.Client",
+        self,
         commands: List["types.BotCommand"],
         scope: "types.BotCommandScope" = types.BotCommandScopeDefault(),
         language_code: str = "",

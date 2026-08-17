@@ -53,7 +53,7 @@ class GetPremiumGiftCodeOptions(TLObject["List[raw.base.PremiumGiftCodeOption]"]
     ID = 0x2757ba54
     QUALNAME = "functions.payments.GetPremiumGiftCodeOptions"
 
-    def __init__(self, *, boost_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, boost_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.boost_peer = boost_peer  # flags.0?InputPeer
 
     @staticmethod

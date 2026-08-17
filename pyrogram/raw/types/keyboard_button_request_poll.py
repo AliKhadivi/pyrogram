@@ -67,7 +67,7 @@ class KeyboardButtonRequestPoll(TLObject):
     ID = 0x7a11d782
     QUALNAME = "types.KeyboardButtonRequestPoll"
 
-    def __init__(self, *, text: str, style: "raw.base.KeyboardButtonStyle" = None, quiz: Optional[bool] = None) -> None:
+    def __init__(self, *, text: str, style: Optional["raw.base.KeyboardButtonStyle"] = None, quiz: Optional[bool] = None) -> None:
         self.text = text  # string
         self.style = style  # flags.10?KeyboardButtonStyle
         self.quiz = quiz  # flags.0?Bool

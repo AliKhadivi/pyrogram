@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SendGroupCallEncryptedMessage(TLObject["raw.base.Bool"]):
+class SendGroupCallEncryptedMessage(TLObject[bool]):
     """Send an E2E-encrypted message or emoji reaction to all participants of a conference call. This method can only be used with conferences; see here » for the serialization and encryption process.
 
 

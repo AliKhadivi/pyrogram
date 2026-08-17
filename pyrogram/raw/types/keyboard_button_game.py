@@ -64,7 +64,7 @@ class KeyboardButtonGame(TLObject):
     ID = 0x89c590f9
     QUALNAME = "types.KeyboardButtonGame"
 
-    def __init__(self, *, text: str, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.style = style  # flags.10?KeyboardButtonStyle
 

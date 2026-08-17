@@ -61,7 +61,7 @@ class StarGiftAttributeOriginalDetails(TLObject):
     ID = 0xe0bff26c
     QUALNAME = "types.StarGiftAttributeOriginalDetails"
 
-    def __init__(self, *, recipient_id: "raw.base.Peer", date: int, sender_id: "raw.base.Peer" = None, message: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, recipient_id: "raw.base.Peer", date: int, sender_id: Optional["raw.base.Peer"] = None, message: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.recipient_id = recipient_id  # Peer
         self.date = date  # int
         self.sender_id = sender_id  # flags.0?Peer

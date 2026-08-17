@@ -74,7 +74,7 @@ class ReactionsNotifySettings(TLObject):
     ID = 0x71e4ea58
     QUALNAME = "types.ReactionsNotifySettings"
 
-    def __init__(self, *, sound: "raw.base.NotificationSound", show_previews: bool, messages_notify_from: "raw.base.ReactionNotificationsFrom" = None, stories_notify_from: "raw.base.ReactionNotificationsFrom" = None, poll_votes_notify_from: "raw.base.ReactionNotificationsFrom" = None) -> None:
+    def __init__(self, *, sound: "raw.base.NotificationSound", show_previews: bool, messages_notify_from: Optional["raw.base.ReactionNotificationsFrom"] = None, stories_notify_from: Optional["raw.base.ReactionNotificationsFrom"] = None, poll_votes_notify_from: Optional["raw.base.ReactionNotificationsFrom"] = None) -> None:
         self.sound = sound  # NotificationSound
         self.show_previews = show_previews  # Bool
         self.messages_notify_from = messages_notify_from  # flags.0?ReactionNotificationsFrom

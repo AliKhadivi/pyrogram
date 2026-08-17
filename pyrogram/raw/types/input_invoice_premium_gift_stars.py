@@ -58,7 +58,7 @@ class InputInvoicePremiumGiftStars(TLObject):
     ID = 0xdabab2ef
     QUALNAME = "types.InputInvoicePremiumGiftStars"
 
-    def __init__(self, *, user_id: "raw.base.InputUser", months: int, message: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, user_id: "raw.base.InputUser", months: int, message: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.user_id = user_id  # InputUser
         self.months = months  # int
         self.message = message  # flags.0?TextWithEntities

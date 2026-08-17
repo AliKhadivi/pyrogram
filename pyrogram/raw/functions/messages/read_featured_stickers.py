@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReadFeaturedStickers(TLObject["raw.base.Bool"]):
+class ReadFeaturedStickers(TLObject[bool]):
     """Mark new featured stickers as read
 
 

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import os
 import re
 from datetime import datetime
@@ -31,25 +32,25 @@ from pyrogram.file_id import FileType
 
 class SendPhoto:
     async def send_photo(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         photo: Union[str, BinaryIO],
         caption: str = "",
-        parse_mode: Optional["enums.ParseMode"] = None,
-        caption_entities: List["types.MessageEntity"] = None,
-        has_spoiler: bool = None,
-        ttl_seconds: int = None,
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
-        protect_content: bool = None,
+        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
+        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
+        has_spoiler: typing.Optional[bool] = None,
+        ttl_seconds: typing.Optional[int] = None,
+        disable_notification: typing.Optional[bool] = None,
+        reply_to_message_id: typing.Optional[int] = None,
+        schedule_date: typing.Optional[datetime] = None,
+        protect_content: typing.Optional[bool] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: Callable = None,
+        progress: typing.Optional[Callable] = None,
         progress_args: tuple = ()
     ) -> Optional["types.Message"]:
         """Send photos.

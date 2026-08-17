@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class SetProfilePhoto:
     async def set_profile_photo(
-        self: "pyrogram.Client",
+        self,
         *,
         photo: Union[str, BinaryIO] = None,
         video: Union[str, BinaryIO] = None

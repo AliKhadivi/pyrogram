@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveCallLog(TLObject["raw.base.Bool"]):
+class SaveCallLog(TLObject[bool]):
     """Deprecated: send libtgvoip phone call debug information
 
 

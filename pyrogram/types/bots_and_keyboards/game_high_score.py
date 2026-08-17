@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw, utils
 from pyrogram import types
@@ -39,7 +40,7 @@ class GameHighScore(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         user: "types.User",
         score: int,
         position: int = None

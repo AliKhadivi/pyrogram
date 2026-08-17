@@ -23,7 +23,7 @@ from pyrogram.handlers.handler import Handler
 
 class AddHandler:
     def add_handler(
-        self: "pyrogram.Client",
+        self,
         handler: "Handler",
         group: int = 0
     ):

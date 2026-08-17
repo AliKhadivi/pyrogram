@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateDialogFilter(TLObject["raw.base.Bool"]):
+class UpdateDialogFilter(TLObject[bool]):
     """Update folder
 
 
@@ -56,7 +56,7 @@ class UpdateDialogFilter(TLObject["raw.base.Bool"]):
     ID = 0x1ad4a04a
     QUALNAME = "functions.messages.UpdateDialogFilter"
 
-    def __init__(self, *, id: int, filter: "raw.base.DialogFilter" = None) -> None:
+    def __init__(self, *, id: int, filter: Optional["raw.base.DialogFilter"] = None) -> None:
         self.id = id  # int
         self.filter = filter  # flags.0?DialogFilter
 

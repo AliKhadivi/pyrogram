@@ -70,7 +70,7 @@ class InputThemeSettings(TLObject):
     ID = 0x8fde504f
     QUALNAME = "types.InputThemeSettings"
 
-    def __init__(self, *, base_theme: "raw.base.BaseTheme", accent_color: int, message_colors_animated: Optional[bool] = None, outbox_accent_color: Optional[int] = None, message_colors: Optional[List[int]] = None, wallpaper: "raw.base.InputWallPaper" = None, wallpaper_settings: "raw.base.WallPaperSettings" = None) -> None:
+    def __init__(self, *, base_theme: "raw.base.BaseTheme", accent_color: int, message_colors_animated: Optional[bool] = None, outbox_accent_color: Optional[int] = None, message_colors: Optional[List[int]] = None, wallpaper: Optional["raw.base.InputWallPaper"] = None, wallpaper_settings: Optional["raw.base.WallPaperSettings"] = None) -> None:
         self.base_theme = base_theme  # BaseTheme
         self.accent_color = accent_color  # int
         self.message_colors_animated = message_colors_animated  # flags.2?true

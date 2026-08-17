@@ -26,7 +26,7 @@ from pyrogram import types
 
 class RestrictChatMember:
     async def restrict_chat_member(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         user_id: Union[int, str],
         permissions: "types.ChatPermissions",

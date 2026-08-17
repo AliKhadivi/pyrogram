@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional, List
 
 import pyrogram
@@ -75,16 +76,16 @@ class InlineQueryResultPhoto(InlineQueryResult):
     def __init__(
         self,
         photo_url: str,
-        thumb_url: str = None,
+        thumb_url: typing.Optional[str] = None,
         photo_width: int = 0,
         photo_height: int = 0,
-        id: str = None,
-        title: str = None,
-        description: str = None,
+        id: typing.Optional[str] = None,
+        title: typing.Optional[str] = None,
+        description: typing.Optional[str] = None,
         caption: str = "",
-        parse_mode: Optional["enums.ParseMode"] = None,
-        caption_entities: List["types.MessageEntity"] = None,
-        reply_markup: "types.InlineKeyboardMarkup" = None,
+        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
+        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
+        reply_markup: typing.Optional["types.InlineKeyboardMarkup"] = None,
         input_message_content: "types.InputMessageContent" = None
     ):
         super().__init__("photo", id, input_message_content, reply_markup)

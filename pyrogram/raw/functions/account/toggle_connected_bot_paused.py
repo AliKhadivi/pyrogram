@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleConnectedBotPaused(TLObject["raw.base.Bool"]):
+class ToggleConnectedBotPaused(TLObject[bool]):
     """Pause or unpause a specific chat, temporarily disconnecting it from all business bots ».
 
 

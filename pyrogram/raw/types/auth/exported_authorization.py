@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -64,7 +65,7 @@ class ExportedAuthorization(TLObject):
     ID = 0xb434e2b8
     QUALNAME = "types.auth.ExportedAuthorization"
 
-    def __init__(self, *, id: int, bytes: bytes) -> None:
+    def __init__(self, *, id: int, bytes: builtins.bytes) -> None:
         self.id = id  # long
         self.bytes = bytes  # bytes
 

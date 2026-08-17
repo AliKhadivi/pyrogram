@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class HidePeerSettingsBar(TLObject["raw.base.Bool"]):
+class HidePeerSettingsBar(TLObject[bool]):
     """Should be called after the user hides the report spam/add as contact bar of a new chat, effectively prevents the user from executing the actions specified in the action bar ».
 
 

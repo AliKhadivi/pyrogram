@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateBusinessIntro(TLObject["raw.base.Bool"]):
+class UpdateBusinessIntro(TLObject[bool]):
     """Set or remove the Telegram Business introduction ».
 
 
@@ -53,7 +53,7 @@ class UpdateBusinessIntro(TLObject["raw.base.Bool"]):
     ID = 0xa614d034
     QUALNAME = "functions.account.UpdateBusinessIntro"
 
-    def __init__(self, *, intro: "raw.base.InputBusinessIntro" = None) -> None:
+    def __init__(self, *, intro: Optional["raw.base.InputBusinessIntro"] = None) -> None:
         self.intro = intro  # flags.0?InputBusinessIntro
 
     @staticmethod

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteStickerSet(TLObject["raw.base.Bool"]):
+class DeleteStickerSet(TLObject[bool]):
     """Deletes a stickerset we created.
 
 

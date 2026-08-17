@@ -49,8 +49,10 @@ _doc = """List of passkeys » associated to the current account.
             account.GetPasskeys"""
 try:
     _t = type(Passkeys)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         Passkeys.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

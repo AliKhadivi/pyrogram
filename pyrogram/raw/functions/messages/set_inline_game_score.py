@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetInlineGameScore(TLObject["raw.base.Bool"]):
+class SetInlineGameScore(TLObject[bool]):
     """Use this method to set the score of the specified user in a game sent as an inline message (bots only).
 
 

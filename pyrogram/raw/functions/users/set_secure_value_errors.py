@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetSecureValueErrors(TLObject["raw.base.Bool"]):
+class SetSecureValueErrors(TLObject[bool]):
     """Notify the user that the sent passport data contains some errors The user will not be able to re-submit their Passport data to you until the errors are fixed (the contents of the field for which you returned the error must change).
 
 

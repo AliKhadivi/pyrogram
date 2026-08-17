@@ -61,7 +61,7 @@ class MessageActionPhoneCall(TLObject):
     ID = 0x80e11a7f
     QUALNAME = "types.MessageActionPhoneCall"
 
-    def __init__(self, *, call_id: int, video: Optional[bool] = None, reason: "raw.base.PhoneCallDiscardReason" = None, duration: Optional[int] = None) -> None:
+    def __init__(self, *, call_id: int, video: Optional[bool] = None, reason: Optional["raw.base.PhoneCallDiscardReason"] = None, duration: Optional[int] = None) -> None:
         self.call_id = call_id  # long
         self.video = video  # flags.2?true
         self.reason = reason  # flags.0?PhoneCallDiscardReason

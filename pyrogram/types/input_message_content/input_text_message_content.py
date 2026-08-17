@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional, List
 
 import pyrogram
@@ -44,8 +45,8 @@ class InputTextMessageContent(InputMessageContent):
     def __init__(
         self,
         message_text: str,
-        parse_mode: Optional["enums.ParseMode"] = None,
-        entities: List["types.MessageEntity"] = None,
+        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
+        entities: typing.Optional[List["types.MessageEntity"]] = None,
         disable_web_page_preview: bool = None
     ):
         super().__init__()

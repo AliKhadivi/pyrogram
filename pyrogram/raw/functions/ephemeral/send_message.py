@@ -80,7 +80,7 @@ class SendMessage(TLObject["raw.base.Updates"]):
     ID = 0x68cbd09f
     QUALNAME = "functions.ephemeral.SendMessage"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", receiver_id: "raw.base.InputUser", message: str, random_id: int, query_id: Optional[int] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: "raw.base.InputMedia" = None, reply_markup: "raw.base.ReplyMarkup" = None, rich_message: "raw.base.InputRichMessage" = None, reply_to: "raw.base.InputReplyTo" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", receiver_id: "raw.base.InputUser", message: str, random_id: int, query_id: Optional[int] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: Optional["raw.base.InputMedia"] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None, rich_message: Optional["raw.base.InputRichMessage"] = None, reply_to: Optional["raw.base.InputReplyTo"] = None) -> None:
         self.peer = peer  # InputPeer
         self.receiver_id = receiver_id  # InputUser
         self.message = message  # string

@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class ArchiveChats:
     async def archive_chats(
-        self: "pyrogram.Client",
+        self,
         chat_ids: Union[int, str, List[Union[int, str]]],
     ) -> bool:
         """Archive one or more chats.

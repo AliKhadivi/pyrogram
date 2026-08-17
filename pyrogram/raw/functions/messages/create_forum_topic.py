@@ -71,7 +71,7 @@ class CreateForumTopic(TLObject["raw.base.Updates"]):
     ID = 0x2f98c3d5
     QUALNAME = "functions.messages.CreateForumTopic"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", title: str, random_id: int, title_missing: Optional[bool] = None, icon_color: Optional[int] = None, icon_emoji_id: Optional[int] = None, send_as: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", title: str, random_id: int, title_missing: Optional[bool] = None, icon_color: Optional[int] = None, icon_emoji_id: Optional[int] = None, send_as: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputPeer
         self.title = title  # string
         self.random_id = random_id  # long

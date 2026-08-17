@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -73,7 +74,7 @@ class WebFile(TLObject):
     ID = 0x21e753bc
     QUALNAME = "types.upload.WebFile"
 
-    def __init__(self, *, size: int, mime_type: str, file_type: "raw.base.storage.FileType", mtime: int, bytes: bytes) -> None:
+    def __init__(self, *, size: int, mime_type: str, file_type: "raw.base.storage.FileType", mtime: int, bytes: builtins.bytes) -> None:
         self.size = size  # int
         self.mime_type = mime_type  # string
         self.file_type = file_type  # storage.FileType

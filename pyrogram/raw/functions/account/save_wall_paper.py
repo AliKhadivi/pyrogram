@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveWallPaper(TLObject["raw.base.Bool"]):
+class SaveWallPaper(TLObject[bool]):
     """Install/uninstall wallpaper
 
 

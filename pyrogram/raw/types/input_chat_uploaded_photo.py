@@ -61,7 +61,7 @@ class InputChatUploadedPhoto(TLObject):
     ID = 0xbdcdaec0
     QUALNAME = "types.InputChatUploadedPhoto"
 
-    def __init__(self, *, file: "raw.base.InputFile" = None, video: "raw.base.InputFile" = None, video_start_ts: Optional[float] = None, video_emoji_markup: "raw.base.VideoSize" = None) -> None:
+    def __init__(self, *, file: Optional["raw.base.InputFile"] = None, video: Optional["raw.base.InputFile"] = None, video_start_ts: Optional[float] = None, video_emoji_markup: Optional["raw.base.VideoSize"] = None) -> None:
         self.file = file  # flags.0?InputFile
         self.video = video  # flags.1?InputFile
         self.video_start_ts = video_start_ts  # flags.2?double

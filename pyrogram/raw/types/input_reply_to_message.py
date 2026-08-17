@@ -76,7 +76,7 @@ class InputReplyToMessage(TLObject):
     ID = 0x3bd4b7c2
     QUALNAME = "types.InputReplyToMessage"
 
-    def __init__(self, *, reply_to_msg_id: int, top_msg_id: Optional[int] = None, reply_to_peer_id: "raw.base.InputPeer" = None, quote_text: Optional[str] = None, quote_entities: Optional[List["raw.base.MessageEntity"]] = None, quote_offset: Optional[int] = None, monoforum_peer_id: "raw.base.InputPeer" = None, todo_item_id: Optional[int] = None, poll_option: Optional[bytes] = None) -> None:
+    def __init__(self, *, reply_to_msg_id: int, top_msg_id: Optional[int] = None, reply_to_peer_id: Optional["raw.base.InputPeer"] = None, quote_text: Optional[str] = None, quote_entities: Optional[List["raw.base.MessageEntity"]] = None, quote_offset: Optional[int] = None, monoforum_peer_id: Optional["raw.base.InputPeer"] = None, todo_item_id: Optional[int] = None, poll_option: Optional[bytes] = None) -> None:
         self.reply_to_msg_id = reply_to_msg_id  # int
         self.top_msg_id = top_msg_id  # flags.0?int
         self.reply_to_peer_id = reply_to_peer_id  # flags.1?InputPeer

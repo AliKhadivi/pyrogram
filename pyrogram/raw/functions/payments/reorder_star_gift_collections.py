@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReorderStarGiftCollections(TLObject["raw.base.Bool"]):
+class ReorderStarGiftCollections(TLObject[bool]):
     """Reorder the star gift collections » on an owned peer's profile.
 
 

@@ -61,7 +61,7 @@ class StoryFwdHeader(TLObject):
     ID = 0xb826e150
     QUALNAME = "types.StoryFwdHeader"
 
-    def __init__(self, *, modified: Optional[bool] = None, from_peer: "raw.base.Peer" = None, from_name: Optional[str] = None, story_id: Optional[int] = None) -> None:
+    def __init__(self, *, modified: Optional[bool] = None, from_peer: Optional["raw.base.Peer"] = None, from_name: Optional[str] = None, story_id: Optional[int] = None) -> None:
         self.modified = modified  # flags.3?true
         self.from_peer = from_peer  # flags.0?Peer
         self.from_name = from_name  # flags.1?string

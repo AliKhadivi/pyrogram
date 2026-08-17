@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotPrecheckoutResults(TLObject["raw.base.Bool"]):
+class SetBotPrecheckoutResults(TLObject[bool]):
     """Once the user has confirmed their payment and shipping details, the bot receives an updateBotPrecheckoutQuery update.
 Use this method to respond to such pre-checkout queries.
 Note: Telegram must receive an answer within 10 seconds after the pre-checkout query was sent.

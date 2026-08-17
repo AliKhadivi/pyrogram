@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveTheme(TLObject["raw.base.Bool"]):
+class SaveTheme(TLObject[bool]):
     """Save a theme
 
 

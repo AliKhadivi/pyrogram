@@ -59,7 +59,7 @@ async def get_chunk(
 
 class GetChatMembers:
     async def get_chat_members(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         query: str = "",
         limit: int = 0,

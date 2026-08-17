@@ -58,7 +58,7 @@ class MessageViews(TLObject):
     ID = 0x455b853d
     QUALNAME = "types.MessageViews"
 
-    def __init__(self, *, views: Optional[int] = None, forwards: Optional[int] = None, replies: "raw.base.MessageReplies" = None) -> None:
+    def __init__(self, *, views: Optional[int] = None, forwards: Optional[int] = None, replies: Optional["raw.base.MessageReplies"] = None) -> None:
         self.views = views  # flags.0?int
         self.forwards = forwards  # flags.1?int
         self.replies = replies  # flags.2?MessageReplies

@@ -67,7 +67,7 @@ class Folder(TLObject):
     ID = 0xff544e65
     QUALNAME = "types.Folder"
 
-    def __init__(self, *, id: int, title: str, autofill_new_broadcasts: Optional[bool] = None, autofill_public_groups: Optional[bool] = None, autofill_new_correspondents: Optional[bool] = None, photo: "raw.base.ChatPhoto" = None) -> None:
+    def __init__(self, *, id: int, title: str, autofill_new_broadcasts: Optional[bool] = None, autofill_public_groups: Optional[bool] = None, autofill_new_correspondents: Optional[bool] = None, photo: Optional["raw.base.ChatPhoto"] = None) -> None:
         self.id = id  # int
         self.title = title  # string
         self.autofill_new_broadcasts = autofill_new_broadcasts  # flags.0?true

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CanSendMessage(TLObject["raw.base.Bool"]):
+class CanSendMessage(TLObject[bool]):
     """Check whether the specified bot can send us messages
 
 

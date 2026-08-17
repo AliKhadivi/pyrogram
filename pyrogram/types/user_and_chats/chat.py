@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union, List, Optional, AsyncGenerator, BinaryIO
 
@@ -134,34 +135,34 @@ class Chat(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         id: int,
         type: "enums.ChatType",
-        is_verified: bool = None,
-        is_restricted: bool = None,
-        is_creator: bool = None,
-        is_scam: bool = None,
-        is_fake: bool = None,
-        is_support: bool = None,
-        title: str = None,
-        username: str = None,
-        first_name: str = None,
-        last_name: str = None,
-        photo: "types.ChatPhoto" = None,
-        bio: str = None,
-        description: str = None,
-        dc_id: int = None,
-        has_protected_content: bool = None,
-        invite_link: str = None,
+        is_verified: typing.Optional[bool] = None,
+        is_restricted: typing.Optional[bool] = None,
+        is_creator: typing.Optional[bool] = None,
+        is_scam: typing.Optional[bool] = None,
+        is_fake: typing.Optional[bool] = None,
+        is_support: typing.Optional[bool] = None,
+        title: typing.Optional[str] = None,
+        username: typing.Optional[str] = None,
+        first_name: typing.Optional[str] = None,
+        last_name: typing.Optional[str] = None,
+        photo: typing.Optional["types.ChatPhoto"] = None,
+        bio: typing.Optional[str] = None,
+        description: typing.Optional[str] = None,
+        dc_id: typing.Optional[int] = None,
+        has_protected_content: typing.Optional[bool] = None,
+        invite_link: typing.Optional[str] = None,
         pinned_message=None,
-        sticker_set_name: str = None,
-        can_set_sticker_set: bool = None,
-        members_count: int = None,
-        restrictions: List["types.Restriction"] = None,
-        permissions: "types.ChatPermissions" = None,
-        distance: int = None,
-        linked_chat: "types.Chat" = None,
-        send_as_chat: "types.Chat" = None,
+        sticker_set_name: typing.Optional[str] = None,
+        can_set_sticker_set: typing.Optional[bool] = None,
+        members_count: typing.Optional[int] = None,
+        restrictions: typing.Optional[List["types.Restriction"]] = None,
+        permissions: typing.Optional["types.ChatPermissions"] = None,
+        distance: typing.Optional[int] = None,
+        linked_chat: typing.Optional["types.Chat"] = None,
+        send_as_chat: typing.Optional["types.Chat"] = None,
         available_reactions: Optional["types.ChatReactions"] = None
     ):
         super().__init__(client)
@@ -482,7 +483,7 @@ class Chat(Object):
         *,
         photo: Union[str, BinaryIO] = None,
         video: Union[str, BinaryIO] = None,
-        video_start_ts: float = None,
+        video_start_ts: typing.Optional[float] = None,
     ) -> bool:
         """Bound method *set_photo* of :obj:`~pyrogram.types.Chat`.
 

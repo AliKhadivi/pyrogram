@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateDialogFiltersOrder(TLObject["raw.base.Bool"]):
+class UpdateDialogFiltersOrder(TLObject[bool]):
     """Reorder folders
 
 

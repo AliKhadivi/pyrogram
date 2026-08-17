@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReadHistory(TLObject["raw.base.Bool"]):
+class ReadHistory(TLObject[bool]):
     """Mark channel/supergroup history as read
 
 

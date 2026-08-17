@@ -49,8 +49,10 @@ _doc = """Recovery info of a 2FA password, only for accounts with a recovery ema
             auth.RequestPasswordRecovery"""
 try:
     _t = type(PasswordRecovery)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         PasswordRecovery.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

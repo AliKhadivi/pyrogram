@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckUrlAuthMatchCode(TLObject["raw.base.Bool"]):
+class CheckUrlAuthMatchCode(TLObject[bool]):
     """Validate the match code selected by the user against the code shown on the login page, as part of the OAuth authorization flow ».
 
 

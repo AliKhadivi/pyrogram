@@ -22,7 +22,7 @@ from pyrogram.session import Session
 
 class Connect:
     async def connect(
-        self: "pyrogram.Client",
+        self,
     ) -> bool:
         """
         Connect the client to Telegram servers.

@@ -24,7 +24,7 @@ from pyrogram import raw, enums
 
 class SearchMessagesCount:
     async def search_messages_count(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         query: str = "",
         filter: "enums.MessagesFilter" = enums.MessagesFilter.EMPTY,

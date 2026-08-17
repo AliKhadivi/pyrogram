@@ -64,7 +64,7 @@ class BotInlineMessageText(TLObject):
     ID = 0x8c7f65e2
     QUALNAME = "types.BotInlineMessageText"
 
-    def __init__(self, *, message: str, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, message: str, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.message = message  # string
         self.no_webpage = no_webpage  # flags.0?true
         self.invert_media = invert_media  # flags.3?true

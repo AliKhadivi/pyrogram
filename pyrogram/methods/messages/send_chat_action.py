@@ -24,7 +24,7 @@ from pyrogram import raw, enums
 
 class SendChatAction:
     async def send_chat_action(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         action: "enums.ChatAction"
     ) -> bool:

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ClearRecentStickers(TLObject["raw.base.Bool"]):
+class ClearRecentStickers(TLObject[bool]):
     """Clear recent stickers
 
 

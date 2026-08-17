@@ -55,7 +55,7 @@ class ChannelAdminLogEventActionPinTopic(TLObject):
     ID = 0x5d8d353b
     QUALNAME = "types.ChannelAdminLogEventActionPinTopic"
 
-    def __init__(self, *, prev_topic: "raw.base.ForumTopic" = None, new_topic: "raw.base.ForumTopic" = None) -> None:
+    def __init__(self, *, prev_topic: Optional["raw.base.ForumTopic"] = None, new_topic: Optional["raw.base.ForumTopic"] = None) -> None:
         self.prev_topic = prev_topic  # flags.0?ForumTopic
         self.new_topic = new_topic  # flags.1?ForumTopic
 

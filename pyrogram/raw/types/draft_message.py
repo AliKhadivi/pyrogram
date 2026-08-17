@@ -79,7 +79,7 @@ class DraftMessage(TLObject):
     ID = 0x60fe3294
     QUALNAME = "types.DraftMessage"
 
-    def __init__(self, *, message: str, date: int, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, reply_to: "raw.base.InputReplyTo" = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: "raw.base.InputMedia" = None, effect: Optional[int] = None, suggested_post: "raw.base.SuggestedPost" = None, rich_message: "raw.base.RichMessage" = None) -> None:
+    def __init__(self, *, message: str, date: int, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, reply_to: Optional["raw.base.InputReplyTo"] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: Optional["raw.base.InputMedia"] = None, effect: Optional[int] = None, suggested_post: Optional["raw.base.SuggestedPost"] = None, rich_message: Optional["raw.base.RichMessage"] = None) -> None:
         self.message = message  # string
         self.date = date  # int
         self.no_webpage = no_webpage  # flags.1?true

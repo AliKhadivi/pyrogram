@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckQuickReplyShortcut(TLObject["raw.base.Bool"]):
+class CheckQuickReplyShortcut(TLObject[bool]):
     """Before offering the user the choice to add a message to a quick reply shortcut, to make sure that none of the limits specified here » were reached.
 
 

@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class SendReaction:
     async def send_reaction(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int,
         emoji: str = "",

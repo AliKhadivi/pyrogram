@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class GetChatPhotosCount:
     async def get_chat_photos_count(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str]
     ) -> int:
         """Get the total count of photos for a chat.

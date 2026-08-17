@@ -71,7 +71,7 @@ class GetSavedDialogs(TLObject["raw.base.messages.SavedDialogs"]):
     ID = 0x1e91fc99
     QUALNAME = "functions.messages.GetSavedDialogs"
 
-    def __init__(self, *, offset_date: int, offset_id: int, offset_peer: "raw.base.InputPeer", limit: int, hash: int, exclude_pinned: Optional[bool] = None, parent_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, offset_date: int, offset_id: int, offset_peer: "raw.base.InputPeer", limit: int, hash: int, exclude_pinned: Optional[bool] = None, parent_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.offset_date = offset_date  # int
         self.offset_id = offset_id  # int
         self.offset_peer = offset_peer  # InputPeer

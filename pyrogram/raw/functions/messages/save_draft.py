@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveDraft(TLObject["raw.base.Bool"]):
+class SaveDraft(TLObject[bool]):
     """Save a message draft associated to a chat.
 
 
@@ -80,7 +80,7 @@ class SaveDraft(TLObject["raw.base.Bool"]):
     ID = 0xad0fa15c
     QUALNAME = "functions.messages.SaveDraft"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", message: str, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, reply_to: "raw.base.InputReplyTo" = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: "raw.base.InputMedia" = None, effect: Optional[int] = None, suggested_post: "raw.base.SuggestedPost" = None, rich_message: "raw.base.InputRichMessage" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", message: str, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, reply_to: Optional["raw.base.InputReplyTo"] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: Optional["raw.base.InputMedia"] = None, effect: Optional[int] = None, suggested_post: Optional["raw.base.SuggestedPost"] = None, rich_message: Optional["raw.base.InputRichMessage"] = None) -> None:
         self.peer = peer  # InputPeer
         self.message = message  # string
         self.no_webpage = no_webpage  # flags.1?true

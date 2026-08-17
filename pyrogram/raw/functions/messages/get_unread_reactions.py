@@ -74,7 +74,7 @@ class GetUnreadReactions(TLObject["raw.base.messages.Messages"]):
     ID = 0xbd7f90ac
     QUALNAME = "functions.messages.GetUnreadReactions"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", offset_id: int, add_offset: int, limit: int, max_id: int, min_id: int, top_msg_id: Optional[int] = None, saved_peer_id: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", offset_id: int, add_offset: int, limit: int, max_id: int, min_id: int, top_msg_id: Optional[int] = None, saved_peer_id: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputPeer
         self.offset_id = offset_id  # int
         self.add_offset = add_offset  # int

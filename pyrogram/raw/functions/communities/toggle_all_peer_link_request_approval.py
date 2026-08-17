@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleAllPeerLinkRequestApproval(TLObject["raw.base.Bool"]):
+class ToggleAllPeerLinkRequestApproval(TLObject[bool]):
     """
 
 

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union, Dict
 
@@ -75,19 +76,19 @@ class ChatMember(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         status: "enums.ChatMemberStatus",
-        user: "types.User" = None,
-        chat: "types.Chat" = None,
-        custom_title: str = None,
-        until_date: datetime = None,
-        joined_date: datetime = None,
-        invited_by: "types.User" = None,
-        promoted_by: "types.User" = None,
-        restricted_by: "types.User" = None,
-        is_member: bool = None,
-        can_be_edited: bool = None,
-        permissions: "types.ChatPermissions" = None,
+        user: typing.Optional["types.User"] = None,
+        chat: typing.Optional["types.Chat"] = None,
+        custom_title: typing.Optional[str] = None,
+        until_date: typing.Optional[datetime] = None,
+        joined_date: typing.Optional[datetime] = None,
+        invited_by: typing.Optional["types.User"] = None,
+        promoted_by: typing.Optional["types.User"] = None,
+        restricted_by: typing.Optional["types.User"] = None,
+        is_member: typing.Optional[bool] = None,
+        can_be_edited: typing.Optional[bool] = None,
+        permissions: typing.Optional["types.ChatPermissions"] = None,
         privileges: "types.ChatPrivileges" = None
     ):
         super().__init__(client)

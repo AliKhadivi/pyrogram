@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteMessage(TLObject["raw.base.Bool"]):
+class DeleteMessage(TLObject[bool]):
     """
 
 

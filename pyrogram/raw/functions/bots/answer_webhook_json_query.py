@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class AnswerWebhookJSONQuery(TLObject["raw.base.Bool"]):
+class AnswerWebhookJSONQuery(TLObject[bool]):
     """Answers a custom query; for bots only
 
 

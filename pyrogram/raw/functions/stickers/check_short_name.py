@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckShortName(TLObject["raw.base.Bool"]):
+class CheckShortName(TLObject[bool]):
     """Check whether the given short name is available
 
 

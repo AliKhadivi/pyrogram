@@ -61,7 +61,7 @@ class UpdateDraftMessage(TLObject):
     ID = 0xedfc111e
     QUALNAME = "types.UpdateDraftMessage"
 
-    def __init__(self, *, peer: "raw.base.Peer", draft: "raw.base.DraftMessage", top_msg_id: Optional[int] = None, saved_peer_id: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.Peer", draft: "raw.base.DraftMessage", top_msg_id: Optional[int] = None, saved_peer_id: Optional["raw.base.Peer"] = None) -> None:
         self.peer = peer  # Peer
         self.draft = draft  # DraftMessage
         self.top_msg_id = top_msg_id  # flags.0?int

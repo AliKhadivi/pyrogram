@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 import os
 import re
@@ -34,7 +35,7 @@ log = logging.getLogger(__name__)
 class SendMediaGroup:
     # TODO: Add progress parameter
     async def send_media_group(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         media: List[Union[
             "types.InputMediaPhoto",
@@ -42,10 +43,10 @@ class SendMediaGroup:
             "types.InputMediaAudio",
             "types.InputMediaDocument"
         ]],
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
-        protect_content: bool = None,
+        disable_notification: typing.Optional[bool] = None,
+        reply_to_message_id: typing.Optional[int] = None,
+        schedule_date: typing.Optional[datetime] = None,
+        protect_content: typing.Optional[bool] = None,
     ) -> List["types.Message"]:
         """Send a group of photos or videos as an album.
 

@@ -68,7 +68,7 @@ class AddContact(TLObject["raw.base.Updates"]):
     ID = 0xd9ba2e54
     QUALNAME = "functions.contacts.AddContact"
 
-    def __init__(self, *, id: "raw.base.InputUser", first_name: str, last_name: str, phone: str, add_phone_privacy_exception: Optional[bool] = None, note: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, id: "raw.base.InputUser", first_name: str, last_name: str, phone: str, add_phone_privacy_exception: Optional[bool] = None, note: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.id = id  # InputUser
         self.first_name = first_name  # string
         self.last_name = last_name  # string

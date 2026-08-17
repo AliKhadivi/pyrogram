@@ -25,7 +25,7 @@ from pyrogram import types
 
 class StopPoll:
     async def stop_poll(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int,
         reply_markup: "types.InlineKeyboardMarkup" = None

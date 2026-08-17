@@ -24,7 +24,7 @@ from pyrogram import raw, types
 
 class PinChatMessage:
     async def pin_chat_message(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int,
         disable_notification: bool = False,

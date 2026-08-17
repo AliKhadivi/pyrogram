@@ -24,7 +24,7 @@ from pyrogram import types, raw
 
 class GetDiscussionReplies:
     async def get_discussion_replies(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int,
         limit: int = 0,

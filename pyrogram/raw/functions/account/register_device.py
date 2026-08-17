@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class RegisterDevice(TLObject["raw.base.Bool"]):
+class RegisterDevice(TLObject[bool]):
     """Register device to receive PUSH notifications
 
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReorderPreviewMedias(TLObject["raw.base.Bool"]):
+class ReorderPreviewMedias(TLObject[bool]):
     """Reorder a main mini app previews, see here » for more info.
 
 

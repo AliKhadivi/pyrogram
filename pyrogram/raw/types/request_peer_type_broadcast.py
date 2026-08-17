@@ -61,7 +61,7 @@ class RequestPeerTypeBroadcast(TLObject):
     ID = 0x339bef6c
     QUALNAME = "types.RequestPeerTypeBroadcast"
 
-    def __init__(self, *, creator: Optional[bool] = None, has_username: Optional[bool] = None, user_admin_rights: "raw.base.ChatAdminRights" = None, bot_admin_rights: "raw.base.ChatAdminRights" = None) -> None:
+    def __init__(self, *, creator: Optional[bool] = None, has_username: Optional[bool] = None, user_admin_rights: Optional["raw.base.ChatAdminRights"] = None, bot_admin_rights: Optional["raw.base.ChatAdminRights"] = None) -> None:
         self.creator = creator  # flags.0?true
         self.has_username = has_username  # flags.3?Bool
         self.user_admin_rights = user_admin_rights  # flags.1?ChatAdminRights

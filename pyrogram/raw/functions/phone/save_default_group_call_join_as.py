@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveDefaultGroupCallJoinAs(TLObject["raw.base.Bool"]):
+class SaveDefaultGroupCallJoinAs(TLObject[bool]):
     """Set the default peer used to join a video chat/livestream » associated with a specific dialog.
 
 

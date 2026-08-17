@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteQuickReplyShortcut(TLObject["raw.base.Bool"]):
+class DeleteQuickReplyShortcut(TLObject[bool]):
     """Completely delete a quick reply shortcut.
 This will also emit an updateDeleteQuickReply update to other logged-in sessions (and no updateDeleteQuickReplyMessages updates, even if all the messages in the shortcuts are also deleted by this method).
 

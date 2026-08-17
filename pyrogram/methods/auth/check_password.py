@@ -28,7 +28,7 @@ log = logging.getLogger(__name__)
 
 class CheckPassword:
     async def check_password(
-        self: "pyrogram.Client",
+        self,
         password: str
     ) -> "types.User":
         """Check your Two-Step Verification password and log in.

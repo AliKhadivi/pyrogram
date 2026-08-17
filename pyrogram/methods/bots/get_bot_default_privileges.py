@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetBotDefaultPrivileges:
     async def get_bot_default_privileges(
-        self: "pyrogram.Client",
+        self,
         for_channels: bool = None
     ) -> Optional["types.ChatPrivileges"]:
         """Get the current default privileges of the bot.

@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetDiscussionMessage:
     async def get_discussion_message(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int,
     ) -> "types.Message":

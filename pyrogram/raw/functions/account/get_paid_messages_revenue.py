@@ -56,7 +56,7 @@ class GetPaidMessagesRevenue(TLObject["raw.base.account.PaidMessagesRevenue"]):
     ID = 0x19ba4a67
     QUALNAME = "functions.account.GetPaidMessagesRevenue"
 
-    def __init__(self, *, user_id: "raw.base.InputUser", parent_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, user_id: "raw.base.InputUser", parent_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.user_id = user_id  # InputUser
         self.parent_peer = parent_peer  # flags.0?InputPeer
 

@@ -89,7 +89,7 @@ class SendInlineBotResult(TLObject["raw.base.Updates"]):
     ID = 0xc0cf7646
     QUALNAME = "functions.messages.SendInlineBotResult"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", random_id: int, query_id: int, id: str, silent: Optional[bool] = None, background: Optional[bool] = None, clear_draft: Optional[bool] = None, hide_via: Optional[bool] = None, reply_to: "raw.base.InputReplyTo" = None, schedule_date: Optional[int] = None, send_as: "raw.base.InputPeer" = None, quick_reply_shortcut: "raw.base.InputQuickReplyShortcut" = None, allow_paid_stars: Optional[int] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", random_id: int, query_id: int, id: str, silent: Optional[bool] = None, background: Optional[bool] = None, clear_draft: Optional[bool] = None, hide_via: Optional[bool] = None, reply_to: Optional["raw.base.InputReplyTo"] = None, schedule_date: Optional[int] = None, send_as: Optional["raw.base.InputPeer"] = None, quick_reply_shortcut: Optional["raw.base.InputQuickReplyShortcut"] = None, allow_paid_stars: Optional[int] = None) -> None:
         self.peer = peer  # InputPeer
         self.random_id = random_id  # long
         self.query_id = query_id  # long

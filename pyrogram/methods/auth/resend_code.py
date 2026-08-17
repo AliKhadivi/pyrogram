@@ -27,7 +27,7 @@ log = logging.getLogger(__name__)
 
 class ResendCode:
     async def resend_code(
-        self: "pyrogram.Client",
+        self,
         phone_number: str,
         phone_code_hash: str
     ) -> "types.SentCode":

@@ -60,7 +60,7 @@ async def get_chunk(
 class SearchMessages:
     # noinspection PyShadowingBuiltins
     async def search_messages(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         query: str = "",
         offset: int = 0,

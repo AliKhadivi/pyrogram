@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleParticipantBanned(TLObject["raw.base.Bool"]):
+class ToggleParticipantBanned(TLObject[bool]):
     """
 
 

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import html
 from datetime import datetime
 from typing import List, Optional
@@ -52,7 +53,7 @@ class Link(str):
     def __new__(cls, url, text, style):
         return str.__new__(cls, Link.format(url, text, style))
 
-    def __call__(self, other: str = None, *, style: str = None):
+    def __call__(self, other: typing.Optional[str] = None, *, style: typing.Optional[str] = None):
         return Link.format(self.url, other or self.text, style or self.style)
 
     def __str__(self):
@@ -150,30 +151,30 @@ class User(Object, Update):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         id: int,
-        is_self: bool = None,
-        is_contact: bool = None,
-        is_mutual_contact: bool = None,
-        is_deleted: bool = None,
-        is_bot: bool = None,
-        is_verified: bool = None,
-        is_restricted: bool = None,
-        is_scam: bool = None,
-        is_fake: bool = None,
-        is_support: bool = None,
-        is_premium: bool = None,
-        first_name: str = None,
-        last_name: str = None,
-        status: "enums.UserStatus" = None,
-        last_online_date: datetime = None,
-        next_offline_date: datetime = None,
-        username: str = None,
-        language_code: str = None,
-        emoji_status: Optional["types.EmojiStatus"] = None,
-        dc_id: int = None,
-        phone_number: str = None,
-        photo: "types.ChatPhoto" = None,
+        is_self: typing.Optional[bool] = None,
+        is_contact: typing.Optional[bool] = None,
+        is_mutual_contact: typing.Optional[bool] = None,
+        is_deleted: typing.Optional[bool] = None,
+        is_bot: typing.Optional[bool] = None,
+        is_verified: typing.Optional[bool] = None,
+        is_restricted: typing.Optional[bool] = None,
+        is_scam: typing.Optional[bool] = None,
+        is_fake: typing.Optional[bool] = None,
+        is_support: typing.Optional[bool] = None,
+        is_premium: typing.Optional[bool] = None,
+        first_name: typing.Optional[str] = None,
+        last_name: typing.Optional[str] = None,
+        status: typing.Optional["enums.UserStatus"] = None,
+        last_online_date: typing.Optional[datetime] = None,
+        next_offline_date: typing.Optional[datetime] = None,
+        username: typing.Optional[str] = None,
+        language_code: typing.Optional[str] = None,
+        emoji_status: typing.Optional[Optional["types.EmojiStatus"]] = None,
+        dc_id: typing.Optional[int] = None,
+        phone_number: typing.Optional[str] = None,
+        photo: typing.Optional["types.ChatPhoto"] = None,
         restrictions: List["types.Restriction"] = None
     ):
         super().__init__(client)

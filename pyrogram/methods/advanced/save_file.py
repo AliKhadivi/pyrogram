@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import asyncio
 import functools
 import inspect
@@ -37,11 +38,11 @@ log = logging.getLogger(__name__)
 
 class SaveFile:
     async def save_file(
-        self: "pyrogram.Client",
+        self,
         path: Union[str, BinaryIO],
-        file_id: int = None,
+        file_id: typing.Optional[int] = None,
         file_part: int = 0,
-        progress: Callable = None,
+        progress: typing.Optional[Callable] = None,
         progress_args: tuple = ()
     ):
         """Upload a file onto Telegram servers, without actually sending the message to anyone.

@@ -24,7 +24,7 @@ from pyrogram import types, raw, utils
 
 class GetChatPhotos:
     async def get_chat_photos(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         limit: int = 0,
     ) -> Optional[AsyncGenerator["types.Photo", None]]:

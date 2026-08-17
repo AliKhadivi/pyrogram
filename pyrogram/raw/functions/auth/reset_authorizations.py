@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetAuthorizations(TLObject["raw.base.Bool"]):
+class ResetAuthorizations(TLObject[bool]):
     """Terminates all user's authorized sessions except for the current one.
 
 

@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetCustomEmojiStickers:
     async def get_custom_emoji_stickers(
-        self: "pyrogram.Client",
+        self,
         custom_emoji_ids: List[int],
     ) -> List["types.Sticker"]:
         """Get information about custom emoji stickers by their identifiers.

@@ -89,7 +89,7 @@ class SearchGlobal(TLObject["raw.base.messages.Messages"]):
     ID = 0x6126a43c
     QUALNAME = "functions.messages.SearchGlobal"
 
-    def __init__(self, *, q: str, filter: "raw.base.MessagesFilter", min_date: int, max_date: int, offset_rate: int, offset_peer: "raw.base.InputPeer", offset_id: int, limit: int, broadcasts_only: Optional[bool] = None, groups_only: Optional[bool] = None, users_only: Optional[bool] = None, folder_id: Optional[int] = None, community: "raw.base.InputChannel" = None) -> None:
+    def __init__(self, *, q: str, filter: "raw.base.MessagesFilter", min_date: int, max_date: int, offset_rate: int, offset_peer: "raw.base.InputPeer", offset_id: int, limit: int, broadcasts_only: Optional[bool] = None, groups_only: Optional[bool] = None, users_only: Optional[bool] = None, folder_id: Optional[int] = None, community: Optional["raw.base.InputChannel"] = None) -> None:
         self.q = q  # string
         self.filter = filter  # MessagesFilter
         self.min_date = min_date  # int

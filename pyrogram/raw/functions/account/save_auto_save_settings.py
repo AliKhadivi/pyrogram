@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveAutoSaveSettings(TLObject["raw.base.Bool"]):
+class SaveAutoSaveSettings(TLObject[bool]):
     """Modify autosave settings
 
 
@@ -65,7 +65,7 @@ class SaveAutoSaveSettings(TLObject["raw.base.Bool"]):
     ID = 0xd69b8361
     QUALNAME = "functions.account.SaveAutoSaveSettings"
 
-    def __init__(self, *, settings: "raw.base.AutoSaveSettings", users: Optional[bool] = None, chats: Optional[bool] = None, broadcasts: Optional[bool] = None, peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, settings: "raw.base.AutoSaveSettings", users: Optional[bool] = None, chats: Optional[bool] = None, broadcasts: Optional[bool] = None, peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.settings = settings  # AutoSaveSettings
         self.users = users  # flags.0?true
         self.chats = chats  # flags.1?true

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class AcceptAuthorization(TLObject["raw.base.Bool"]):
+class AcceptAuthorization(TLObject[bool]):
     """Sends a Telegram Passport authorization form, effectively sharing data with the service
 
 

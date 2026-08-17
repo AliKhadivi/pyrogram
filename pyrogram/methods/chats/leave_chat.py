@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class LeaveChat:
     async def leave_chat(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         delete: bool = False
     ):

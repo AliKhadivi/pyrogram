@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SendSignalingData(TLObject["raw.base.Bool"]):
+class SendSignalingData(TLObject[bool]):
     """Send VoIP signaling data for an ongoing phone call.
 
 

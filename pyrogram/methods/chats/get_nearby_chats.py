@@ -26,7 +26,7 @@ from pyrogram import utils
 
 class GetNearbyChats:
     async def get_nearby_chats(
-        self: "pyrogram.Client",
+        self,
         latitude: float,
         longitude: float
     ) -> List["types.Chat"]:

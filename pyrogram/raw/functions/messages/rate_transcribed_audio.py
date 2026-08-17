@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class RateTranscribedAudio(TLObject["raw.base.Bool"]):
+class RateTranscribedAudio(TLObject[bool]):
     """Rate transcribed voice message
 
 

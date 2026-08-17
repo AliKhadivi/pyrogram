@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class TogglePinnedToTop(TLObject["raw.base.Bool"]):
+class TogglePinnedToTop(TLObject[bool]):
     """Pin some stories to the top of the profile, see here » for more info.
 
 

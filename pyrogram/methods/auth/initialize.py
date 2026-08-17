@@ -26,7 +26,7 @@ log = logging.getLogger(__name__)
 
 class Initialize:
     async def initialize(
-        self: "pyrogram.Client",
+        self,
     ):
         """Initialize the client by starting up workers.
 

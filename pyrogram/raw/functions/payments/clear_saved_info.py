@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ClearSavedInfo(TLObject["raw.base.Bool"]):
+class ClearSavedInfo(TLObject[bool]):
     """Clear saved payment information
 
 

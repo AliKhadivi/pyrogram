@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import inspect
 import re
 from typing import Callable, Union, List, Pattern
@@ -121,7 +122,7 @@ class OrFilter(Filter):
 CUSTOM_FILTER_NAME = "CustomFilter"
 
 
-def create(func: Callable, name: str = None, **kwargs) -> Filter:
+def create(func: Callable, name: typing.Optional[str] = None, **kwargs) -> Filter:
     """Easily create a custom filter.
 
     Custom filters give you extra control over which updates are allowed or not to be processed by your handlers.

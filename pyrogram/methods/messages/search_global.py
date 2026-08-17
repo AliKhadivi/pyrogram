@@ -26,7 +26,7 @@ from pyrogram import utils
 
 class SearchGlobal:
     async def search_global(
-        self: "pyrogram.Client",
+        self,
         query: str = "",
         filter: "enums.MessagesFilter" = enums.MessagesFilter.EMPTY,
         limit: int = 0,

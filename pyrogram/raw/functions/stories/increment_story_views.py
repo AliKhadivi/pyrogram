@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class IncrementStoryViews(TLObject["raw.base.Bool"]):
+class IncrementStoryViews(TLObject[bool]):
     """Increment the view counter of one or more stories.
 
 

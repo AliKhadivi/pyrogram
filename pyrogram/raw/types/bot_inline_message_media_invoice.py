@@ -73,7 +73,7 @@ class BotInlineMessageMediaInvoice(TLObject):
     ID = 0x354a9b09
     QUALNAME = "types.BotInlineMessageMediaInvoice"
 
-    def __init__(self, *, title: str, description: str, currency: str, total_amount: int, shipping_address_requested: Optional[bool] = None, test: Optional[bool] = None, photo: "raw.base.WebDocument" = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, title: str, description: str, currency: str, total_amount: int, shipping_address_requested: Optional[bool] = None, test: Optional[bool] = None, photo: Optional["raw.base.WebDocument"] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.title = title  # string
         self.description = description  # string
         self.currency = currency  # string

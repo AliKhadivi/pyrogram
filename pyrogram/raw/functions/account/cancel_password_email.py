@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CancelPasswordEmail(TLObject["raw.base.Bool"]):
+class CancelPasswordEmail(TLObject[bool]):
     """Cancel the code that was sent to verify an email to use as 2FA recovery method.
 
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveDefaultSendAs(TLObject["raw.base.Bool"]):
+class SaveDefaultSendAs(TLObject[bool]):
     """Change the default peer that should be used when sending messages, reactions, poll votes to a specific group
 
 

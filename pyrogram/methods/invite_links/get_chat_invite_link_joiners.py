@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetChatInviteLinkJoiners:
     async def get_chat_invite_link_joiners(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         invite_link: str,
         limit: int = 0

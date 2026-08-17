@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class DeleteChatInviteLink:
     async def delete_chat_invite_link(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         invite_link: str,
     ) -> bool:

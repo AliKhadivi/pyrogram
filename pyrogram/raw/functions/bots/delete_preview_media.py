@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeletePreviewMedia(TLObject["raw.base.Bool"]):
+class DeletePreviewMedia(TLObject[bool]):
     """Delete a main mini app preview, see here » for more info.
 
 

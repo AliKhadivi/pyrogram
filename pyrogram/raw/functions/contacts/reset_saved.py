@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetSaved(TLObject["raw.base.Bool"]):
+class ResetSaved(TLObject[bool]):
     """Removes all contacts without an associated Telegram account.
 
 

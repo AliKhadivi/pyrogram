@@ -67,7 +67,7 @@ class InputKeyboardButtonUserProfile(TLObject):
     ID = 0x7d5e07c7
     QUALNAME = "types.InputKeyboardButtonUserProfile"
 
-    def __init__(self, *, text: str, user_id: "raw.base.InputUser", style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, user_id: "raw.base.InputUser", style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.user_id = user_id  # InputUser
         self.style = style  # flags.10?KeyboardButtonStyle

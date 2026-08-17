@@ -64,7 +64,7 @@ class StoryView(TLObject):
     ID = 0xb0bdeac5
     QUALNAME = "types.StoryView"
 
-    def __init__(self, *, user_id: int, date: int, blocked: Optional[bool] = None, blocked_my_stories_from: Optional[bool] = None, reaction: "raw.base.Reaction" = None) -> None:
+    def __init__(self, *, user_id: int, date: int, blocked: Optional[bool] = None, blocked_my_stories_from: Optional[bool] = None, reaction: Optional["raw.base.Reaction"] = None) -> None:
         self.user_id = user_id  # long
         self.date = date  # int
         self.blocked = blocked  # flags.0?true

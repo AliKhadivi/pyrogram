@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union, List
 
@@ -25,14 +26,14 @@ from pyrogram import types, utils, raw
 
 class CopyMediaGroup:
     async def copy_media_group(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         from_chat_id: Union[int, str],
         message_id: int,
         captions: Union[List[str], str] = None,
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
+        disable_notification: typing.Optional[bool] = None,
+        reply_to_message_id: typing.Optional[int] = None,
+        schedule_date: typing.Optional[datetime] = None,
     ) -> List["types.Message"]:
         """Copy a media group by providing one of the message ids.
 

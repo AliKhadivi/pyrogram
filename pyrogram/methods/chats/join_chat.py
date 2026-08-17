@@ -25,7 +25,7 @@ from pyrogram import types
 
 class JoinChat:
     async def join_chat(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str]
     ) -> "types.Chat":
         """Join a group chat or channel.

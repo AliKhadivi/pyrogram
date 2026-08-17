@@ -67,7 +67,7 @@ class PeerColorOption(TLObject):
     ID = 0xadec6ebe
     QUALNAME = "types.help.PeerColorOption"
 
-    def __init__(self, *, color_id: int, hidden: Optional[bool] = None, colors: "raw.base.help.PeerColorSet" = None, dark_colors: "raw.base.help.PeerColorSet" = None, channel_min_level: Optional[int] = None, group_min_level: Optional[int] = None) -> None:
+    def __init__(self, *, color_id: int, hidden: Optional[bool] = None, colors: Optional["raw.base.help.PeerColorSet"] = None, dark_colors: Optional["raw.base.help.PeerColorSet"] = None, channel_min_level: Optional[int] = None, group_min_level: Optional[int] = None) -> None:
         self.color_id = color_id  # int
         self.hidden = hidden  # flags.0?true
         self.colors = colors  # flags.1?help.PeerColorSet

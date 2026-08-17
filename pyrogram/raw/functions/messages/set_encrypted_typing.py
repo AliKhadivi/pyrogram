@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetEncryptedTyping(TLObject["raw.base.Bool"]):
+class SetEncryptedTyping(TLObject[bool]):
     """Send typing event by the current user to a secret chat.
 
 

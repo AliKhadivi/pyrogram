@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class InstallTheme(TLObject["raw.base.Bool"]):
+class InstallTheme(TLObject[bool]):
     """Install a theme
 
 
@@ -62,7 +62,7 @@ class InstallTheme(TLObject["raw.base.Bool"]):
     ID = 0xc727bb3b
     QUALNAME = "functions.account.InstallTheme"
 
-    def __init__(self, *, dark: Optional[bool] = None, theme: "raw.base.InputTheme" = None, format: Optional[str] = None, base_theme: "raw.base.BaseTheme" = None) -> None:
+    def __init__(self, *, dark: Optional[bool] = None, theme: Optional["raw.base.InputTheme"] = None, format: Optional[str] = None, base_theme: Optional["raw.base.BaseTheme"] = None) -> None:
         self.dark = dark  # flags.0?true
         self.theme = theme  # flags.1?InputTheme
         self.format = format  # flags.2?string

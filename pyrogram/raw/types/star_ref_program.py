@@ -73,7 +73,7 @@ class StarRefProgram(TLObject):
     ID = 0xdd0c66f2
     QUALNAME = "types.StarRefProgram"
 
-    def __init__(self, *, bot_id: int, commission_permille: int, duration_months: Optional[int] = None, end_date: Optional[int] = None, daily_revenue_per_user: "raw.base.StarsAmount" = None) -> None:
+    def __init__(self, *, bot_id: int, commission_permille: int, duration_months: Optional[int] = None, end_date: Optional[int] = None, daily_revenue_per_user: Optional["raw.base.StarsAmount"] = None) -> None:
         self.bot_id = bot_id  # long
         self.commission_permille = commission_permille  # int
         self.duration_months = duration_months  # flags.0?int

@@ -61,7 +61,7 @@ class RequestedPeerChannel(TLObject):
     ID = 0x8ba403e4
     QUALNAME = "types.RequestedPeerChannel"
 
-    def __init__(self, *, channel_id: int, title: Optional[str] = None, username: Optional[str] = None, photo: "raw.base.Photo" = None) -> None:
+    def __init__(self, *, channel_id: int, title: Optional[str] = None, username: Optional[str] = None, photo: Optional["raw.base.Photo"] = None) -> None:
         self.channel_id = channel_id  # long
         self.title = title  # flags.0?string
         self.username = username  # flags.1?string

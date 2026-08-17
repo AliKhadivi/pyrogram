@@ -26,7 +26,7 @@ from pyrogram import utils
 
 class GetChat:
     async def get_chat(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str]
     ) -> Union["types.Chat", "types.ChatPreview"]:
         """Get up to date information about a chat.

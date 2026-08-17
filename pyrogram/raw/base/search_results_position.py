@@ -39,8 +39,10 @@ _doc = """Information about a message in a specific position
             SearchResultPosition"""
 try:
     _t = type(SearchResultsPosition)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         SearchResultsPosition.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReorderUsernames(TLObject["raw.base.Bool"]):
+class ReorderUsernames(TLObject[bool]):
     """Reorder usernames associated to a bot we own.
 
 

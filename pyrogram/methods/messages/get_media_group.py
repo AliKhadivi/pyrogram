@@ -27,7 +27,7 @@ log = logging.getLogger(__name__)
 
 class GetMediaGroup:
     async def get_media_group(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int
     ) -> List["types.Message"]:

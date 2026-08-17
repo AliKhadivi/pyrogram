@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ConfirmBotConnection(TLObject["raw.base.Bool"]):
+class ConfirmBotConnection(TLObject[bool]):
     """
 
 

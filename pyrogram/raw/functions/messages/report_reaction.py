@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportReaction(TLObject["raw.base.Bool"]):
+class ReportReaction(TLObject[bool]):
     """Report a message reaction
 
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportProfilePhoto(TLObject["raw.base.Bool"]):
+class ReportProfilePhoto(TLObject[bool]):
     """Report a profile photo of a dialog
 
 

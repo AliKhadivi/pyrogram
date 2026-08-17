@@ -55,7 +55,7 @@ class MessageEmpty(TLObject):
     ID = 0x90a6ca84
     QUALNAME = "types.MessageEmpty"
 
-    def __init__(self, *, id: int, peer_id: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, id: int, peer_id: Optional["raw.base.Peer"] = None) -> None:
         self.id = id  # int
         self.peer_id = peer_id  # flags.0?Peer
 

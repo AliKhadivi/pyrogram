@@ -65,7 +65,7 @@ class GetBotCallbackAnswer(TLObject["raw.base.messages.BotCallbackAnswer"]):
     ID = 0x9342ca07
     QUALNAME = "functions.messages.GetBotCallbackAnswer"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", msg_id: int, game: Optional[bool] = None, data: Optional[bytes] = None, password: "raw.base.InputCheckPasswordSRP" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", msg_id: int, game: Optional[bool] = None, data: Optional[bytes] = None, password: Optional["raw.base.InputCheckPasswordSRP"] = None) -> None:
         self.peer = peer  # InputPeer
         self.msg_id = msg_id  # int
         self.game = game  # flags.1?true

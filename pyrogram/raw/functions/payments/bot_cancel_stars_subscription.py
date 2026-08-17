@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class BotCancelStarsSubscription(TLObject["raw.base.Bool"]):
+class BotCancelStarsSubscription(TLObject[bool]):
     """Cancel a bot subscription
 
 

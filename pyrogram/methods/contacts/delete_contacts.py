@@ -24,7 +24,7 @@ from pyrogram import raw, types
 
 class DeleteContacts:
     async def delete_contacts(
-        self: "pyrogram.Client",
+        self,
         user_ids: Union[int, str, List[Union[int, str]]]
     ) -> Union["types.User", List["types.User"], None]:
         """Delete contacts from your Telegram address book.

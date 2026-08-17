@@ -25,7 +25,7 @@ from pyrogram import types
 
 class AnswerInlineQuery:
     async def answer_inline_query(
-        self: "pyrogram.Client",
+        self,
         inline_query_id: str,
         results: Iterable["types.InlineQueryResult"],
         cache_time: int = 300,

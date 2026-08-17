@@ -73,7 +73,7 @@ class InputBotInlineMessageMediaWebPage(TLObject):
     ID = 0xbddcc510
     QUALNAME = "types.InputBotInlineMessageMediaWebPage"
 
-    def __init__(self, *, message: str, url: str, invert_media: Optional[bool] = None, force_large_media: Optional[bool] = None, force_small_media: Optional[bool] = None, optional: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, message: str, url: str, invert_media: Optional[bool] = None, force_large_media: Optional[bool] = None, force_small_media: Optional[bool] = None, optional: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.message = message  # string
         self.url = url  # string
         self.invert_media = invert_media  # flags.3?true

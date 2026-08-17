@@ -61,7 +61,7 @@ class MessageExtendedMediaPreview(TLObject):
     ID = 0xad628cc8
     QUALNAME = "types.MessageExtendedMediaPreview"
 
-    def __init__(self, *, w: Optional[int] = None, h: Optional[int] = None, thumb: "raw.base.PhotoSize" = None, video_duration: Optional[int] = None) -> None:
+    def __init__(self, *, w: Optional[int] = None, h: Optional[int] = None, thumb: Optional["raw.base.PhotoSize"] = None, video_duration: Optional[int] = None) -> None:
         self.w = w  # flags.0?int
         self.h = h  # flags.0?int
         self.thumb = thumb  # flags.1?PhotoSize

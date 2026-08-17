@@ -89,7 +89,7 @@ class MessageMediaInvoice(TLObject):
     ID = 0xf6a548d3
     QUALNAME = "types.MessageMediaInvoice"
 
-    def __init__(self, *, title: str, description: str, currency: str, total_amount: int, start_param: str, shipping_address_requested: Optional[bool] = None, test: Optional[bool] = None, photo: "raw.base.WebDocument" = None, receipt_msg_id: Optional[int] = None, extended_media: "raw.base.MessageExtendedMedia" = None) -> None:
+    def __init__(self, *, title: str, description: str, currency: str, total_amount: int, start_param: str, shipping_address_requested: Optional[bool] = None, test: Optional[bool] = None, photo: Optional["raw.base.WebDocument"] = None, receipt_msg_id: Optional[int] = None, extended_media: Optional["raw.base.MessageExtendedMedia"] = None) -> None:
         self.title = title  # string
         self.description = description  # string
         self.currency = currency  # string

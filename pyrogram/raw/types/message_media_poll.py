@@ -68,7 +68,7 @@ class MessageMediaPoll(TLObject):
     ID = 0x773f4e66
     QUALNAME = "types.MessageMediaPoll"
 
-    def __init__(self, *, poll: "raw.base.Poll", results: "raw.base.PollResults", attached_media: "raw.base.MessageMedia" = None) -> None:
+    def __init__(self, *, poll: "raw.base.Poll", results: "raw.base.PollResults", attached_media: Optional["raw.base.MessageMedia"] = None) -> None:
         self.poll = poll  # Poll
         self.results = results  # PollResults
         self.attached_media = attached_media  # flags.0?MessageMedia

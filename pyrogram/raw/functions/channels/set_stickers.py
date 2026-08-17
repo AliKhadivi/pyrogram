@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetStickers(TLObject["raw.base.Bool"]):
+class SetStickers(TLObject[bool]):
     """Associate a stickerset to the supergroup
 
 

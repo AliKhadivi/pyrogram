@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ClearRecentEmojiStatuses(TLObject["raw.base.Bool"]):
+class ClearRecentEmojiStatuses(TLObject[bool]):
     """Clears list of recently used emoji statuses
 
 

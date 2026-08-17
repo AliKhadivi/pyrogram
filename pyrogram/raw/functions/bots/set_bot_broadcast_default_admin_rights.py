@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotBroadcastDefaultAdminRights(TLObject["raw.base.Bool"]):
+class SetBotBroadcastDefaultAdminRights(TLObject[bool]):
     """Set the default suggested admin rights for bots being added as admins to channels, see here for more info on how to handle them ».
 
 

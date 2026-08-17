@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from base64 import b64encode
 from struct import pack
 
@@ -56,11 +57,11 @@ class ChosenInlineResult(Object, Update):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         result_id: str,
         from_user: "types.User",
         query: str,
-        location: "types.Location" = None,
+        location: typing.Optional["types.Location"] = None,
         inline_message_id: str = None
     ):
         super().__init__(client)

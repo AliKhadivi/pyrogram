@@ -56,7 +56,7 @@ class RecoverPassword(TLObject["raw.base.auth.Authorization"]):
     ID = 0x37096c70
     QUALNAME = "functions.auth.RecoverPassword"
 
-    def __init__(self, *, code: str, new_settings: "raw.base.account.PasswordInputSettings" = None) -> None:
+    def __init__(self, *, code: str, new_settings: Optional["raw.base.account.PasswordInputSettings"] = None) -> None:
         self.code = code  # string
         self.new_settings = new_settings  # flags.0?account.PasswordInputSettings
 

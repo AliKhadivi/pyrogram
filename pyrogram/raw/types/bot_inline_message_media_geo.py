@@ -64,7 +64,7 @@ class BotInlineMessageMediaGeo(TLObject):
     ID = 0x51846fd
     QUALNAME = "types.BotInlineMessageMediaGeo"
 
-    def __init__(self, *, geo: "raw.base.GeoPoint", heading: Optional[int] = None, period: Optional[int] = None, proximity_notification_radius: Optional[int] = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, geo: "raw.base.GeoPoint", heading: Optional[int] = None, period: Optional[int] = None, proximity_notification_radius: Optional[int] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.geo = geo  # GeoPoint
         self.heading = heading  # flags.0?int
         self.period = period  # flags.1?int

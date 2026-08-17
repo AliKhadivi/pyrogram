@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -25,11 +26,11 @@ from pyrogram.errors import UnknownError
 
 class GetInlineBotResults:
     async def get_inline_bot_results(
-        self: "pyrogram.Client",
+        self,
         bot: Union[int, str],
         query: str = "",
         offset: str = "",
-        latitude: float = None,
+        latitude: typing.Optional[float] = None,
         longitude: float = None
     ):
         """Get bot results via inline queries.

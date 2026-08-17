@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetDefaultEmojiStatuses:
     async def get_default_emoji_statuses(
-        self: "pyrogram.Client",
+        self,
     ) -> List["types.EmojiStatus"]:
         """Get the default emoji statuses.
 

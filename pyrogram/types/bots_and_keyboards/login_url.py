@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from pyrogram import raw
 
 from ..object import Object
@@ -59,9 +60,9 @@ class LoginUrl(Object):
     def __init__(
         self, *,
         url: str,
-        forward_text: str = None,
-        bot_username: str = None,
-        request_write_access: str = None,
+        forward_text: typing.Optional[str] = None,
+        bot_username: typing.Optional[str] = None,
+        request_write_access: typing.Optional[str] = None,
         button_id: int = None
     ):
         super().__init__()

@@ -25,7 +25,7 @@ from pyrogram.utils import compute_password_hash, compute_password_check, btoi, 
 
 class ChangeCloudPassword:
     async def change_cloud_password(
-        self: "pyrogram.Client",
+        self,
         current_password: str,
         new_password: str,
         new_hint: str = ""

@@ -61,7 +61,7 @@ class InputWebFileAudioAlbumThumbLocation(TLObject):
     ID = 0xf46fe924
     QUALNAME = "types.InputWebFileAudioAlbumThumbLocation"
 
-    def __init__(self, *, small: Optional[bool] = None, document: "raw.base.InputDocument" = None, title: Optional[str] = None, performer: Optional[str] = None) -> None:
+    def __init__(self, *, small: Optional[bool] = None, document: Optional["raw.base.InputDocument"] = None, title: Optional[str] = None, performer: Optional[str] = None) -> None:
         self.small = small  # flags.2?true
         self.document = document  # flags.0?InputDocument
         self.title = title  # flags.1?string

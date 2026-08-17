@@ -24,7 +24,7 @@ from pyrogram import raw, types
 
 class GetChatAdminsWithInviteLinks:
     async def get_chat_admins_with_invite_links(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
     ):
         """Get the list of the administrators that have exported invite links in a chat.

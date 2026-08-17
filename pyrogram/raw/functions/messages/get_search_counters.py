@@ -62,7 +62,7 @@ class GetSearchCounters(TLObject["List[raw.base.messages.SearchCounter]"]):
     ID = 0x1bbcf300
     QUALNAME = "functions.messages.GetSearchCounters"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", filters: List["raw.base.MessagesFilter"], saved_peer_id: "raw.base.InputPeer" = None, top_msg_id: Optional[int] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", filters: List["raw.base.MessagesFilter"], saved_peer_id: Optional["raw.base.InputPeer"] = None, top_msg_id: Optional[int] = None) -> None:
         self.peer = peer  # InputPeer
         self.filters = filters  # Vector<MessagesFilter>
         self.saved_peer_id = saved_peer_id  # flags.2?InputPeer

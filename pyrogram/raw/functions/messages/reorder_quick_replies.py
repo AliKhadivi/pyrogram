@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReorderQuickReplies(TLObject["raw.base.Bool"]):
+class ReorderQuickReplies(TLObject[bool]):
     """Reorder quick reply shortcuts.
 
 

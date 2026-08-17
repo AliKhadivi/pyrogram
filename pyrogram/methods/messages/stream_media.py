@@ -26,7 +26,7 @@ from pyrogram.file_id import FileId
 
 class StreamMedia:
     async def stream_media(
-        self: "pyrogram.Client",
+        self,
         message: Union["types.Message", str],
         limit: int = 0,
         offset: int = 0

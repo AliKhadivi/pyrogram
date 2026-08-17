@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import List, Union, Optional
 
@@ -79,20 +80,20 @@ class Poll(Object, Update):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         id: str,
         question: str,
         options: List["types.PollOption"],
         total_voter_count: int,
         is_closed: bool,
-        is_anonymous: bool = None,
-        type: "enums.PollType" = None,
-        allows_multiple_answers: bool = None,
-        chosen_option_id: Optional[int] = None,
-        correct_option_id: Optional[int] = None,
-        explanation: Optional[str] = None,
-        explanation_entities: Optional[List["types.MessageEntity"]] = None,
-        open_period: Optional[int] = None,
+        is_anonymous: typing.Optional[bool] = None,
+        type: typing.Optional["enums.PollType"] = None,
+        allows_multiple_answers: typing.Optional[bool] = None,
+        chosen_option_id: typing.Optional[Optional[int]] = None,
+        correct_option_id: typing.Optional[Optional[int]] = None,
+        explanation: typing.Optional[Optional[str]] = None,
+        explanation_entities: typing.Optional[Optional[List["types.MessageEntity"]]] = None,
+        open_period: typing.Optional[Optional[int]] = None,
         close_date: Optional[datetime] = None
     ):
         super().__init__(client)

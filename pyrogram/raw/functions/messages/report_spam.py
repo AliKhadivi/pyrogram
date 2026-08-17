@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportSpam(TLObject["raw.base.Bool"]):
+class ReportSpam(TLObject[bool]):
     """Report a new incoming chat for spam, if the peer settings of the chat allow us to do that
 
 

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from pyrogram import raw, enums
 from ..object import Object
 
@@ -42,7 +43,7 @@ class SentCode(Object):
         self, *,
         type: "enums.SentCodeType",
         phone_code_hash: str,
-        next_type: "enums.NextCodeType" = None,
+        next_type: typing.Optional["enums.NextCodeType"] = None,
         timeout: int = None
     ):
         super().__init__()

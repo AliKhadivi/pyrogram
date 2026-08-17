@@ -68,7 +68,7 @@ class GetStoryReactionsList(TLObject["raw.base.stories.StoryReactionsList"]):
     ID = 0xb9b2881f
     QUALNAME = "functions.stories.GetStoryReactionsList"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", id: int, limit: int, forwards_first: Optional[bool] = None, reaction: "raw.base.Reaction" = None, offset: Optional[str] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", id: int, limit: int, forwards_first: Optional[bool] = None, reaction: Optional["raw.base.Reaction"] = None, offset: Optional[str] = None) -> None:
         self.peer = peer  # InputPeer
         self.id = id  # int
         self.limit = limit  # int

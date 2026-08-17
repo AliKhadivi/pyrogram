@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetChatAdminInviteLinks:
     async def get_chat_admin_invite_links(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         admin_id: Union[int, str],
         revoked: bool = False,

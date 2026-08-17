@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleStickerSets(TLObject["raw.base.Bool"]):
+class ToggleStickerSets(TLObject[bool]):
     """Apply changes to multiple stickersets
 
 

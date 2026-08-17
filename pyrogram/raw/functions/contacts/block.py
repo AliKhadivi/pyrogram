@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class Block(TLObject["raw.base.Bool"]):
+class Block(TLObject[bool]):
     """Adds a peer to a blocklist, see here » for more info.
 
 

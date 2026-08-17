@@ -25,7 +25,7 @@ from pyrogram import types
 
 class CreateGroup:
     async def create_group(
-        self: "pyrogram.Client",
+        self,
         title: str,
         users: Union[Union[int, str], List[Union[int, str]]]
     ) -> "types.Chat":

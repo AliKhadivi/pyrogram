@@ -22,7 +22,7 @@ from pyrogram import types
 
 class CreateChannel:
     async def create_channel(
-        self: "pyrogram.Client",
+        self,
         title: str,
         description: str = ""
     ) -> "types.Chat":

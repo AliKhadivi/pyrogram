@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateUserEmojiStatus(TLObject["raw.base.Bool"]):
+class UpdateUserEmojiStatus(TLObject[bool]):
     """Change the emoji status of a user (invoked by bots, see here » for more info on the full flow)
 
 

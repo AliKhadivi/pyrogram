@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleDialogFilterTags(TLObject["raw.base.Bool"]):
+class ToggleDialogFilterTags(TLObject[bool]):
     """Enable or disable folder tags ».
 
 

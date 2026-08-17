@@ -67,7 +67,7 @@ class ThemeSettings(TLObject):
     ID = 0xfa58b6d4
     QUALNAME = "types.ThemeSettings"
 
-    def __init__(self, *, base_theme: "raw.base.BaseTheme", accent_color: int, message_colors_animated: Optional[bool] = None, outbox_accent_color: Optional[int] = None, message_colors: Optional[List[int]] = None, wallpaper: "raw.base.WallPaper" = None) -> None:
+    def __init__(self, *, base_theme: "raw.base.BaseTheme", accent_color: int, message_colors_animated: Optional[bool] = None, outbox_accent_color: Optional[int] = None, message_colors: Optional[List[int]] = None, wallpaper: Optional["raw.base.WallPaper"] = None) -> None:
         self.base_theme = base_theme  # BaseTheme
         self.accent_color = accent_color  # int
         self.message_colors_animated = message_colors_animated  # flags.2?true

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleDialogPin(TLObject["raw.base.Bool"]):
+class ToggleDialogPin(TLObject[bool]):
     """Pin/unpin a dialog
 
 

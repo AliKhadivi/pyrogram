@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckUsername(TLObject["raw.base.Bool"]):
+class CheckUsername(TLObject[bool]):
     """Check whether a username is available and valid for use when creating a managed bot ».
 
 

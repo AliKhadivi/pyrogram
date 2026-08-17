@@ -23,7 +23,7 @@ from pyrogram import types
 
 class AnswerWebAppQuery:
     async def answer_web_app_query(
-        self: "pyrogram.Client",
+        self,
         web_app_query_id: str,
         result: "types.InlineQueryResult"
     ) -> "types.SentWebAppMessage":

@@ -59,7 +59,7 @@ class GetNotifyExceptions(TLObject["raw.base.Updates"]):
     ID = 0x53577479
     QUALNAME = "functions.account.GetNotifyExceptions"
 
-    def __init__(self, *, compare_sound: Optional[bool] = None, compare_stories: Optional[bool] = None, peer: "raw.base.InputNotifyPeer" = None) -> None:
+    def __init__(self, *, compare_sound: Optional[bool] = None, compare_stories: Optional[bool] = None, peer: Optional["raw.base.InputNotifyPeer"] = None) -> None:
         self.compare_sound = compare_sound  # flags.1?true
         self.compare_stories = compare_stories  # flags.2?true
         self.peer = peer  # flags.0?InputNotifyPeer

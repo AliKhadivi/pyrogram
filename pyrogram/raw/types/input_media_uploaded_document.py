@@ -82,7 +82,7 @@ class InputMediaUploadedDocument(TLObject):
     ID = 0x37c9330
     QUALNAME = "types.InputMediaUploadedDocument"
 
-    def __init__(self, *, file: "raw.base.InputFile", mime_type: str, attributes: List["raw.base.DocumentAttribute"], nosound_video: Optional[bool] = None, force_file: Optional[bool] = None, spoiler: Optional[bool] = None, thumb: "raw.base.InputFile" = None, stickers: Optional[List["raw.base.InputDocument"]] = None, video_cover: "raw.base.InputPhoto" = None, video_timestamp: Optional[int] = None, ttl_seconds: Optional[int] = None) -> None:
+    def __init__(self, *, file: "raw.base.InputFile", mime_type: str, attributes: List["raw.base.DocumentAttribute"], nosound_video: Optional[bool] = None, force_file: Optional[bool] = None, spoiler: Optional[bool] = None, thumb: Optional["raw.base.InputFile"] = None, stickers: Optional[List["raw.base.InputDocument"]] = None, video_cover: Optional["raw.base.InputPhoto"] = None, video_timestamp: Optional[int] = None, ttl_seconds: Optional[int] = None) -> None:
         self.file = file  # InputFile
         self.mime_type = mime_type  # string
         self.attributes = attributes  # Vector<DocumentAttribute>

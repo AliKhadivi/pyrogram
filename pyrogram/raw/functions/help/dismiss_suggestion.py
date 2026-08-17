@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DismissSuggestion(TLObject["raw.base.Bool"]):
+class DismissSuggestion(TLObject[bool]):
     """Dismiss a suggestion, see here for more info ».
 
 

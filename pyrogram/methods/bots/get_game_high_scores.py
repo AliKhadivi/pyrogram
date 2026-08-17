@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetGameHighScores:
     async def get_game_high_scores(
-        self: "pyrogram.Client",
+        self,
         user_id: Union[int, str],
         chat_id: Union[int, str],
         message_id: int = None

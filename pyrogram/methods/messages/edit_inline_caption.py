@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional
 
 import pyrogram
@@ -24,10 +25,10 @@ from pyrogram import types, enums
 
 class EditInlineCaption:
     async def edit_inline_caption(
-        self: "pyrogram.Client",
+        self,
         inline_message_id: str,
         caption: str,
-        parse_mode: Optional["enums.ParseMode"] = None,
+        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:
         """Edit the caption of inline media messages.

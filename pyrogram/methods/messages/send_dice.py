@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union, Optional
 
@@ -26,13 +27,13 @@ from pyrogram import types
 
 class SendDice:
     async def send_dice(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         emoji: str = "🎲",
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
-        protect_content: bool = None,
+        disable_notification: typing.Optional[bool] = None,
+        reply_to_message_id: typing.Optional[int] = None,
+        schedule_date: typing.Optional[datetime] = None,
+        protect_content: typing.Optional[bool] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

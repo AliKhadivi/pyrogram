@@ -25,7 +25,7 @@ from pyrogram import types
 
 class AddContact:
     async def add_contact(
-        self: "pyrogram.Client",
+        self,
         user_id: Union[int, str],
         first_name: str,
         last_name: str = "",

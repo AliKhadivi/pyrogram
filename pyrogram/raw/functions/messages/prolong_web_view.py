@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ProlongWebView(TLObject["raw.base.Bool"]):
+class ProlongWebView(TLObject[bool]):
     """Indicate to the server (from the user side) that the user is still using a web app.
 
 
@@ -68,7 +68,7 @@ class ProlongWebView(TLObject["raw.base.Bool"]):
     ID = 0xb0d81a83
     QUALNAME = "functions.messages.ProlongWebView"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", bot: "raw.base.InputUser", query_id: int, silent: Optional[bool] = None, reply_to: "raw.base.InputReplyTo" = None, send_as: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", bot: "raw.base.InputUser", query_id: int, silent: Optional[bool] = None, reply_to: Optional["raw.base.InputReplyTo"] = None, send_as: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputPeer
         self.bot = bot  # InputUser
         self.query_id = query_id  # long

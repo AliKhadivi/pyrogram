@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -25,12 +26,12 @@ from pyrogram import types
 
 class SendGame:
     async def send_game(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         game_short_name: str,
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        protect_content: bool = None,
+        disable_notification: typing.Optional[bool] = None,
+        reply_to_message_id: typing.Optional[int] = None,
+        protect_content: typing.Optional[bool] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

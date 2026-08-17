@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetChatJoinRequests:
     async def get_chat_join_requests(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         limit: int = 0,
         query: str = ""

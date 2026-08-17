@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class UnblockUser:
     async def unblock_user(
-        self: "pyrogram.Client",
+        self,
         user_id: Union[int, str]
     ) -> bool:
         """Unblock a user.

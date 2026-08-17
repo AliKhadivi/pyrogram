@@ -67,7 +67,7 @@ class UpdateBotInlineQuery(TLObject):
     ID = 0x496f379c
     QUALNAME = "types.UpdateBotInlineQuery"
 
-    def __init__(self, *, query_id: int, user_id: int, query: str, offset: str, geo: "raw.base.GeoPoint" = None, peer_type: "raw.base.InlineQueryPeerType" = None) -> None:
+    def __init__(self, *, query_id: int, user_id: int, query: str, offset: str, geo: Optional["raw.base.GeoPoint"] = None, peer_type: Optional["raw.base.InlineQueryPeerType"] = None) -> None:
         self.query_id = query_id  # long
         self.user_id = user_id  # long
         self.query = query  # string

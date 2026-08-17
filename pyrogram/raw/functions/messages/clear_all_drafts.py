@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ClearAllDrafts(TLObject["raw.base.Bool"]):
+class ClearAllDrafts(TLObject[bool]):
     """Clear all drafts.
 
 

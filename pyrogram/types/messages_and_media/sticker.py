@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import List, Dict, Type
 
@@ -77,19 +78,19 @@ class Sticker(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         file_id: str,
         file_unique_id: str,
         width: int,
         height: int,
         is_animated: bool,
         is_video: bool,
-        file_name: str = None,
-        mime_type: str = None,
-        file_size: int = None,
-        date: datetime = None,
-        emoji: str = None,
-        set_name: str = None,
+        file_name: typing.Optional[str] = None,
+        mime_type: typing.Optional[str] = None,
+        file_size: typing.Optional[int] = None,
+        date: typing.Optional[datetime] = None,
+        emoji: typing.Optional[str] = None,
+        set_name: typing.Optional[str] = None,
         thumbs: List["types.Thumbnail"] = None
     ):
         super().__init__(client)

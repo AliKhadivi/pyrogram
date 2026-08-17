@@ -68,7 +68,7 @@ class SetChatWallPaper(TLObject["raw.base.Updates"]):
     ID = 0x8ffacae1
     QUALNAME = "functions.messages.SetChatWallPaper"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", for_both: Optional[bool] = None, revert: Optional[bool] = None, wallpaper: "raw.base.InputWallPaper" = None, settings: "raw.base.WallPaperSettings" = None, id: Optional[int] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", for_both: Optional[bool] = None, revert: Optional[bool] = None, wallpaper: Optional["raw.base.InputWallPaper"] = None, settings: Optional["raw.base.WallPaperSettings"] = None, id: Optional[int] = None) -> None:
         self.peer = peer  # InputPeer
         self.for_both = for_both  # flags.3?true
         self.revert = revert  # flags.4?true

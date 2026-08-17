@@ -51,7 +51,7 @@ async def get_chunk(
 
 class GetChatHistory:
     async def get_chat_history(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         limit: int = 0,
         offset: int = 0,

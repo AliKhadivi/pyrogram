@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ConfirmPasswordEmail(TLObject["raw.base.Bool"]):
+class ConfirmPasswordEmail(TLObject[bool]):
     """Verify an email to use as 2FA recovery method.
 
 

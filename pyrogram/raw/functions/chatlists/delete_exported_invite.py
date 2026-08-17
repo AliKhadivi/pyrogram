@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteExportedInvite(TLObject["raw.base.Bool"]):
+class DeleteExportedInvite(TLObject[bool]):
     """Delete a previously created chat folder deep link ».
 
 

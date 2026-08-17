@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -55,7 +56,7 @@ class PhotoPathSize(TLObject):
     ID = 0xd8214d41
     QUALNAME = "types.PhotoPathSize"
 
-    def __init__(self, *, type: str, bytes: bytes) -> None:
+    def __init__(self, *, type: str, bytes: builtins.bytes) -> None:
         self.type = type  # string
         self.bytes = bytes  # bytes
 

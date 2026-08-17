@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Optional
 
@@ -39,7 +40,7 @@ class EmojiStatus(Object):
     def __init__(
         self,
         *,
-        client: Optional["pyrogram.Client"] = None,
+        client: typing.Optional[Optional["pyrogram.Client"]] = None,
         custom_emoji_id: int,
         until_date: Optional[datetime] = None
     ):

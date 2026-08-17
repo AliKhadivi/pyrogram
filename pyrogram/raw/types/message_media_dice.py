@@ -68,7 +68,7 @@ class MessageMediaDice(TLObject):
     ID = 0x8cbec07
     QUALNAME = "types.MessageMediaDice"
 
-    def __init__(self, *, value: int, emoticon: str, game_outcome: "raw.base.messages.EmojiGameOutcome" = None) -> None:
+    def __init__(self, *, value: int, emoticon: str, game_outcome: Optional["raw.base.messages.EmojiGameOutcome"] = None) -> None:
         self.value = value  # int
         self.emoticon = emoticon  # string
         self.game_outcome = game_outcome  # flags.0?messages.EmojiGameOutcome

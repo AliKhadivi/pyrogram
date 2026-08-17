@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReceivedCall(TLObject["raw.base.Bool"]):
+class ReceivedCall(TLObject[bool]):
     """Optional: notify the server that the user is currently busy in a call: this will automatically refuse all incoming phone calls until the current phone call is ended, see here » for more info on the full flow.
 
 

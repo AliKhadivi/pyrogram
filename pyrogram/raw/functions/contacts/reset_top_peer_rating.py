@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetTopPeerRating(TLObject["raw.base.Bool"]):
+class ResetTopPeerRating(TLObject[bool]):
     """Reset rating of top peer
 
 

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -25,15 +26,15 @@ from pyrogram import types
 
 class SetGameScore:
     async def set_game_score(
-        self: "pyrogram.Client",
+        self,
         user_id: Union[int, str],
         score: int,
-        force: bool = None,
-        disable_edit_message: bool = None,
+        force: typing.Optional[bool] = None,
+        disable_edit_message: typing.Optional[bool] = None,
         chat_id: Union[int, str] = None,
         message_id: int = None
     ) -> Union["types.Message", bool]:
-        # inline_message_id: str = None):  TODO Add inline_message_id
+        # inline_message_id: typing.Optional[str] = None):  TODO Add inline_message_id
         """Set the score of the specified user in a game.
 
         .. include:: /_includes/usable-by/bots.rst

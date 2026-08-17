@@ -58,7 +58,7 @@ class MediaAreaGeoPoint(TLObject):
     ID = 0xcad5452d
     QUALNAME = "types.MediaAreaGeoPoint"
 
-    def __init__(self, *, coordinates: "raw.base.MediaAreaCoordinates", geo: "raw.base.GeoPoint", address: "raw.base.GeoPointAddress" = None) -> None:
+    def __init__(self, *, coordinates: "raw.base.MediaAreaCoordinates", geo: "raw.base.GeoPoint", address: Optional["raw.base.GeoPointAddress"] = None) -> None:
         self.coordinates = coordinates  # MediaAreaCoordinates
         self.geo = geo  # GeoPoint
         self.address = address  # flags.0?GeoPointAddress

@@ -88,7 +88,7 @@ class BoostsStatus(TLObject):
     ID = 0x4959427a
     QUALNAME = "types.premium.BoostsStatus"
 
-    def __init__(self, *, level: int, current_level_boosts: int, boosts: int, boost_url: str, my_boost: Optional[bool] = None, gift_boosts: Optional[int] = None, next_level_boosts: Optional[int] = None, premium_audience: "raw.base.StatsPercentValue" = None, prepaid_giveaways: Optional[List["raw.base.PrepaidGiveaway"]] = None, my_boost_slots: Optional[List[int]] = None) -> None:
+    def __init__(self, *, level: int, current_level_boosts: int, boosts: int, boost_url: str, my_boost: Optional[bool] = None, gift_boosts: Optional[int] = None, next_level_boosts: Optional[int] = None, premium_audience: Optional["raw.base.StatsPercentValue"] = None, prepaid_giveaways: Optional[List["raw.base.PrepaidGiveaway"]] = None, my_boost_slots: Optional[List[int]] = None) -> None:
         self.level = level  # int
         self.current_level_boosts = current_level_boosts  # int
         self.boosts = boosts  # int

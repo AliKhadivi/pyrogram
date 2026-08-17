@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportSpam(TLObject["raw.base.Bool"]):
+class ReportSpam(TLObject[bool]):
     """Reports some messages from a user in a supergroup as spam; requires administrator rights in the supergroup
 
 

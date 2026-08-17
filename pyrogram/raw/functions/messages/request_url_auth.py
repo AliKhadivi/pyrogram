@@ -65,7 +65,7 @@ class RequestUrlAuth(TLObject["raw.base.UrlAuthResult"]):
     ID = 0x894cc99c
     QUALNAME = "functions.messages.RequestUrlAuth"
 
-    def __init__(self, *, peer: "raw.base.InputPeer" = None, msg_id: Optional[int] = None, button_id: Optional[int] = None, url: Optional[str] = None, in_app_origin: Optional[str] = None) -> None:
+    def __init__(self, *, peer: Optional["raw.base.InputPeer"] = None, msg_id: Optional[int] = None, button_id: Optional[int] = None, url: Optional[str] = None, in_app_origin: Optional[str] = None) -> None:
         self.peer = peer  # flags.1?InputPeer
         self.msg_id = msg_id  # flags.1?int
         self.button_id = button_id  # flags.1?int

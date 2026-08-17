@@ -70,7 +70,7 @@ class BotInlineMediaResult(TLObject):
     ID = 0x17db940b
     QUALNAME = "types.BotInlineMediaResult"
 
-    def __init__(self, *, id: str, type: str, send_message: "raw.base.BotInlineMessage", photo: "raw.base.Photo" = None, document: "raw.base.Document" = None, title: Optional[str] = None, description: Optional[str] = None) -> None:
+    def __init__(self, *, id: str, type: str, send_message: "raw.base.BotInlineMessage", photo: Optional["raw.base.Photo"] = None, document: Optional["raw.base.Document"] = None, title: Optional[str] = None, description: Optional[str] = None) -> None:
         self.id = id  # string
         self.type = type  # string
         self.send_message = send_message  # BotInlineMessage

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteBusinessChatLink(TLObject["raw.base.Bool"]):
+class DeleteBusinessChatLink(TLObject[bool]):
     """Delete a business chat deep link ».
 
 

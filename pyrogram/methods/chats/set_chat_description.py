@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class SetChatDescription:
     async def set_chat_description(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         description: str
     ) -> bool:

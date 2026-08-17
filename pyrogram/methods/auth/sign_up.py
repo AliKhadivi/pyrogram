@@ -27,7 +27,7 @@ log = logging.getLogger(__name__)
 
 class SignUp:
     async def sign_up(
-        self: "pyrogram.Client",
+        self,
         phone_number: str,
         phone_code_hash: str,
         first_name: str,

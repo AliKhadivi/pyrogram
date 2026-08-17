@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateBusinessGreetingMessage(TLObject["raw.base.Bool"]):
+class UpdateBusinessGreetingMessage(TLObject[bool]):
     """Set a list of Telegram Business greeting messages.
 
 
@@ -53,7 +53,7 @@ class UpdateBusinessGreetingMessage(TLObject["raw.base.Bool"]):
     ID = 0x66cdafc4
     QUALNAME = "functions.account.UpdateBusinessGreetingMessage"
 
-    def __init__(self, *, message: "raw.base.InputBusinessGreetingMessage" = None) -> None:
+    def __init__(self, *, message: Optional["raw.base.InputBusinessGreetingMessage"] = None) -> None:
         self.message = message  # flags.0?InputBusinessGreetingMessage
 
     @staticmethod

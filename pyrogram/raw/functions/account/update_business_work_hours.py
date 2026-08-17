@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateBusinessWorkHours(TLObject["raw.base.Bool"]):
+class UpdateBusinessWorkHours(TLObject[bool]):
     """Specify a set of Telegram Business opening hours.
 This info will be contained in userFull.business_work_hours.
 
@@ -54,7 +54,7 @@ This info will be contained in userFull.business_work_hours.
     ID = 0x4b00e066
     QUALNAME = "functions.account.UpdateBusinessWorkHours"
 
-    def __init__(self, *, business_work_hours: "raw.base.BusinessWorkHours" = None) -> None:
+    def __init__(self, *, business_work_hours: Optional["raw.base.BusinessWorkHours"] = None) -> None:
         self.business_work_hours = business_work_hours  # flags.0?BusinessWorkHours
 
     @staticmethod

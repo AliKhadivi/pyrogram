@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DiscardEncryption(TLObject["raw.base.Bool"]):
+class DiscardEncryption(TLObject[bool]):
     """Cancels a request for creation and/or delete info on secret chat.
 
 

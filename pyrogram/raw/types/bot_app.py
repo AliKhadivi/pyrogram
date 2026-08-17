@@ -73,7 +73,7 @@ class BotApp(TLObject):
     ID = 0x95fcd1d6
     QUALNAME = "types.BotApp"
 
-    def __init__(self, *, id: int, access_hash: int, short_name: str, title: str, description: str, photo: "raw.base.Photo", hash: int, document: "raw.base.Document" = None) -> None:
+    def __init__(self, *, id: int, access_hash: int, short_name: str, title: str, description: str, photo: "raw.base.Photo", hash: int, document: Optional["raw.base.Document"] = None) -> None:
         self.id = id  # long
         self.access_hash = access_hash  # long
         self.short_name = short_name  # string

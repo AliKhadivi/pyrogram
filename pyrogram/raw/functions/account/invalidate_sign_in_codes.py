@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class InvalidateSignInCodes(TLObject["raw.base.Bool"]):
+class InvalidateSignInCodes(TLObject[bool]):
     """Invalidate the specified login codes, see here » for more info.
 
 

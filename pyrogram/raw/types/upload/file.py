@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -67,7 +68,7 @@ class File(TLObject):
     ID = 0x96a18d5
     QUALNAME = "types.upload.File"
 
-    def __init__(self, *, type: "raw.base.storage.FileType", mtime: int, bytes: bytes) -> None:
+    def __init__(self, *, type: "raw.base.storage.FileType", mtime: int, bytes: builtins.bytes) -> None:
         self.type = type  # storage.FileType
         self.mtime = mtime  # int
         self.bytes = bytes  # bytes

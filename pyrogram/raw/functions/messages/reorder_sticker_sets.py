@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReorderStickerSets(TLObject["raw.base.Bool"]):
+class ReorderStickerSets(TLObject[bool]):
     """Reorder installed stickersets
 
 

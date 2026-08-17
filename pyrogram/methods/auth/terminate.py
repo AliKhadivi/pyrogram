@@ -26,7 +26,7 @@ log = logging.getLogger(__name__)
 
 class Terminate:
     async def terminate(
-        self: "pyrogram.Client",
+        self,
     ):
         """Terminate the client by shutting down workers.
 

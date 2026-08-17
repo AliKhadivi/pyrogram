@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetContactSignUpNotification(TLObject["raw.base.Bool"]):
+class SetContactSignUpNotification(TLObject[bool]):
     """Toggle contact sign up notifications
 
 

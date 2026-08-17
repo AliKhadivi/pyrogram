@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateDeviceLocked(TLObject["raw.base.Bool"]):
+class UpdateDeviceLocked(TLObject[bool]):
     """When client-side passcode lock feature is enabled, will not show message texts in incoming PUSH notifications.
 
 

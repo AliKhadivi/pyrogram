@@ -71,7 +71,7 @@ class UploadContactProfilePhoto(TLObject["raw.base.photos.Photo"]):
     ID = 0xe14c4a71
     QUALNAME = "functions.photos.UploadContactProfilePhoto"
 
-    def __init__(self, *, user_id: "raw.base.InputUser", suggest: Optional[bool] = None, save: Optional[bool] = None, file: "raw.base.InputFile" = None, video: "raw.base.InputFile" = None, video_start_ts: Optional[float] = None, video_emoji_markup: "raw.base.VideoSize" = None) -> None:
+    def __init__(self, *, user_id: "raw.base.InputUser", suggest: Optional[bool] = None, save: Optional[bool] = None, file: Optional["raw.base.InputFile"] = None, video: Optional["raw.base.InputFile"] = None, video_start_ts: Optional[float] = None, video_emoji_markup: Optional["raw.base.VideoSize"] = None) -> None:
         self.user_id = user_id  # InputUser
         self.suggest = suggest  # flags.3?true
         self.save = save  # flags.4?true

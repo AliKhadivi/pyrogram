@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class InstallWallPaper(TLObject["raw.base.Bool"]):
+class InstallWallPaper(TLObject[bool]):
     """Install wallpaper
 
 

@@ -49,8 +49,10 @@ _doc = """Represents a prepared inline message saved by a bot, to be sent to the
             messages.SavePreparedInlineMessage"""
 try:
     _t = type(BotPreparedInlineMessage)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         BotPreparedInlineMessage.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

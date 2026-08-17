@@ -55,7 +55,7 @@ class BotInlineMessageRichMessage(TLObject):
     ID = 0xa617e7b
     QUALNAME = "types.BotInlineMessageRichMessage"
 
-    def __init__(self, *, rich_message: "raw.base.RichMessage", reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, rich_message: "raw.base.RichMessage", reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.rich_message = rich_message  # RichMessage
         self.reply_markup = reply_markup  # flags.2?ReplyMarkup
 

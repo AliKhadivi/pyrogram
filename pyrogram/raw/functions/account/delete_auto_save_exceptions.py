@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteAutoSaveExceptions(TLObject["raw.base.Bool"]):
+class DeleteAutoSaveExceptions(TLObject[bool]):
     """Clear all peer-specific autosave settings.
 
 

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional
 
 import pyrogram
@@ -30,7 +31,7 @@ class Parser:
         self.html = HTML(client)
         self.markdown = Markdown(client)
 
-    async def parse(self, text: str, mode: Optional[enums.ParseMode] = None):
+    async def parse(self, text: str, mode: typing.Optional[Optional[enums.ParseMode]] = None):
         text = str(text if text else "").strip()
 
         if mode is None:

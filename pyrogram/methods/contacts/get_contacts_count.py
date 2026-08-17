@@ -22,7 +22,7 @@ from pyrogram import raw
 
 class GetContactsCount:
     async def get_contacts_count(
-        self: "pyrogram.Client"
+        self
     ) -> int:
         """Get the total count of contacts from your Telegram address book.
 

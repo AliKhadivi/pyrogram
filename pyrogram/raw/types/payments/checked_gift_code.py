@@ -85,7 +85,7 @@ class CheckedGiftCode(TLObject):
     ID = 0xeb983f8f
     QUALNAME = "types.payments.CheckedGiftCode"
 
-    def __init__(self, *, date: int, days: int, chats: List["raw.base.Chat"], users: List["raw.base.User"], via_giveaway: Optional[bool] = None, from_id: "raw.base.Peer" = None, giveaway_msg_id: Optional[int] = None, to_id: Optional[int] = None, used_date: Optional[int] = None) -> None:
+    def __init__(self, *, date: int, days: int, chats: List["raw.base.Chat"], users: List["raw.base.User"], via_giveaway: Optional[bool] = None, from_id: Optional["raw.base.Peer"] = None, giveaway_msg_id: Optional[int] = None, to_id: Optional[int] = None, used_date: Optional[int] = None) -> None:
         self.date = date  # int
         self.days = days  # int
         self.chats = chats  # Vector<Chat>

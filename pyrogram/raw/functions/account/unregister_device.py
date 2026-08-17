@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UnregisterDevice(TLObject["raw.base.Bool"]):
+class UnregisterDevice(TLObject[bool]):
     """Deletes a device by its token, stops sending PUSH-notifications to it.
 
 

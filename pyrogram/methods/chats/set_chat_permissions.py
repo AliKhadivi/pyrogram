@@ -25,7 +25,7 @@ from pyrogram import types
 
 class SetChatPermissions:
     async def set_chat_permissions(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         permissions: "types.ChatPermissions",
     ) -> "types.Chat":

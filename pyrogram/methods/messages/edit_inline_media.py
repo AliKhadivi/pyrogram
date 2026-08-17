@@ -34,7 +34,7 @@ class EditInlineMedia:
     MAX_RETRIES = 3
 
     async def edit_inline_media(
-        self: "pyrogram.Client",
+        self,
         inline_message_id: str,
         media: "types.InputMedia",
         reply_markup: "types.InlineKeyboardMarkup" = None

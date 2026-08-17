@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteExportedChatInvite(TLObject["raw.base.Bool"]):
+class DeleteExportedChatInvite(TLObject[bool]):
     """Delete a chat invite
 
 

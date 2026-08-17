@@ -26,7 +26,7 @@ from pyrogram import types
 
 class BanChatMember:
     async def ban_chat_member(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         user_id: Union[int, str],
         until_date: datetime = utils.zero_datetime()

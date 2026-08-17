@@ -87,7 +87,7 @@ class WallPaper(TLObject):
     ID = 0xa437c3ed
     QUALNAME = "types.WallPaper"
 
-    def __init__(self, *, id: int, access_hash: int, slug: str, document: "raw.base.Document", creator: Optional[bool] = None, default: Optional[bool] = None, pattern: Optional[bool] = None, dark: Optional[bool] = None, settings: "raw.base.WallPaperSettings" = None) -> None:
+    def __init__(self, *, id: int, access_hash: int, slug: str, document: "raw.base.Document", creator: Optional[bool] = None, default: Optional[bool] = None, pattern: Optional[bool] = None, dark: Optional[bool] = None, settings: Optional["raw.base.WallPaperSettings"] = None) -> None:
         self.id = id  # long
         self.access_hash = access_hash  # long
         self.slug = slug  # string

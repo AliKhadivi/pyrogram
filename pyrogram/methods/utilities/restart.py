@@ -21,7 +21,7 @@ import pyrogram
 
 class Restart:
     async def restart(
-        self: "pyrogram.Client",
+        self,
         block: bool = True
     ):
         """Restart the Client.

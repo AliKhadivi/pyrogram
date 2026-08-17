@@ -65,7 +65,7 @@ class GetSearchResultsCalendar(TLObject["raw.base.messages.SearchResultsCalendar
     ID = 0x6aa3f6bd
     QUALNAME = "functions.messages.GetSearchResultsCalendar"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", filter: "raw.base.MessagesFilter", offset_id: int, offset_date: int, saved_peer_id: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", filter: "raw.base.MessagesFilter", offset_id: int, offset_date: int, saved_peer_id: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputPeer
         self.filter = filter  # MessagesFilter
         self.offset_id = offset_id  # int

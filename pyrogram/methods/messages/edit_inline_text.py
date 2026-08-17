@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional
 
 import pyrogram
@@ -27,11 +28,11 @@ from .inline_session import get_session
 
 class EditInlineText:
     async def edit_inline_text(
-        self: "pyrogram.Client",
+        self,
         inline_message_id: str,
         text: str,
-        parse_mode: Optional["enums.ParseMode"] = None,
-        disable_web_page_preview: bool = None,
+        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
+        disable_web_page_preview: typing.Optional[bool] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:
         """Edit the text of inline messages.

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 from pyrogram import types
@@ -87,24 +88,24 @@ class WebPage(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         id: str,
         url: str,
         display_url: str,
-        type: str = None,
-        site_name: str = None,
-        title: str = None,
-        description: str = None,
-        audio: "types.Audio" = None,
-        document: "types.Document" = None,
-        photo: "types.Photo" = None,
-        animation: "types.Animation" = None,
-        video: "types.Video" = None,
-        embed_url: str = None,
-        embed_type: str = None,
-        embed_width: int = None,
-        embed_height: int = None,
-        duration: int = None,
+        type: typing.Optional[str] = None,
+        site_name: typing.Optional[str] = None,
+        title: typing.Optional[str] = None,
+        description: typing.Optional[str] = None,
+        audio: typing.Optional["types.Audio"] = None,
+        document: typing.Optional["types.Document"] = None,
+        photo: typing.Optional["types.Photo"] = None,
+        animation: typing.Optional["types.Animation"] = None,
+        video: typing.Optional["types.Video"] = None,
+        embed_url: typing.Optional[str] = None,
+        embed_type: typing.Optional[str] = None,
+        embed_width: typing.Optional[int] = None,
+        embed_height: typing.Optional[int] = None,
+        duration: typing.Optional[int] = None,
         author: str = None
     ):
         super().__init__(client)

@@ -25,7 +25,7 @@ from .inline_session import get_session
 
 class EditInlineReplyMarkup:
     async def edit_inline_reply_markup(
-        self: "pyrogram.Client",
+        self,
         inline_message_id: str,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import os
 import re
 from datetime import datetime
@@ -32,20 +33,20 @@ from pyrogram.file_id import FileType
 
 class SendSticker:
     async def send_sticker(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         sticker: Union[str, BinaryIO],
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
-        protect_content: bool = None,
+        disable_notification: typing.Optional[bool] = None,
+        reply_to_message_id: typing.Optional[int] = None,
+        schedule_date: typing.Optional[datetime] = None,
+        protect_content: typing.Optional[bool] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: Callable = None,
+        progress: typing.Optional[Callable] = None,
         progress_args: tuple = ()
     ) -> Optional["types.Message"]:
         """Send static .webp or animated .tgs stickers.

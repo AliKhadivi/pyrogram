@@ -61,7 +61,7 @@ class GroupCallDonor(TLObject):
     ID = 0xee430c85
     QUALNAME = "types.GroupCallDonor"
 
-    def __init__(self, *, stars: int, top: Optional[bool] = None, my: Optional[bool] = None, peer_id: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, stars: int, top: Optional[bool] = None, my: Optional[bool] = None, peer_id: Optional["raw.base.Peer"] = None) -> None:
         self.stars = stars  # long
         self.top = top  # flags.0?true
         self.my = my  # flags.1?true

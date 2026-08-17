@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -75,12 +76,12 @@ class InlineKeyboardButton(Object):
         self,
         text: str,
         callback_data: Union[str, bytes] = None,
-        url: str = None,
-        web_app: "types.WebAppInfo" = None,
-        login_url: "types.LoginUrl" = None,
-        user_id: int = None,
-        switch_inline_query: str = None,
-        switch_inline_query_current_chat: str = None,
+        url: typing.Optional[str] = None,
+        web_app: typing.Optional["types.WebAppInfo"] = None,
+        login_url: typing.Optional["types.LoginUrl"] = None,
+        user_id: typing.Optional[int] = None,
+        switch_inline_query: typing.Optional[str] = None,
+        switch_inline_query_current_chat: typing.Optional[str] = None,
         callback_game: "types.CallbackGame" = None
     ):
         super().__init__()

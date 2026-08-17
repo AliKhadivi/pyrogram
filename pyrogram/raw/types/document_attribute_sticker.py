@@ -61,7 +61,7 @@ class DocumentAttributeSticker(TLObject):
     ID = 0x6319d612
     QUALNAME = "types.DocumentAttributeSticker"
 
-    def __init__(self, *, alt: str, stickerset: "raw.base.InputStickerSet", mask: Optional[bool] = None, mask_coords: "raw.base.MaskCoords" = None) -> None:
+    def __init__(self, *, alt: str, stickerset: "raw.base.InputStickerSet", mask: Optional[bool] = None, mask_coords: Optional["raw.base.MaskCoords"] = None) -> None:
         self.alt = alt  # string
         self.stickerset = stickerset  # InputStickerSet
         self.mask = mask  # flags.1?true

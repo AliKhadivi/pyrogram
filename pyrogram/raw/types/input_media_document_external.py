@@ -64,7 +64,7 @@ class InputMediaDocumentExternal(TLObject):
     ID = 0x779600f9
     QUALNAME = "types.InputMediaDocumentExternal"
 
-    def __init__(self, *, url: str, spoiler: Optional[bool] = None, ttl_seconds: Optional[int] = None, video_cover: "raw.base.InputPhoto" = None, video_timestamp: Optional[int] = None) -> None:
+    def __init__(self, *, url: str, spoiler: Optional[bool] = None, ttl_seconds: Optional[int] = None, video_cover: Optional["raw.base.InputPhoto"] = None, video_timestamp: Optional[int] = None) -> None:
         self.url = url  # string
         self.spoiler = spoiler  # flags.1?true
         self.ttl_seconds = ttl_seconds  # flags.0?int

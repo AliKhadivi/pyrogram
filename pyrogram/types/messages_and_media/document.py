@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import List
 
@@ -56,13 +57,13 @@ class Document(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional["pyrogram.Client"] = None,
         file_id: str,
         file_unique_id: str,
-        file_name: str = None,
-        mime_type: str = None,
-        file_size: int = None,
-        date: datetime = None,
+        file_name: typing.Optional[str] = None,
+        mime_type: typing.Optional[str] = None,
+        file_size: typing.Optional[int] = None,
+        date: typing.Optional[datetime] = None,
         thumbs: List["types.Thumbnail"] = None
     ):
         super().__init__(client)

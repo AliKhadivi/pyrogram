@@ -77,7 +77,7 @@ class RequestSimpleWebView(TLObject["raw.base.WebViewResult"]):
     ID = 0x413a3e73
     QUALNAME = "functions.messages.RequestSimpleWebView"
 
-    def __init__(self, *, bot: "raw.base.InputUser", platform: str, from_switch_webview: Optional[bool] = None, from_side_menu: Optional[bool] = None, compact: Optional[bool] = None, fullscreen: Optional[bool] = None, url: Optional[str] = None, start_param: Optional[str] = None, theme_params: "raw.base.DataJSON" = None) -> None:
+    def __init__(self, *, bot: "raw.base.InputUser", platform: str, from_switch_webview: Optional[bool] = None, from_side_menu: Optional[bool] = None, compact: Optional[bool] = None, fullscreen: Optional[bool] = None, url: Optional[str] = None, start_param: Optional[str] = None, theme_params: Optional["raw.base.DataJSON"] = None) -> None:
         self.bot = bot  # InputUser
         self.platform = platform  # string
         self.from_switch_webview = from_switch_webview  # flags.1?true

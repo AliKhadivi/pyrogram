@@ -76,7 +76,7 @@ class SentCode(TLObject):
     ID = 0x5e002502
     QUALNAME = "types.auth.SentCode"
 
-    def __init__(self, *, type: "raw.base.auth.SentCodeType", phone_code_hash: str, next_type: "raw.base.auth.CodeType" = None, timeout: Optional[int] = None) -> None:
+    def __init__(self, *, type: "raw.base.auth.SentCodeType", phone_code_hash: str, next_type: Optional["raw.base.auth.CodeType"] = None, timeout: Optional[int] = None) -> None:
         self.type = type  # auth.SentCodeType
         self.phone_code_hash = phone_code_hash  # string
         self.next_type = next_type  # flags.1?auth.CodeType

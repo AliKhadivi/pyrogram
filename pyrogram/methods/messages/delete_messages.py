@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class DeleteMessages:
     async def delete_messages(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_ids: Union[int, Iterable[int]],
         revoke: bool = True

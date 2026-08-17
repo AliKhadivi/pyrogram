@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleSponsoredMessages(TLObject["raw.base.Bool"]):
+class ToggleSponsoredMessages(TLObject[bool]):
     """Disable or re-enable Telegram ads for the current Premium account.
 
 

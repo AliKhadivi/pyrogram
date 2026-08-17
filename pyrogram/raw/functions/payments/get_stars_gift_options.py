@@ -53,7 +53,7 @@ class GetStarsGiftOptions(TLObject["List[raw.base.StarsGiftOption]"]):
     ID = 0xd3c96bc8
     QUALNAME = "functions.payments.GetStarsGiftOptions"
 
-    def __init__(self, *, user_id: "raw.base.InputUser" = None) -> None:
+    def __init__(self, *, user_id: Optional["raw.base.InputUser"] = None) -> None:
         self.user_id = user_id  # flags.0?InputUser
 
     @staticmethod

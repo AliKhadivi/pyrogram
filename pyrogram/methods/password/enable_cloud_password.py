@@ -25,7 +25,7 @@ from pyrogram.utils import compute_password_hash, btoi, itob
 
 class EnableCloudPassword:
     async def enable_cloud_password(
-        self: "pyrogram.Client",
+        self,
         password: str,
         hint: str = "",
         email: str = None

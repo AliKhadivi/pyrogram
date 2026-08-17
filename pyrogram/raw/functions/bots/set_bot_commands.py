@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotCommands(TLObject["raw.base.Bool"]):
+class SetBotCommands(TLObject[bool]):
     """Set bot command list
 
 

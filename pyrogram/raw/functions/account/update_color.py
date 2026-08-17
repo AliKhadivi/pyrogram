@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateColor(TLObject["raw.base.Bool"]):
+class UpdateColor(TLObject[bool]):
     """Update the accent color and background custom emoji » of the current account.
 
 
@@ -56,7 +56,7 @@ class UpdateColor(TLObject["raw.base.Bool"]):
     ID = 0x684d214e
     QUALNAME = "functions.account.UpdateColor"
 
-    def __init__(self, *, for_profile: Optional[bool] = None, color: "raw.base.PeerColor" = None) -> None:
+    def __init__(self, *, for_profile: Optional[bool] = None, color: Optional["raw.base.PeerColor"] = None) -> None:
         self.for_profile = for_profile  # flags.1?true
         self.color = color  # flags.2?PeerColor
 

@@ -72,7 +72,7 @@ class WallPaperNoFile(TLObject):
     ID = 0xe0804116
     QUALNAME = "types.WallPaperNoFile"
 
-    def __init__(self, *, id: int, default: Optional[bool] = None, dark: Optional[bool] = None, settings: "raw.base.WallPaperSettings" = None) -> None:
+    def __init__(self, *, id: int, default: Optional[bool] = None, dark: Optional[bool] = None, settings: Optional["raw.base.WallPaperSettings"] = None) -> None:
         self.id = id  # long
         self.default = default  # flags.1?true
         self.dark = dark  # flags.4?true

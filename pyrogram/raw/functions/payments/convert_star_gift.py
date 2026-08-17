@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ConvertStarGift(TLObject["raw.base.Bool"]):
+class ConvertStarGift(TLObject[bool]):
     """Convert a received gift » into Telegram Stars: this will permanently destroy the gift, converting it into starGift.convert_stars Telegram Stars, added to the user's balance.
 
 

@@ -25,7 +25,7 @@ from pyrogram import types
 
 class GetSendAsChats:
     async def get_send_as_chats(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str]
     ) -> List["types.Chat"]:
         """Get the list of "send_as" chats available.

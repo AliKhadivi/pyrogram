@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateSavedReactionTag(TLObject["raw.base.Bool"]):
+class UpdateSavedReactionTag(TLObject[bool]):
     """Update the description of a saved message tag ».
 
 

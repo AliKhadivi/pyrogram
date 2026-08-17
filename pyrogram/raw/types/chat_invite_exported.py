@@ -100,7 +100,7 @@ class ChatInviteExported(TLObject):
     ID = 0xa22cbd96
     QUALNAME = "types.ChatInviteExported"
 
-    def __init__(self, *, link: str, admin_id: int, date: int, revoked: Optional[bool] = None, permanent: Optional[bool] = None, request_needed: Optional[bool] = None, start_date: Optional[int] = None, expire_date: Optional[int] = None, usage_limit: Optional[int] = None, usage: Optional[int] = None, requested: Optional[int] = None, subscription_expired: Optional[int] = None, title: Optional[str] = None, subscription_pricing: "raw.base.StarsSubscriptionPricing" = None) -> None:
+    def __init__(self, *, link: str, admin_id: int, date: int, revoked: Optional[bool] = None, permanent: Optional[bool] = None, request_needed: Optional[bool] = None, start_date: Optional[int] = None, expire_date: Optional[int] = None, usage_limit: Optional[int] = None, usage: Optional[int] = None, requested: Optional[int] = None, subscription_expired: Optional[int] = None, title: Optional[str] = None, subscription_pricing: Optional["raw.base.StarsSubscriptionPricing"] = None) -> None:
         self.link = link  # string
         self.admin_id = admin_id  # long
         self.date = date  # int

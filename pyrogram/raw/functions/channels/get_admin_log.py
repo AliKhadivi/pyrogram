@@ -71,7 +71,7 @@ class GetAdminLog(TLObject["raw.base.channels.AdminLogResults"]):
     ID = 0x33ddf480
     QUALNAME = "functions.channels.GetAdminLog"
 
-    def __init__(self, *, channel: "raw.base.InputChannel", q: str, max_id: int, min_id: int, limit: int, events_filter: "raw.base.ChannelAdminLogEventsFilter" = None, admins: Optional[List["raw.base.InputUser"]] = None) -> None:
+    def __init__(self, *, channel: "raw.base.InputChannel", q: str, max_id: int, min_id: int, limit: int, events_filter: Optional["raw.base.ChannelAdminLogEventsFilter"] = None, admins: Optional[List["raw.base.InputUser"]] = None) -> None:
         self.channel = channel  # InputChannel
         self.q = q  # string
         self.max_id = max_id  # long

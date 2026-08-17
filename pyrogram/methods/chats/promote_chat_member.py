@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -24,10 +25,10 @@ from pyrogram import raw, types, errors
 
 class PromoteChatMember:
     async def promote_chat_member(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         user_id: Union[int, str],
-        privileges: "types.ChatPrivileges" = None,
+        privileges: typing.Optional["types.ChatPrivileges"] = None,
     ) -> bool:
         """Promote or demote a user in a supergroup or a channel.
 

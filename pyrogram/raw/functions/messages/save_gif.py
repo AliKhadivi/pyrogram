@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveGif(TLObject["raw.base.Bool"]):
+class SaveGif(TLObject[bool]):
     """Add GIF to saved gifs list
 
 

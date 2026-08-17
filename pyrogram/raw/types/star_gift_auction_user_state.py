@@ -67,7 +67,7 @@ class StarGiftAuctionUserState(TLObject):
     ID = 0x2eeed1c4
     QUALNAME = "types.StarGiftAuctionUserState"
 
-    def __init__(self, *, acquired_count: int, returned: Optional[bool] = None, bid_amount: Optional[int] = None, bid_date: Optional[int] = None, min_bid_amount: Optional[int] = None, bid_peer: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, acquired_count: int, returned: Optional[bool] = None, bid_amount: Optional[int] = None, bid_date: Optional[int] = None, min_bid_amount: Optional[int] = None, bid_peer: Optional["raw.base.Peer"] = None) -> None:
         self.acquired_count = acquired_count  # int
         self.returned = returned  # flags.1?true
         self.bid_amount = bid_amount  # flags.0?long

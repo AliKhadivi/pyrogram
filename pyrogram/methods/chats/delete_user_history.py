@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class DeleteUserHistory:
     async def delete_user_history(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         user_id: Union[int, str],
     ) -> bool:

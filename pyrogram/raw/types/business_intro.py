@@ -58,7 +58,7 @@ class BusinessIntro(TLObject):
     ID = 0x5a0a066d
     QUALNAME = "types.BusinessIntro"
 
-    def __init__(self, *, title: str, description: str, sticker: "raw.base.Document" = None) -> None:
+    def __init__(self, *, title: str, description: str, sticker: Optional["raw.base.Document"] = None) -> None:
         self.title = title  # string
         self.description = description  # string
         self.sticker = sticker  # flags.0?Document

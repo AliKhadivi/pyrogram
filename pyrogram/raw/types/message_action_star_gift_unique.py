@@ -106,7 +106,7 @@ class MessageActionStarGiftUnique(TLObject):
     ID = 0xe6c31522
     QUALNAME = "types.MessageActionStarGiftUnique"
 
-    def __init__(self, *, gift: "raw.base.StarGift", upgrade: Optional[bool] = None, transferred: Optional[bool] = None, saved: Optional[bool] = None, refunded: Optional[bool] = None, prepaid_upgrade: Optional[bool] = None, assigned: Optional[bool] = None, from_offer: Optional[bool] = None, craft: Optional[bool] = None, can_export_at: Optional[int] = None, transfer_stars: Optional[int] = None, from_id: "raw.base.Peer" = None, peer: "raw.base.Peer" = None, saved_id: Optional[int] = None, resale_amount: "raw.base.StarsAmount" = None, can_transfer_at: Optional[int] = None, can_resell_at: Optional[int] = None, drop_original_details_stars: Optional[int] = None, can_craft_at: Optional[int] = None) -> None:
+    def __init__(self, *, gift: "raw.base.StarGift", upgrade: Optional[bool] = None, transferred: Optional[bool] = None, saved: Optional[bool] = None, refunded: Optional[bool] = None, prepaid_upgrade: Optional[bool] = None, assigned: Optional[bool] = None, from_offer: Optional[bool] = None, craft: Optional[bool] = None, can_export_at: Optional[int] = None, transfer_stars: Optional[int] = None, from_id: Optional["raw.base.Peer"] = None, peer: Optional["raw.base.Peer"] = None, saved_id: Optional[int] = None, resale_amount: Optional["raw.base.StarsAmount"] = None, can_transfer_at: Optional[int] = None, can_resell_at: Optional[int] = None, drop_original_details_stars: Optional[int] = None, can_craft_at: Optional[int] = None) -> None:
         self.gift = gift  # StarGift
         self.upgrade = upgrade  # flags.0?true
         self.transferred = transferred  # flags.1?true

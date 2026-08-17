@@ -26,7 +26,7 @@ log = logging.getLogger(__name__)
 
 class SendRecoveryCode:
     async def send_recovery_code(
-        self: "pyrogram.Client",
+        self,
     ) -> str:
         """Send a code to your email to recover your password.
 

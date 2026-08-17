@@ -65,7 +65,7 @@ class DeleteSavedHistory(TLObject["raw.base.messages.AffectedHistory"]):
     ID = 0x4dc5085f
     QUALNAME = "functions.messages.DeleteSavedHistory"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", max_id: int, parent_peer: "raw.base.InputPeer" = None, min_date: Optional[int] = None, max_date: Optional[int] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", max_id: int, parent_peer: Optional["raw.base.InputPeer"] = None, min_date: Optional[int] = None, max_date: Optional[int] = None) -> None:
         self.peer = peer  # InputPeer
         self.max_id = max_id  # int
         self.parent_peer = parent_peer  # flags.0?InputPeer

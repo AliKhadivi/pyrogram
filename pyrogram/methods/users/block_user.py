@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class BlockUser:
     async def block_user(
-        self: "pyrogram.Client",
+        self,
         user_id: Union[int, str]
     ) -> bool:
         """Block a user.

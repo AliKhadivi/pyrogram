@@ -26,7 +26,7 @@ log = logging.getLogger(__name__)
 
 class Start:
     async def start(
-        self: "pyrogram.Client"
+        self
     ):
         """Start the client.
 

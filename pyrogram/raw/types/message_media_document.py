@@ -89,7 +89,7 @@ class MessageMediaDocument(TLObject):
     ID = 0x52d8ccd9
     QUALNAME = "types.MessageMediaDocument"
 
-    def __init__(self, *, nopremium: Optional[bool] = None, spoiler: Optional[bool] = None, video: Optional[bool] = None, round: Optional[bool] = None, voice: Optional[bool] = None, document: "raw.base.Document" = None, alt_documents: Optional[List["raw.base.Document"]] = None, video_cover: "raw.base.Photo" = None, video_timestamp: Optional[int] = None, ttl_seconds: Optional[int] = None) -> None:
+    def __init__(self, *, nopremium: Optional[bool] = None, spoiler: Optional[bool] = None, video: Optional[bool] = None, round: Optional[bool] = None, voice: Optional[bool] = None, document: Optional["raw.base.Document"] = None, alt_documents: Optional[List["raw.base.Document"]] = None, video_cover: Optional["raw.base.Photo"] = None, video_timestamp: Optional[int] = None, ttl_seconds: Optional[int] = None) -> None:
         self.nopremium = nopremium  # flags.3?true
         self.spoiler = spoiler  # flags.4?true
         self.video = video  # flags.6?true

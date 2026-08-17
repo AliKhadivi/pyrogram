@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateBusinessLocation(TLObject["raw.base.Bool"]):
+class UpdateBusinessLocation(TLObject[bool]):
     """Businesses » may advertise their location using this method, see here » for more info.
 
 
@@ -56,7 +56,7 @@ class UpdateBusinessLocation(TLObject["raw.base.Bool"]):
     ID = 0x9e6b131a
     QUALNAME = "functions.account.UpdateBusinessLocation"
 
-    def __init__(self, *, geo_point: "raw.base.InputGeoPoint" = None, address: Optional[str] = None) -> None:
+    def __init__(self, *, geo_point: Optional["raw.base.InputGeoPoint"] = None, address: Optional[str] = None) -> None:
         self.geo_point = geo_point  # flags.1?InputGeoPoint
         self.address = address  # flags.0?string
 

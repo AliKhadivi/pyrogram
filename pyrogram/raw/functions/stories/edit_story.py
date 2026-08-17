@@ -74,7 +74,7 @@ class EditStory(TLObject["raw.base.Updates"]):
     ID = 0x2c63a72b
     QUALNAME = "functions.stories.EditStory"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", id: int, media: "raw.base.InputMedia" = None, media_areas: Optional[List["raw.base.MediaArea"]] = None, caption: Optional[str] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, privacy_rules: Optional[List["raw.base.InputPrivacyRule"]] = None, music: "raw.base.InputDocument" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", id: int, media: Optional["raw.base.InputMedia"] = None, media_areas: Optional[List["raw.base.MediaArea"]] = None, caption: Optional[str] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, privacy_rules: Optional[List["raw.base.InputPrivacyRule"]] = None, music: Optional["raw.base.InputDocument"] = None) -> None:
         self.peer = peer  # InputPeer
         self.id = id  # int
         self.media = media  # flags.0?InputMedia

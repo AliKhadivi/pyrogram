@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteTone(TLObject["raw.base.Bool"]):
+class DeleteTone(TLObject[bool]):
     """Permanently delete a custom AI composer tone » created by the current user.
 
 

@@ -64,7 +64,7 @@ class PasswordSettings(TLObject):
     ID = 0x9a5c33e5
     QUALNAME = "types.account.PasswordSettings"
 
-    def __init__(self, *, email: Optional[str] = None, secure_settings: "raw.base.SecureSecretSettings" = None) -> None:
+    def __init__(self, *, email: Optional[str] = None, secure_settings: Optional["raw.base.SecureSecretSettings"] = None) -> None:
         self.email = email  # flags.0?string
         self.secure_settings = secure_settings  # flags.1?SecureSecretSettings
 

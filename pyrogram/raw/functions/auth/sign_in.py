@@ -62,7 +62,7 @@ class SignIn(TLObject["raw.base.auth.Authorization"]):
     ID = 0x8d52a951
     QUALNAME = "functions.auth.SignIn"
 
-    def __init__(self, *, phone_number: str, phone_code_hash: str, phone_code: Optional[str] = None, email_verification: "raw.base.EmailVerification" = None) -> None:
+    def __init__(self, *, phone_number: str, phone_code_hash: str, phone_code: Optional[str] = None, email_verification: Optional["raw.base.EmailVerification"] = None) -> None:
         self.phone_number = phone_number  # string
         self.phone_code_hash = phone_code_hash  # string
         self.phone_code = phone_code  # flags.0?string

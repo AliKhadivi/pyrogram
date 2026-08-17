@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveAutoDownloadSettings(TLObject["raw.base.Bool"]):
+class SaveAutoDownloadSettings(TLObject[bool]):
     """Change media autodownload settings
 
 

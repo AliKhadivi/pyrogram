@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class MarkChatUnread:
     async def mark_chat_unread(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
     ) -> bool:
         """Mark a chat as unread.

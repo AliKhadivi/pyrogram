@@ -82,7 +82,7 @@ class AppUpdate(TLObject):
     ID = 0xccbbce30
     QUALNAME = "types.help.AppUpdate"
 
-    def __init__(self, *, id: int, version: str, text: str, entities: List["raw.base.MessageEntity"], can_not_skip: Optional[bool] = None, document: "raw.base.Document" = None, url: Optional[str] = None, sticker: "raw.base.Document" = None) -> None:
+    def __init__(self, *, id: int, version: str, text: str, entities: List["raw.base.MessageEntity"], can_not_skip: Optional[bool] = None, document: Optional["raw.base.Document"] = None, url: Optional[str] = None, sticker: Optional["raw.base.Document"] = None) -> None:
         self.id = id  # int
         self.version = version  # string
         self.text = text  # string

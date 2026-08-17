@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReadEncryptedHistory(TLObject["raw.base.Bool"]):
+class ReadEncryptedHistory(TLObject[bool]):
     """Marks message history within a secret chat as read.
 
 

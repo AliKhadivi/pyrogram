@@ -51,8 +51,10 @@ _doc = """Photo with auxiliary data.
             photos.UploadContactProfilePhoto"""
 try:
     _t = type(Photo)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         Photo.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

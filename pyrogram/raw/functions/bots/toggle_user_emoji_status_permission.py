@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleUserEmojiStatusPermission(TLObject["raw.base.Bool"]):
+class ToggleUserEmojiStatusPermission(TLObject[bool]):
     """Allow or prevent a bot from changing our emoji status »
 
 

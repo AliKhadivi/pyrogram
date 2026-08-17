@@ -76,7 +76,7 @@ class MonoForumDialog(TLObject):
     ID = 0x64407ea7
     QUALNAME = "types.MonoForumDialog"
 
-    def __init__(self, *, peer: "raw.base.Peer", top_message: int, read_inbox_max_id: int, read_outbox_max_id: int, unread_count: int, unread_reactions_count: int, unread_mark: Optional[bool] = None, nopaid_messages_exception: Optional[bool] = None, draft: "raw.base.DraftMessage" = None) -> None:
+    def __init__(self, *, peer: "raw.base.Peer", top_message: int, read_inbox_max_id: int, read_outbox_max_id: int, unread_count: int, unread_reactions_count: int, unread_mark: Optional[bool] = None, nopaid_messages_exception: Optional[bool] = None, draft: Optional["raw.base.DraftMessage"] = None) -> None:
         self.peer = peer  # Peer
         self.top_message = top_message  # int
         self.read_inbox_max_id = read_inbox_max_id  # int

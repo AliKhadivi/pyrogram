@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Dict
 from typing import Optional
@@ -73,15 +74,15 @@ class ChatInviteLink(Object):
         self, *,
         invite_link: str,
         date: datetime,
-        is_primary: bool = None,
-        is_revoked: bool = None,
-        creator: "types.User" = None,
-        name: str = None,
-        creates_join_request: bool = None,
-        start_date: datetime = None,
-        expire_date: datetime = None,
-        member_limit: int = None,
-        member_count: int = None,
+        is_primary: typing.Optional[bool] = None,
+        is_revoked: typing.Optional[bool] = None,
+        creator: typing.Optional["types.User"] = None,
+        name: typing.Optional[str] = None,
+        creates_join_request: typing.Optional[bool] = None,
+        start_date: typing.Optional[datetime] = None,
+        expire_date: typing.Optional[datetime] = None,
+        member_limit: typing.Optional[int] = None,
+        member_count: typing.Optional[int] = None,
         pending_join_request_count: int = None
     ):
         super().__init__()

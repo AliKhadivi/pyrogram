@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class FulfillStarsSubscription(TLObject["raw.base.Bool"]):
+class FulfillStarsSubscription(TLObject[bool]):
     """Re-join a private channel associated to an active Telegram Star subscription ».
 
 

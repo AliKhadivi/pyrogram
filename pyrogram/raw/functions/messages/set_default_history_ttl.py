@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetDefaultHistoryTTL(TLObject["raw.base.Bool"]):
+class SetDefaultHistoryTTL(TLObject[bool]):
     """Changes the default value of the Time-To-Live setting, applied to all new chats.
 
 

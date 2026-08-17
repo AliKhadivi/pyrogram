@@ -25,7 +25,7 @@ from pyrogram import types
 
 class RetractVote:
     async def retract_vote(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int
     ) -> "types.Poll":

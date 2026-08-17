@@ -71,7 +71,7 @@ class AcceptUrlAuth(TLObject["raw.base.UrlAuthResult"]):
     ID = 0x67a3f0de
     QUALNAME = "functions.messages.AcceptUrlAuth"
 
-    def __init__(self, *, write_allowed: Optional[bool] = None, share_phone_number: Optional[bool] = None, peer: "raw.base.InputPeer" = None, msg_id: Optional[int] = None, button_id: Optional[int] = None, url: Optional[str] = None, match_code: Optional[str] = None) -> None:
+    def __init__(self, *, write_allowed: Optional[bool] = None, share_phone_number: Optional[bool] = None, peer: Optional["raw.base.InputPeer"] = None, msg_id: Optional[int] = None, button_id: Optional[int] = None, url: Optional[str] = None, match_code: Optional[str] = None) -> None:
         self.write_allowed = write_allowed  # flags.0?true
         self.share_phone_number = share_phone_number  # flags.3?true
         self.peer = peer  # flags.1?InputPeer

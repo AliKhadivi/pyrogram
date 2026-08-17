@@ -62,7 +62,7 @@ class ToggleJoinRequest(TLObject["raw.base.Updates"]):
     ID = 0xecc2618
     QUALNAME = "functions.channels.ToggleJoinRequest"
 
-    def __init__(self, *, channel: "raw.base.InputChannel", enabled: bool, apply_to_invites: Optional[bool] = None, guard_bot: "raw.base.InputUser" = None) -> None:
+    def __init__(self, *, channel: "raw.base.InputChannel", enabled: bool, apply_to_invites: Optional[bool] = None, guard_bot: Optional["raw.base.InputUser"] = None) -> None:
         self.channel = channel  # InputChannel
         self.enabled = enabled  # Bool
         self.apply_to_invites = apply_to_invites  # flags.1?true

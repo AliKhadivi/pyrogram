@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetDiscussionGroup(TLObject["raw.base.Bool"]):
+class SetDiscussionGroup(TLObject[bool]):
     """Associate a group to a channel as discussion group for that channel
 
 

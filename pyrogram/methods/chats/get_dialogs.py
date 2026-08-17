@@ -24,7 +24,7 @@ from pyrogram import types, raw, utils
 
 class GetDialogs:
     async def get_dialogs(
-        self: "pyrogram.Client",
+        self,
         limit: int = 0
     ) -> Optional[AsyncGenerator["types.Dialog", None]]:
         """Get a user's dialogs sequentially.

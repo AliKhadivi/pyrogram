@@ -23,7 +23,7 @@ from pyrogram import types
 
 class GetMe:
     async def get_me(
-        self: "pyrogram.Client"
+        self
     ) -> "types.User":
         """Get your own user identity.
 

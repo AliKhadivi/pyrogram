@@ -65,7 +65,7 @@ class GetMessageReactionsList(TLObject["raw.base.messages.MessageReactionsList"]
     ID = 0x461b3f48
     QUALNAME = "functions.messages.GetMessageReactionsList"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", id: int, limit: int, reaction: "raw.base.Reaction" = None, offset: Optional[str] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", id: int, limit: int, reaction: Optional["raw.base.Reaction"] = None, offset: Optional[str] = None) -> None:
         self.peer = peer  # InputPeer
         self.id = id  # int
         self.limit = limit  # int

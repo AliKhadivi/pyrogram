@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class RequestCallbackAnswer:
     async def request_callback_answer(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         message_id: int,
         callback_data: Union[str, bytes],

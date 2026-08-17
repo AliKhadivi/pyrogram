@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class SetAdministratorTitle:
     async def set_administrator_title(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         user_id: Union[int, str],
         title: str,

@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class DeleteSupergroup:
     async def delete_supergroup(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str]
     ) -> bool:
         """Delete a supergroup.

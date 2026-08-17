@@ -95,7 +95,7 @@ class SendStory(TLObject["raw.base.Updates"]):
     ID = 0x8f9e6898
     QUALNAME = "functions.stories.SendStory"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", media: "raw.base.InputMedia", privacy_rules: List["raw.base.InputPrivacyRule"], random_id: int, pinned: Optional[bool] = None, noforwards: Optional[bool] = None, fwd_modified: Optional[bool] = None, media_areas: Optional[List["raw.base.MediaArea"]] = None, caption: Optional[str] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, period: Optional[int] = None, fwd_from_id: "raw.base.InputPeer" = None, fwd_from_story: Optional[int] = None, albums: Optional[List[int]] = None, music: "raw.base.InputDocument" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", media: "raw.base.InputMedia", privacy_rules: List["raw.base.InputPrivacyRule"], random_id: int, pinned: Optional[bool] = None, noforwards: Optional[bool] = None, fwd_modified: Optional[bool] = None, media_areas: Optional[List["raw.base.MediaArea"]] = None, caption: Optional[str] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, period: Optional[int] = None, fwd_from_id: Optional["raw.base.InputPeer"] = None, fwd_from_story: Optional[int] = None, albums: Optional[List[int]] = None, music: Optional["raw.base.InputDocument"] = None) -> None:
         self.peer = peer  # InputPeer
         self.media = media  # InputMedia
         self.privacy_rules = privacy_rules  # Vector<InputPrivacyRule>

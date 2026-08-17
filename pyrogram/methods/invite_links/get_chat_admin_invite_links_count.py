@@ -24,7 +24,7 @@ from pyrogram import raw
 
 class GetChatAdminInviteLinksCount:
     async def get_chat_admin_invite_links_count(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         admin_id: Union[int, str],
         revoked: bool = False,

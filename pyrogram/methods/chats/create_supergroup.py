@@ -22,7 +22,7 @@ from pyrogram import types
 
 class CreateSupergroup:
     async def create_supergroup(
-        self: "pyrogram.Client",
+        self,
         title: str,
         description: str = ""
     ) -> "types.Chat":

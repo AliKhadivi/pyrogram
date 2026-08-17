@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateEmojiStatus(TLObject["raw.base.Bool"]):
+class UpdateEmojiStatus(TLObject[bool]):
     """Set an emoji status
 
 

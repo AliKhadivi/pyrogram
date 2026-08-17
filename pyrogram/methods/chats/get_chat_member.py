@@ -26,7 +26,7 @@ from pyrogram.errors import UserNotParticipant
 
 class GetChatMember:
     async def get_chat_member(
-        self: "pyrogram.Client",
+        self,
         chat_id: Union[int, str],
         user_id: Union[int, str]
     ) -> "types.ChatMember":

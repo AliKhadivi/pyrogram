@@ -58,7 +58,7 @@ class WebPageAttributeStory(TLObject):
     ID = 0x2e94c3e7
     QUALNAME = "types.WebPageAttributeStory"
 
-    def __init__(self, *, peer: "raw.base.Peer", id: int, story: "raw.base.StoryItem" = None) -> None:
+    def __init__(self, *, peer: "raw.base.Peer", id: int, story: Optional["raw.base.StoryItem"] = None) -> None:
         self.peer = peer  # Peer
         self.id = id  # int
         self.story = story  # flags.0?StoryItem

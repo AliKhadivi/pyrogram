@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class AcceptTermsOfService(TLObject["raw.base.Bool"]):
+class AcceptTermsOfService(TLObject[bool]):
     """Accept the new terms of service
 
 

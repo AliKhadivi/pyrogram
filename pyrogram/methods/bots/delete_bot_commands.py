@@ -22,7 +22,7 @@ from pyrogram import raw, types
 
 class DeleteBotCommands:
     async def delete_bot_commands(
-        self: "pyrogram.Client",
+        self,
         scope: "types.BotCommandScope" = types.BotCommandScopeDefault(),
         language_code: str = "",
     ) -> bool:

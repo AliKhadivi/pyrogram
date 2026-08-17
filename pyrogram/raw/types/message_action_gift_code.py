@@ -79,7 +79,7 @@ class MessageActionGiftCode(TLObject):
     ID = 0x31c48347
     QUALNAME = "types.MessageActionGiftCode"
 
-    def __init__(self, *, days: int, slug: str, via_giveaway: Optional[bool] = None, unclaimed: Optional[bool] = None, boost_peer: "raw.base.Peer" = None, currency: Optional[str] = None, amount: Optional[int] = None, crypto_currency: Optional[str] = None, crypto_amount: Optional[int] = None, message: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, days: int, slug: str, via_giveaway: Optional[bool] = None, unclaimed: Optional[bool] = None, boost_peer: Optional["raw.base.Peer"] = None, currency: Optional[str] = None, amount: Optional[int] = None, crypto_currency: Optional[str] = None, crypto_amount: Optional[int] = None, message: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.days = days  # int
         self.slug = slug  # string
         self.via_giveaway = via_giveaway  # flags.0?true

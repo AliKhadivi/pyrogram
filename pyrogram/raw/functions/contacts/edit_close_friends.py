@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class EditCloseFriends(TLObject["raw.base.Bool"]):
+class EditCloseFriends(TLObject[bool]):
     """Edit the close friends list, see here » for more info.
 
 

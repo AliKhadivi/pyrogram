@@ -58,7 +58,7 @@ class RequestedPeerChat(TLObject):
     ID = 0x7307544f
     QUALNAME = "types.RequestedPeerChat"
 
-    def __init__(self, *, chat_id: int, title: Optional[str] = None, photo: "raw.base.Photo" = None) -> None:
+    def __init__(self, *, chat_id: int, title: Optional[str] = None, photo: Optional["raw.base.Photo"] = None) -> None:
         self.chat_id = chat_id  # long
         self.title = title  # flags.0?string
         self.photo = photo  # flags.2?Photo

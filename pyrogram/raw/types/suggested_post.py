@@ -61,7 +61,7 @@ class SuggestedPost(TLObject):
     ID = 0xe8e37e5
     QUALNAME = "types.SuggestedPost"
 
-    def __init__(self, *, accepted: Optional[bool] = None, rejected: Optional[bool] = None, price: "raw.base.StarsAmount" = None, schedule_date: Optional[int] = None) -> None:
+    def __init__(self, *, accepted: Optional[bool] = None, rejected: Optional[bool] = None, price: Optional["raw.base.StarsAmount"] = None, schedule_date: Optional[int] = None) -> None:
         self.accepted = accepted  # flags.1?true
         self.rejected = rejected  # flags.2?true
         self.price = price  # flags.3?StarsAmount

@@ -67,7 +67,7 @@ class InputMediaUploadedPhoto(TLObject):
     ID = 0x7d8375da
     QUALNAME = "types.InputMediaUploadedPhoto"
 
-    def __init__(self, *, file: "raw.base.InputFile", spoiler: Optional[bool] = None, live_photo: Optional[bool] = None, stickers: Optional[List["raw.base.InputDocument"]] = None, ttl_seconds: Optional[int] = None, video: "raw.base.InputDocument" = None) -> None:
+    def __init__(self, *, file: "raw.base.InputFile", spoiler: Optional[bool] = None, live_photo: Optional[bool] = None, stickers: Optional[List["raw.base.InputDocument"]] = None, ttl_seconds: Optional[int] = None, video: Optional["raw.base.InputDocument"] = None) -> None:
         self.file = file  # InputFile
         self.spoiler = spoiler  # flags.2?true
         self.live_photo = live_photo  # flags.3?true
