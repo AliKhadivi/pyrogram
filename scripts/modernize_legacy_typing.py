@@ -18,6 +18,14 @@ NONE_DEFAULT = re.compile(
     r'(?P<name>\b[A-Za-z_]\w*)[ \t]*:[ \t]*(?P<type>(?!typing\.Optional\[|Optional\[)[^,\n=]+?)[ \t]*=[ \t]*None(?P<tail>[ \t]*[,\)])'
 )
 
+# Restrict self annotation to text between a function declaration and its
+# closing parameter parenthesis. This avoids touching ordinary calls such as
+# Session(self, ...).
+MIXIN_SELF = re.compile(
+    r'(?P<prefix>\b(?:async[ \t]+)?def[ \t]+\w+[ \t]*\([^)]*?)'
+    r'(?<![A-Za-z0-9_])self(?![A-Za-z0-9_]|[ \t]*:)'
+)
+
 
 def add_typing_import(source: str) -> str:
     if "import typing\n" in source:
@@ -59,10 +67,7 @@ def normalize(path: Path) -> bool:
     if "/pyrogram/methods/" in posix:
         updated = updated.replace('self: "pyrogram.Client"', 'self: typing.Any')
         updated = updated.replace("self: 'pyrogram.Client'", 'self: typing.Any')
-        updated = re.sub(r'(?P<prefix>\b(?:async[ \t]+)?def[ \t]+\w+\([ \t]*)self(?P<tail>[ \t]*[,\)])',
-                         r'\g<prefix>self: typing.Any\g<tail>', updated)
-        updated = re.sub(r'(?P<prefix>\n[ \t]+)self(?P<tail>[ \t]*,)',
-                         r'\g<prefix>self: typing.Any\g<tail>', updated)
+        updated = MIXIN_SELF.sub(r'\g<prefix>self: typing.Any', updated)
 
     # Pyrogram Object instances may be deserialized before they are rebound to
     # a Client. Bound helper methods intentionally assume a client exists once
