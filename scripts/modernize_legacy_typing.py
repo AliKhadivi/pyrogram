@@ -11,11 +11,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PKG = ROOT / "pyrogram"
+OPTIONAL_PREFIX = "typing.Optional["
 
 # Matches common legacy signatures such as `foo: str = None`.
 # Horizontal whitespace is intentional: never allow a match to cross lines.
 NONE_DEFAULT = re.compile(
-    r'(?P<name>\b[A-Za-z_]\w*)[ \t]*:[ \t]*(?P<type>(?!typing\.Optional\[|Optional\[)[^,\n=]+?)[ \t]*=[ \t]*None(?P<tail>[ \t]*[,\)])'
+    r'(?P<name>\b[A-Za-z_]\w*)[ \t]*:[ \t]*(?P<type>[^,\n=]+?)[ \t]*=[ \t]*None(?P<tail>[ \t]*[,\)])'
 )
 
 # Restrict self annotation to text between a function declaration and its
@@ -25,6 +26,61 @@ MIXIN_SELF = re.compile(
     r'(?P<prefix>\b(?:async[ \t]+)?def[ \t]+\w+[ \t]*\([^)]*?)'
     r'(?<![A-Za-z0-9_])self(?![A-Za-z0-9_]|[ \t]*:)'
 )
+
+
+def matching_bracket(text: str, open_index: int) -> int | None:
+    depth = 0
+    for index in range(open_index, len(text)):
+        char = text[index]
+        if char == "[":
+            depth += 1
+        elif char == "]":
+            depth -= 1
+            if depth == 0:
+                return index
+    return None
+
+
+def collapse_nested_optionals(text: str) -> str:
+    """Collapse Optional[Optional[T]] (at any nesting depth) to Optional[T]."""
+    while True:
+        changed = False
+        cursor = 0
+        pieces: list[str] = []
+
+        while True:
+            start = text.find(OPTIONAL_PREFIX, cursor)
+            if start < 0:
+                pieces.append(text[cursor:])
+                break
+
+            pieces.append(text[cursor:start])
+            outer_open = start + len("typing.Optional")
+            outer_close = matching_bracket(text, outer_open)
+            if outer_close is None:
+                pieces.append(text[start:])
+                break
+
+            inner_start = outer_open + 1
+            inner = text[inner_start:outer_close].strip()
+
+            if inner.startswith(OPTIONAL_PREFIX):
+                inner_open = len("typing.Optional")
+                inner_close = matching_bracket(inner, inner_open)
+                if inner_close == len(inner) - 1:
+                    pieces.append(inner)
+                    changed = True
+                else:
+                    pieces.append(text[start:outer_close + 1])
+            else:
+                pieces.append(text[start:outer_close + 1])
+
+            cursor = outer_close + 1
+
+        updated = "".join(pieces)
+        if not changed:
+            return updated
+        text = updated
 
 
 def add_typing_import(source: str) -> str:
@@ -48,15 +104,16 @@ def add_typing_import(source: str) -> str:
 
 def normalize(path: Path) -> bool:
     source = path.read_text(encoding="utf-8")
-    updated = source
+    updated = collapse_nested_optionals(source)
 
     def repl(match: re.Match[str]) -> str:
-        annotation = match.group("type").strip()
-        if annotation in {"Any", "typing.Any"}:
-            return match.group(0)
+        annotation = collapse_nested_optionals(match.group("type").strip())
+        if annotation in {"Any", "typing.Any"} or "Optional[" in annotation:
+            return f'{match.group("name")}: {annotation} = None{match.group("tail")}'
         return f'{match.group("name")}: typing.Optional[{annotation}] = None{match.group("tail")}'
 
     updated = NONE_DEFAULT.sub(repl, updated)
+    updated = collapse_nested_optionals(updated)
 
     posix = path.as_posix()
 
