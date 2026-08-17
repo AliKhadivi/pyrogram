@@ -67,7 +67,7 @@ class MessageActionGiftPremium(TLObject):
     ID = 0x48e91302
     QUALNAME = "types.MessageActionGiftPremium"
 
-    def __init__(self, *, currency: str, amount: int, days: int, crypto_currency: Optional[str] = None, crypto_amount: Optional[int] = None, message: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, currency: str, amount: int, days: int, crypto_currency: Optional[str] = None, crypto_amount: Optional[int] = None, message: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.currency = currency  # string
         self.amount = amount  # long
         self.days = days  # int

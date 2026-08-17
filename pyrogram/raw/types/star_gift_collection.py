@@ -74,7 +74,7 @@ class StarGiftCollection(TLObject):
     ID = 0x9d6b13b0
     QUALNAME = "types.StarGiftCollection"
 
-    def __init__(self, *, collection_id: int, title: str, gifts_count: int, hash: int, icon: "raw.base.Document" = None) -> None:
+    def __init__(self, *, collection_id: int, title: str, gifts_count: int, hash: int, icon: Optional["raw.base.Document"] = None) -> None:
         self.collection_id = collection_id  # int
         self.title = title  # string
         self.gifts_count = gifts_count  # int

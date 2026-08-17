@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveDefaultSendAs(TLObject["raw.base.Bool"]):
+class SaveDefaultSendAs(TLObject[bool]):
     """Save the default peer displayed as the author of live story comments and reactions, see in-call messages ».
 
 

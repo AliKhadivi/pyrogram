@@ -13,12 +13,16 @@ import sys
 from pathlib import Path
 from typing import Iterable
 
-from pyrogram import raw
-
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "pyrogram"
 EXCLUDED_PARTS = {"raw", "__pycache__"}
 RAW_ROOTS = {"types", "functions", "base"}
+
+# Make the repository package importable when this script is executed directly
+# from CI or any working directory without installing Pyrogram first.
+sys.path.insert(0, str(ROOT))
+
+from pyrogram import raw  # noqa: E402
 
 
 def iter_python_files() -> Iterable[Path]:

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class FaveSticker(TLObject["raw.base.Bool"]):
+class FaveSticker(TLObject[bool]):
     """Mark or unmark a sticker as favorite
 
 

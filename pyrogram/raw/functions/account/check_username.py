@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckUsername(TLObject["raw.base.Bool"]):
+class CheckUsername(TLObject[bool]):
     """Validates a username and checks availability.
 
 

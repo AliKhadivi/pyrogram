@@ -64,7 +64,7 @@ class KeyboardButtonBuy(TLObject):
     ID = 0x3fa53905
     QUALNAME = "types.KeyboardButtonBuy"
 
-    def __init__(self, *, text: str, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.style = style  # flags.10?KeyboardButtonStyle
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetWebAuthorization(TLObject["raw.base.Bool"]):
+class ResetWebAuthorization(TLObject[bool]):
     """Log out an active web telegram login session
 
 

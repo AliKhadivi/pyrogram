@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union, List
 
@@ -26,24 +27,24 @@ from pyrogram import types, enums
 
 class SendPoll:
     async def send_poll(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         question: str,
         options: List[str],
         is_anonymous: bool = True,
         type: "enums.PollType" = enums.PollType.REGULAR,
-        allows_multiple_answers: bool = None,
-        correct_option_id: int = None,
-        explanation: str = None,
-        explanation_parse_mode: "enums.ParseMode" = None,
-        explanation_entities: List["types.MessageEntity"] = None,
-        open_period: int = None,
-        close_date: datetime = None,
-        is_closed: bool = None,
-        disable_notification: bool = None,
-        protect_content: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
+        allows_multiple_answers: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        correct_option_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        explanation: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        explanation_parse_mode: typing.Optional[typing.Optional[typing.Optional["enums.ParseMode"]]] = None,
+        explanation_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        open_period: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        close_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        is_closed: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

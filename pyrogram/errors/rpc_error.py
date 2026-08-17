@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import re
 from datetime import datetime
 from importlib import import_module
@@ -35,7 +36,7 @@ class RPCError(Exception):
     def __init__(
         self,
         value: Union[int, str, raw.types.RpcError] = None,
-        rpc_name: str = None,
+        rpc_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         is_unknown: bool = False,
         is_signed: bool = False
     ):

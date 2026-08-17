@@ -82,7 +82,7 @@ class AvailableReaction(TLObject):
     ID = 0xc077ec01
     QUALNAME = "types.AvailableReaction"
 
-    def __init__(self, *, reaction: str, title: str, static_icon: "raw.base.Document", appear_animation: "raw.base.Document", select_animation: "raw.base.Document", activate_animation: "raw.base.Document", effect_animation: "raw.base.Document", inactive: Optional[bool] = None, premium: Optional[bool] = None, around_animation: "raw.base.Document" = None, center_icon: "raw.base.Document" = None) -> None:
+    def __init__(self, *, reaction: str, title: str, static_icon: "raw.base.Document", appear_animation: "raw.base.Document", select_animation: "raw.base.Document", activate_animation: "raw.base.Document", effect_animation: "raw.base.Document", inactive: Optional[bool] = None, premium: Optional[bool] = None, around_animation: Optional["raw.base.Document"] = None, center_icon: Optional["raw.base.Document"] = None) -> None:
         self.reaction = reaction  # string
         self.title = title  # string
         self.static_icon = static_icon  # Document

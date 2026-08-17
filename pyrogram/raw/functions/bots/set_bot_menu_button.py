@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotMenuButton(TLObject["raw.base.Bool"]):
+class SetBotMenuButton(TLObject[bool]):
     """Sets the menu button action » for a given user or for all users
 
 

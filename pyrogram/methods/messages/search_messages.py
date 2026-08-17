@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union, List, AsyncGenerator, Optional
 
 import pyrogram
@@ -60,7 +61,7 @@ async def get_chunk(
 class SearchMessages:
     # noinspection PyShadowingBuiltins
     async def search_messages(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         query: str = "",
         offset: int = 0,

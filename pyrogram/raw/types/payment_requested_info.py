@@ -61,7 +61,7 @@ class PaymentRequestedInfo(TLObject):
     ID = 0x909c3f94
     QUALNAME = "types.PaymentRequestedInfo"
 
-    def __init__(self, *, name: Optional[str] = None, phone: Optional[str] = None, email: Optional[str] = None, shipping_address: "raw.base.PostAddress" = None) -> None:
+    def __init__(self, *, name: Optional[str] = None, phone: Optional[str] = None, email: Optional[str] = None, shipping_address: Optional["raw.base.PostAddress"] = None) -> None:
         self.name = name  # flags.0?string
         self.phone = phone  # flags.1?string
         self.email = email  # flags.2?string

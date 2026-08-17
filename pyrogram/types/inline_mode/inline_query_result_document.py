@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional, List
 
 import pyrogram
@@ -78,14 +79,14 @@ class InlineQueryResultDocument(InlineQueryResult):
         document_url: str,
         title: str,
         mime_type: str = "application/zip",
-        id: str = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         caption: str = "",
-        parse_mode: Optional["enums.ParseMode"] = None,
-        caption_entities: List["types.MessageEntity"] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
         description: str = "",
-        reply_markup: "types.InlineKeyboardMarkup" = None,
-        input_message_content: "types.InputMessageContent" = None,
-        thumb_url: str = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
+        input_message_content: typing.Optional[typing.Optional[typing.Optional["types.InputMessageContent"]]] = None,
+        thumb_url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         thumb_width: int = 0,
         thumb_height: int = 0
     ):

@@ -61,7 +61,7 @@ class UpdateChannelReadMessagesContents(TLObject):
     ID = 0x25f324f7
     QUALNAME = "types.UpdateChannelReadMessagesContents"
 
-    def __init__(self, *, channel_id: int, messages: List[int], top_msg_id: Optional[int] = None, saved_peer_id: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, channel_id: int, messages: List[int], top_msg_id: Optional[int] = None, saved_peer_id: Optional["raw.base.Peer"] = None) -> None:
         self.channel_id = channel_id  # long
         self.messages = messages  # Vector<int>
         self.top_msg_id = top_msg_id  # flags.0?int

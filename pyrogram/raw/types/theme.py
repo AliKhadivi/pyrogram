@@ -93,7 +93,7 @@ class Theme(TLObject):
     ID = 0xa00e67d6
     QUALNAME = "types.Theme"
 
-    def __init__(self, *, id: int, access_hash: int, slug: str, title: str, creator: Optional[bool] = None, default: Optional[bool] = None, for_chat: Optional[bool] = None, document: "raw.base.Document" = None, settings: Optional[List["raw.base.ThemeSettings"]] = None, emoticon: Optional[str] = None, installs_count: Optional[int] = None) -> None:
+    def __init__(self, *, id: int, access_hash: int, slug: str, title: str, creator: Optional[bool] = None, default: Optional[bool] = None, for_chat: Optional[bool] = None, document: Optional["raw.base.Document"] = None, settings: Optional[List["raw.base.ThemeSettings"]] = None, emoticon: Optional[str] = None, installs_count: Optional[int] = None) -> None:
         self.id = id  # long
         self.access_hash = access_hash  # long
         self.slug = slug  # string

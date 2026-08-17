@@ -55,7 +55,7 @@ class BusinessLocation(TLObject):
     ID = 0xac5c1af7
     QUALNAME = "types.BusinessLocation"
 
-    def __init__(self, *, address: str, geo_point: "raw.base.GeoPoint" = None) -> None:
+    def __init__(self, *, address: str, geo_point: Optional["raw.base.GeoPoint"] = None) -> None:
         self.address = address  # string
         self.geo_point = geo_point  # flags.0?GeoPoint
 

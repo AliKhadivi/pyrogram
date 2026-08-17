@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportAntiSpamFalsePositive(TLObject["raw.base.Bool"]):
+class ReportAntiSpamFalsePositive(TLObject[bool]):
     """Report a native antispam false positive
 
 

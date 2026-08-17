@@ -56,7 +56,7 @@ class GetSavedDialogsByID(TLObject["raw.base.messages.SavedDialogs"]):
     ID = 0x6f6f9c96
     QUALNAME = "functions.messages.GetSavedDialogsByID"
 
-    def __init__(self, *, ids: List["raw.base.InputPeer"], parent_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, ids: List["raw.base.InputPeer"], parent_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.ids = ids  # Vector<InputPeer>
         self.parent_peer = parent_peer  # flags.1?InputPeer
 

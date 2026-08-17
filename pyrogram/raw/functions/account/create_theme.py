@@ -62,7 +62,7 @@ class CreateTheme(TLObject["raw.base.Theme"]):
     ID = 0x652e4400
     QUALNAME = "functions.account.CreateTheme"
 
-    def __init__(self, *, slug: str, title: str, document: "raw.base.InputDocument" = None, settings: Optional[List["raw.base.InputThemeSettings"]] = None) -> None:
+    def __init__(self, *, slug: str, title: str, document: Optional["raw.base.InputDocument"] = None, settings: Optional[List["raw.base.InputThemeSettings"]] = None) -> None:
         self.slug = slug  # string
         self.title = title  # string
         self.document = document  # flags.2?InputDocument

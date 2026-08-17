@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw
 
 class UnpinAllChatMessages:
     async def unpin_all_chat_messages(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
     ) -> bool:
         """Use this method to clear the list of pinned messages in a chat.

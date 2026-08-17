@@ -64,7 +64,7 @@ class MessageReactor(TLObject):
     ID = 0x4ba3a95a
     QUALNAME = "types.MessageReactor"
 
-    def __init__(self, *, count: int, top: Optional[bool] = None, my: Optional[bool] = None, anonymous: Optional[bool] = None, peer_id: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, count: int, top: Optional[bool] = None, my: Optional[bool] = None, anonymous: Optional[bool] = None, peer_id: Optional["raw.base.Peer"] = None) -> None:
         self.count = count  # int
         self.top = top  # flags.0?true
         self.my = my  # flags.1?true

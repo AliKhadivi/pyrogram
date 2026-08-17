@@ -55,7 +55,7 @@ class InputBotInlineMessageRichMessage(TLObject):
     ID = 0xb43df56c
     QUALNAME = "types.InputBotInlineMessageRichMessage"
 
-    def __init__(self, *, rich_message: "raw.base.InputRichMessage", reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, rich_message: "raw.base.InputRichMessage", reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.rich_message = rich_message  # InputRichMessage
         self.reply_markup = reply_markup  # flags.2?ReplyMarkup
 

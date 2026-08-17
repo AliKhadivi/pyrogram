@@ -67,7 +67,7 @@ class KeyboardButtonCopy(TLObject):
     ID = 0xbcc4af10
     QUALNAME = "types.KeyboardButtonCopy"
 
-    def __init__(self, *, text: str, copy_text: str, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, copy_text: str, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.copy_text = copy_text  # string
         self.style = style  # flags.10?KeyboardButtonStyle

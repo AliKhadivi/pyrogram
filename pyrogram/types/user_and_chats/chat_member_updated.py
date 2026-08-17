@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Dict, Union
 
@@ -52,13 +53,13 @@ class ChatMemberUpdated(Object, Update):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         chat: "types.Chat",
         from_user: "types.User",
         date: datetime,
         old_chat_member: "types.ChatMember",
         new_chat_member: "types.ChatMember",
-        invite_link: "types.ChatInviteLink" = None,
+        invite_link: typing.Optional[typing.Optional[typing.Optional["types.ChatInviteLink"]]] = None,
     ):
         super().__init__(client)
 

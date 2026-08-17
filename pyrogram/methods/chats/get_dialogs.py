@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import AsyncGenerator, Optional
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import types, raw, utils
 
 class GetDialogs:
     async def get_dialogs(
-        self: "pyrogram.Client",
+        self: typing.Any,
         limit: int = 0
     ) -> Optional[AsyncGenerator["types.Dialog", None]]:
         """Get a user's dialogs sequentially.

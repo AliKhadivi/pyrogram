@@ -61,7 +61,7 @@ class WebViewMessageSent(TLObject):
     ID = 0xc94511c
     QUALNAME = "types.WebViewMessageSent"
 
-    def __init__(self, *, msg_id: "raw.base.InputBotInlineMessageID" = None) -> None:
+    def __init__(self, *, msg_id: Optional["raw.base.InputBotInlineMessageID"] = None) -> None:
         self.msg_id = msg_id  # flags.0?InputBotInlineMessageID
 
     @staticmethod

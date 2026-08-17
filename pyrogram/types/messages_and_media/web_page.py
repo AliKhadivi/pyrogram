@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 from pyrogram import types
@@ -87,24 +88,24 @@ class WebPage(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         id: str,
         url: str,
         display_url: str,
-        type: str = None,
-        site_name: str = None,
-        title: str = None,
-        description: str = None,
-        audio: "types.Audio" = None,
-        document: "types.Document" = None,
-        photo: "types.Photo" = None,
-        animation: "types.Animation" = None,
-        video: "types.Video" = None,
-        embed_url: str = None,
-        embed_type: str = None,
-        embed_width: int = None,
-        embed_height: int = None,
-        duration: int = None,
+        type: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        site_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        title: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        description: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        audio: typing.Optional[typing.Optional[typing.Optional["types.Audio"]]] = None,
+        document: typing.Optional[typing.Optional[typing.Optional["types.Document"]]] = None,
+        photo: typing.Optional[typing.Optional[typing.Optional["types.Photo"]]] = None,
+        animation: typing.Optional[typing.Optional[typing.Optional["types.Animation"]]] = None,
+        video: typing.Optional[typing.Optional[typing.Optional["types.Video"]]] = None,
+        embed_url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        embed_type: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        embed_width: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        embed_height: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        duration: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
         author: str = None
     ):
         super().__init__(client)

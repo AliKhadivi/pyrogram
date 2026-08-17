@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class FinishTakeoutSession(TLObject["raw.base.Bool"]):
+class FinishTakeoutSession(TLObject[bool]):
     """Terminate a takeout session, see here » for more info.
 
 

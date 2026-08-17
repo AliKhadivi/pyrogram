@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetAuthorizationTTL(TLObject["raw.base.Bool"]):
+class SetAuthorizationTTL(TLObject[bool]):
     """Set time-to-live of current session
 
 

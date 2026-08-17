@@ -215,7 +215,7 @@ class UpdateShortSentMessage(TLObject):
     ID = 0x9015e101
     QUALNAME = "types.UpdateShortSentMessage"
 
-    def __init__(self, *, id: int, pts: int, pts_count: int, date: int, out: Optional[bool] = None, media: "raw.base.MessageMedia" = None, entities: Optional[List["raw.base.MessageEntity"]] = None, ttl_period: Optional[int] = None) -> None:
+    def __init__(self, *, id: int, pts: int, pts_count: int, date: int, out: Optional[bool] = None, media: Optional["raw.base.MessageMedia"] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, ttl_period: Optional[int] = None) -> None:
         self.id = id  # int
         self.pts = pts  # int
         self.pts_count = pts_count  # int

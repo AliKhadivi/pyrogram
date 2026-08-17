@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List, Optional
 
 import pyrogram
@@ -68,13 +69,13 @@ class InlineQueryResultAudio(InlineQueryResult):
         self,
         audio_url: str,
         title: str,
-        id: str = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         performer: str = "",
         audio_duration: int = 0,
         caption: str = "",
-        parse_mode: Optional["enums.ParseMode"] = None,
-        caption_entities: List["types.MessageEntity"] = None,
-        reply_markup: "types.InlineKeyboardMarkup" = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
         input_message_content: "types.InputMessageContent" = None
     ):
         super().__init__("audio", id, input_message_content, reply_markup)

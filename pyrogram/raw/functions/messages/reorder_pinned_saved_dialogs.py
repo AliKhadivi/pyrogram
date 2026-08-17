@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReorderPinnedSavedDialogs(TLObject["raw.base.Bool"]):
+class ReorderPinnedSavedDialogs(TLObject[bool]):
     """Reorder pinned saved message dialogs ».
 
 

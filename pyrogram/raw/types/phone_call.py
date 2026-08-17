@@ -91,7 +91,7 @@ class PhoneCall(TLObject):
     ID = 0x30535af5
     QUALNAME = "types.PhoneCall"
 
-    def __init__(self, *, id: int, access_hash: int, date: int, admin_id: int, participant_id: int, g_a_or_b: bytes, key_fingerprint: int, protocol: "raw.base.PhoneCallProtocol", connections: List["raw.base.PhoneConnection"], start_date: int, p2p_allowed: Optional[bool] = None, video: Optional[bool] = None, conference_supported: Optional[bool] = None, custom_parameters: "raw.base.DataJSON" = None) -> None:
+    def __init__(self, *, id: int, access_hash: int, date: int, admin_id: int, participant_id: int, g_a_or_b: bytes, key_fingerprint: int, protocol: "raw.base.PhoneCallProtocol", connections: List["raw.base.PhoneConnection"], start_date: int, p2p_allowed: Optional[bool] = None, video: Optional[bool] = None, conference_supported: Optional[bool] = None, custom_parameters: Optional["raw.base.DataJSON"] = None) -> None:
         self.id = id  # long
         self.access_hash = access_hash  # long
         self.date = date  # int

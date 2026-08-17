@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeletePasskey(TLObject["raw.base.Bool"]):
+class DeletePasskey(TLObject[bool]):
     """Delete a passkey associated to the current account, see here » for more info.
 
 

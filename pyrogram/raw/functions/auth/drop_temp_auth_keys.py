@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DropTempAuthKeys(TLObject["raw.base.Bool"]):
+class DropTempAuthKeys(TLObject[bool]):
     """Delete all temporary authorization keys except for the ones specified
 
 

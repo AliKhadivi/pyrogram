@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class StartHistoryImport(TLObject["raw.base.Bool"]):
+class StartHistoryImport(TLObject[bool]):
     """Complete the history import process, importing all messages into the chat.
 To be called only after initializing the import with messages.initHistoryImport and uploading all files using messages.uploadImportedMedia.
 

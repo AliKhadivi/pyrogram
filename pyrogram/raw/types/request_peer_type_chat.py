@@ -67,7 +67,7 @@ class RequestPeerTypeChat(TLObject):
     ID = 0xc9f06e1b
     QUALNAME = "types.RequestPeerTypeChat"
 
-    def __init__(self, *, creator: Optional[bool] = None, bot_participant: Optional[bool] = None, has_username: Optional[bool] = None, forum: Optional[bool] = None, user_admin_rights: "raw.base.ChatAdminRights" = None, bot_admin_rights: "raw.base.ChatAdminRights" = None) -> None:
+    def __init__(self, *, creator: Optional[bool] = None, bot_participant: Optional[bool] = None, has_username: Optional[bool] = None, forum: Optional[bool] = None, user_admin_rights: Optional["raw.base.ChatAdminRights"] = None, bot_admin_rights: Optional["raw.base.ChatAdminRights"] = None) -> None:
         self.creator = creator  # flags.0?true
         self.bot_participant = bot_participant  # flags.5?true
         self.has_username = has_username  # flags.3?Bool

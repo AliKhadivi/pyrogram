@@ -79,7 +79,7 @@ class BotInfo(TLObject):
     ID = 0x4d8a0299
     QUALNAME = "types.BotInfo"
 
-    def __init__(self, *, has_preview_medias: Optional[bool] = None, user_id: Optional[int] = None, description: Optional[str] = None, description_photo: "raw.base.Photo" = None, description_document: "raw.base.Document" = None, commands: Optional[List["raw.base.BotCommand"]] = None, menu_button: "raw.base.BotMenuButton" = None, privacy_policy_url: Optional[str] = None, app_settings: "raw.base.BotAppSettings" = None, verifier_settings: "raw.base.BotVerifierSettings" = None) -> None:
+    def __init__(self, *, has_preview_medias: Optional[bool] = None, user_id: Optional[int] = None, description: Optional[str] = None, description_photo: Optional["raw.base.Photo"] = None, description_document: Optional["raw.base.Document"] = None, commands: Optional[List["raw.base.BotCommand"]] = None, menu_button: Optional["raw.base.BotMenuButton"] = None, privacy_policy_url: Optional[str] = None, app_settings: Optional["raw.base.BotAppSettings"] = None, verifier_settings: Optional["raw.base.BotVerifierSettings"] = None) -> None:
         self.has_preview_medias = has_preview_medias  # flags.6?true
         self.user_id = user_id  # flags.0?long
         self.description = description  # flags.1?string

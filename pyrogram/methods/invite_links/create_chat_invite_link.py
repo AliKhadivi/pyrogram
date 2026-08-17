@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union
 
@@ -26,11 +27,11 @@ from pyrogram import types
 
 class CreateChatInviteLink:
     async def create_chat_invite_link(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
-        name: str = None,
-        expire_date: datetime = None,
-        member_limit: int = None,
+        name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        expire_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        member_limit: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
         creates_join_request: bool = None
     ) -> "types.ChatInviteLink":
         """Create an additional invite link for a chat.

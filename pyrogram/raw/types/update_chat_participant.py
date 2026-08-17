@@ -73,7 +73,7 @@ class UpdateChatParticipant(TLObject):
     ID = 0xd087663a
     QUALNAME = "types.UpdateChatParticipant"
 
-    def __init__(self, *, chat_id: int, date: int, actor_id: int, user_id: int, qts: int, prev_participant: "raw.base.ChatParticipant" = None, new_participant: "raw.base.ChatParticipant" = None, invite: "raw.base.ExportedChatInvite" = None) -> None:
+    def __init__(self, *, chat_id: int, date: int, actor_id: int, user_id: int, qts: int, prev_participant: Optional["raw.base.ChatParticipant"] = None, new_participant: Optional["raw.base.ChatParticipant"] = None, invite: Optional["raw.base.ExportedChatInvite"] = None) -> None:
         self.chat_id = chat_id  # long
         self.date = date  # int
         self.actor_id = actor_id  # long

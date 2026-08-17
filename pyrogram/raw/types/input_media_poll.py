@@ -67,7 +67,7 @@ class InputMediaPoll(TLObject):
     ID = 0x883a4108
     QUALNAME = "types.InputMediaPoll"
 
-    def __init__(self, *, poll: "raw.base.Poll", correct_answers: Optional[List[int]] = None, attached_media: "raw.base.InputMedia" = None, solution: Optional[str] = None, solution_entities: Optional[List["raw.base.MessageEntity"]] = None, solution_media: "raw.base.InputMedia" = None) -> None:
+    def __init__(self, *, poll: "raw.base.Poll", correct_answers: Optional[List[int]] = None, attached_media: Optional["raw.base.InputMedia"] = None, solution: Optional[str] = None, solution_entities: Optional[List["raw.base.MessageEntity"]] = None, solution_media: Optional["raw.base.InputMedia"] = None) -> None:
         self.poll = poll  # Poll
         self.correct_answers = correct_answers  # flags.0?Vector<int>
         self.attached_media = attached_media  # flags.3?InputMedia

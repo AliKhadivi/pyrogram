@@ -58,7 +58,7 @@ class UpdatePeerWallpaper(TLObject):
     ID = 0xae3f101d
     QUALNAME = "types.UpdatePeerWallpaper"
 
-    def __init__(self, *, peer: "raw.base.Peer", wallpaper_overridden: Optional[bool] = None, wallpaper: "raw.base.WallPaper" = None) -> None:
+    def __init__(self, *, peer: "raw.base.Peer", wallpaper_overridden: Optional[bool] = None, wallpaper: Optional["raw.base.WallPaper"] = None) -> None:
         self.peer = peer  # Peer
         self.wallpaper_overridden = wallpaper_overridden  # flags.1?true
         self.wallpaper = wallpaper  # flags.0?WallPaper

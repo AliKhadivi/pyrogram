@@ -67,7 +67,7 @@ class BotBusinessConnection(TLObject):
     ID = 0x8f34b2f5
     QUALNAME = "types.BotBusinessConnection"
 
-    def __init__(self, *, connection_id: str, user_id: int, dc_id: int, date: int, disabled: Optional[bool] = None, rights: "raw.base.BusinessBotRights" = None) -> None:
+    def __init__(self, *, connection_id: str, user_id: int, dc_id: int, date: int, disabled: Optional[bool] = None, rights: Optional["raw.base.BusinessBotRights"] = None) -> None:
         self.connection_id = connection_id  # string
         self.user_id = user_id  # long
         self.dc_id = dc_id  # int

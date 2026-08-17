@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Callable
 
 import pyrogram
@@ -23,7 +24,7 @@ import pyrogram
 
 class OnRawUpdate:
     def on_raw_update(
-        self=None,
+        self: typing.Any=None,
         group: int = 0
     ) -> Callable:
         """Decorator for handling raw updates.

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateBusinessAwayMessage(TLObject["raw.base.Bool"]):
+class UpdateBusinessAwayMessage(TLObject[bool]):
     """Set a list of Telegram Business away messages.
 
 
@@ -53,7 +53,7 @@ class UpdateBusinessAwayMessage(TLObject["raw.base.Bool"]):
     ID = 0xa26a7fa5
     QUALNAME = "functions.account.UpdateBusinessAwayMessage"
 
-    def __init__(self, *, message: "raw.base.InputBusinessAwayMessage" = None) -> None:
+    def __init__(self, *, message: Optional["raw.base.InputBusinessAwayMessage"] = None) -> None:
         self.message = message  # flags.0?InputBusinessAwayMessage
 
     @staticmethod

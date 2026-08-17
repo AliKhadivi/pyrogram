@@ -59,7 +59,7 @@ class RequestChatJoinWebView(TLObject["raw.base.WebViewResult"]):
     ID = 0xba9ee679
     QUALNAME = "functions.messages.RequestChatJoinWebView"
 
-    def __init__(self, *, query_id: int, platform: str, theme_params: "raw.base.DataJSON" = None) -> None:
+    def __init__(self, *, query_id: int, platform: str, theme_params: Optional["raw.base.DataJSON"] = None) -> None:
         self.query_id = query_id  # long
         self.platform = platform  # string
         self.theme_params = theme_params  # flags.0?DataJSON

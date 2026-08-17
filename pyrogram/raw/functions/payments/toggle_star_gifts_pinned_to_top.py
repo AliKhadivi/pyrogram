@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleStarGiftsPinnedToTop(TLObject["raw.base.Bool"]):
+class ToggleStarGiftsPinnedToTop(TLObject[bool]):
     """Pins a received gift on top of the profile of the user or owned channels by using payments.toggleStarGiftsPinnedToTop.
 
 

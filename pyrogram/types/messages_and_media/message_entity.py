@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional
 
 import pyrogram
@@ -56,13 +57,13 @@ class MessageEntity(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         type: "enums.MessageEntityType",
         offset: int,
         length: int,
-        url: str = None,
-        user: "types.User" = None,
-        language: str = None,
+        url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        user: typing.Optional[typing.Optional[typing.Optional["types.User"]]] = None,
+        language: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         custom_emoji_id: int = None
     ):
         super().__init__(client)

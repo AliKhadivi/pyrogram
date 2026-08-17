@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UninstallStickerSet(TLObject["raw.base.Bool"]):
+class UninstallStickerSet(TLObject[bool]):
     """Uninstall a stickerset
 
 

@@ -73,7 +73,7 @@ class KeyboardButtonSwitchInline(TLObject):
     ID = 0x991399fc
     QUALNAME = "types.KeyboardButtonSwitchInline"
 
-    def __init__(self, *, text: str, query: str, same_peer: Optional[bool] = None, style: "raw.base.KeyboardButtonStyle" = None, peer_types: Optional[List["raw.base.InlineQueryPeerType"]] = None) -> None:
+    def __init__(self, *, text: str, query: str, same_peer: Optional[bool] = None, style: Optional["raw.base.KeyboardButtonStyle"] = None, peer_types: Optional[List["raw.base.InlineQueryPeerType"]] = None) -> None:
         self.text = text  # string
         self.query = query  # string
         self.same_peer = same_peer  # flags.0?true

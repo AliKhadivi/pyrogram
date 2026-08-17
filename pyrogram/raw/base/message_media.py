@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-MessageMedia = Union[raw.types.MessageMediaContact, raw.types.MessageMediaDice, raw.types.MessageMediaDocument, raw.types.MessageMediaEmpty, raw.types.MessageMediaGame, raw.types.MessageMediaGeo, raw.types.MessageMediaGeoLive, raw.types.MessageMediaGiveaway, raw.types.MessageMediaGiveawayResults, raw.types.MessageMediaInvoice, raw.types.MessageMediaPaidMedia, raw.types.MessageMediaPhoto, raw.types.MessageMediaPoll, raw.types.MessageMediaStory, raw.types.MessageMediaToDo, raw.types.MessageMediaUnsupported, raw.types.MessageMediaVenue, raw.types.MessageMediaVideoStream, raw.types.MessageMediaWebPage]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    MessageMedia = Any
+else:
+    MessageMedia = Union[raw.types.MessageMediaContact, raw.types.MessageMediaDice, raw.types.MessageMediaDocument, raw.types.MessageMediaEmpty, raw.types.MessageMediaGame, raw.types.MessageMediaGeo, raw.types.MessageMediaGeoLive, raw.types.MessageMediaGiveaway, raw.types.MessageMediaGiveawayResults, raw.types.MessageMediaInvoice, raw.types.MessageMediaPaidMedia, raw.types.MessageMediaPhoto, raw.types.MessageMediaPoll, raw.types.MessageMediaStory, raw.types.MessageMediaToDo, raw.types.MessageMediaUnsupported, raw.types.MessageMediaVenue, raw.types.MessageMediaVideoStream, raw.types.MessageMediaWebPage]
+
 _doc = """Media
 
     Constructors:
@@ -68,8 +76,10 @@ _doc = """Media
             messages.UploadImportedMedia"""
 try:
     _t = type(MessageMedia)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         MessageMedia.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

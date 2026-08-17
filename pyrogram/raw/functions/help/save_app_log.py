@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveAppLog(TLObject["raw.base.Bool"]):
+class SaveAppLog(TLObject[bool]):
     """Saves logs of application on the server.
 
 

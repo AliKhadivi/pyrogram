@@ -62,7 +62,7 @@ class UpdateConnectedBot(TLObject["raw.base.Updates"]):
     ID = 0x66a08c7e
     QUALNAME = "functions.account.UpdateConnectedBot"
 
-    def __init__(self, *, bot: "raw.base.InputUser", recipients: "raw.base.InputBusinessBotRecipients", deleted: Optional[bool] = None, rights: "raw.base.BusinessBotRights" = None) -> None:
+    def __init__(self, *, bot: "raw.base.InputUser", recipients: "raw.base.InputBusinessBotRecipients", deleted: Optional[bool] = None, rights: Optional["raw.base.BusinessBotRights"] = None) -> None:
         self.bot = bot  # InputUser
         self.recipients = recipients  # InputBusinessBotRecipients
         self.deleted = deleted  # flags.1?true

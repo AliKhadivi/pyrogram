@@ -91,7 +91,7 @@ class MessageReplyHeader(TLObject):
     ID = 0x1b97dd66
     QUALNAME = "types.MessageReplyHeader"
 
-    def __init__(self, *, reply_to_scheduled: Optional[bool] = None, forum_topic: Optional[bool] = None, quote: Optional[bool] = None, reply_to_ephemeral: Optional[bool] = None, reply_to_msg_id: Optional[int] = None, reply_to_peer_id: "raw.base.Peer" = None, reply_from: "raw.base.MessageFwdHeader" = None, reply_media: "raw.base.MessageMedia" = None, reply_to_top_id: Optional[int] = None, quote_text: Optional[str] = None, quote_entities: Optional[List["raw.base.MessageEntity"]] = None, quote_offset: Optional[int] = None, todo_item_id: Optional[int] = None, poll_option: Optional[bytes] = None) -> None:
+    def __init__(self, *, reply_to_scheduled: Optional[bool] = None, forum_topic: Optional[bool] = None, quote: Optional[bool] = None, reply_to_ephemeral: Optional[bool] = None, reply_to_msg_id: Optional[int] = None, reply_to_peer_id: Optional["raw.base.Peer"] = None, reply_from: Optional["raw.base.MessageFwdHeader"] = None, reply_media: Optional["raw.base.MessageMedia"] = None, reply_to_top_id: Optional[int] = None, quote_text: Optional[str] = None, quote_entities: Optional[List["raw.base.MessageEntity"]] = None, quote_offset: Optional[int] = None, todo_item_id: Optional[int] = None, poll_option: Optional[bytes] = None) -> None:
         self.reply_to_scheduled = reply_to_scheduled  # flags.2?true
         self.forum_topic = forum_topic  # flags.3?true
         self.quote = quote  # flags.9?true

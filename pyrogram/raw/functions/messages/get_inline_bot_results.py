@@ -65,7 +65,7 @@ class GetInlineBotResults(TLObject["raw.base.messages.BotResults"]):
     ID = 0x514e999d
     QUALNAME = "functions.messages.GetInlineBotResults"
 
-    def __init__(self, *, bot: "raw.base.InputUser", peer: "raw.base.InputPeer", query: str, offset: str, geo_point: "raw.base.InputGeoPoint" = None) -> None:
+    def __init__(self, *, bot: "raw.base.InputUser", peer: "raw.base.InputPeer", query: str, offset: str, geo_point: Optional["raw.base.InputGeoPoint"] = None) -> None:
         self.bot = bot  # InputUser
         self.peer = peer  # InputPeer
         self.query = query  # string

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List, Union, BinaryIO
 
 from ..messages_and_media import MessageEntity
@@ -38,7 +39,7 @@ class InputMedia(Object):
         self,
         media: Union[str, BinaryIO],
         caption: str = "",
-        parse_mode: str = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         caption_entities: List[MessageEntity] = None
     ):
         super().__init__()

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveMusic(TLObject["raw.base.Bool"]):
+class SaveMusic(TLObject[bool]):
     """Adds or removes a song from the current user's profile see here » for more info on the music tab of the profile page.
 
 
@@ -59,7 +59,7 @@ class SaveMusic(TLObject["raw.base.Bool"]):
     ID = 0xb26732a9
     QUALNAME = "functions.account.SaveMusic"
 
-    def __init__(self, *, id: "raw.base.InputDocument", unsave: Optional[bool] = None, after_id: "raw.base.InputDocument" = None) -> None:
+    def __init__(self, *, id: "raw.base.InputDocument", unsave: Optional[bool] = None, after_id: Optional["raw.base.InputDocument"] = None) -> None:
         self.id = id  # InputDocument
         self.unsave = unsave  # flags.0?true
         self.after_id = after_id  # flags.1?InputDocument

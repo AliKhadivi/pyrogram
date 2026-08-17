@@ -55,7 +55,7 @@ class WebPageAttributeTheme(TLObject):
     ID = 0x54b56617
     QUALNAME = "types.WebPageAttributeTheme"
 
-    def __init__(self, *, documents: Optional[List["raw.base.Document"]] = None, settings: "raw.base.ThemeSettings" = None) -> None:
+    def __init__(self, *, documents: Optional[List["raw.base.Document"]] = None, settings: Optional["raw.base.ThemeSettings"] = None) -> None:
         self.documents = documents  # flags.0?Vector<Document>
         self.settings = settings  # flags.1?ThemeSettings
 

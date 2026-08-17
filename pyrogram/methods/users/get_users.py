@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import asyncio
 from typing import Union, List, Iterable
 
@@ -26,7 +27,7 @@ from pyrogram import types
 
 class GetUsers:
     async def get_users(
-        self: "pyrogram.Client",
+        self: typing.Any,
         user_ids: Union[int, str, Iterable[Union[int, str]]]
     ) -> Union["types.User", List["types.User"]]:
         """Get information about a user.

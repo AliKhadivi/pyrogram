@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetEmojiStickers(TLObject["raw.base.Bool"]):
+class SetEmojiStickers(TLObject[bool]):
     """Set a custom emoji stickerset for supergroups. Only usable after reaching at least the boost level » specified in the group_emoji_stickers_level_min » config parameter.
 
 

@@ -64,7 +64,7 @@ class BotInlineMessageMediaContact(TLObject):
     ID = 0x18d1cdc2
     QUALNAME = "types.BotInlineMessageMediaContact"
 
-    def __init__(self, *, phone_number: str, first_name: str, last_name: str, vcard: str, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, phone_number: str, first_name: str, last_name: str, vcard: str, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.phone_number = phone_number  # string
         self.first_name = first_name  # string
         self.last_name = last_name  # string

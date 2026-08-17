@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteStarGiftCollection(TLObject["raw.base.Bool"]):
+class DeleteStarGiftCollection(TLObject[bool]):
     """Delete a star gift collection ».
 
 

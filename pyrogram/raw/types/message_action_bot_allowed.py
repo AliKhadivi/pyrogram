@@ -61,7 +61,7 @@ class MessageActionBotAllowed(TLObject):
     ID = 0xc516d679
     QUALNAME = "types.MessageActionBotAllowed"
 
-    def __init__(self, *, attach_menu: Optional[bool] = None, from_request: Optional[bool] = None, domain: Optional[str] = None, app: "raw.base.BotApp" = None) -> None:
+    def __init__(self, *, attach_menu: Optional[bool] = None, from_request: Optional[bool] = None, domain: Optional[str] = None, app: Optional["raw.base.BotApp"] = None) -> None:
         self.attach_menu = attach_menu  # flags.1?true
         self.from_request = from_request  # flags.3?true
         self.domain = domain  # flags.0?string

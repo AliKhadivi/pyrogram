@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetJoinChatResults(TLObject["raw.base.Bool"]):
+class SetJoinChatResults(TLObject[bool]):
     """
 
 

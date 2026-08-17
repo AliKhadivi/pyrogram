@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckUsername(TLObject["raw.base.Bool"]):
+class CheckUsername(TLObject[bool]):
     """Check if a username is free and can be assigned to a channel/supergroup
 
 

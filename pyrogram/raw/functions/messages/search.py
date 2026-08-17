@@ -95,7 +95,7 @@ class Search(TLObject["raw.base.messages.Messages"]):
     ID = 0x29ee847a
     QUALNAME = "functions.messages.Search"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", q: str, filter: "raw.base.MessagesFilter", min_date: int, max_date: int, offset_id: int, add_offset: int, limit: int, max_id: int, min_id: int, hash: int, from_id: "raw.base.InputPeer" = None, saved_peer_id: "raw.base.InputPeer" = None, saved_reaction: Optional[List["raw.base.Reaction"]] = None, top_msg_id: Optional[int] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", q: str, filter: "raw.base.MessagesFilter", min_date: int, max_date: int, offset_id: int, add_offset: int, limit: int, max_id: int, min_id: int, hash: int, from_id: Optional["raw.base.InputPeer"] = None, saved_peer_id: Optional["raw.base.InputPeer"] = None, saved_reaction: Optional[List["raw.base.Reaction"]] = None, top_msg_id: Optional[int] = None) -> None:
         self.peer = peer  # InputPeer
         self.q = q  # string
         self.filter = filter  # MessagesFilter

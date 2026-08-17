@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportReadMetrics(TLObject["raw.base.Bool"]):
+class ReportReadMetrics(TLObject[bool]):
     """Report viewport read metrics for visible messages, indicating how long each message stayed in the chat viewport, see here » for more info on the full flow.
 
 

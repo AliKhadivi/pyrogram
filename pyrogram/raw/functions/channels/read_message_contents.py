@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReadMessageContents(TLObject["raw.base.Bool"]):
+class ReadMessageContents(TLObject[bool]):
     """Mark channel/supergroup message contents as read, emitting an updateChannelReadMessagesContents.
 
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class HideChatlistUpdates(TLObject["raw.base.Bool"]):
+class HideChatlistUpdates(TLObject[bool]):
     """Dismiss new pending peers recently added to a chat folder deep link ».
 
 

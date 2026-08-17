@@ -53,7 +53,7 @@ class GetChannelRecommendations(TLObject["raw.base.messages.Chats"]):
     ID = 0x25a71742
     QUALNAME = "functions.channels.GetChannelRecommendations"
 
-    def __init__(self, *, channel: "raw.base.InputChannel" = None) -> None:
+    def __init__(self, *, channel: Optional["raw.base.InputChannel"] = None) -> None:
         self.channel = channel  # flags.0?InputChannel
 
     @staticmethod

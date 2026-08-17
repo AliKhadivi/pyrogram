@@ -64,7 +64,7 @@ class MyBoost(TLObject):
     ID = 0xc448415c
     QUALNAME = "types.MyBoost"
 
-    def __init__(self, *, slot: int, date: int, expires: int, peer: "raw.base.Peer" = None, cooldown_until_date: Optional[int] = None) -> None:
+    def __init__(self, *, slot: int, date: int, expires: int, peer: Optional["raw.base.Peer"] = None, cooldown_until_date: Optional[int] = None) -> None:
         self.slot = slot  # int
         self.date = date  # int
         self.expires = expires  # int

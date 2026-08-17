@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateBirthday(TLObject["raw.base.Bool"]):
+class UpdateBirthday(TLObject[bool]):
     """Update our birthday, see here » for more info.
 
 
@@ -53,7 +53,7 @@ class UpdateBirthday(TLObject["raw.base.Bool"]):
     ID = 0xcc6e0c11
     QUALNAME = "functions.account.UpdateBirthday"
 
-    def __init__(self, *, birthday: "raw.base.Birthday" = None) -> None:
+    def __init__(self, *, birthday: Optional["raw.base.Birthday"] = None) -> None:
         self.birthday = birthday  # flags.0?Birthday
 
     @staticmethod

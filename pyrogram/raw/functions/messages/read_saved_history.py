@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReadSavedHistory(TLObject["raw.base.Bool"]):
+class ReadSavedHistory(TLObject[bool]):
     """Mark messages as read in a monoforum topic ».
 
 

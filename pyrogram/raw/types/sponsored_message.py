@@ -94,7 +94,7 @@ class SponsoredMessage(TLObject):
     ID = 0x7dbf8673
     QUALNAME = "types.SponsoredMessage"
 
-    def __init__(self, *, random_id: bytes, url: str, title: str, message: str, button_text: str, recommended: Optional[bool] = None, can_report: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, photo: "raw.base.Photo" = None, media: "raw.base.MessageMedia" = None, color: "raw.base.PeerColor" = None, sponsor_info: Optional[str] = None, additional_info: Optional[str] = None, min_display_duration: Optional[int] = None, max_display_duration: Optional[int] = None) -> None:
+    def __init__(self, *, random_id: bytes, url: str, title: str, message: str, button_text: str, recommended: Optional[bool] = None, can_report: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, photo: Optional["raw.base.Photo"] = None, media: Optional["raw.base.MessageMedia"] = None, color: Optional["raw.base.PeerColor"] = None, sponsor_info: Optional[str] = None, additional_info: Optional[str] = None, min_display_duration: Optional[int] = None, max_display_duration: Optional[int] = None) -> None:
         self.random_id = random_id  # bytes
         self.url = url  # string
         self.title = title  # string

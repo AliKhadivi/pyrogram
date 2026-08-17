@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class Leave(TLObject["raw.base.Bool"]):
+class Leave(TLObject[bool]):
     """Disable SMS jobs (official clients only).
 
 

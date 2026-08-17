@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleBotInAttachMenu(TLObject["raw.base.Bool"]):
+class ToggleBotInAttachMenu(TLObject[bool]):
     """Enable or disable web bot attachment menu »
 
 

@@ -58,7 +58,7 @@ class UpdateDialogUnreadMark(TLObject):
     ID = 0xb658f23e
     QUALNAME = "types.UpdateDialogUnreadMark"
 
-    def __init__(self, *, peer: "raw.base.DialogPeer", unread: Optional[bool] = None, saved_peer_id: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.DialogPeer", unread: Optional[bool] = None, saved_peer_id: Optional["raw.base.Peer"] = None) -> None:
         self.peer = peer  # DialogPeer
         self.unread = unread  # flags.0?true
         self.saved_peer_id = saved_peer_id  # flags.1?Peer

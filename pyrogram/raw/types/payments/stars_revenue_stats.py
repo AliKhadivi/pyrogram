@@ -70,7 +70,7 @@ class StarsRevenueStats(TLObject):
     ID = 0x6c207376
     QUALNAME = "types.payments.StarsRevenueStats"
 
-    def __init__(self, *, revenue_graph: "raw.base.StatsGraph", status: "raw.base.StarsRevenueStatus", usd_rate: float, top_hours_graph: "raw.base.StatsGraph" = None) -> None:
+    def __init__(self, *, revenue_graph: "raw.base.StatsGraph", status: "raw.base.StarsRevenueStatus", usd_rate: float, top_hours_graph: Optional["raw.base.StatsGraph"] = None) -> None:
         self.revenue_graph = revenue_graph  # StatsGraph
         self.status = status  # StarsRevenueStatus
         self.usd_rate = usd_rate  # double

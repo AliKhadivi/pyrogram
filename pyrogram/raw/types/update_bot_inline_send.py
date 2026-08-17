@@ -64,7 +64,7 @@ class UpdateBotInlineSend(TLObject):
     ID = 0x12f12a07
     QUALNAME = "types.UpdateBotInlineSend"
 
-    def __init__(self, *, user_id: int, query: str, id: str, geo: "raw.base.GeoPoint" = None, msg_id: "raw.base.InputBotInlineMessageID" = None) -> None:
+    def __init__(self, *, user_id: int, query: str, id: str, geo: Optional["raw.base.GeoPoint"] = None, msg_id: Optional["raw.base.InputBotInlineMessageID"] = None) -> None:
         self.user_id = user_id  # long
         self.query = query  # string
         self.id = id  # string

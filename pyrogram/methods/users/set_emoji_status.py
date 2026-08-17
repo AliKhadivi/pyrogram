@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw, types
 
 class SetEmojiStatus:
     async def set_emoji_status(
-        self: "pyrogram.Client",
+        self: typing.Any,
         emoji_status: Optional["types.EmojiStatus"] = None
     ) -> bool:
         """Set the emoji status.

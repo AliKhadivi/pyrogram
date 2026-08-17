@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBlocked(TLObject["raw.base.Bool"]):
+class SetBlocked(TLObject[bool]):
     """Replace the contents of an entire blocklist, see here for more info ».
 
 

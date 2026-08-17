@@ -73,7 +73,7 @@ class InputSecureValue(TLObject):
     ID = 0xdb21d0a7
     QUALNAME = "types.InputSecureValue"
 
-    def __init__(self, *, type: "raw.base.SecureValueType", data: "raw.base.SecureData" = None, front_side: "raw.base.InputSecureFile" = None, reverse_side: "raw.base.InputSecureFile" = None, selfie: "raw.base.InputSecureFile" = None, translation: Optional[List["raw.base.InputSecureFile"]] = None, files: Optional[List["raw.base.InputSecureFile"]] = None, plain_data: "raw.base.SecurePlainData" = None) -> None:
+    def __init__(self, *, type: "raw.base.SecureValueType", data: Optional["raw.base.SecureData"] = None, front_side: Optional["raw.base.InputSecureFile"] = None, reverse_side: Optional["raw.base.InputSecureFile"] = None, selfie: Optional["raw.base.InputSecureFile"] = None, translation: Optional[List["raw.base.InputSecureFile"]] = None, files: Optional[List["raw.base.InputSecureFile"]] = None, plain_data: Optional["raw.base.SecurePlainData"] = None) -> None:
         self.type = type  # SecureValueType
         self.data = data  # flags.0?SecureData
         self.front_side = front_side  # flags.1?InputSecureFile

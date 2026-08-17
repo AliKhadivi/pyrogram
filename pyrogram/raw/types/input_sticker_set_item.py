@@ -61,7 +61,7 @@ class InputStickerSetItem(TLObject):
     ID = 0x32da9e9c
     QUALNAME = "types.InputStickerSetItem"
 
-    def __init__(self, *, document: "raw.base.InputDocument", emoji: str, mask_coords: "raw.base.MaskCoords" = None, keywords: Optional[str] = None) -> None:
+    def __init__(self, *, document: "raw.base.InputDocument", emoji: str, mask_coords: Optional["raw.base.MaskCoords"] = None, keywords: Optional[str] = None) -> None:
         self.document = document  # InputDocument
         self.emoji = emoji  # string
         self.mask_coords = mask_coords  # flags.0?MaskCoords

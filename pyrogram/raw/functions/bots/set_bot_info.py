@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotInfo(TLObject["raw.base.Bool"]):
+class SetBotInfo(TLObject[bool]):
     """Set localized name, about text and description of a bot (or of the current account, if called by a bot).
 
 
@@ -65,7 +65,7 @@ class SetBotInfo(TLObject["raw.base.Bool"]):
     ID = 0x10cf3123
     QUALNAME = "functions.bots.SetBotInfo"
 
-    def __init__(self, *, lang_code: str, bot: "raw.base.InputUser" = None, name: Optional[str] = None, about: Optional[str] = None, description: Optional[str] = None) -> None:
+    def __init__(self, *, lang_code: str, bot: Optional["raw.base.InputUser"] = None, name: Optional[str] = None, about: Optional[str] = None, description: Optional[str] = None) -> None:
         self.lang_code = lang_code  # string
         self.bot = bot  # flags.2?InputUser
         self.name = name  # flags.3?string

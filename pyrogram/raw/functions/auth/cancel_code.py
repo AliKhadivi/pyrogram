@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CancelCode(TLObject["raw.base.Bool"]):
+class CancelCode(TLObject[bool]):
     """Cancel the login verification code
 
 

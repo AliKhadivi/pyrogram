@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ViewSponsoredMessage(TLObject["raw.base.Bool"]):
+class ViewSponsoredMessage(TLObject[bool]):
     """Mark a specific sponsored message » as read
 
 

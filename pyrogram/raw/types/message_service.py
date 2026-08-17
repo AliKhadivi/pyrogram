@@ -97,7 +97,7 @@ class MessageService(TLObject):
     ID = 0x7a800e0a
     QUALNAME = "types.MessageService"
 
-    def __init__(self, *, id: int, peer_id: "raw.base.Peer", date: int, action: "raw.base.MessageAction", out: Optional[bool] = None, mentioned: Optional[bool] = None, media_unread: Optional[bool] = None, reactions_are_possible: Optional[bool] = None, silent: Optional[bool] = None, post: Optional[bool] = None, legacy: Optional[bool] = None, from_id: "raw.base.Peer" = None, saved_peer_id: "raw.base.Peer" = None, reply_to: "raw.base.MessageReplyHeader" = None, reactions: "raw.base.MessageReactions" = None, ttl_period: Optional[int] = None) -> None:
+    def __init__(self, *, id: int, peer_id: "raw.base.Peer", date: int, action: "raw.base.MessageAction", out: Optional[bool] = None, mentioned: Optional[bool] = None, media_unread: Optional[bool] = None, reactions_are_possible: Optional[bool] = None, silent: Optional[bool] = None, post: Optional[bool] = None, legacy: Optional[bool] = None, from_id: Optional["raw.base.Peer"] = None, saved_peer_id: Optional["raw.base.Peer"] = None, reply_to: Optional["raw.base.MessageReplyHeader"] = None, reactions: Optional["raw.base.MessageReactions"] = None, ttl_period: Optional[int] = None) -> None:
         self.id = id  # int
         self.peer_id = peer_id  # Peer
         self.date = date  # int

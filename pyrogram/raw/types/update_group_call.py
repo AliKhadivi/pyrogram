@@ -58,7 +58,7 @@ class UpdateGroupCall(TLObject):
     ID = 0x9d2216e0
     QUALNAME = "types.UpdateGroupCall"
 
-    def __init__(self, *, call: "raw.base.GroupCall", live_story: Optional[bool] = None, peer: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, call: "raw.base.GroupCall", live_story: Optional[bool] = None, peer: Optional["raw.base.Peer"] = None) -> None:
         self.call = call  # GroupCall
         self.live_story = live_story  # flags.2?true
         self.peer = peer  # flags.1?Peer

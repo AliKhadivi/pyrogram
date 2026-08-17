@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateContactNote(TLObject["raw.base.Bool"]):
+class UpdateContactNote(TLObject[bool]):
     """Update the private note associated to a contact; see here » for more info.
 
 

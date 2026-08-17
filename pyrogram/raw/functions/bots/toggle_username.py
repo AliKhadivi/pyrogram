@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleUsername(TLObject["raw.base.Bool"]):
+class ToggleUsername(TLObject[bool]):
     """Activate or deactivate a purchased fragment.com username associated to a bot we own.
 
 

@@ -73,7 +73,7 @@ class InputBotInlineResult(TLObject):
     ID = 0x88bf9319
     QUALNAME = "types.InputBotInlineResult"
 
-    def __init__(self, *, id: str, type: str, send_message: "raw.base.InputBotInlineMessage", title: Optional[str] = None, description: Optional[str] = None, url: Optional[str] = None, thumb: "raw.base.InputWebDocument" = None, content: "raw.base.InputWebDocument" = None) -> None:
+    def __init__(self, *, id: str, type: str, send_message: "raw.base.InputBotInlineMessage", title: Optional[str] = None, description: Optional[str] = None, url: Optional[str] = None, thumb: Optional["raw.base.InputWebDocument"] = None, content: Optional["raw.base.InputWebDocument"] = None) -> None:
         self.id = id  # string
         self.type = type  # string
         self.send_message = send_message  # InputBotInlineMessage

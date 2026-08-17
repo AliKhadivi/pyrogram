@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 from pyrogram import types
@@ -25,7 +26,7 @@ from .inline_session import get_session
 
 class EditInlineReplyMarkup:
     async def edit_inline_reply_markup(
-        self: "pyrogram.Client",
+        self: typing.Any,
         inline_message_id: str,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:

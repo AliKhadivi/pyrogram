@@ -55,7 +55,7 @@ class UpdateDialogFilter(TLObject):
     ID = 0x26ffde7d
     QUALNAME = "types.UpdateDialogFilter"
 
-    def __init__(self, *, id: int, filter: "raw.base.DialogFilter" = None) -> None:
+    def __init__(self, *, id: int, filter: Optional["raw.base.DialogFilter"] = None) -> None:
         self.id = id  # int
         self.filter = filter  # flags.0?DialogFilter
 

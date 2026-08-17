@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-RequestPeerType = Union[raw.types.RequestPeerTypeBroadcast, raw.types.RequestPeerTypeChat, raw.types.RequestPeerTypeCreateBot, raw.types.RequestPeerTypeUser]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    RequestPeerType = Any
+else:
+    RequestPeerType = Union[raw.types.RequestPeerTypeBroadcast, raw.types.RequestPeerTypeChat, raw.types.RequestPeerTypeCreateBot, raw.types.RequestPeerTypeUser]
+
 _doc = """Filtering criteria to use for the peer selection list shown to the user.
 
     Constructors:
@@ -42,8 +50,10 @@ _doc = """Filtering criteria to use for the peer selection list shown to the use
             RequestPeerTypeUser"""
 try:
     _t = type(RequestPeerType)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         RequestPeerType.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

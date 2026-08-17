@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdatePersonalChannel(TLObject["raw.base.Bool"]):
+class UpdatePersonalChannel(TLObject[bool]):
     """Associate (or remove) a personal channel », that will be listed on our personal profile page ».
 
 

@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-UrlAuthResult = Union[raw.types.UrlAuthResultAccepted, raw.types.UrlAuthResultDefault, raw.types.UrlAuthResultRequest]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    UrlAuthResult = Any
+else:
+    UrlAuthResult = Union[raw.types.UrlAuthResultAccepted, raw.types.UrlAuthResultDefault, raw.types.UrlAuthResultRequest]
+
 _doc = """URL authorization result
 
     Constructors:
@@ -52,8 +60,10 @@ _doc = """URL authorization result
             messages.AcceptUrlAuth"""
 try:
     _t = type(UrlAuthResult)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         UrlAuthResult.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

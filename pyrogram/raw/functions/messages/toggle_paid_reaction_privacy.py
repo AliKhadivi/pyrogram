@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class TogglePaidReactionPrivacy(TLObject["raw.base.Bool"]):
+class TogglePaidReactionPrivacy(TLObject[bool]):
     """Changes the privacy of already sent paid reactions on a specific message.
 
 

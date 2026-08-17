@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List
 
 import pyrogram
@@ -26,7 +27,7 @@ from pyrogram import utils
 
 class GetNearbyChats:
     async def get_nearby_chats(
-        self: "pyrogram.Client",
+        self: typing.Any,
         latitude: float,
         longitude: float
     ) -> List["types.Chat"]:

@@ -64,7 +64,7 @@ class RequestedPeerUser(TLObject):
     ID = 0xd62ff46a
     QUALNAME = "types.RequestedPeerUser"
 
-    def __init__(self, *, user_id: int, first_name: Optional[str] = None, last_name: Optional[str] = None, username: Optional[str] = None, photo: "raw.base.Photo" = None) -> None:
+    def __init__(self, *, user_id: int, first_name: Optional[str] = None, last_name: Optional[str] = None, username: Optional[str] = None, photo: Optional["raw.base.Photo"] = None) -> None:
         self.user_id = user_id  # long
         self.first_name = first_name  # flags.0?string
         self.last_name = last_name  # flags.0?string

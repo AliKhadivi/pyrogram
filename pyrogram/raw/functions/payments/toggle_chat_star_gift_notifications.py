@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleChatStarGiftNotifications(TLObject["raw.base.Bool"]):
+class ToggleChatStarGiftNotifications(TLObject[bool]):
     """Enables or disables the reception of notifications every time a gift » is received by the specified channel, can only be invoked by admins with post_messages admin rights.
 
 

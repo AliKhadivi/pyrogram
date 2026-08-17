@@ -16,13 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw, types
 
 
 class DeleteBotCommands:
     async def delete_bot_commands(
-        self: "pyrogram.Client",
+        self: typing.Any,
         scope: "types.BotCommandScope" = types.BotCommandScopeDefault(),
         language_code: str = "",
     ) -> bool:

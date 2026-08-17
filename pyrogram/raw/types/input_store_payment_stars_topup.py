@@ -61,7 +61,7 @@ class InputStorePaymentStarsTopup(TLObject):
     ID = 0xf9a2a6cb
     QUALNAME = "types.InputStorePaymentStarsTopup"
 
-    def __init__(self, *, stars: int, currency: str, amount: int, spend_purpose_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, stars: int, currency: str, amount: int, spend_purpose_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.stars = stars  # long
         self.currency = currency  # string
         self.amount = amount  # long

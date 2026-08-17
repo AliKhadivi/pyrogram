@@ -67,7 +67,7 @@ class UpdateMessagePoll(TLObject):
     ID = 0xd64c522b
     QUALNAME = "types.UpdateMessagePoll"
 
-    def __init__(self, *, poll_id: int, results: "raw.base.PollResults", peer: "raw.base.Peer" = None, msg_id: Optional[int] = None, top_msg_id: Optional[int] = None, poll: "raw.base.Poll" = None) -> None:
+    def __init__(self, *, poll_id: int, results: "raw.base.PollResults", peer: Optional["raw.base.Peer"] = None, msg_id: Optional[int] = None, top_msg_id: Optional[int] = None, poll: Optional["raw.base.Poll"] = None) -> None:
         self.poll_id = poll_id  # long
         self.results = results  # PollResults
         self.peer = peer  # flags.1?Peer

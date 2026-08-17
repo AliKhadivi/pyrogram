@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class Unblock(TLObject["raw.base.Bool"]):
+class Unblock(TLObject[bool]):
     """Deletes a peer from a blocklist, see here » for more info.
 
 

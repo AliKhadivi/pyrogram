@@ -16,15 +16,16 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 
 
 class UpdateProfile:
     async def update_profile(
-        self: "pyrogram.Client",
-        first_name: str = None,
-        last_name: str = None,
+        self: typing.Any,
+        first_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        last_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         bio: str = None
     ) -> bool:
         """Update your profile details such as first name, last name and bio.

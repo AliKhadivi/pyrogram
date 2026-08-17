@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union, List
 
 import pyrogram
@@ -25,7 +26,7 @@ from pyrogram import types
 
 class CreateGroup:
     async def create_group(
-        self: "pyrogram.Client",
+        self: typing.Any,
         title: str,
         users: Union[Union[int, str], List[Union[int, str]]]
     ) -> "types.Chat":

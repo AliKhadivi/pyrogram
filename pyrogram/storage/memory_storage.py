@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import base64
 import logging
 import sqlite3
@@ -27,7 +28,7 @@ log = logging.getLogger(__name__)
 
 
 class MemoryStorage(SQLiteStorage):
-    def __init__(self, name: str, session_string: str = None):
+    def __init__(self, name: str, session_string: typing.Optional[typing.Optional[typing.Optional[str]]] = None):
         super().__init__(name)
 
         self.session_string = session_string

@@ -70,7 +70,7 @@ class UpdateBusinessBotCallbackQuery(TLObject):
     ID = 0x1ea2fda7
     QUALNAME = "types.UpdateBusinessBotCallbackQuery"
 
-    def __init__(self, *, query_id: int, user_id: int, connection_id: str, message: "raw.base.Message", chat_instance: int, reply_to_message: "raw.base.Message" = None, data: Optional[bytes] = None) -> None:
+    def __init__(self, *, query_id: int, user_id: int, connection_id: str, message: "raw.base.Message", chat_instance: int, reply_to_message: Optional["raw.base.Message"] = None, data: Optional[bytes] = None) -> None:
         self.query_id = query_id  # long
         self.user_id = user_id  # long
         self.connection_id = connection_id  # string

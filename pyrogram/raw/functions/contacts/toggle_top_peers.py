@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleTopPeers(TLObject["raw.base.Bool"]):
+class ToggleTopPeers(TLObject[bool]):
     """Enable/disable top peers
 
 

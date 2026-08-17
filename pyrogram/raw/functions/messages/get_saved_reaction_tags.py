@@ -56,7 +56,7 @@ class GetSavedReactionTags(TLObject["raw.base.messages.SavedReactionTags"]):
     ID = 0x3637e05b
     QUALNAME = "functions.messages.GetSavedReactionTags"
 
-    def __init__(self, *, hash: int, peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, hash: int, peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.hash = hash  # long
         self.peer = peer  # flags.0?InputPeer
 

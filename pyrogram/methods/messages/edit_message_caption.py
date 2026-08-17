@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union, List, Optional
 
 import pyrogram
@@ -24,12 +25,12 @@ from pyrogram import types, enums
 
 class EditMessageCaption:
     async def edit_message_caption(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         message_id: int,
         caption: str,
-        parse_mode: Optional["enums.ParseMode"] = None,
-        caption_entities: List["types.MessageEntity"] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "types.Message":
         """Edit the caption of media messages.

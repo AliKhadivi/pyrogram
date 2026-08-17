@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union
 
@@ -26,16 +27,16 @@ from pyrogram import types
 
 class SendContact:
     async def send_contact(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         phone_number: str,
         first_name: str,
-        last_name: str = None,
-        vcard: str = None,
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
-        protect_content: bool = None,
+        last_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        vcard: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

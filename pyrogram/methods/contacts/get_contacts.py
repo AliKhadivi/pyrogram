@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 from typing import List
 
@@ -28,7 +29,7 @@ log = logging.getLogger(__name__)
 
 class GetContacts:
     async def get_contacts(
-        self: "pyrogram.Client"
+        self: typing.Any
     ) -> List["types.User"]:
         """Get contacts from your Telegram address book.
 

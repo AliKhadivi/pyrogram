@@ -62,7 +62,7 @@ class ChangeSticker(TLObject["raw.base.messages.StickerSet"]):
     ID = 0xf5537ebc
     QUALNAME = "functions.stickers.ChangeSticker"
 
-    def __init__(self, *, sticker: "raw.base.InputDocument", emoji: Optional[str] = None, mask_coords: "raw.base.MaskCoords" = None, keywords: Optional[str] = None) -> None:
+    def __init__(self, *, sticker: "raw.base.InputDocument", emoji: Optional[str] = None, mask_coords: Optional["raw.base.MaskCoords"] = None, keywords: Optional[str] = None) -> None:
         self.sticker = sticker  # InputDocument
         self.emoji = emoji  # flags.0?string
         self.mask_coords = mask_coords  # flags.1?MaskCoords

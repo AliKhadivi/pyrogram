@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateStatus(TLObject["raw.base.Bool"]):
+class UpdateStatus(TLObject[bool]):
     """Updates online user status.
 
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotUpdatesStatus(TLObject["raw.base.Bool"]):
+class SetBotUpdatesStatus(TLObject[bool]):
     """Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
 
 

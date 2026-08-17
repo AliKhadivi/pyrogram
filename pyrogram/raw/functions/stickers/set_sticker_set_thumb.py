@@ -59,7 +59,7 @@ class SetStickerSetThumb(TLObject["raw.base.messages.StickerSet"]):
     ID = 0xa76a5392
     QUALNAME = "functions.stickers.SetStickerSetThumb"
 
-    def __init__(self, *, stickerset: "raw.base.InputStickerSet", thumb: "raw.base.InputDocument" = None, thumb_document_id: Optional[int] = None) -> None:
+    def __init__(self, *, stickerset: "raw.base.InputStickerSet", thumb: Optional["raw.base.InputDocument"] = None, thumb_document_id: Optional[int] = None) -> None:
         self.stickerset = stickerset  # InputStickerSet
         self.thumb = thumb  # flags.0?InputDocument
         self.thumb_document_id = thumb_document_id  # flags.1?long

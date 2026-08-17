@@ -73,7 +73,7 @@ class StarGiftAuctionAcquiredGift(TLObject):
     ID = 0x42b00348
     QUALNAME = "types.StarGiftAuctionAcquiredGift"
 
-    def __init__(self, *, peer: "raw.base.Peer", date: int, bid_amount: int, round: int, pos: int, name_hidden: Optional[bool] = None, message: "raw.base.TextWithEntities" = None, gift_num: Optional[int] = None) -> None:
+    def __init__(self, *, peer: "raw.base.Peer", date: int, bid_amount: int, round: int, pos: int, name_hidden: Optional[bool] = None, message: Optional["raw.base.TextWithEntities"] = None, gift_num: Optional[int] = None) -> None:
         self.peer = peer  # Peer
         self.date = date  # int
         self.bid_amount = bid_amount  # long

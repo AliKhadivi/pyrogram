@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Iterable
 
 import pyrogram
@@ -25,7 +26,7 @@ from pyrogram import types
 
 class AnswerInlineQuery:
     async def answer_inline_query(
-        self: "pyrogram.Client",
+        self: typing.Any,
         inline_query_id: str,
         results: Iterable["types.InlineQueryResult"],
         cache_time: int = 300,

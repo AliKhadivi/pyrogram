@@ -65,7 +65,7 @@ class SendPaidReaction(TLObject["raw.base.Updates"]):
     ID = 0x58bbcb50
     QUALNAME = "functions.messages.SendPaidReaction"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", msg_id: int, count: int, random_id: int, private: "raw.base.PaidReactionPrivacy" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", msg_id: int, count: int, random_id: int, private: Optional["raw.base.PaidReactionPrivacy"] = None) -> None:
         self.peer = peer  # InputPeer
         self.msg_id = msg_id  # int
         self.count = count  # int

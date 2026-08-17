@@ -64,7 +64,7 @@ class InputBotInlineMessageMediaGeo(TLObject):
     ID = 0x96929a85
     QUALNAME = "types.InputBotInlineMessageMediaGeo"
 
-    def __init__(self, *, geo_point: "raw.base.InputGeoPoint", heading: Optional[int] = None, period: Optional[int] = None, proximity_notification_radius: Optional[int] = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, geo_point: "raw.base.InputGeoPoint", heading: Optional[int] = None, period: Optional[int] = None, proximity_notification_radius: Optional[int] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.geo_point = geo_point  # InputGeoPoint
         self.heading = heading  # flags.0?int
         self.period = period  # flags.1?int

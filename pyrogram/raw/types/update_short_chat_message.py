@@ -239,7 +239,7 @@ class UpdateShortChatMessage(TLObject):
     ID = 0x4d6deea5
     QUALNAME = "types.UpdateShortChatMessage"
 
-    def __init__(self, *, id: int, from_id: int, chat_id: int, message: str, pts: int, pts_count: int, date: int, out: Optional[bool] = None, mentioned: Optional[bool] = None, media_unread: Optional[bool] = None, silent: Optional[bool] = None, fwd_from: "raw.base.MessageFwdHeader" = None, via_bot_id: Optional[int] = None, reply_to: "raw.base.MessageReplyHeader" = None, entities: Optional[List["raw.base.MessageEntity"]] = None, ttl_period: Optional[int] = None) -> None:
+    def __init__(self, *, id: int, from_id: int, chat_id: int, message: str, pts: int, pts_count: int, date: int, out: Optional[bool] = None, mentioned: Optional[bool] = None, media_unread: Optional[bool] = None, silent: Optional[bool] = None, fwd_from: Optional["raw.base.MessageFwdHeader"] = None, via_bot_id: Optional[int] = None, reply_to: Optional["raw.base.MessageReplyHeader"] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, ttl_period: Optional[int] = None) -> None:
         self.id = id  # int
         self.from_id = from_id  # long
         self.chat_id = chat_id  # long

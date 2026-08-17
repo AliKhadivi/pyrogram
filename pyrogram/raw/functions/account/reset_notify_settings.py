@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetNotifySettings(TLObject["raw.base.Bool"]):
+class ResetNotifySettings(TLObject[bool]):
     """Resets all notification settings from users and groups.
 
 

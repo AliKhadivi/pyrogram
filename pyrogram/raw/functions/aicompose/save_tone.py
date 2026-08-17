@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveTone(TLObject["raw.base.Bool"]):
+class SaveTone(TLObject[bool]):
     """Install or uninstall an AI composer tone », adding it to or removing it from the list of saved tones of the current user.
 
 

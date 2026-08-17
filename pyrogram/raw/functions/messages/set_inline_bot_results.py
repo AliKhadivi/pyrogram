@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetInlineBotResults(TLObject["raw.base.Bool"]):
+class SetInlineBotResults(TLObject[bool]):
     """Answer an inline query, for bots only
 
 
@@ -74,7 +74,7 @@ class SetInlineBotResults(TLObject["raw.base.Bool"]):
     ID = 0xbb12a419
     QUALNAME = "functions.messages.SetInlineBotResults"
 
-    def __init__(self, *, query_id: int, results: List["raw.base.InputBotInlineResult"], cache_time: int, gallery: Optional[bool] = None, private: Optional[bool] = None, next_offset: Optional[str] = None, switch_pm: "raw.base.InlineBotSwitchPM" = None, switch_webview: "raw.base.InlineBotWebView" = None) -> None:
+    def __init__(self, *, query_id: int, results: List["raw.base.InputBotInlineResult"], cache_time: int, gallery: Optional[bool] = None, private: Optional[bool] = None, next_offset: Optional[str] = None, switch_pm: Optional["raw.base.InlineBotSwitchPM"] = None, switch_webview: Optional["raw.base.InlineBotWebView"] = None) -> None:
         self.query_id = query_id  # long
         self.results = results  # Vector<InputBotInlineResult>
         self.cache_time = cache_time  # int

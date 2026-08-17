@@ -71,7 +71,7 @@ class CreateConferenceCall(TLObject["raw.base.Updates"]):
     ID = 0x7d0444bb
     QUALNAME = "functions.phone.CreateConferenceCall"
 
-    def __init__(self, *, random_id: int, muted: Optional[bool] = None, video_stopped: Optional[bool] = None, join: Optional[bool] = None, public_key: Optional[int] = None, block: Optional[bytes] = None, params: "raw.base.DataJSON" = None) -> None:
+    def __init__(self, *, random_id: int, muted: Optional[bool] = None, video_stopped: Optional[bool] = None, join: Optional[bool] = None, public_key: Optional[int] = None, block: Optional[bytes] = None, params: Optional["raw.base.DataJSON"] = None) -> None:
         self.random_id = random_id  # int
         self.muted = muted  # flags.0?true
         self.video_stopped = video_stopped  # flags.2?true

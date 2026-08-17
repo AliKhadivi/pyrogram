@@ -82,7 +82,7 @@ class Community(TLObject):
     ID = 0x65efe954
     QUALNAME = "types.Community"
 
-    def __init__(self, *, id: int, title: str, photo: "raw.base.ChatPhoto", date: int, creator: Optional[bool] = None, left: Optional[bool] = None, min: Optional[bool] = None, collapsed_in_dialogs: Optional[bool] = None, access_hash: Optional[int] = None, admin_rights: "raw.base.ChatAdminRights" = None, default_banned_rights: "raw.base.ChatBannedRights" = None) -> None:
+    def __init__(self, *, id: int, title: str, photo: "raw.base.ChatPhoto", date: int, creator: Optional[bool] = None, left: Optional[bool] = None, min: Optional[bool] = None, collapsed_in_dialogs: Optional[bool] = None, access_hash: Optional[int] = None, admin_rights: Optional["raw.base.ChatAdminRights"] = None, default_banned_rights: Optional["raw.base.ChatBannedRights"] = None) -> None:
         self.id = id  # long
         self.title = title  # string
         self.photo = photo  # ChatPhoto

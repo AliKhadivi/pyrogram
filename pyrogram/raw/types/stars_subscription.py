@@ -85,7 +85,7 @@ class StarsSubscription(TLObject):
     ID = 0x2e6eab1a
     QUALNAME = "types.StarsSubscription"
 
-    def __init__(self, *, id: str, peer: "raw.base.Peer", until_date: int, pricing: "raw.base.StarsSubscriptionPricing", canceled: Optional[bool] = None, can_refulfill: Optional[bool] = None, missing_balance: Optional[bool] = None, bot_canceled: Optional[bool] = None, chat_invite_hash: Optional[str] = None, title: Optional[str] = None, photo: "raw.base.WebDocument" = None, invoice_slug: Optional[str] = None) -> None:
+    def __init__(self, *, id: str, peer: "raw.base.Peer", until_date: int, pricing: "raw.base.StarsSubscriptionPricing", canceled: Optional[bool] = None, can_refulfill: Optional[bool] = None, missing_balance: Optional[bool] = None, bot_canceled: Optional[bool] = None, chat_invite_hash: Optional[str] = None, title: Optional[str] = None, photo: Optional["raw.base.WebDocument"] = None, invoice_slug: Optional[str] = None) -> None:
         self.id = id  # string
         self.peer = peer  # Peer
         self.until_date = until_date  # int

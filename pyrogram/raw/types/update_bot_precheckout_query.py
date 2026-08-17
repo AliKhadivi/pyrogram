@@ -70,7 +70,7 @@ class UpdateBotPrecheckoutQuery(TLObject):
     ID = 0x8caa9a96
     QUALNAME = "types.UpdateBotPrecheckoutQuery"
 
-    def __init__(self, *, query_id: int, user_id: int, payload: bytes, currency: str, total_amount: int, info: "raw.base.PaymentRequestedInfo" = None, shipping_option_id: Optional[str] = None) -> None:
+    def __init__(self, *, query_id: int, user_id: int, payload: bytes, currency: str, total_amount: int, info: Optional["raw.base.PaymentRequestedInfo"] = None, shipping_option_id: Optional[str] = None) -> None:
         self.query_id = query_id  # long
         self.user_id = user_id  # long
         self.payload = payload  # bytes

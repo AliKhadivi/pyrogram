@@ -115,7 +115,7 @@ class ForumTopic(TLObject):
     ID = 0xfcdad815
     QUALNAME = "types.ForumTopic"
 
-    def __init__(self, *, id: int, date: int, peer: "raw.base.Peer", title: str, icon_color: int, top_message: int, read_inbox_max_id: int, read_outbox_max_id: int, unread_count: int, unread_mentions_count: int, unread_reactions_count: int, unread_poll_votes_count: int, from_id: "raw.base.Peer", notify_settings: "raw.base.PeerNotifySettings", my: Optional[bool] = None, closed: Optional[bool] = None, pinned: Optional[bool] = None, short: Optional[bool] = None, hidden: Optional[bool] = None, title_missing: Optional[bool] = None, icon_emoji_id: Optional[int] = None, draft: "raw.base.DraftMessage" = None) -> None:
+    def __init__(self, *, id: int, date: int, peer: "raw.base.Peer", title: str, icon_color: int, top_message: int, read_inbox_max_id: int, read_outbox_max_id: int, unread_count: int, unread_mentions_count: int, unread_reactions_count: int, unread_poll_votes_count: int, from_id: "raw.base.Peer", notify_settings: "raw.base.PeerNotifySettings", my: Optional[bool] = None, closed: Optional[bool] = None, pinned: Optional[bool] = None, short: Optional[bool] = None, hidden: Optional[bool] = None, title_missing: Optional[bool] = None, icon_emoji_id: Optional[int] = None, draft: Optional["raw.base.DraftMessage"] = None) -> None:
         self.id = id  # int
         self.date = date  # int
         self.peer = peer  # Peer

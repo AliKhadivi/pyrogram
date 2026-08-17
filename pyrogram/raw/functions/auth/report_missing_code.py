@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportMissingCode(TLObject["raw.base.Bool"]):
+class ReportMissingCode(TLObject[bool]):
     """Official apps only, reports that the SMS authentication code wasn't delivered.
 
 

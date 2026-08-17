@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class TogglePeerTranslations(TLObject["raw.base.Bool"]):
+class TogglePeerTranslations(TLObject[bool]):
     """Show or hide the real-time chat translation popup for a certain chat
 
 

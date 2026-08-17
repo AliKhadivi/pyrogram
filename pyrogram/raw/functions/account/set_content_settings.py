@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetContentSettings(TLObject["raw.base.Bool"]):
+class SetContentSettings(TLObject[bool]):
     """Set sensitive content settings (for viewing or hiding NSFW content)
 
 

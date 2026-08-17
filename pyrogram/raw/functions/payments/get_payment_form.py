@@ -56,7 +56,7 @@ class GetPaymentForm(TLObject["raw.base.payments.PaymentForm"]):
     ID = 0x37148dbb
     QUALNAME = "functions.payments.GetPaymentForm"
 
-    def __init__(self, *, invoice: "raw.base.InputInvoice", theme_params: "raw.base.DataJSON" = None) -> None:
+    def __init__(self, *, invoice: "raw.base.InputInvoice", theme_params: Optional["raw.base.DataJSON"] = None) -> None:
         self.invoice = invoice  # InputInvoice
         self.theme_params = theme_params  # flags.0?DataJSON
 

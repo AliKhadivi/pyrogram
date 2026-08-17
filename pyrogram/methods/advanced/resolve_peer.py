@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 import re
 from typing import Union
@@ -30,7 +31,7 @@ log = logging.getLogger(__name__)
 
 class ResolvePeer:
     async def resolve_peer(
-        self: "pyrogram.Client",
+        self: typing.Any,
         peer_id: Union[int, str]
     ) -> Union[raw.base.InputPeer, raw.base.InputUser, raw.base.InputChannel]:
         """Get the InputPeer of a known peer id.

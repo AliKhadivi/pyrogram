@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -32,7 +33,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveBigFilePart(TLObject["raw.base.Bool"]):
+class SaveBigFilePart(TLObject[bool]):
     """Saves a part of a large file (over 10 MB in size) to be later passed to one of the methods.
 
 
@@ -62,7 +63,7 @@ class SaveBigFilePart(TLObject["raw.base.Bool"]):
     ID = 0xde7b673d
     QUALNAME = "functions.upload.SaveBigFilePart"
 
-    def __init__(self, *, file_id: int, file_part: int, file_total_parts: int, bytes: bytes) -> None:
+    def __init__(self, *, file_id: int, file_part: int, file_total_parts: int, bytes: builtins.bytes) -> None:
         self.file_id = file_id  # long
         self.file_part = file_part  # int
         self.file_total_parts = file_total_parts  # int

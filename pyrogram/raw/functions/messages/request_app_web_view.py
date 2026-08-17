@@ -74,7 +74,7 @@ class RequestAppWebView(TLObject["raw.base.WebViewResult"]):
     ID = 0x53618bce
     QUALNAME = "functions.messages.RequestAppWebView"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", app: "raw.base.InputBotApp", platform: str, write_allowed: Optional[bool] = None, compact: Optional[bool] = None, fullscreen: Optional[bool] = None, start_param: Optional[str] = None, theme_params: "raw.base.DataJSON" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", app: "raw.base.InputBotApp", platform: str, write_allowed: Optional[bool] = None, compact: Optional[bool] = None, fullscreen: Optional[bool] = None, start_param: Optional[str] = None, theme_params: Optional["raw.base.DataJSON"] = None) -> None:
         self.peer = peer  # InputPeer
         self.app = app  # InputBotApp
         self.platform = platform  # string

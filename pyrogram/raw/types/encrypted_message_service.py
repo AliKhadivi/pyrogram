@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -61,7 +62,7 @@ class EncryptedMessageService(TLObject):
     ID = 0x23734b06
     QUALNAME = "types.EncryptedMessageService"
 
-    def __init__(self, *, random_id: int, chat_id: int, date: int, bytes: bytes) -> None:
+    def __init__(self, *, random_id: int, chat_id: int, date: int, bytes: builtins.bytes) -> None:
         self.random_id = random_id  # long
         self.chat_id = chat_id  # int
         self.date = date  # int

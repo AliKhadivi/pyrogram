@@ -109,7 +109,7 @@ class WebPage(TLObject):
     ID = 0xe89c45b2
     QUALNAME = "types.WebPage"
 
-    def __init__(self, *, id: int, url: str, display_url: str, hash: int, has_large_media: Optional[bool] = None, video_cover_photo: Optional[bool] = None, type: Optional[str] = None, site_name: Optional[str] = None, title: Optional[str] = None, description: Optional[str] = None, photo: "raw.base.Photo" = None, embed_url: Optional[str] = None, embed_type: Optional[str] = None, embed_width: Optional[int] = None, embed_height: Optional[int] = None, duration: Optional[int] = None, author: Optional[str] = None, document: "raw.base.Document" = None, cached_page: "raw.base.Page" = None, attributes: Optional[List["raw.base.WebPageAttribute"]] = None) -> None:
+    def __init__(self, *, id: int, url: str, display_url: str, hash: int, has_large_media: Optional[bool] = None, video_cover_photo: Optional[bool] = None, type: Optional[str] = None, site_name: Optional[str] = None, title: Optional[str] = None, description: Optional[str] = None, photo: Optional["raw.base.Photo"] = None, embed_url: Optional[str] = None, embed_type: Optional[str] = None, embed_width: Optional[int] = None, embed_height: Optional[int] = None, duration: Optional[int] = None, author: Optional[str] = None, document: Optional["raw.base.Document"] = None, cached_page: Optional["raw.base.Page"] = None, attributes: Optional[List["raw.base.WebPageAttribute"]] = None) -> None:
         self.id = id  # long
         self.url = url  # string
         self.display_url = display_url  # string

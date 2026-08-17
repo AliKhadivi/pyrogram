@@ -91,7 +91,7 @@ class PeerNotifySettings(TLObject):
     ID = 0x99622c0c
     QUALNAME = "types.PeerNotifySettings"
 
-    def __init__(self, *, show_previews: Optional[bool] = None, silent: Optional[bool] = None, mute_until: Optional[int] = None, ios_sound: "raw.base.NotificationSound" = None, android_sound: "raw.base.NotificationSound" = None, other_sound: "raw.base.NotificationSound" = None, stories_muted: Optional[bool] = None, stories_hide_sender: Optional[bool] = None, stories_ios_sound: "raw.base.NotificationSound" = None, stories_android_sound: "raw.base.NotificationSound" = None, stories_other_sound: "raw.base.NotificationSound" = None) -> None:
+    def __init__(self, *, show_previews: Optional[bool] = None, silent: Optional[bool] = None, mute_until: Optional[int] = None, ios_sound: Optional["raw.base.NotificationSound"] = None, android_sound: Optional["raw.base.NotificationSound"] = None, other_sound: Optional["raw.base.NotificationSound"] = None, stories_muted: Optional[bool] = None, stories_hide_sender: Optional[bool] = None, stories_ios_sound: Optional["raw.base.NotificationSound"] = None, stories_android_sound: Optional["raw.base.NotificationSound"] = None, stories_other_sound: Optional["raw.base.NotificationSound"] = None) -> None:
         self.show_previews = show_previews  # flags.0?Bool
         self.silent = silent  # flags.1?Bool
         self.mute_until = mute_until  # flags.2?int

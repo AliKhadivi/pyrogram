@@ -64,7 +64,7 @@ class KeyboardButtonRequestGeoLocation(TLObject):
     ID = 0xaa40f94d
     QUALNAME = "types.KeyboardButtonRequestGeoLocation"
 
-    def __init__(self, *, text: str, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.style = style  # flags.10?KeyboardButtonStyle
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckDownloadFileParams(TLObject["raw.base.Bool"]):
+class CheckDownloadFileParams(TLObject[bool]):
     """Check if a mini app can request the download of a specific file: called when handling web_app_request_file_download events »
 
 

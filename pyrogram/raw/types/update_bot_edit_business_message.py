@@ -61,7 +61,7 @@ class UpdateBotEditBusinessMessage(TLObject):
     ID = 0x7df587c
     QUALNAME = "types.UpdateBotEditBusinessMessage"
 
-    def __init__(self, *, connection_id: str, message: "raw.base.Message", qts: int, reply_to_message: "raw.base.Message" = None) -> None:
+    def __init__(self, *, connection_id: str, message: "raw.base.Message", qts: int, reply_to_message: Optional["raw.base.Message"] = None) -> None:
         self.connection_id = connection_id  # string
         self.message = message  # Message
         self.qts = qts  # int

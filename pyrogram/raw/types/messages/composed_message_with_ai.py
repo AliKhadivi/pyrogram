@@ -64,7 +64,7 @@ class ComposedMessageWithAI(TLObject):
     ID = 0x90d7adfa
     QUALNAME = "types.messages.ComposedMessageWithAI"
 
-    def __init__(self, *, result_text: "raw.base.TextWithEntities", diff_text: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, result_text: "raw.base.TextWithEntities", diff_text: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.result_text = result_text  # TextWithEntities
         self.diff_text = diff_text  # flags.0?TextWithEntities
 

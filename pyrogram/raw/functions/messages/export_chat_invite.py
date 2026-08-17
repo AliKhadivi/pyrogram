@@ -71,7 +71,7 @@ class ExportChatInvite(TLObject["raw.base.ExportedChatInvite"]):
     ID = 0xa455de90
     QUALNAME = "functions.messages.ExportChatInvite"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", legacy_revoke_permanent: Optional[bool] = None, request_needed: Optional[bool] = None, expire_date: Optional[int] = None, usage_limit: Optional[int] = None, title: Optional[str] = None, subscription_pricing: "raw.base.StarsSubscriptionPricing" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", legacy_revoke_permanent: Optional[bool] = None, request_needed: Optional[bool] = None, expire_date: Optional[int] = None, usage_limit: Optional[int] = None, title: Optional[str] = None, subscription_pricing: Optional["raw.base.StarsSubscriptionPricing"] = None) -> None:
         self.peer = peer  # InputPeer
         self.legacy_revoke_permanent = legacy_revoke_permanent  # flags.2?true
         self.request_needed = request_needed  # flags.3?true

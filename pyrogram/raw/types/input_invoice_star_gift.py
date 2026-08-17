@@ -64,7 +64,7 @@ class InputInvoiceStarGift(TLObject):
     ID = 0xe8625e92
     QUALNAME = "types.InputInvoiceStarGift"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", gift_id: int, hide_name: Optional[bool] = None, include_upgrade: Optional[bool] = None, message: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", gift_id: int, hide_name: Optional[bool] = None, include_upgrade: Optional[bool] = None, message: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.peer = peer  # InputPeer
         self.gift_id = gift_id  # long
         self.hide_name = hide_name  # flags.0?true

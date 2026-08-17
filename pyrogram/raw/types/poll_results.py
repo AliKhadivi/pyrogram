@@ -76,7 +76,7 @@ class PollResults(TLObject):
     ID = 0xba7bb15e
     QUALNAME = "types.PollResults"
 
-    def __init__(self, *, min: Optional[bool] = None, has_unread_votes: Optional[bool] = None, can_view_stats: Optional[bool] = None, results: Optional[List["raw.base.PollAnswerVoters"]] = None, total_voters: Optional[int] = None, recent_voters: Optional[List["raw.base.Peer"]] = None, solution: Optional[str] = None, solution_entities: Optional[List["raw.base.MessageEntity"]] = None, solution_media: "raw.base.MessageMedia" = None) -> None:
+    def __init__(self, *, min: Optional[bool] = None, has_unread_votes: Optional[bool] = None, can_view_stats: Optional[bool] = None, results: Optional[List["raw.base.PollAnswerVoters"]] = None, total_voters: Optional[int] = None, recent_voters: Optional[List["raw.base.Peer"]] = None, solution: Optional[str] = None, solution_entities: Optional[List["raw.base.MessageEntity"]] = None, solution_media: Optional["raw.base.MessageMedia"] = None) -> None:
         self.min = min  # flags.0?true
         self.has_unread_votes = has_unread_votes  # flags.6?true
         self.can_view_stats = can_view_stats  # flags.7?true

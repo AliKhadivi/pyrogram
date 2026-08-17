@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -25,7 +26,7 @@ from pyrogram import types
 
 class SetChatMenuButton:
     async def set_chat_menu_button(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str] = None,
         menu_button: "types.MenuButton" = None
     ) -> bool:

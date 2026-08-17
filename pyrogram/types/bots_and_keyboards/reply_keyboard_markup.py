@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List, Union
 
 import pyrogram
@@ -59,10 +60,10 @@ class ReplyKeyboardMarkup(Object):
     def __init__(
         self,
         keyboard: List[List[Union["types.KeyboardButton", str]]],
-        is_persistent: bool = None,
-        resize_keyboard: bool = None,
-        one_time_keyboard: bool = None,
-        selective: bool = None,
+        is_persistent: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        resize_keyboard: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        one_time_keyboard: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        selective: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         placeholder: str = None
     ):
         super().__init__()

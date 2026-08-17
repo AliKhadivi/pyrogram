@@ -76,7 +76,7 @@ class InputMediaInvoice(TLObject):
     ID = 0x405fef0d
     QUALNAME = "types.InputMediaInvoice"
 
-    def __init__(self, *, title: str, description: str, invoice: "raw.base.Invoice", payload: bytes, provider_data: "raw.base.DataJSON", photo: "raw.base.InputWebDocument" = None, provider: Optional[str] = None, start_param: Optional[str] = None, extended_media: "raw.base.InputMedia" = None) -> None:
+    def __init__(self, *, title: str, description: str, invoice: "raw.base.Invoice", payload: bytes, provider_data: "raw.base.DataJSON", photo: Optional["raw.base.InputWebDocument"] = None, provider: Optional[str] = None, start_param: Optional[str] = None, extended_media: Optional["raw.base.InputMedia"] = None) -> None:
         self.title = title  # string
         self.description = description  # string
         self.invoice = invoice  # Invoice

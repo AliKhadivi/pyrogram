@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class TogglePeerLink(TLObject["raw.base.Bool"]):
+class TogglePeerLink(TLObject[bool]):
     """
 
 

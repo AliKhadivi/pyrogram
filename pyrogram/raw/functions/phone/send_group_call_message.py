@@ -65,7 +65,7 @@ class SendGroupCallMessage(TLObject["raw.base.Updates"]):
     ID = 0xb1d11410
     QUALNAME = "functions.phone.SendGroupCallMessage"
 
-    def __init__(self, *, call: "raw.base.InputGroupCall", random_id: int, message: "raw.base.TextWithEntities", allow_paid_stars: Optional[int] = None, send_as: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, call: "raw.base.InputGroupCall", random_id: int, message: "raw.base.TextWithEntities", allow_paid_stars: Optional[int] = None, send_as: Optional["raw.base.InputPeer"] = None) -> None:
         self.call = call  # InputGroupCall
         self.random_id = random_id  # long
         self.message = message  # TextWithEntities

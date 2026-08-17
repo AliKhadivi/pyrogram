@@ -70,7 +70,7 @@ class EditMessage(TLObject["raw.base.Updates"]):
     ID = 0x13f250ee
     QUALNAME = "functions.ephemeral.EditMessage"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", receiver_id: "raw.base.InputUser", id: int, message: Optional[str] = None, media: "raw.base.InputMedia" = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", receiver_id: "raw.base.InputUser", id: int, message: Optional[str] = None, media: Optional["raw.base.InputMedia"] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.peer = peer  # InputPeer
         self.receiver_id = receiver_id  # InputUser
         self.id = id  # int

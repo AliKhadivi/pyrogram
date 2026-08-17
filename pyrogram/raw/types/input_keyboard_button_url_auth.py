@@ -76,7 +76,7 @@ class InputKeyboardButtonUrlAuth(TLObject):
     ID = 0x68013e72
     QUALNAME = "types.InputKeyboardButtonUrlAuth"
 
-    def __init__(self, *, text: str, url: str, bot: "raw.base.InputUser", request_write_access: Optional[bool] = None, style: "raw.base.KeyboardButtonStyle" = None, fwd_text: Optional[str] = None) -> None:
+    def __init__(self, *, text: str, url: str, bot: "raw.base.InputUser", request_write_access: Optional[bool] = None, style: Optional["raw.base.KeyboardButtonStyle"] = None, fwd_text: Optional[str] = None) -> None:
         self.text = text  # string
         self.url = url  # string
         self.bot = bot  # InputUser

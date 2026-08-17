@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 from pyrogram import types
@@ -23,7 +24,7 @@ from pyrogram import types
 
 class GetMe:
     async def get_me(
-        self: "pyrogram.Client"
+        self: typing.Any
     ) -> "types.User":
         """Get your own user identity.
 

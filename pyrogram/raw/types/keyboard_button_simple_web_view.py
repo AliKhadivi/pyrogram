@@ -67,7 +67,7 @@ class KeyboardButtonSimpleWebView(TLObject):
     ID = 0xe15c4370
     QUALNAME = "types.KeyboardButtonSimpleWebView"
 
-    def __init__(self, *, text: str, url: str, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, url: str, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.url = url  # string
         self.style = style  # flags.10?KeyboardButtonStyle

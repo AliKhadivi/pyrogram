@@ -64,7 +64,7 @@ class InputPhoneContact(TLObject):
     ID = 0x6a1dc4be
     QUALNAME = "types.InputPhoneContact"
 
-    def __init__(self, *, client_id: int, phone: str, first_name: str, last_name: str, note: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, client_id: int, phone: str, first_name: str, last_name: str, note: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.client_id = client_id  # long
         self.phone = phone  # string
         self.first_name = first_name  # string

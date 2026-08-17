@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleNoPaidMessagesException(TLObject["raw.base.Bool"]):
+class ToggleNoPaidMessagesException(TLObject[bool]):
     """Allow a user to send us messages without paying if paid messages » are enabled.
 
 
@@ -62,7 +62,7 @@ class ToggleNoPaidMessagesException(TLObject["raw.base.Bool"]):
     ID = 0xfe2eda76
     QUALNAME = "functions.account.ToggleNoPaidMessagesException"
 
-    def __init__(self, *, user_id: "raw.base.InputUser", refund_charged: Optional[bool] = None, require_payment: Optional[bool] = None, parent_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, user_id: "raw.base.InputUser", refund_charged: Optional[bool] = None, require_payment: Optional[bool] = None, parent_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.user_id = user_id  # InputUser
         self.refund_charged = refund_charged  # flags.0?true
         self.require_payment = require_payment  # flags.2?true

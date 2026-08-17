@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 from typing import Union, Optional, AsyncGenerator
 
@@ -59,7 +60,7 @@ async def get_chunk(
 
 class GetChatMembers:
     async def get_chat_members(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         query: str = "",
         limit: int = 0,

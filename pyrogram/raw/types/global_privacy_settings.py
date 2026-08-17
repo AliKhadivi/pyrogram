@@ -83,7 +83,7 @@ class GlobalPrivacySettings(TLObject):
     ID = 0xfe41b34f
     QUALNAME = "types.GlobalPrivacySettings"
 
-    def __init__(self, *, archive_and_mute_new_noncontact_peers: Optional[bool] = None, keep_archived_unmuted: Optional[bool] = None, keep_archived_folders: Optional[bool] = None, hide_read_marks: Optional[bool] = None, new_noncontact_peers_require_premium: Optional[bool] = None, display_gifts_button: Optional[bool] = None, noncontact_peers_paid_stars: Optional[int] = None, disallowed_gifts: "raw.base.DisallowedGiftsSettings" = None) -> None:
+    def __init__(self, *, archive_and_mute_new_noncontact_peers: Optional[bool] = None, keep_archived_unmuted: Optional[bool] = None, keep_archived_folders: Optional[bool] = None, hide_read_marks: Optional[bool] = None, new_noncontact_peers_require_premium: Optional[bool] = None, display_gifts_button: Optional[bool] = None, noncontact_peers_paid_stars: Optional[int] = None, disallowed_gifts: Optional["raw.base.DisallowedGiftsSettings"] = None) -> None:
         self.archive_and_mute_new_noncontact_peers = archive_and_mute_new_noncontact_peers  # flags.0?true
         self.keep_archived_unmuted = keep_archived_unmuted  # flags.1?true
         self.keep_archived_folders = keep_archived_folders  # flags.2?true

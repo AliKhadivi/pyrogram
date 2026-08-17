@@ -71,7 +71,7 @@ class MessageMediaStory(TLObject):
     ID = 0x68cb6283
     QUALNAME = "types.MessageMediaStory"
 
-    def __init__(self, *, peer: "raw.base.Peer", id: int, via_mention: Optional[bool] = None, story: "raw.base.StoryItem" = None) -> None:
+    def __init__(self, *, peer: "raw.base.Peer", id: int, via_mention: Optional[bool] = None, story: Optional["raw.base.StoryItem"] = None) -> None:
         self.peer = peer  # Peer
         self.id = id  # int
         self.via_mention = via_mention  # flags.1?true

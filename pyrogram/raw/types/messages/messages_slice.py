@@ -102,7 +102,7 @@ class MessagesSlice(TLObject):
     ID = 0x5f206716
     QUALNAME = "types.messages.MessagesSlice"
 
-    def __init__(self, *, count: int, messages: List["raw.base.Message"], topics: List["raw.base.ForumTopic"], chats: List["raw.base.Chat"], users: List["raw.base.User"], inexact: Optional[bool] = None, next_rate: Optional[int] = None, offset_id_offset: Optional[int] = None, search_flood: "raw.base.SearchPostsFlood" = None) -> None:
+    def __init__(self, *, count: int, messages: List["raw.base.Message"], topics: List["raw.base.ForumTopic"], chats: List["raw.base.Chat"], users: List["raw.base.User"], inexact: Optional[bool] = None, next_rate: Optional[int] = None, offset_id_offset: Optional[int] = None, search_flood: Optional["raw.base.SearchPostsFlood"] = None) -> None:
         self.count = count  # int
         self.messages = messages  # Vector<Message>
         self.topics = topics  # Vector<ForumTopic>

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteAccount(TLObject["raw.base.Bool"]):
+class DeleteAccount(TLObject[bool]):
     """Delete the user's account from the telegram servers.
 
 
@@ -56,7 +56,7 @@ class DeleteAccount(TLObject["raw.base.Bool"]):
     ID = 0xa2c0cf74
     QUALNAME = "functions.account.DeleteAccount"
 
-    def __init__(self, *, reason: str, password: "raw.base.InputCheckPasswordSRP" = None) -> None:
+    def __init__(self, *, reason: str, password: Optional["raw.base.InputCheckPasswordSRP"] = None) -> None:
         self.reason = reason  # string
         self.password = password  # flags.0?InputCheckPasswordSRP
 

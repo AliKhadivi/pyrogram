@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveCallDebug(TLObject["raw.base.Bool"]):
+class SaveCallDebug(TLObject[bool]):
     """Send phone call debug data to server.
 
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportMessagesDelivery(TLObject["raw.base.Bool"]):
+class ReportMessagesDelivery(TLObject[bool]):
     """Used for Telegram Gateway verification messages »: indicate to the server that one or more messages were received by the client, if requested by the message.report_delivery_until_date flag or the equivalent flag in push notifications.
 
 

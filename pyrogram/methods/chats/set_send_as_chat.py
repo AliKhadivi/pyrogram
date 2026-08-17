@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw
 
 class SetSendAsChat:
     async def set_send_as_chat(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         send_as_chat_id: Union[int, str]
     ) -> bool:

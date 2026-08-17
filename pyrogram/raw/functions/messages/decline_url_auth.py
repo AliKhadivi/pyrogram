@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeclineUrlAuth(TLObject["raw.base.Bool"]):
+class DeclineUrlAuth(TLObject[bool]):
     """Decline an incoming OAuth authorization request », notifying the server that the user refused the login request.
 
 

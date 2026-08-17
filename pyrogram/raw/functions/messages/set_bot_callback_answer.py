@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotCallbackAnswer(TLObject["raw.base.Bool"]):
+class SetBotCallbackAnswer(TLObject[bool]):
     """Set the callback answer to a user button press (bots only)
 
 

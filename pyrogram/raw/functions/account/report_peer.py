@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportPeer(TLObject["raw.base.Bool"]):
+class ReportPeer(TLObject[bool]):
     """Report a peer for violation of telegram's Terms of Service
 
 

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ChangeStarsSubscription(TLObject["raw.base.Bool"]):
+class ChangeStarsSubscription(TLObject[bool]):
     """Activate or deactivate a Telegram Star subscription ».
 
 

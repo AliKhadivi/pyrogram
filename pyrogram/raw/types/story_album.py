@@ -71,7 +71,7 @@ class StoryAlbum(TLObject):
     ID = 0x9325705a
     QUALNAME = "types.StoryAlbum"
 
-    def __init__(self, *, album_id: int, title: str, icon_photo: "raw.base.Photo" = None, icon_video: "raw.base.Document" = None) -> None:
+    def __init__(self, *, album_id: int, title: str, icon_photo: Optional["raw.base.Photo"] = None, icon_video: Optional["raw.base.Document"] = None) -> None:
         self.album_id = album_id  # int
         self.title = title  # string
         self.icon_photo = icon_photo  # flags.0?Photo

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union, List
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw
 
 class UnarchiveChats:
     async def unarchive_chats(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_ids: Union[int, str, List[Union[int, str]]],
     ) -> bool:
         """Unarchive one or more chats.

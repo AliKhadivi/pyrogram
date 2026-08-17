@@ -89,7 +89,7 @@ class AiComposeTone(TLObject):
     ID = 0xcff63ea9
     QUALNAME = "types.AiComposeTone"
 
-    def __init__(self, *, id: int, access_hash: int, slug: str, title: str, creator: Optional[bool] = None, emoji_id: Optional[int] = None, prompt: Optional[str] = None, installs_count: Optional[int] = None, author_id: Optional[int] = None, example_english: "raw.base.AiComposeToneExample" = None) -> None:
+    def __init__(self, *, id: int, access_hash: int, slug: str, title: str, creator: Optional[bool] = None, emoji_id: Optional[int] = None, prompt: Optional[str] = None, installs_count: Optional[int] = None, author_id: Optional[int] = None, example_english: Optional["raw.base.AiComposeToneExample"] = None) -> None:
         self.id = id  # long
         self.access_hash = access_hash  # long
         self.slug = slug  # string

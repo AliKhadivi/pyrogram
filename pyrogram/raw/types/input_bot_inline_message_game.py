@@ -52,7 +52,7 @@ class InputBotInlineMessageGame(TLObject):
     ID = 0x4b425864
     QUALNAME = "types.InputBotInlineMessageGame"
 
-    def __init__(self, *, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.reply_markup = reply_markup  # flags.2?ReplyMarkup
 
     @staticmethod

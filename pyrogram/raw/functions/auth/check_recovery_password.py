@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CheckRecoveryPassword(TLObject["raw.base.Bool"]):
+class CheckRecoveryPassword(TLObject[bool]):
     """Check if the 2FA recovery code sent using auth.requestPasswordRecovery is valid, before passing it to auth.recoverPassword.
 
 

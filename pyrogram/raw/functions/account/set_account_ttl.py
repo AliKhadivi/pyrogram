@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetAccountTTL(TLObject["raw.base.Bool"]):
+class SetAccountTTL(TLObject[bool]):
     """Set account self-destruction period
 
 

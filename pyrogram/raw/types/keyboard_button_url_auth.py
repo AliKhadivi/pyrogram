@@ -73,7 +73,7 @@ class KeyboardButtonUrlAuth(TLObject):
     ID = 0xf51006f9
     QUALNAME = "types.KeyboardButtonUrlAuth"
 
-    def __init__(self, *, text: str, url: str, button_id: int, style: "raw.base.KeyboardButtonStyle" = None, fwd_text: Optional[str] = None) -> None:
+    def __init__(self, *, text: str, url: str, button_id: int, style: Optional["raw.base.KeyboardButtonStyle"] = None, fwd_text: Optional[str] = None) -> None:
         self.text = text  # string
         self.url = url  # string
         self.button_id = button_id  # int

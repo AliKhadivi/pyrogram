@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class FinishJob(TLObject["raw.base.Bool"]):
+class FinishJob(TLObject[bool]):
     """Finish an SMS job (official clients only).
 
 

@@ -65,7 +65,7 @@ class ComposeMessageWithAI(TLObject["raw.base.messages.ComposedMessageWithAI"]):
     ID = 0xdaecc589
     QUALNAME = "functions.messages.ComposeMessageWithAI"
 
-    def __init__(self, *, text: "raw.base.TextWithEntities", proofread: Optional[bool] = None, emojify: Optional[bool] = None, translate_to_lang: Optional[str] = None, tone: "raw.base.InputAiComposeTone" = None) -> None:
+    def __init__(self, *, text: "raw.base.TextWithEntities", proofread: Optional[bool] = None, emojify: Optional[bool] = None, translate_to_lang: Optional[str] = None, tone: Optional["raw.base.InputAiComposeTone"] = None) -> None:
         self.text = text  # TextWithEntities
         self.proofread = proofread  # flags.0?true
         self.emojify = emojify  # flags.3?true

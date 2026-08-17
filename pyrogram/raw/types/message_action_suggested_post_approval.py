@@ -64,7 +64,7 @@ class MessageActionSuggestedPostApproval(TLObject):
     ID = 0xee7a1596
     QUALNAME = "types.MessageActionSuggestedPostApproval"
 
-    def __init__(self, *, rejected: Optional[bool] = None, balance_too_low: Optional[bool] = None, reject_comment: Optional[str] = None, schedule_date: Optional[int] = None, price: "raw.base.StarsAmount" = None) -> None:
+    def __init__(self, *, rejected: Optional[bool] = None, balance_too_low: Optional[bool] = None, reject_comment: Optional[str] = None, schedule_date: Optional[int] = None, price: Optional["raw.base.StarsAmount"] = None) -> None:
         self.rejected = rejected  # flags.0?true
         self.balance_too_low = balance_too_low  # flags.1?true
         self.reject_comment = reject_comment  # flags.2?string

@@ -55,7 +55,7 @@ class InputPollAnswer(TLObject):
     ID = 0x199fed96
     QUALNAME = "types.InputPollAnswer"
 
-    def __init__(self, *, text: "raw.base.TextWithEntities", media: "raw.base.InputMedia" = None) -> None:
+    def __init__(self, *, text: "raw.base.TextWithEntities", media: Optional["raw.base.InputMedia"] = None) -> None:
         self.text = text  # TextWithEntities
         self.media = media  # flags.0?InputMedia
 

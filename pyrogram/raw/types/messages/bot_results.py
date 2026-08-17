@@ -82,7 +82,7 @@ class BotResults(TLObject):
     ID = 0xe021f2f6
     QUALNAME = "types.messages.BotResults"
 
-    def __init__(self, *, query_id: int, results: List["raw.base.BotInlineResult"], cache_time: int, users: List["raw.base.User"], gallery: Optional[bool] = None, next_offset: Optional[str] = None, switch_pm: "raw.base.InlineBotSwitchPM" = None, switch_webview: "raw.base.InlineBotWebView" = None) -> None:
+    def __init__(self, *, query_id: int, results: List["raw.base.BotInlineResult"], cache_time: int, users: List["raw.base.User"], gallery: Optional[bool] = None, next_offset: Optional[str] = None, switch_pm: Optional["raw.base.InlineBotSwitchPM"] = None, switch_webview: Optional["raw.base.InlineBotWebView"] = None) -> None:
         self.query_id = query_id  # long
         self.results = results  # Vector<BotInlineResult>
         self.cache_time = cache_time  # int

@@ -88,7 +88,7 @@ class PromoData(TLObject):
     ID = 0x8a4d87a
     QUALNAME = "types.help.PromoData"
 
-    def __init__(self, *, expires: int, pending_suggestions: List[str], dismissed_suggestions: List[str], chats: List["raw.base.Chat"], users: List["raw.base.User"], proxy: Optional[bool] = None, peer: "raw.base.Peer" = None, psa_type: Optional[str] = None, psa_message: Optional[str] = None, custom_pending_suggestion: "raw.base.PendingSuggestion" = None) -> None:
+    def __init__(self, *, expires: int, pending_suggestions: List[str], dismissed_suggestions: List[str], chats: List["raw.base.Chat"], users: List["raw.base.User"], proxy: Optional[bool] = None, peer: Optional["raw.base.Peer"] = None, psa_type: Optional[str] = None, psa_message: Optional[str] = None, custom_pending_suggestion: Optional["raw.base.PendingSuggestion"] = None) -> None:
         self.expires = expires  # int
         self.pending_suggestions = pending_suggestions  # Vector<string>
         self.dismissed_suggestions = dismissed_suggestions  # Vector<string>

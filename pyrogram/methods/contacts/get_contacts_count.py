@@ -16,13 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 
 
 class GetContactsCount:
     async def get_contacts_count(
-        self: "pyrogram.Client"
+        self: typing.Any
     ) -> int:
         """Get the total count of contacts from your Telegram address book.
 

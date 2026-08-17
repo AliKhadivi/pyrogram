@@ -70,7 +70,7 @@ class KeyboardButtonCallback(TLObject):
     ID = 0xe62bc960
     QUALNAME = "types.KeyboardButtonCallback"
 
-    def __init__(self, *, text: str, data: bytes, requires_password: Optional[bool] = None, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, data: bytes, requires_password: Optional[bool] = None, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.data = data  # bytes
         self.requires_password = requires_password  # flags.0?true

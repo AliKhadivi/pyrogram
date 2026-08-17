@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetDefaultReaction(TLObject["raw.base.Bool"]):
+class SetDefaultReaction(TLObject[bool]):
     """Change default emoji reaction to use in the quick reaction menu: the value is synced across devices and can be fetched using help.getConfig, reactions_default field.
 
 

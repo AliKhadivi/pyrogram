@@ -76,7 +76,7 @@ class UpdateChannelParticipant(TLObject):
     ID = 0x985d3abb
     QUALNAME = "types.UpdateChannelParticipant"
 
-    def __init__(self, *, channel_id: int, date: int, actor_id: int, user_id: int, qts: int, via_chatlist: Optional[bool] = None, prev_participant: "raw.base.ChannelParticipant" = None, new_participant: "raw.base.ChannelParticipant" = None, invite: "raw.base.ExportedChatInvite" = None) -> None:
+    def __init__(self, *, channel_id: int, date: int, actor_id: int, user_id: int, qts: int, via_chatlist: Optional[bool] = None, prev_participant: Optional["raw.base.ChannelParticipant"] = None, new_participant: Optional["raw.base.ChannelParticipant"] = None, invite: Optional["raw.base.ExportedChatInvite"] = None) -> None:
         self.channel_id = channel_id  # long
         self.date = date  # int
         self.actor_id = actor_id  # long

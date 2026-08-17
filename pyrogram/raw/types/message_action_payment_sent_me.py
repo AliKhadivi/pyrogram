@@ -76,7 +76,7 @@ class MessageActionPaymentSentMe(TLObject):
     ID = 0xffa00ccc
     QUALNAME = "types.MessageActionPaymentSentMe"
 
-    def __init__(self, *, currency: str, total_amount: int, payload: bytes, charge: "raw.base.PaymentCharge", recurring_init: Optional[bool] = None, recurring_used: Optional[bool] = None, info: "raw.base.PaymentRequestedInfo" = None, shipping_option_id: Optional[str] = None, subscription_until_date: Optional[int] = None) -> None:
+    def __init__(self, *, currency: str, total_amount: int, payload: bytes, charge: "raw.base.PaymentCharge", recurring_init: Optional[bool] = None, recurring_used: Optional[bool] = None, info: Optional["raw.base.PaymentRequestedInfo"] = None, shipping_option_id: Optional[str] = None, subscription_until_date: Optional[int] = None) -> None:
         self.currency = currency  # string
         self.total_amount = total_amount  # long
         self.payload = payload  # bytes

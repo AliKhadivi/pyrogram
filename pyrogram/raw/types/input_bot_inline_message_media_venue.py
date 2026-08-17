@@ -70,7 +70,7 @@ class InputBotInlineMessageMediaVenue(TLObject):
     ID = 0x417bbf11
     QUALNAME = "types.InputBotInlineMessageMediaVenue"
 
-    def __init__(self, *, geo_point: "raw.base.InputGeoPoint", title: str, address: str, provider: str, venue_id: str, venue_type: str, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, geo_point: "raw.base.InputGeoPoint", title: str, address: str, provider: str, venue_id: str, venue_type: str, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.geo_point = geo_point  # InputGeoPoint
         self.title = title  # string
         self.address = address  # string

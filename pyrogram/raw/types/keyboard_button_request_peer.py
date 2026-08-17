@@ -73,7 +73,7 @@ class KeyboardButtonRequestPeer(TLObject):
     ID = 0x5b0f15f5
     QUALNAME = "types.KeyboardButtonRequestPeer"
 
-    def __init__(self, *, text: str, button_id: int, peer_type: "raw.base.RequestPeerType", max_quantity: int, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, button_id: int, peer_type: "raw.base.RequestPeerType", max_quantity: int, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.button_id = button_id  # int
         self.peer_type = peer_type  # RequestPeerType

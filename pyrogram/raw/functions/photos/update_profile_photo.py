@@ -59,7 +59,7 @@ class UpdateProfilePhoto(TLObject["raw.base.photos.Photo"]):
     ID = 0x9e82039
     QUALNAME = "functions.photos.UpdateProfilePhoto"
 
-    def __init__(self, *, id: "raw.base.InputPhoto", fallback: Optional[bool] = None, bot: "raw.base.InputUser" = None) -> None:
+    def __init__(self, *, id: "raw.base.InputPhoto", fallback: Optional[bool] = None, bot: Optional["raw.base.InputUser"] = None) -> None:
         self.id = id  # InputPhoto
         self.fallback = fallback  # flags.0?true
         self.bot = bot  # flags.1?InputUser

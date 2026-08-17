@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeactivateAllUsernames(TLObject["raw.base.Bool"]):
+class DeactivateAllUsernames(TLObject[bool]):
     """Disable all purchased usernames of a supergroup or channel
 
 

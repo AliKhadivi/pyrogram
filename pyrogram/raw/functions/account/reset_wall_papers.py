@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetWallPapers(TLObject["raw.base.Bool"]):
+class ResetWallPapers(TLObject[bool]):
     """Delete all installed wallpapers, reverting to the default wallpaper set.
 
 

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union, List, Iterable
 
@@ -26,12 +27,12 @@ from pyrogram import types
 
 class ForwardMessages:
     async def forward_messages(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         from_chat_id: Union[int, str],
         message_ids: Union[int, Iterable[int]],
-        disable_notification: bool = None,
-        schedule_date: datetime = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
         protect_content: bool = None
     ) -> Union["types.Message", List["types.Message"]]:
         """Forward messages of any kind.

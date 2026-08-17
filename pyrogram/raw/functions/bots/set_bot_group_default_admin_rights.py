@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetBotGroupDefaultAdminRights(TLObject["raw.base.Bool"]):
+class SetBotGroupDefaultAdminRights(TLObject[bool]):
     """Set the default suggested admin rights for bots being added as admins to groups, see here for more info on how to handle them ».
 
 

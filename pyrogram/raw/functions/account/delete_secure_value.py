@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteSecureValue(TLObject["raw.base.Bool"]):
+class DeleteSecureValue(TLObject[bool]):
     """Delete stored Telegram Passport documents, for more info see the passport docs »
 
 

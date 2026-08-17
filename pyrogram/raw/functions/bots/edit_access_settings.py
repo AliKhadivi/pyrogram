@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class EditAccessSettings(TLObject["raw.base.Bool"]):
+class EditAccessSettings(TLObject[bool]):
     """Edit the access restriction settings » of a managed bot; can only be called by the manager bot.
 
 

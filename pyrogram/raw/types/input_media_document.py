@@ -67,7 +67,7 @@ class InputMediaDocument(TLObject):
     ID = 0xa8763ab5
     QUALNAME = "types.InputMediaDocument"
 
-    def __init__(self, *, id: "raw.base.InputDocument", spoiler: Optional[bool] = None, video_cover: "raw.base.InputPhoto" = None, video_timestamp: Optional[int] = None, ttl_seconds: Optional[int] = None, query: Optional[str] = None) -> None:
+    def __init__(self, *, id: "raw.base.InputDocument", spoiler: Optional[bool] = None, video_cover: Optional["raw.base.InputPhoto"] = None, video_timestamp: Optional[int] = None, ttl_seconds: Optional[int] = None, query: Optional[str] = None) -> None:
         self.id = id  # InputDocument
         self.spoiler = spoiler  # flags.2?true
         self.video_cover = video_cover  # flags.3?InputPhoto

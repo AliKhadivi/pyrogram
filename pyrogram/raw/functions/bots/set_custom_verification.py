@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetCustomVerification(TLObject["raw.base.Bool"]):
+class SetCustomVerification(TLObject[bool]):
     """Verify a user or chat on behalf of an organization ».
 
 
@@ -62,7 +62,7 @@ class SetCustomVerification(TLObject["raw.base.Bool"]):
     ID = 0x8b89dfbd
     QUALNAME = "functions.bots.SetCustomVerification"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", enabled: Optional[bool] = None, bot: "raw.base.InputUser" = None, custom_description: Optional[str] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", enabled: Optional[bool] = None, bot: Optional["raw.base.InputUser"] = None, custom_description: Optional[str] = None) -> None:
         self.peer = peer  # InputPeer
         self.enabled = enabled  # flags.1?true
         self.bot = bot  # flags.0?InputUser

@@ -64,7 +64,7 @@ class PasswordInputSettings(TLObject):
     ID = 0xc23727c9
     QUALNAME = "types.account.PasswordInputSettings"
 
-    def __init__(self, *, new_algo: "raw.base.PasswordKdfAlgo" = None, new_password_hash: Optional[bytes] = None, hint: Optional[str] = None, email: Optional[str] = None, new_secure_settings: "raw.base.SecureSecretSettings" = None) -> None:
+    def __init__(self, *, new_algo: Optional["raw.base.PasswordKdfAlgo"] = None, new_password_hash: Optional[bytes] = None, hint: Optional[str] = None, email: Optional[str] = None, new_secure_settings: Optional["raw.base.SecureSecretSettings"] = None) -> None:
         self.new_algo = new_algo  # flags.0?PasswordKdfAlgo
         self.new_password_hash = new_password_hash  # flags.0?bytes
         self.hint = hint  # flags.0?string

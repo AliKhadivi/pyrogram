@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class EditLocation(TLObject["raw.base.Bool"]):
+class EditLocation(TLObject[bool]):
     """Edit location of geogroup, see here » for more info on geogroups.
 
 

@@ -77,7 +77,7 @@ class GetSavedHistory(TLObject["raw.base.messages.Messages"]):
     ID = 0x998ab009
     QUALNAME = "functions.messages.GetSavedHistory"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", offset_id: int, offset_date: int, add_offset: int, limit: int, max_id: int, min_id: int, hash: int, parent_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", offset_id: int, offset_date: int, add_offset: int, limit: int, max_id: int, min_id: int, hash: int, parent_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputPeer
         self.offset_id = offset_id  # int
         self.offset_date = offset_date  # int

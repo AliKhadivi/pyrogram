@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class Join(TLObject["raw.base.Bool"]):
+class Join(TLObject[bool]):
     """Enable SMS jobs (official clients only).
 
 

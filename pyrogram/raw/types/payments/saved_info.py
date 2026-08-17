@@ -64,7 +64,7 @@ class SavedInfo(TLObject):
     ID = 0xfb8fe43c
     QUALNAME = "types.payments.SavedInfo"
 
-    def __init__(self, *, has_saved_credentials: Optional[bool] = None, saved_info: "raw.base.PaymentRequestedInfo" = None) -> None:
+    def __init__(self, *, has_saved_credentials: Optional[bool] = None, saved_info: Optional["raw.base.PaymentRequestedInfo"] = None) -> None:
         self.has_saved_credentials = has_saved_credentials  # flags.1?true
         self.saved_info = saved_info  # flags.0?PaymentRequestedInfo
 

@@ -87,7 +87,7 @@ class SecureValue(TLObject):
     ID = 0x187fa0ca
     QUALNAME = "types.SecureValue"
 
-    def __init__(self, *, type: "raw.base.SecureValueType", hash: bytes, data: "raw.base.SecureData" = None, front_side: "raw.base.SecureFile" = None, reverse_side: "raw.base.SecureFile" = None, selfie: "raw.base.SecureFile" = None, translation: Optional[List["raw.base.SecureFile"]] = None, files: Optional[List["raw.base.SecureFile"]] = None, plain_data: "raw.base.SecurePlainData" = None) -> None:
+    def __init__(self, *, type: "raw.base.SecureValueType", hash: bytes, data: Optional["raw.base.SecureData"] = None, front_side: Optional["raw.base.SecureFile"] = None, reverse_side: Optional["raw.base.SecureFile"] = None, selfie: Optional["raw.base.SecureFile"] = None, translation: Optional[List["raw.base.SecureFile"]] = None, files: Optional[List["raw.base.SecureFile"]] = None, plain_data: Optional["raw.base.SecurePlainData"] = None) -> None:
         self.type = type  # SecureValueType
         self.hash = hash  # bytes
         self.data = data  # flags.0?SecureData

@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -61,7 +62,7 @@ class CdnFile(TLObject):
     ID = 0xa99fca4f
     QUALNAME = "types.upload.CdnFile"
 
-    def __init__(self, *, bytes: bytes) -> None:
+    def __init__(self, *, bytes: builtins.bytes) -> None:
         self.bytes = bytes  # bytes
 
     @staticmethod

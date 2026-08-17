@@ -67,7 +67,7 @@ class InputInvoiceStarGiftAuctionBid(TLObject):
     ID = 0x1ecafa10
     QUALNAME = "types.InputInvoiceStarGiftAuctionBid"
 
-    def __init__(self, *, gift_id: int, bid_amount: int, hide_name: Optional[bool] = None, update_bid: Optional[bool] = None, peer: "raw.base.InputPeer" = None, message: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, gift_id: int, bid_amount: int, hide_name: Optional[bool] = None, update_bid: Optional[bool] = None, peer: Optional["raw.base.InputPeer"] = None, message: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.gift_id = gift_id  # long
         self.bid_amount = bid_amount  # long
         self.hide_name = hide_name  # flags.0?true

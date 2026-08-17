@@ -65,7 +65,7 @@ class TranslateText(TLObject["raw.base.messages.TranslatedText"]):
     ID = 0xa5eec345
     QUALNAME = "functions.messages.TranslateText"
 
-    def __init__(self, *, to_lang: str, peer: "raw.base.InputPeer" = None, id: Optional[List[int]] = None, text: Optional[List["raw.base.TextWithEntities"]] = None, tone: Optional[str] = None) -> None:
+    def __init__(self, *, to_lang: str, peer: Optional["raw.base.InputPeer"] = None, id: Optional[List[int]] = None, text: Optional[List["raw.base.TextWithEntities"]] = None, tone: Optional[str] = None) -> None:
         self.to_lang = to_lang  # string
         self.peer = peer  # flags.0?InputPeer
         self.id = id  # flags.0?Vector<int>

@@ -16,17 +16,18 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 
 
 class AnswerCallbackQuery:
     async def answer_callback_query(
-        self: "pyrogram.Client",
+        self: typing.Any,
         callback_query_id: str,
-        text: str = None,
-        show_alert: bool = None,
-        url: str = None,
+        text: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        show_alert: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         cache_time: int = 0
     ):
         """Send answers to callback queries sent from inline keyboards.

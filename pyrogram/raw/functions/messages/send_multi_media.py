@@ -95,7 +95,7 @@ class SendMultiMedia(TLObject["raw.base.Updates"]):
     ID = 0x1bf89d74
     QUALNAME = "functions.messages.SendMultiMedia"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", multi_media: List["raw.base.InputSingleMedia"], silent: Optional[bool] = None, background: Optional[bool] = None, clear_draft: Optional[bool] = None, noforwards: Optional[bool] = None, update_stickersets_order: Optional[bool] = None, invert_media: Optional[bool] = None, allow_paid_floodskip: Optional[bool] = None, reply_to: "raw.base.InputReplyTo" = None, schedule_date: Optional[int] = None, send_as: "raw.base.InputPeer" = None, quick_reply_shortcut: "raw.base.InputQuickReplyShortcut" = None, effect: Optional[int] = None, allow_paid_stars: Optional[int] = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", multi_media: List["raw.base.InputSingleMedia"], silent: Optional[bool] = None, background: Optional[bool] = None, clear_draft: Optional[bool] = None, noforwards: Optional[bool] = None, update_stickersets_order: Optional[bool] = None, invert_media: Optional[bool] = None, allow_paid_floodskip: Optional[bool] = None, reply_to: Optional["raw.base.InputReplyTo"] = None, schedule_date: Optional[int] = None, send_as: Optional["raw.base.InputPeer"] = None, quick_reply_shortcut: Optional["raw.base.InputQuickReplyShortcut"] = None, effect: Optional[int] = None, allow_paid_stars: Optional[int] = None) -> None:
         self.peer = peer  # InputPeer
         self.multi_media = multi_media  # Vector<InputSingleMedia>
         self.silent = silent  # flags.5?true

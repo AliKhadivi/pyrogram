@@ -64,7 +64,7 @@ class UpdateMessageReactions(TLObject):
     ID = 0x1e297bfa
     QUALNAME = "types.UpdateMessageReactions"
 
-    def __init__(self, *, peer: "raw.base.Peer", msg_id: int, reactions: "raw.base.MessageReactions", top_msg_id: Optional[int] = None, saved_peer_id: "raw.base.Peer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.Peer", msg_id: int, reactions: "raw.base.MessageReactions", top_msg_id: Optional[int] = None, saved_peer_id: Optional["raw.base.Peer"] = None) -> None:
         self.peer = peer  # Peer
         self.msg_id = msg_id  # int
         self.reactions = reactions  # MessageReactions

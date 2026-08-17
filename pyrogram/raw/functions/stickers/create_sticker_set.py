@@ -77,7 +77,7 @@ class CreateStickerSet(TLObject["raw.base.messages.StickerSet"]):
     ID = 0x9021ab67
     QUALNAME = "functions.stickers.CreateStickerSet"
 
-    def __init__(self, *, user_id: "raw.base.InputUser", title: str, short_name: str, stickers: List["raw.base.InputStickerSetItem"], masks: Optional[bool] = None, emojis: Optional[bool] = None, text_color: Optional[bool] = None, thumb: "raw.base.InputDocument" = None, software: Optional[str] = None) -> None:
+    def __init__(self, *, user_id: "raw.base.InputUser", title: str, short_name: str, stickers: List["raw.base.InputStickerSetItem"], masks: Optional[bool] = None, emojis: Optional[bool] = None, text_color: Optional[bool] = None, thumb: Optional["raw.base.InputDocument"] = None, software: Optional[str] = None) -> None:
         self.user_id = user_id  # InputUser
         self.title = title  # string
         self.short_name = short_name  # string

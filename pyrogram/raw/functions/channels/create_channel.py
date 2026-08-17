@@ -77,7 +77,7 @@ class CreateChannel(TLObject["raw.base.Updates"]):
     ID = 0x91006707
     QUALNAME = "functions.channels.CreateChannel"
 
-    def __init__(self, *, title: str, about: str, broadcast: Optional[bool] = None, megagroup: Optional[bool] = None, for_import: Optional[bool] = None, forum: Optional[bool] = None, geo_point: "raw.base.InputGeoPoint" = None, address: Optional[str] = None, ttl_period: Optional[int] = None) -> None:
+    def __init__(self, *, title: str, about: str, broadcast: Optional[bool] = None, megagroup: Optional[bool] = None, for_import: Optional[bool] = None, forum: Optional[bool] = None, geo_point: Optional["raw.base.InputGeoPoint"] = None, address: Optional[str] = None, ttl_period: Optional[int] = None) -> None:
         self.title = title  # string
         self.about = about  # string
         self.broadcast = broadcast  # flags.0?true

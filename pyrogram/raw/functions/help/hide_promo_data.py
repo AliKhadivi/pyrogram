@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class HidePromoData(TLObject["raw.base.Bool"]):
+class HidePromoData(TLObject[bool]):
     """Hide MTProxy/Public Service Announcement information
 
 

@@ -67,7 +67,7 @@ class PhoneCallDiscarded(TLObject):
     ID = 0x50ca4de1
     QUALNAME = "types.PhoneCallDiscarded"
 
-    def __init__(self, *, id: int, need_rating: Optional[bool] = None, need_debug: Optional[bool] = None, video: Optional[bool] = None, reason: "raw.base.PhoneCallDiscardReason" = None, duration: Optional[int] = None) -> None:
+    def __init__(self, *, id: int, need_rating: Optional[bool] = None, need_debug: Optional[bool] = None, video: Optional[bool] = None, reason: Optional["raw.base.PhoneCallDiscardReason"] = None, duration: Optional[int] = None) -> None:
         self.id = id  # long
         self.need_rating = need_rating  # flags.2?true
         self.need_debug = need_debug  # flags.3?true

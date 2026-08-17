@@ -64,7 +64,7 @@ class PollAnswer(TLObject):
     ID = 0x4b7d786a
     QUALNAME = "types.PollAnswer"
 
-    def __init__(self, *, text: "raw.base.TextWithEntities", option: bytes, media: "raw.base.MessageMedia" = None, added_by: "raw.base.Peer" = None, date: Optional[int] = None) -> None:
+    def __init__(self, *, text: "raw.base.TextWithEntities", option: bytes, media: Optional["raw.base.MessageMedia"] = None, added_by: Optional["raw.base.Peer"] = None, date: Optional[int] = None) -> None:
         self.text = text  # TextWithEntities
         self.option = option  # bytes
         self.media = media  # flags.0?MessageMedia

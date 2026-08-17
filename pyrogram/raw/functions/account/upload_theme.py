@@ -62,7 +62,7 @@ class UploadTheme(TLObject["raw.base.Document"]):
     ID = 0x1c3db333
     QUALNAME = "functions.account.UploadTheme"
 
-    def __init__(self, *, file: "raw.base.InputFile", file_name: str, mime_type: str, thumb: "raw.base.InputFile" = None) -> None:
+    def __init__(self, *, file: "raw.base.InputFile", file_name: str, mime_type: str, thumb: Optional["raw.base.InputFile"] = None) -> None:
         self.file = file  # InputFile
         self.file_name = file_name  # string
         self.mime_type = mime_type  # string

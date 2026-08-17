@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReorderAlbums(TLObject["raw.base.Bool"]):
+class ReorderAlbums(TLObject[bool]):
     """Reorder story albums on a profile ».
 
 

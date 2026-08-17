@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetMainProfileTab(TLObject["raw.base.Bool"]):
+class SetMainProfileTab(TLObject[bool]):
     """Changes the main profile tab of a channel, see here » for more info.
 
 

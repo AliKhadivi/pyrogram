@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SetTyping(TLObject["raw.base.Bool"]):
+class SetTyping(TLObject[bool]):
     """Sends a current user typing event (see SendMessageAction for all event types) to a conversation partner or group.
 
 

@@ -88,7 +88,7 @@ class PaymentReceiptStars(TLObject):
     ID = 0xdabbf83a
     QUALNAME = "types.payments.PaymentReceiptStars"
 
-    def __init__(self, *, date: int, bot_id: int, title: str, description: str, invoice: "raw.base.Invoice", currency: str, total_amount: int, transaction_id: str, users: List["raw.base.User"], photo: "raw.base.WebDocument" = None) -> None:
+    def __init__(self, *, date: int, bot_id: int, title: str, description: str, invoice: "raw.base.Invoice", currency: str, total_amount: int, transaction_id: str, users: List["raw.base.User"], photo: Optional["raw.base.WebDocument"] = None) -> None:
         self.date = date  # int
         self.bot_id = bot_id  # long
         self.title = title  # string

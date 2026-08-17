@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional, List, BinaryIO, Union
 
 from .input_media import InputMedia
@@ -66,10 +67,10 @@ class InputMediaAudio(InputMedia):
     def __init__(
         self,
         media: Union[str, BinaryIO],
-        thumb: str = None,
+        thumb: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         caption: str = "",
-        parse_mode: Optional["enums.ParseMode"] = None,
-        caption_entities: List[MessageEntity] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List[MessageEntity]]]] = None,
         duration: int = 0,
         performer: str = "",
         title: str = ""

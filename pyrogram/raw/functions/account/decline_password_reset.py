@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeclinePasswordReset(TLObject["raw.base.Bool"]):
+class DeclinePasswordReset(TLObject[bool]):
     """Abort a pending 2FA password reset, see here for more info »
 
 

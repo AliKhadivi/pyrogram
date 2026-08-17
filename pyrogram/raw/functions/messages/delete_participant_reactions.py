@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteParticipantReactions(TLObject["raw.base.Bool"]):
+class DeleteParticipantReactions(TLObject[bool]):
     """As an admin, remove all of a specific participant's reactions from every message in a group or channel.
 
 

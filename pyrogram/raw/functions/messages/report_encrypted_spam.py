@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ReportEncryptedSpam(TLObject["raw.base.Bool"]):
+class ReportEncryptedSpam(TLObject[bool]):
     """Report a secret chat for spam
 
 

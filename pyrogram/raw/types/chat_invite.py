@@ -112,7 +112,7 @@ class ChatInvite(TLObject):
     ID = 0x5c9d3702
     QUALNAME = "types.ChatInvite"
 
-    def __init__(self, *, title: str, photo: "raw.base.Photo", participants_count: int, color: int, channel: Optional[bool] = None, broadcast: Optional[bool] = None, public: Optional[bool] = None, megagroup: Optional[bool] = None, request_needed: Optional[bool] = None, verified: Optional[bool] = None, scam: Optional[bool] = None, fake: Optional[bool] = None, can_refulfill_subscription: Optional[bool] = None, about: Optional[str] = None, participants: Optional[List["raw.base.User"]] = None, subscription_pricing: "raw.base.StarsSubscriptionPricing" = None, subscription_form_id: Optional[int] = None, bot_verification: "raw.base.BotVerification" = None) -> None:
+    def __init__(self, *, title: str, photo: "raw.base.Photo", participants_count: int, color: int, channel: Optional[bool] = None, broadcast: Optional[bool] = None, public: Optional[bool] = None, megagroup: Optional[bool] = None, request_needed: Optional[bool] = None, verified: Optional[bool] = None, scam: Optional[bool] = None, fake: Optional[bool] = None, can_refulfill_subscription: Optional[bool] = None, about: Optional[str] = None, participants: Optional[List["raw.base.User"]] = None, subscription_pricing: Optional["raw.base.StarsSubscriptionPricing"] = None, subscription_form_id: Optional[int] = None, bot_verification: Optional["raw.base.BotVerification"] = None) -> None:
         self.title = title  # string
         self.photo = photo  # Photo
         self.participants_count = participants_count  # int

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdatePasswordSettings(TLObject["raw.base.Bool"]):
+class UpdatePasswordSettings(TLObject[bool]):
     """Set a new 2FA password
 
 

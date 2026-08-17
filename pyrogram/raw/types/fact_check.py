@@ -70,7 +70,7 @@ class FactCheck(TLObject):
     ID = 0xb89bfccf
     QUALNAME = "types.FactCheck"
 
-    def __init__(self, *, hash: int, need_check: Optional[bool] = None, country: Optional[str] = None, text: "raw.base.TextWithEntities" = None) -> None:
+    def __init__(self, *, hash: int, need_check: Optional[bool] = None, country: Optional[str] = None, text: Optional["raw.base.TextWithEntities"] = None) -> None:
         self.hash = hash  # long
         self.need_check = need_check  # flags.0?true
         self.country = country  # flags.1?string

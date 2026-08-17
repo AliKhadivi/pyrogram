@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 from ..object import Object
@@ -44,11 +45,11 @@ class Contact(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         phone_number: str,
         first_name: str,
-        last_name: str = None,
-        user_id: int = None,
+        last_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        user_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
         vcard: str = None
     ):
         super().__init__(client)

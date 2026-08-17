@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 from typing import Union
 
@@ -27,7 +28,7 @@ log = logging.getLogger(__name__)
 
 class GetChatHistoryCount:
     async def get_chat_history_count(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str]
     ) -> int:
         """Get the total count of messages in a chat.

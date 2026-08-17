@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ChangeAuthorizationSettings(TLObject["raw.base.Bool"]):
+class ChangeAuthorizationSettings(TLObject[bool]):
     """Change settings related to a session.
 
 

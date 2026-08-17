@@ -55,7 +55,7 @@ class ChatParticipantsForbidden(TLObject):
     ID = 0x8763d3e1
     QUALNAME = "types.ChatParticipantsForbidden"
 
-    def __init__(self, *, chat_id: int, self_participant: "raw.base.ChatParticipant" = None) -> None:
+    def __init__(self, *, chat_id: int, self_participant: Optional["raw.base.ChatParticipant"] = None) -> None:
         self.chat_id = chat_id  # long
         self.self_participant = self_participant  # flags.0?ChatParticipant
 

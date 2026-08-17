@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class RequestFirebaseSms(TLObject["raw.base.Bool"]):
+class RequestFirebaseSms(TLObject[bool]):
     """Request an SMS code via Firebase.
 
 

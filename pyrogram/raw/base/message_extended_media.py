@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-MessageExtendedMedia = Union[raw.types.MessageExtendedMedia, raw.types.MessageExtendedMediaPreview]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    MessageExtendedMedia = Any
+else:
+    MessageExtendedMedia = Union[raw.types.MessageExtendedMedia, raw.types.MessageExtendedMediaPreview]
+
 _doc = """Paid media, see here » for more info.
 
     Constructors:
@@ -40,8 +48,10 @@ _doc = """Paid media, see here » for more info.
             MessageExtendedMediaPreview"""
 try:
     _t = type(MessageExtendedMedia)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         MessageExtendedMedia.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

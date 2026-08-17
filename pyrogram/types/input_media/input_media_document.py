@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional, List, Union, BinaryIO
 
 from .input_media import InputMedia
@@ -55,9 +56,9 @@ class InputMediaDocument(InputMedia):
     def __init__(
         self,
         media: Union[str, BinaryIO],
-        thumb: str = None,
+        thumb: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         caption: str = "",
-        parse_mode: Optional["enums.ParseMode"] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
         caption_entities: List[MessageEntity] = None
     ):
         super().__init__(media, caption, parse_mode, caption_entities)

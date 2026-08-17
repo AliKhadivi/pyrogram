@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class CanPurchaseStore(TLObject["raw.base.Bool"]):
+class CanPurchaseStore(TLObject[bool]):
     """Checks whether a purchase is possible. Must be called before in-store purchase, official apps only.
 
 

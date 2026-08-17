@@ -59,7 +59,7 @@ class ReadReactions(TLObject["raw.base.messages.AffectedHistory"]):
     ID = 0x9ec44f93
     QUALNAME = "functions.messages.ReadReactions"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", top_msg_id: Optional[int] = None, saved_peer_id: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", top_msg_id: Optional[int] = None, saved_peer_id: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputPeer
         self.top_msg_id = top_msg_id  # flags.0?int
         self.saved_peer_id = saved_peer_id  # flags.1?InputPeer

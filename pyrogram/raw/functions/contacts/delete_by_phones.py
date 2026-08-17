@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteByPhones(TLObject["raw.base.Bool"]):
+class DeleteByPhones(TLObject[bool]):
     """Delete contacts by phone number
 
 

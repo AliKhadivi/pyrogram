@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetWebAuthorizations(TLObject["raw.base.Bool"]):
+class ResetWebAuthorizations(TLObject[bool]):
     """Reset all active web telegram login sessions
 
 

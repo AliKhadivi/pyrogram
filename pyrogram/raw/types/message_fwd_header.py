@@ -88,7 +88,7 @@ class MessageFwdHeader(TLObject):
     ID = 0x4e4df4bb
     QUALNAME = "types.MessageFwdHeader"
 
-    def __init__(self, *, date: int, imported: Optional[bool] = None, saved_out: Optional[bool] = None, from_id: "raw.base.Peer" = None, from_name: Optional[str] = None, channel_post: Optional[int] = None, post_author: Optional[str] = None, saved_from_peer: "raw.base.Peer" = None, saved_from_msg_id: Optional[int] = None, saved_from_id: "raw.base.Peer" = None, saved_from_name: Optional[str] = None, saved_date: Optional[int] = None, psa_type: Optional[str] = None) -> None:
+    def __init__(self, *, date: int, imported: Optional[bool] = None, saved_out: Optional[bool] = None, from_id: Optional["raw.base.Peer"] = None, from_name: Optional[str] = None, channel_post: Optional[int] = None, post_author: Optional[str] = None, saved_from_peer: Optional["raw.base.Peer"] = None, saved_from_msg_id: Optional[int] = None, saved_from_id: Optional["raw.base.Peer"] = None, saved_from_name: Optional[str] = None, saved_date: Optional[int] = None, psa_type: Optional[str] = None) -> None:
         self.date = date  # int
         self.imported = imported  # flags.7?true
         self.saved_out = saved_out  # flags.11?true

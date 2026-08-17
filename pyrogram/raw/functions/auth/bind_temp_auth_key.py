@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class BindTempAuthKey(TLObject["raw.base.Bool"]):
+class BindTempAuthKey(TLObject[bool]):
     """Binds a temporary authorization key temp_auth_key_id to the permanent authorization key perm_auth_key_id.
 
 

@@ -1,8 +1,22 @@
+import asyncio
+
 from pyrogram import Client
 
 
+def make_client(name: str, **kwargs) -> tuple[Client, asyncio.AbstractEventLoop]:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    return Client(name, api_id=1, api_hash="0" * 32, in_memory=True, **kwargs), loop
+
+
+def close_client(client: Client, loop: asyncio.AbstractEventLoop) -> None:
+    client.executor.shutdown(wait=False)
+    asyncio.set_event_loop(None)
+    loop.close()
+
+
 def test_jalgo_desktop_connection_metadata_defaults():
-    client = Client("test", api_id=1, api_hash="0" * 32, in_memory=True)
+    client, loop = make_client("test")
 
     try:
         assert client.app_version.startswith("Jalgo Desktop ")
@@ -11,15 +25,12 @@ def test_jalgo_desktop_connection_metadata_defaults():
         assert "Python" not in client.device_model
         assert "Pyrogram" not in client.app_version
     finally:
-        client.executor.shutdown(wait=False)
+        close_client(client, loop)
 
 
 def test_connection_metadata_can_be_overridden():
-    client = Client(
+    client, loop = make_client(
         "test-custom",
-        api_id=1,
-        api_hash="0" * 32,
-        in_memory=True,
         app_version="Custom App 1.0",
         device_model="Custom Device",
         system_version="Custom OS"
@@ -30,4 +41,4 @@ def test_connection_metadata_can_be_overridden():
         assert client.device_model == "Custom Device"
         assert client.system_version == "Custom OS"
     finally:
-        client.executor.shutdown(wait=False)
+        close_client(client, loop)

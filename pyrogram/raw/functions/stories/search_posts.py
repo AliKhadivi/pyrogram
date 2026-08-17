@@ -65,7 +65,7 @@ class SearchPosts(TLObject["raw.base.stories.FoundStories"]):
     ID = 0xd1810907
     QUALNAME = "functions.stories.SearchPosts"
 
-    def __init__(self, *, offset: str, limit: int, hashtag: Optional[str] = None, area: "raw.base.MediaArea" = None, peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, offset: str, limit: int, hashtag: Optional[str] = None, area: Optional["raw.base.MediaArea"] = None, peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.offset = offset  # string
         self.limit = limit  # int
         self.hashtag = hashtag  # flags.0?string

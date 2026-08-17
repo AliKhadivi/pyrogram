@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class EditInlineBotMessage(TLObject["raw.base.Bool"]):
+class EditInlineBotMessage(TLObject[bool]):
     """Edit an inline bot message
 
 
@@ -74,7 +74,7 @@ class EditInlineBotMessage(TLObject["raw.base.Bool"]):
     ID = 0xa423bb51
     QUALNAME = "functions.messages.EditInlineBotMessage"
 
-    def __init__(self, *, id: "raw.base.InputBotInlineMessageID", no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, message: Optional[str] = None, media: "raw.base.InputMedia" = None, reply_markup: "raw.base.ReplyMarkup" = None, entities: Optional[List["raw.base.MessageEntity"]] = None, rich_message: "raw.base.InputRichMessage" = None) -> None:
+    def __init__(self, *, id: "raw.base.InputBotInlineMessageID", no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, message: Optional[str] = None, media: Optional["raw.base.InputMedia"] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, rich_message: Optional["raw.base.InputRichMessage"] = None) -> None:
         self.id = id  # InputBotInlineMessageID
         self.no_webpage = no_webpage  # flags.1?true
         self.invert_media = invert_media  # flags.16?true

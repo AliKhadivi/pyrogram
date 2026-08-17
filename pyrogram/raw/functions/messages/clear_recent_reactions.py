@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ClearRecentReactions(TLObject["raw.base.Bool"]):
+class ClearRecentReactions(TLObject[bool]):
     """Clear recently used message reactions
 
 

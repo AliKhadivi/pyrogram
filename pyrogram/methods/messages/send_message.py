@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union, List, Optional
 
@@ -26,16 +27,16 @@ from pyrogram import types
 
 class SendMessage:
     async def send_message(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         text: str,
-        parse_mode: Optional["enums.ParseMode"] = None,
-        entities: List["types.MessageEntity"] = None,
-        disable_web_page_preview: bool = None,
-        disable_notification: bool = None,
-        reply_to_message_id: int = None,
-        schedule_date: datetime = None,
-        protect_content: bool = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

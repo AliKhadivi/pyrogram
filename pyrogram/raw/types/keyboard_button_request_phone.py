@@ -64,7 +64,7 @@ class KeyboardButtonRequestPhone(TLObject):
     ID = 0x417efd8f
     QUALNAME = "types.KeyboardButtonRequestPhone"
 
-    def __init__(self, *, text: str, style: "raw.base.KeyboardButtonStyle" = None) -> None:
+    def __init__(self, *, text: str, style: Optional["raw.base.KeyboardButtonStyle"] = None) -> None:
         self.text = text  # string
         self.style = style  # flags.10?KeyboardButtonStyle
 

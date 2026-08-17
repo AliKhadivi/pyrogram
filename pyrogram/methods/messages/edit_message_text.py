@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union, List, Optional
 
 import pyrogram
@@ -26,13 +27,13 @@ from pyrogram import utils
 
 class EditMessageText:
     async def edit_message_text(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         message_id: int,
         text: str,
-        parse_mode: Optional["enums.ParseMode"] = None,
-        entities: List["types.MessageEntity"] = None,
-        disable_web_page_preview: bool = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "types.Message":
         """Edit the text of messages.

@@ -17,6 +17,7 @@
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
 from io import BytesIO
+import builtins
 from typing import TYPE_CHECKING, List, Optional, Any
 
 from pyrogram.raw.core.primitives import Int, Long, Int128, Int256, Bool, Bytes, String, Double, Vector
@@ -32,7 +33,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveFilePart(TLObject["raw.base.Bool"]):
+class SaveFilePart(TLObject[bool]):
     """Saves a part of file for further sending to one of the methods.
 
 
@@ -59,7 +60,7 @@ class SaveFilePart(TLObject["raw.base.Bool"]):
     ID = 0xb304a621
     QUALNAME = "functions.upload.SaveFilePart"
 
-    def __init__(self, *, file_id: int, file_part: int, bytes: bytes) -> None:
+    def __init__(self, *, file_id: int, file_part: int, bytes: builtins.bytes) -> None:
         self.file_id = file_id  # long
         self.file_part = file_part  # int
         self.bytes = bytes  # bytes

@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetBotCommands(TLObject["raw.base.Bool"]):
+class ResetBotCommands(TLObject[bool]):
     """Clear bot commands for the specified bot scope and language code
 
 

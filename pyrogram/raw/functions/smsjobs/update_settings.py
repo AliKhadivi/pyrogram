@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateSettings(TLObject["raw.base.Bool"]):
+class UpdateSettings(TLObject[bool]):
     """Update SMS job settings (official clients only).
 
 

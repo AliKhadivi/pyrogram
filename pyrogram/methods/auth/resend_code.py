@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 
 import pyrogram
@@ -27,7 +28,7 @@ log = logging.getLogger(__name__)
 
 class ResendCode:
     async def resend_code(
-        self: "pyrogram.Client",
+        self: typing.Any,
         phone_number: str,
         phone_code_hash: str
     ) -> "types.SentCode":

@@ -70,7 +70,7 @@ class Game(TLObject):
     ID = 0xbdf9653b
     QUALNAME = "types.Game"
 
-    def __init__(self, *, id: int, access_hash: int, short_name: str, title: str, description: str, photo: "raw.base.Photo", document: "raw.base.Document" = None) -> None:
+    def __init__(self, *, id: int, access_hash: int, short_name: str, title: str, description: str, photo: "raw.base.Photo", document: Optional["raw.base.Document"] = None) -> None:
         self.id = id  # long
         self.access_hash = access_hash  # long
         self.short_name = short_name  # string

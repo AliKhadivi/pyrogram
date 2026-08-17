@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteAlbum(TLObject["raw.base.Bool"]):
+class DeleteAlbum(TLObject[bool]):
     """Delete a story album.
 
 

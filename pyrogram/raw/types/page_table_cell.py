@@ -73,7 +73,7 @@ class PageTableCell(TLObject):
     ID = 0x34566b6a
     QUALNAME = "types.PageTableCell"
 
-    def __init__(self, *, header: Optional[bool] = None, align_center: Optional[bool] = None, align_right: Optional[bool] = None, valign_middle: Optional[bool] = None, valign_bottom: Optional[bool] = None, text: "raw.base.RichText" = None, colspan: Optional[int] = None, rowspan: Optional[int] = None) -> None:
+    def __init__(self, *, header: Optional[bool] = None, align_center: Optional[bool] = None, align_right: Optional[bool] = None, valign_middle: Optional[bool] = None, valign_bottom: Optional[bool] = None, text: Optional["raw.base.RichText"] = None, colspan: Optional[int] = None, rowspan: Optional[int] = None) -> None:
         self.header = header  # flags.0?true
         self.align_center = align_center  # flags.3?true
         self.align_right = align_right  # flags.4?true

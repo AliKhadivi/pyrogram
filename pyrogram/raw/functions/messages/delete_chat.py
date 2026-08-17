@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class DeleteChat(TLObject["raw.base.Bool"]):
+class DeleteChat(TLObject[bool]):
     """Delete a chat
 
 

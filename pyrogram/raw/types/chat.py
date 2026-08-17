@@ -94,7 +94,7 @@ class Chat(TLObject):
     ID = 0x41cbf256
     QUALNAME = "types.Chat"
 
-    def __init__(self, *, id: int, title: str, photo: "raw.base.ChatPhoto", participants_count: int, date: int, version: int, creator: Optional[bool] = None, left: Optional[bool] = None, deactivated: Optional[bool] = None, call_active: Optional[bool] = None, call_not_empty: Optional[bool] = None, noforwards: Optional[bool] = None, migrated_to: "raw.base.InputChannel" = None, admin_rights: "raw.base.ChatAdminRights" = None, default_banned_rights: "raw.base.ChatBannedRights" = None) -> None:
+    def __init__(self, *, id: int, title: str, photo: "raw.base.ChatPhoto", participants_count: int, date: int, version: int, creator: Optional[bool] = None, left: Optional[bool] = None, deactivated: Optional[bool] = None, call_active: Optional[bool] = None, call_not_empty: Optional[bool] = None, noforwards: Optional[bool] = None, migrated_to: Optional["raw.base.InputChannel"] = None, admin_rights: Optional["raw.base.ChatAdminRights"] = None, default_banned_rights: Optional["raw.base.ChatBannedRights"] = None) -> None:
         self.id = id  # long
         self.title = title  # string
         self.photo = photo  # ChatPhoto

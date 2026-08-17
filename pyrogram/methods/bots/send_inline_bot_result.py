@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -24,11 +25,11 @@ from pyrogram import raw
 
 class SendInlineBotResult:
     async def send_inline_bot_result(
-        self: "pyrogram.Client",
+        self: typing.Any,
         chat_id: Union[int, str],
         query_id: int,
         result_id: str,
-        disable_notification: bool = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_to_message_id: int = None
     ) -> "raw.base.Updates":
         """Send an inline bot result.

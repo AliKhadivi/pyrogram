@@ -56,7 +56,7 @@ class GetBotInfo(TLObject["raw.base.bots.BotInfo"]):
     ID = 0xdcd914fd
     QUALNAME = "functions.bots.GetBotInfo"
 
-    def __init__(self, *, lang_code: str, bot: "raw.base.InputUser" = None) -> None:
+    def __init__(self, *, lang_code: str, bot: Optional["raw.base.InputUser"] = None) -> None:
         self.lang_code = lang_code  # string
         self.bot = bot  # flags.0?InputUser
 

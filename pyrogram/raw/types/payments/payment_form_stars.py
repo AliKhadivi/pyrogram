@@ -79,7 +79,7 @@ class PaymentFormStars(TLObject):
     ID = 0x7bf6b15c
     QUALNAME = "types.payments.PaymentFormStars"
 
-    def __init__(self, *, form_id: int, bot_id: int, title: str, description: str, invoice: "raw.base.Invoice", users: List["raw.base.User"], photo: "raw.base.WebDocument" = None) -> None:
+    def __init__(self, *, form_id: int, bot_id: int, title: str, description: str, invoice: "raw.base.Invoice", users: List["raw.base.User"], photo: Optional["raw.base.WebDocument"] = None) -> None:
         self.form_id = form_id  # long
         self.bot_id = bot_id  # long
         self.title = title  # string

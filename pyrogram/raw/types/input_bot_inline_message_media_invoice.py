@@ -73,7 +73,7 @@ class InputBotInlineMessageMediaInvoice(TLObject):
     ID = 0xd7e78225
     QUALNAME = "types.InputBotInlineMessageMediaInvoice"
 
-    def __init__(self, *, title: str, description: str, invoice: "raw.base.Invoice", payload: bytes, provider: str, provider_data: "raw.base.DataJSON", photo: "raw.base.InputWebDocument" = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, title: str, description: str, invoice: "raw.base.Invoice", payload: bytes, provider: str, provider_data: "raw.base.DataJSON", photo: Optional["raw.base.InputWebDocument"] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.title = title  # string
         self.description = description  # string
         self.invoice = invoice  # Invoice

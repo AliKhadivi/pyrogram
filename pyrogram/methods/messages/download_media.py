@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import asyncio
 import os
 from datetime import datetime
@@ -30,12 +31,12 @@ DEFAULT_DOWNLOAD_DIR = "downloads/"
 
 class DownloadMedia:
     async def download_media(
-        self: "pyrogram.Client",
+        self: typing.Any,
         message: Union["types.Message", str],
         file_name: str = DEFAULT_DOWNLOAD_DIR,
         in_memory: bool = False,
         block: bool = True,
-        progress: Callable = None,
+        progress: typing.Optional[typing.Optional[typing.Optional[Callable]]] = None,
         progress_args: tuple = ()
     ) -> Optional[Union[str, BinaryIO]]:
         """Download the media from a message.

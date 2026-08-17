@@ -65,7 +65,7 @@ class ComposeRichMessageWithAI(TLObject["raw.base.messages.ComposedRichMessageWi
     ID = 0x8d7ae6af
     QUALNAME = "functions.messages.ComposeRichMessageWithAI"
 
-    def __init__(self, *, proofread: Optional[bool] = None, emojify: Optional[bool] = None, text: "raw.base.InputRichMessage" = None, translate_to_lang: Optional[str] = None, tone: "raw.base.InputAiComposeTone" = None) -> None:
+    def __init__(self, *, proofread: Optional[bool] = None, emojify: Optional[bool] = None, text: Optional["raw.base.InputRichMessage"] = None, translate_to_lang: Optional[str] = None, tone: Optional["raw.base.InputAiComposeTone"] = None) -> None:
         self.proofread = proofread  # flags.0?true
         self.emojify = emojify  # flags.3?true
         self.text = text  # flags.4?InputRichMessage

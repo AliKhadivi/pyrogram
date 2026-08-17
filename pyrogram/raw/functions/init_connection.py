@@ -80,7 +80,7 @@ class InitConnection(TLObject["raw.base.X"]):
     ID = 0xc1cd5ea9
     QUALNAME = "functions.InitConnection"
 
-    def __init__(self, *, api_id: int, device_model: str, system_version: str, app_version: str, system_lang_code: str, lang_pack: str, lang_code: str, query: TLObject, proxy: "raw.base.InputClientProxy" = None, params: "raw.base.JSONValue" = None) -> None:
+    def __init__(self, *, api_id: int, device_model: str, system_version: str, app_version: str, system_lang_code: str, lang_pack: str, lang_code: str, query: TLObject, proxy: Optional["raw.base.InputClientProxy"] = None, params: Optional["raw.base.JSONValue"] = None) -> None:
         self.api_id = api_id  # int
         self.device_model = device_model  # string
         self.system_version = system_version  # string

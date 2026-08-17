@@ -86,7 +86,7 @@ class EditMessage(TLObject["raw.base.Updates"]):
     ID = 0xb106e66c
     QUALNAME = "functions.messages.EditMessage"
 
-    def __init__(self, *, peer: "raw.base.InputPeer", id: int, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, message: Optional[str] = None, media: "raw.base.InputMedia" = None, reply_markup: "raw.base.ReplyMarkup" = None, entities: Optional[List["raw.base.MessageEntity"]] = None, schedule_date: Optional[int] = None, schedule_repeat_period: Optional[int] = None, quick_reply_shortcut_id: Optional[int] = None, rich_message: "raw.base.InputRichMessage" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputPeer", id: int, no_webpage: Optional[bool] = None, invert_media: Optional[bool] = None, message: Optional[str] = None, media: Optional["raw.base.InputMedia"] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, schedule_date: Optional[int] = None, schedule_repeat_period: Optional[int] = None, quick_reply_shortcut_id: Optional[int] = None, rich_message: Optional["raw.base.InputRichMessage"] = None) -> None:
         self.peer = peer  # InputPeer
         self.id = id  # int
         self.no_webpage = no_webpage  # flags.1?true

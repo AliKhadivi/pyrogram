@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResetAuthorization(TLObject["raw.base.Bool"]):
+class ResetAuthorization(TLObject[bool]):
     """Log out an active authorized session by its hash
 
 

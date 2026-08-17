@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import asyncio
 import functools
 import inspect
@@ -203,26 +204,26 @@ class Client(Methods):
         self,
         name: str,
         api_id: Union[int, str] = None,
-        api_hash: str = None,
+        api_hash: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         app_version: str = APP_VERSION,
         device_model: str = DEVICE_MODEL,
         system_version: str = SYSTEM_VERSION,
         lang_code: str = LANG_CODE,
         ipv6: bool = False,
-        proxy: dict = None,
+        proxy: typing.Optional[typing.Optional[typing.Optional[dict]]] = None,
         test_mode: bool = False,
-        bot_token: str = None,
-        session_string: str = None,
-        in_memory: bool = None,
-        phone_number: str = None,
-        phone_code: str = None,
-        password: str = None,
+        bot_token: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        session_string: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        in_memory: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        phone_number: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        phone_code: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        password: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         workers: int = WORKERS,
         workdir: str = WORKDIR,
-        plugins: dict = None,
+        plugins: typing.Optional[typing.Optional[typing.Optional[dict]]] = None,
         parse_mode: "enums.ParseMode" = enums.ParseMode.DEFAULT,
-        no_updates: bool = None,
-        takeout: bool = None,
+        no_updates: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        takeout: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         sleep_threshold: int = Session.SLEEP_THRESHOLD,
         hide_password: bool = False,
         max_concurrent_transmissions: int = MAX_CONCURRENT_TRANSMISSIONS
@@ -812,7 +813,7 @@ class Client(Methods):
         file_size: int = 0,
         limit: int = 0,
         offset: int = 0,
-        progress: Callable = None,
+        progress: typing.Optional[typing.Optional[typing.Optional[Callable]]] = None,
         progress_args: tuple = ()
     ) -> Optional[AsyncGenerator[bytes, None]]:
         async with self.get_file_semaphore:

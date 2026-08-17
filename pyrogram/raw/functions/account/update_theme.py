@@ -68,7 +68,7 @@ class UpdateTheme(TLObject["raw.base.Theme"]):
     ID = 0x2bf40ccc
     QUALNAME = "functions.account.UpdateTheme"
 
-    def __init__(self, *, format: str, theme: "raw.base.InputTheme", slug: Optional[str] = None, title: Optional[str] = None, document: "raw.base.InputDocument" = None, settings: Optional[List["raw.base.InputThemeSettings"]] = None) -> None:
+    def __init__(self, *, format: str, theme: "raw.base.InputTheme", slug: Optional[str] = None, title: Optional[str] = None, document: Optional["raw.base.InputDocument"] = None, settings: Optional[List["raw.base.InputThemeSettings"]] = None) -> None:
         self.format = format  # string
         self.theme = theme  # InputTheme
         self.slug = slug  # flags.0?string

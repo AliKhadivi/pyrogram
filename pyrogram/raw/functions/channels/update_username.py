@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class UpdateUsername(TLObject["raw.base.Bool"]):
+class UpdateUsername(TLObject[bool]):
     """Change or remove the username of a supergroup/channel
 
 

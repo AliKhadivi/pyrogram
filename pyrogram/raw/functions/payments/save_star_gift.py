@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveStarGift(TLObject["raw.base.Bool"]):
+class SaveStarGift(TLObject[bool]):
     """Display or remove a received or hosted gift » from our profile.
 
 

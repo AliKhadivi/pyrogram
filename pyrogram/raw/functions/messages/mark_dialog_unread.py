@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class MarkDialogUnread(TLObject["raw.base.Bool"]):
+class MarkDialogUnread(TLObject[bool]):
     """Manually mark dialog as unread
 
 
@@ -59,7 +59,7 @@ class MarkDialogUnread(TLObject["raw.base.Bool"]):
     ID = 0x8c5006f8
     QUALNAME = "functions.messages.MarkDialogUnread"
 
-    def __init__(self, *, peer: "raw.base.InputDialogPeer", unread: Optional[bool] = None, parent_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, peer: "raw.base.InputDialogPeer", unread: Optional[bool] = None, parent_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.peer = peer  # InputDialogPeer
         self.unread = unread  # flags.0?true
         self.parent_peer = parent_peer  # flags.1?InputPeer

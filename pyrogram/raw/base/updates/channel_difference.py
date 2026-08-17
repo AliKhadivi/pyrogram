@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-ChannelDifference = Union[raw.types.updates.ChannelDifference, raw.types.updates.ChannelDifferenceEmpty, raw.types.updates.ChannelDifferenceTooLong]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    ChannelDifference = Any
+else:
+    ChannelDifference = Union[raw.types.updates.ChannelDifference, raw.types.updates.ChannelDifferenceEmpty, raw.types.updates.ChannelDifferenceTooLong]
+
 _doc = """Contains the difference (new messages) between our local channel state and the remote state
 
     Constructors:
@@ -51,8 +59,10 @@ _doc = """Contains the difference (new messages) between our local channel state
             updates.GetChannelDifference"""
 try:
     _t = type(ChannelDifference)
+    _module = getattr(_t, "__module__", "")
+    _name = getattr(_t, "__name__", "")
     # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
-    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+    if _module != "typing" and not (_module == "types" and _name == "UnionType"):
         ChannelDifference.__doc__ = _doc
 except (AttributeError, TypeError):
     pass

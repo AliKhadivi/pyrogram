@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class EditQuickReplyShortcut(TLObject["raw.base.Bool"]):
+class EditQuickReplyShortcut(TLObject[bool]):
     """Rename a quick reply shortcut.
 This will emit an updateQuickReplies update to other logged-in sessions.
 

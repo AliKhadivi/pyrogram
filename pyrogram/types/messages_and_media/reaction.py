@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Optional
 
 import pyrogram
@@ -44,10 +45,10 @@ class Reaction(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
-        emoji: Optional[str] = None,
-        custom_emoji_id: Optional[int] = None,
-        count: Optional[int] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
+        emoji: typing.Optional[typing.Optional[typing.Optional[Optional[str]]]] = None,
+        custom_emoji_id: typing.Optional[typing.Optional[typing.Optional[Optional[int]]]] = None,
+        count: typing.Optional[typing.Optional[typing.Optional[Optional[int]]]] = None,
         chosen_order: Optional[int] = None
     ):
         super().__init__(client)

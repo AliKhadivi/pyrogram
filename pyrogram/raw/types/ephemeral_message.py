@@ -85,7 +85,7 @@ class EphemeralMessage(TLObject):
     ID = 0xd9c6dc1a
     QUALNAME = "types.EphemeralMessage"
 
-    def __init__(self, *, id: int, from_id: "raw.base.Peer", peer_id: "raw.base.Peer", receiver_id: int, date: int, message: str, out: Optional[bool] = None, top_msg_id: Optional[int] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: "raw.base.MessageMedia" = None, reply_markup: "raw.base.ReplyMarkup" = None, reply_to: "raw.base.MessageReplyHeader" = None) -> None:
+    def __init__(self, *, id: int, from_id: "raw.base.Peer", peer_id: "raw.base.Peer", receiver_id: int, date: int, message: str, out: Optional[bool] = None, top_msg_id: Optional[int] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, media: Optional["raw.base.MessageMedia"] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None, reply_to: Optional["raw.base.MessageReplyHeader"] = None) -> None:
         self.id = id  # int
         self.from_id = from_id  # Peer
         self.peer_id = peer_id  # Peer

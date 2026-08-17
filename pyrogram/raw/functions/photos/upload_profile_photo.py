@@ -68,7 +68,7 @@ class UploadProfilePhoto(TLObject["raw.base.photos.Photo"]):
     ID = 0x388a3b5
     QUALNAME = "functions.photos.UploadProfilePhoto"
 
-    def __init__(self, *, fallback: Optional[bool] = None, bot: "raw.base.InputUser" = None, file: "raw.base.InputFile" = None, video: "raw.base.InputFile" = None, video_start_ts: Optional[float] = None, video_emoji_markup: "raw.base.VideoSize" = None) -> None:
+    def __init__(self, *, fallback: Optional[bool] = None, bot: Optional["raw.base.InputUser"] = None, file: Optional["raw.base.InputFile"] = None, video: Optional["raw.base.InputFile"] = None, video_start_ts: Optional[float] = None, video_emoji_markup: Optional["raw.base.VideoSize"] = None) -> None:
         self.fallback = fallback  # flags.3?true
         self.bot = bot  # flags.5?InputUser
         self.file = file  # flags.0?InputFile

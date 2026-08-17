@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class EditChatAdmin(TLObject["raw.base.Bool"]):
+class EditChatAdmin(TLObject[bool]):
     """Make a user admin in a basic group.
 
 

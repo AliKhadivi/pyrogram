@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ClickSponsoredMessage(TLObject["raw.base.Bool"]):
+class ClickSponsoredMessage(TLObject[bool]):
     """Informs the server that the user has interacted with a sponsored message in one of the ways listed here ».
 
 

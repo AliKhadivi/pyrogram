@@ -64,7 +64,7 @@ class InputMediaPhoto(TLObject):
     ID = 0xe3af4434
     QUALNAME = "types.InputMediaPhoto"
 
-    def __init__(self, *, id: "raw.base.InputPhoto", spoiler: Optional[bool] = None, live_photo: Optional[bool] = None, ttl_seconds: Optional[int] = None, video: "raw.base.InputDocument" = None) -> None:
+    def __init__(self, *, id: "raw.base.InputPhoto", spoiler: Optional[bool] = None, live_photo: Optional[bool] = None, ttl_seconds: Optional[int] = None, video: Optional["raw.base.InputDocument"] = None) -> None:
         self.id = id  # InputPhoto
         self.spoiler = spoiler  # flags.1?true
         self.live_photo = live_photo  # flags.2?true

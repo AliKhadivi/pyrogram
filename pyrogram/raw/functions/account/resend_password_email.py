@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ResendPasswordEmail(TLObject["raw.base.Bool"]):
+class ResendPasswordEmail(TLObject[bool]):
     """Resend the code to verify an email to use as 2FA recovery method.
 
 

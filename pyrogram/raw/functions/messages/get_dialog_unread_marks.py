@@ -53,7 +53,7 @@ class GetDialogUnreadMarks(TLObject["List[raw.base.DialogPeer]"]):
     ID = 0x21202222
     QUALNAME = "functions.messages.GetDialogUnreadMarks"
 
-    def __init__(self, *, parent_peer: "raw.base.InputPeer" = None) -> None:
+    def __init__(self, *, parent_peer: Optional["raw.base.InputPeer"] = None) -> None:
         self.parent_peer = parent_peer  # flags.0?InputPeer
 
     @staticmethod

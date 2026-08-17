@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class ToggleAllStoriesHidden(TLObject["raw.base.Bool"]):
+class ToggleAllStoriesHidden(TLObject[bool]):
     """Hide the active stories of a specific peer, preventing them from being displayed on the action bar on the homescreen.
 
 

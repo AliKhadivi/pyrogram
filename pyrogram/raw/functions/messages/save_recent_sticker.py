@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class SaveRecentSticker(TLObject["raw.base.Bool"]):
+class SaveRecentSticker(TLObject[bool]):
     """Add/remove sticker from recent stickers list
 
 

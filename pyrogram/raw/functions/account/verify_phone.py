@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class VerifyPhone(TLObject["raw.base.Bool"]):
+class VerifyPhone(TLObject[bool]):
     """Verify a phone number for telegram passport.
 
 

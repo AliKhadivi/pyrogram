@@ -61,7 +61,7 @@ class InputBotInlineMessageMediaAuto(TLObject):
     ID = 0x3380c786
     QUALNAME = "types.InputBotInlineMessageMediaAuto"
 
-    def __init__(self, *, message: str, invert_media: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: "raw.base.ReplyMarkup" = None) -> None:
+    def __init__(self, *, message: str, invert_media: Optional[bool] = None, entities: Optional[List["raw.base.MessageEntity"]] = None, reply_markup: Optional["raw.base.ReplyMarkup"] = None) -> None:
         self.message = message  # string
         self.invert_media = invert_media  # flags.3?true
         self.entities = entities  # flags.1?Vector<MessageEntity>

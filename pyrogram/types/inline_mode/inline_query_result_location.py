@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw, types
 from .inline_query_result import InlineQueryResult
@@ -76,14 +77,14 @@ class InlineQueryResultLocation(InlineQueryResult):
         title: str,
         latitude: float,
         longitude: float,
-        horizontal_accuracy: float = None,
-        live_period: int = None,
-        heading: int = None,
-        proximity_alert_radius: int = None,
-        id: str = None,
-        reply_markup: "types.InlineKeyboardMarkup" = None,
-        input_message_content: "types.InputMessageContent" = None,
-        thumb_url: str = None,
+        horizontal_accuracy: typing.Optional[typing.Optional[typing.Optional[float]]] = None,
+        live_period: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        heading: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        proximity_alert_radius: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
+        input_message_content: typing.Optional[typing.Optional[typing.Optional["types.InputMessageContent"]]] = None,
+        thumb_url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         thumb_width: int = 0,
         thumb_height: int = 0
     ):

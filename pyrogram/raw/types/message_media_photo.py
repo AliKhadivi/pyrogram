@@ -74,7 +74,7 @@ class MessageMediaPhoto(TLObject):
     ID = 0xe216eb63
     QUALNAME = "types.MessageMediaPhoto"
 
-    def __init__(self, *, spoiler: Optional[bool] = None, live_photo: Optional[bool] = None, photo: "raw.base.Photo" = None, ttl_seconds: Optional[int] = None, video: "raw.base.Document" = None) -> None:
+    def __init__(self, *, spoiler: Optional[bool] = None, live_photo: Optional[bool] = None, photo: Optional["raw.base.Photo"] = None, ttl_seconds: Optional[int] = None, video: Optional["raw.base.Document"] = None) -> None:
         self.spoiler = spoiler  # flags.3?true
         self.live_photo = live_photo  # flags.4?true
         self.photo = photo  # flags.0?Photo

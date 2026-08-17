@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 
 import pyrogram
@@ -54,13 +55,13 @@ class Voice(Object):
     def __init__(
         self,
         *,
-        client: "pyrogram.Client" = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         file_id: str,
         file_unique_id: str,
         duration: int,
-        waveform: bytes = None,
-        mime_type: str = None,
-        file_size: int = None,
+        waveform: typing.Optional[typing.Optional[typing.Optional[bytes]]] = None,
+        mime_type: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        file_size: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
         date: datetime = None
     ):
         super().__init__(client)

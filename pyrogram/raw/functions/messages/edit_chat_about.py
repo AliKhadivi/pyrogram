@@ -32,7 +32,7 @@ if TYPE_CHECKING:
 # # # # # # # # # # # # # # # # # # # # # # # #
 
 
-class EditChatAbout(TLObject["raw.base.Bool"]):
+class EditChatAbout(TLObject[bool]):
     """Edit the description of a group/supergroup/channel.
 
 
