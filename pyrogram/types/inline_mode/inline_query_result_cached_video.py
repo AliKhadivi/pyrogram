@@ -67,12 +67,12 @@ class InlineQueryResultCachedVideo(InlineQueryResult):
         self,
         video_file_id: str,
         title: str,
-        id: typing.Optional[str] = None,
-        description: typing.Optional[str] = None,
+        id: typing.Optional[typing.Optional[str]] = None,
+        description: typing.Optional[typing.Optional[str]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        reply_markup: typing.Optional["types.InlineKeyboardMarkup"] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
         input_message_content: "types.InputMessageContent" = None
     ):
         super().__init__("video", id, input_message_content, reply_markup)

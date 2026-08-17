@@ -49,7 +49,7 @@ class ChatPhoto(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         small_file_id: str,
         small_photo_unique_id: str,
         big_file_id: str,

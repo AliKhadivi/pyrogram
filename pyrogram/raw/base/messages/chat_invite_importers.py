@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-ChatInviteImporters = Union[raw.types.messages.ChatInviteImporters]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    ChatInviteImporters = Any
+else:
+    ChatInviteImporters = Union[raw.types.messages.ChatInviteImporters]
+
 _doc = """List of users that imported a chat invitation link.
 
     Constructors:

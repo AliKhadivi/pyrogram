@@ -311,74 +311,74 @@ class Message(Object, Update):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         id: int,
-        from_user: typing.Optional["types.User"] = None,
-        sender_chat: typing.Optional["types.Chat"] = None,
-        date: typing.Optional[datetime] = None,
-        chat: typing.Optional["types.Chat"] = None,
-        forward_from: typing.Optional["types.User"] = None,
-        forward_sender_name: typing.Optional[str] = None,
-        forward_from_chat: typing.Optional["types.Chat"] = None,
-        forward_from_message_id: typing.Optional[int] = None,
-        forward_signature: typing.Optional[str] = None,
-        forward_date: typing.Optional[datetime] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        reply_to_top_message_id: typing.Optional[int] = None,
-        reply_to_message: typing.Optional["Message"] = None,
-        mentioned: typing.Optional[bool] = None,
-        empty: typing.Optional[bool] = None,
-        service: typing.Optional["enums.MessageServiceType"] = None,
-        scheduled: typing.Optional[bool] = None,
-        from_scheduled: typing.Optional[bool] = None,
-        media: typing.Optional["enums.MessageMediaType"] = None,
-        edit_date: typing.Optional[datetime] = None,
-        media_group_id: typing.Optional[str] = None,
-        author_signature: typing.Optional[str] = None,
-        has_protected_content: typing.Optional[bool] = None,
-        has_media_spoiler: typing.Optional[bool] = None,
-        text: typing.Optional[Str] = None,
-        entities: typing.Optional[List["types.MessageEntity"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        audio: typing.Optional["types.Audio"] = None,
-        document: typing.Optional["types.Document"] = None,
-        photo: typing.Optional["types.Photo"] = None,
-        sticker: typing.Optional["types.Sticker"] = None,
-        animation: typing.Optional["types.Animation"] = None,
-        game: typing.Optional["types.Game"] = None,
-        video: typing.Optional["types.Video"] = None,
-        voice: typing.Optional["types.Voice"] = None,
-        video_note: typing.Optional["types.VideoNote"] = None,
-        caption: typing.Optional[Str] = None,
-        contact: typing.Optional["types.Contact"] = None,
-        location: typing.Optional["types.Location"] = None,
-        venue: typing.Optional["types.Venue"] = None,
-        web_page: typing.Optional["types.WebPage"] = None,
-        poll: typing.Optional["types.Poll"] = None,
-        dice: typing.Optional["types.Dice"] = None,
-        new_chat_members: typing.Optional[List["types.User"]] = None,
-        left_chat_member: typing.Optional["types.User"] = None,
-        new_chat_title: typing.Optional[str] = None,
-        new_chat_photo: typing.Optional["types.Photo"] = None,
-        delete_chat_photo: typing.Optional[bool] = None,
-        group_chat_created: typing.Optional[bool] = None,
-        supergroup_chat_created: typing.Optional[bool] = None,
-        channel_chat_created: typing.Optional[bool] = None,
-        migrate_to_chat_id: typing.Optional[int] = None,
-        migrate_from_chat_id: typing.Optional[int] = None,
-        pinned_message: typing.Optional["Message"] = None,
-        game_high_score: typing.Optional[int] = None,
-        views: typing.Optional[int] = None,
-        forwards: typing.Optional[int] = None,
-        via_bot: typing.Optional["types.User"] = None,
-        outgoing: typing.Optional[bool] = None,
-        matches: typing.Optional[List[Match]] = None,
-        command: typing.Optional[List[str]] = None,
-        video_chat_scheduled: typing.Optional["types.VideoChatScheduled"] = None,
-        video_chat_started: typing.Optional["types.VideoChatStarted"] = None,
-        video_chat_ended: typing.Optional["types.VideoChatEnded"] = None,
-        video_chat_members_invited: typing.Optional["types.VideoChatMembersInvited"] = None,
-        web_app_data: typing.Optional["types.WebAppData"] = None,
+        from_user: typing.Optional[typing.Optional["types.User"]] = None,
+        sender_chat: typing.Optional[typing.Optional["types.Chat"]] = None,
+        date: typing.Optional[typing.Optional[datetime]] = None,
+        chat: typing.Optional[typing.Optional["types.Chat"]] = None,
+        forward_from: typing.Optional[typing.Optional["types.User"]] = None,
+        forward_sender_name: typing.Optional[typing.Optional[str]] = None,
+        forward_from_chat: typing.Optional[typing.Optional["types.Chat"]] = None,
+        forward_from_message_id: typing.Optional[typing.Optional[int]] = None,
+        forward_signature: typing.Optional[typing.Optional[str]] = None,
+        forward_date: typing.Optional[typing.Optional[datetime]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        reply_to_top_message_id: typing.Optional[typing.Optional[int]] = None,
+        reply_to_message: typing.Optional[typing.Optional["Message"]] = None,
+        mentioned: typing.Optional[typing.Optional[bool]] = None,
+        empty: typing.Optional[typing.Optional[bool]] = None,
+        service: typing.Optional[typing.Optional["enums.MessageServiceType"]] = None,
+        scheduled: typing.Optional[typing.Optional[bool]] = None,
+        from_scheduled: typing.Optional[typing.Optional[bool]] = None,
+        media: typing.Optional[typing.Optional["enums.MessageMediaType"]] = None,
+        edit_date: typing.Optional[typing.Optional[datetime]] = None,
+        media_group_id: typing.Optional[typing.Optional[str]] = None,
+        author_signature: typing.Optional[typing.Optional[str]] = None,
+        has_protected_content: typing.Optional[typing.Optional[bool]] = None,
+        has_media_spoiler: typing.Optional[typing.Optional[bool]] = None,
+        text: typing.Optional[typing.Optional[Str]] = None,
+        entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        audio: typing.Optional[typing.Optional["types.Audio"]] = None,
+        document: typing.Optional[typing.Optional["types.Document"]] = None,
+        photo: typing.Optional[typing.Optional["types.Photo"]] = None,
+        sticker: typing.Optional[typing.Optional["types.Sticker"]] = None,
+        animation: typing.Optional[typing.Optional["types.Animation"]] = None,
+        game: typing.Optional[typing.Optional["types.Game"]] = None,
+        video: typing.Optional[typing.Optional["types.Video"]] = None,
+        voice: typing.Optional[typing.Optional["types.Voice"]] = None,
+        video_note: typing.Optional[typing.Optional["types.VideoNote"]] = None,
+        caption: typing.Optional[typing.Optional[Str]] = None,
+        contact: typing.Optional[typing.Optional["types.Contact"]] = None,
+        location: typing.Optional[typing.Optional["types.Location"]] = None,
+        venue: typing.Optional[typing.Optional["types.Venue"]] = None,
+        web_page: typing.Optional[typing.Optional["types.WebPage"]] = None,
+        poll: typing.Optional[typing.Optional["types.Poll"]] = None,
+        dice: typing.Optional[typing.Optional["types.Dice"]] = None,
+        new_chat_members: typing.Optional[typing.Optional[List["types.User"]]] = None,
+        left_chat_member: typing.Optional[typing.Optional["types.User"]] = None,
+        new_chat_title: typing.Optional[typing.Optional[str]] = None,
+        new_chat_photo: typing.Optional[typing.Optional["types.Photo"]] = None,
+        delete_chat_photo: typing.Optional[typing.Optional[bool]] = None,
+        group_chat_created: typing.Optional[typing.Optional[bool]] = None,
+        supergroup_chat_created: typing.Optional[typing.Optional[bool]] = None,
+        channel_chat_created: typing.Optional[typing.Optional[bool]] = None,
+        migrate_to_chat_id: typing.Optional[typing.Optional[int]] = None,
+        migrate_from_chat_id: typing.Optional[typing.Optional[int]] = None,
+        pinned_message: typing.Optional[typing.Optional["Message"]] = None,
+        game_high_score: typing.Optional[typing.Optional[int]] = None,
+        views: typing.Optional[typing.Optional[int]] = None,
+        forwards: typing.Optional[typing.Optional[int]] = None,
+        via_bot: typing.Optional[typing.Optional["types.User"]] = None,
+        outgoing: typing.Optional[typing.Optional[bool]] = None,
+        matches: typing.Optional[typing.Optional[List[Match]]] = None,
+        command: typing.Optional[typing.Optional[List[str]]] = None,
+        video_chat_scheduled: typing.Optional[typing.Optional["types.VideoChatScheduled"]] = None,
+        video_chat_started: typing.Optional[typing.Optional["types.VideoChatStarted"]] = None,
+        video_chat_ended: typing.Optional[typing.Optional["types.VideoChatEnded"]] = None,
+        video_chat_members_invited: typing.Optional[typing.Optional["types.VideoChatMembersInvited"]] = None,
+        web_app_data: typing.Optional[typing.Optional["types.WebAppData"]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -891,14 +891,14 @@ class Message(Object, Update):
     async def reply_text(
         self,
         text: str,
-        quote: typing.Optional[bool] = None,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        entities: typing.Optional[List["types.MessageEntity"]] = None,
-        disable_web_page_preview: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        schedule_date: typing.Optional[datetime] = None,
-        protect_content: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
+        protect_content: typing.Optional[typing.Optional[bool]] = None,
         reply_markup=None
     ) -> "Message":
         """Bound method *reply_text* of :obj:`~pyrogram.types.Message`.
@@ -986,24 +986,24 @@ class Message(Object, Update):
     async def reply_animation(
         self,
         animation: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        has_spoiler: typing.Optional[bool] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        has_spoiler: typing.Optional[typing.Optional[bool]] = None,
         duration: int = 0,
         width: int = 0,
         height: int = 0,
-        thumb: typing.Optional[str] = None,
-        disable_notification: typing.Optional[bool] = None,
+        thumb: typing.Optional[typing.Optional[str]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        progress: typing.Optional[Callable] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_animation* :obj:`~pyrogram.types.Message`.
@@ -1130,23 +1130,23 @@ class Message(Object, Update):
     async def reply_audio(
         self,
         audio: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
         duration: int = 0,
-        performer: typing.Optional[str] = None,
-        title: typing.Optional[str] = None,
-        thumb: typing.Optional[str] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        performer: typing.Optional[typing.Optional[str]] = None,
+        title: typing.Optional[typing.Optional[str]] = None,
+        thumb: typing.Optional[typing.Optional[str]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_audio* of :obj:`~pyrogram.types.Message`.
@@ -1269,12 +1269,12 @@ class Message(Object, Update):
     async def reply_cached_media(
         self,
         file_id: str,
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -1393,11 +1393,11 @@ class Message(Object, Update):
         self,
         phone_number: str,
         first_name: str,
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         last_name: str = "",
         vcard: str = "",
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -1477,23 +1477,23 @@ class Message(Object, Update):
     async def reply_document(
         self,
         document: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
-        thumb: typing.Optional[str] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        thumb: typing.Optional[typing.Optional[str]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        file_name: typing.Optional[str] = None,
-        force_document: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        schedule_date: typing.Optional[datetime] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        file_name: typing.Optional[typing.Optional[str]] = None,
+        force_document: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_document* of :obj:`~pyrogram.types.Message`.
@@ -1619,9 +1619,9 @@ class Message(Object, Update):
     async def reply_game(
         self,
         game_short_name: str,
-        quote: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -1689,8 +1689,8 @@ class Message(Object, Update):
         self,
         query_id: int,
         result_id: str,
-        quote: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
         reply_to_message_id: int = None
     ) -> "Message":
         """Bound method *reply_inline_bot_result* of :obj:`~pyrogram.types.Message`.
@@ -1753,9 +1753,9 @@ class Message(Object, Update):
         self,
         latitude: float,
         longitude: float,
-        quote: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -1827,8 +1827,8 @@ class Message(Object, Update):
     async def reply_media_group(
         self,
         media: List[Union["types.InputMediaPhoto", "types.InputMediaVideo"]],
-        quote: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
         reply_to_message_id: int = None
     ) -> List["types.Message"]:
         """Bound method *reply_media_group* of :obj:`~pyrogram.types.Message`.
@@ -1888,21 +1888,21 @@ class Message(Object, Update):
     async def reply_photo(
         self,
         photo: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        has_spoiler: typing.Optional[bool] = None,
-        ttl_seconds: typing.Optional[int] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        has_spoiler: typing.Optional[typing.Optional[bool]] = None,
+        ttl_seconds: typing.Optional[typing.Optional[int]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_photo* of :obj:`~pyrogram.types.Message`.
@@ -2019,19 +2019,19 @@ class Message(Object, Update):
         options: List[str],
         is_anonymous: bool = True,
         type: "enums.PollType" = enums.PollType.REGULAR,
-        allows_multiple_answers: typing.Optional[bool] = None,
-        correct_option_id: typing.Optional[int] = None,
-        explanation: typing.Optional[str] = None,
-        explanation_parse_mode: typing.Optional["enums.ParseMode"] = None,
-        explanation_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        open_period: typing.Optional[int] = None,
-        close_date: typing.Optional[datetime] = None,
-        is_closed: typing.Optional[bool] = None,
-        quote: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
-        protect_content: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        schedule_date: typing.Optional[datetime] = None,
+        allows_multiple_answers: typing.Optional[typing.Optional[bool]] = None,
+        correct_option_id: typing.Optional[typing.Optional[int]] = None,
+        explanation: typing.Optional[typing.Optional[str]] = None,
+        explanation_parse_mode: typing.Optional[typing.Optional["enums.ParseMode"]] = None,
+        explanation_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        open_period: typing.Optional[typing.Optional[int]] = None,
+        close_date: typing.Optional[typing.Optional[datetime]] = None,
+        is_closed: typing.Optional[typing.Optional[bool]] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        protect_content: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -2161,16 +2161,16 @@ class Message(Object, Update):
     async def reply_sticker(
         self,
         sticker: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_sticker* of :obj:`~pyrogram.types.Message`.
@@ -2264,11 +2264,11 @@ class Message(Object, Update):
         longitude: float,
         title: str,
         address: str,
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         foursquare_id: str = "",
         foursquare_type: str = "",
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -2359,26 +2359,26 @@ class Message(Object, Update):
     async def reply_video(
         self,
         video: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        has_spoiler: typing.Optional[bool] = None,
-        ttl_seconds: typing.Optional[int] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        has_spoiler: typing.Optional[typing.Optional[bool]] = None,
+        ttl_seconds: typing.Optional[typing.Optional[int]] = None,
         duration: int = 0,
         width: int = 0,
         height: int = 0,
-        thumb: typing.Optional[str] = None,
+        thumb: typing.Optional[typing.Optional[str]] = None,
         supports_streaming: bool = True,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_video* of :obj:`~pyrogram.types.Message`.
@@ -2515,19 +2515,19 @@ class Message(Object, Update):
     async def reply_video_note(
         self,
         video_note: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         duration: int = 0,
         length: int = 1,
-        thumb: typing.Optional[str] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        thumb: typing.Optional[typing.Optional[str]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_video_note* of :obj:`~pyrogram.types.Message`.
@@ -2633,20 +2633,20 @@ class Message(Object, Update):
     async def reply_voice(
         self,
         voice: Union[str, BinaryIO],
-        quote: typing.Optional[bool] = None,
+        quote: typing.Optional[typing.Optional[bool]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
         duration: int = 0,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> "Message":
         """Bound method *reply_voice* of :obj:`~pyrogram.types.Message`.
@@ -2754,9 +2754,9 @@ class Message(Object, Update):
     async def edit_text(
         self,
         text: str,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        entities: typing.Optional[List["types.MessageEntity"]] = None,
-        disable_web_page_preview: typing.Optional[bool] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[bool]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "Message":
         """Bound method *edit_text* of :obj:`~pyrogram.types.Message`.
@@ -2816,8 +2816,8 @@ class Message(Object, Update):
     async def edit_caption(
         self,
         caption: str,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "Message":
         """Bound method *edit_caption* of :obj:`~pyrogram.types.Message`.
@@ -2908,7 +2908,7 @@ class Message(Object, Update):
             reply_markup=reply_markup
         )
 
-    async def edit_reply_markup(self, reply_markup: typing.Optional["types.InlineKeyboardMarkup"] = None) -> "Message":
+    async def edit_reply_markup(self, reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None) -> "Message":
         """Bound method *edit_reply_markup* of :obj:`~pyrogram.types.Message`.
 
         Use as a shortcut for:
@@ -2946,7 +2946,7 @@ class Message(Object, Update):
     async def forward(
         self,
         chat_id: Union[int, str],
-        disable_notification: typing.Optional[bool] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
         schedule_date: datetime = None
     ) -> Union["types.Message", List["types.Message"]]:
         """Bound method *forward* of :obj:`~pyrogram.types.Message`.
@@ -2996,13 +2996,13 @@ class Message(Object, Update):
     async def copy(
         self,
         chat_id: Union[int, str],
-        caption: typing.Optional[str] = None,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        schedule_date: typing.Optional[datetime] = None,
-        protect_content: typing.Optional[bool] = None,
+        caption: typing.Optional[typing.Optional[str]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
+        protect_content: typing.Optional[typing.Optional[bool]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
@@ -3217,7 +3217,7 @@ class Message(Object, Update):
             revoke=revoke
         )
 
-    async def click(self, x: Union[int, str] = 0, y: typing.Optional[int] = None, quote: typing.Optional[bool] = None, timeout: int = 10):
+    async def click(self, x: Union[int, str] = 0, y: typing.Optional[typing.Optional[int]] = None, quote: typing.Optional[typing.Optional[bool]] = None, timeout: int = 10):
         """Bound method *click* of :obj:`~pyrogram.types.Message`.
 
         Use as a shortcut for clicking a button attached to the message instead of:
@@ -3415,7 +3415,7 @@ class Message(Object, Update):
         file_name: str = "",
         in_memory: bool = False,
         block: bool = True,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> str:
         """Bound method *download* of :obj:`~pyrogram.types.Message`.

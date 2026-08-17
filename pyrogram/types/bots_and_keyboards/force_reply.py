@@ -44,7 +44,7 @@ class ForceReply(Object):
 
     def __init__(
         self,
-        selective: typing.Optional[bool] = None,
+        selective: typing.Optional[typing.Optional[bool]] = None,
         placeholder: str = None
     ):
         super().__init__()

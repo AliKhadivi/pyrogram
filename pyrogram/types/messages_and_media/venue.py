@@ -48,11 +48,11 @@ class Venue(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         location: "types.Location",
         title: str,
         address: str,
-        foursquare_id: typing.Optional[str] = None,
+        foursquare_id: typing.Optional[typing.Optional[str]] = None,
         foursquare_type: str = None
     ):
         super().__init__(client)

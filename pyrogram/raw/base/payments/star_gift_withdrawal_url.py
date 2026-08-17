@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-StarGiftWithdrawalUrl = Union[raw.types.payments.StarGiftWithdrawalUrl]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    StarGiftWithdrawalUrl = Any
+else:
+    StarGiftWithdrawalUrl = Union[raw.types.payments.StarGiftWithdrawalUrl]
+
 _doc = """A URL that can be used to import the exported NFT on Fragment.
 
     Constructors:

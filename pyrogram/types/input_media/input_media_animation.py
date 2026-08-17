@@ -68,10 +68,10 @@ class InputMediaAnimation(InputMedia):
     def __init__(
         self,
         media: Union[str, BinaryIO],
-        thumb: typing.Optional[str] = None,
+        thumb: typing.Optional[typing.Optional[str]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List[MessageEntity]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List[MessageEntity]]] = None,
         width: int = 0,
         height: int = 0,
         duration: int = 0,

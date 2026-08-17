@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-GeoPointAddress = Union[raw.types.GeoPointAddress]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    GeoPointAddress = Any
+else:
+    GeoPointAddress = Union[raw.types.GeoPointAddress]
+
 _doc = """Address optionally associated to a geoPoint.
 
     Constructors:

@@ -48,11 +48,11 @@ class ChatPreview(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         title: str,
         type: str,
         members_count: int,
-        photo: typing.Optional["types.Photo"] = None,
+        photo: typing.Optional[typing.Optional["types.Photo"]] = None,
         members: List["types.User"] = None
     ):
         super().__init__(client)

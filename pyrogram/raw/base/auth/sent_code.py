@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-SentCode = Union[raw.types.auth.SentCode, raw.types.auth.SentCodePaymentRequired, raw.types.auth.SentCodeSuccess]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    SentCode = Any
+else:
+    SentCode = Union[raw.types.auth.SentCode, raw.types.auth.SentCodePaymentRequired, raw.types.auth.SentCodeSuccess]
+
 _doc = """Contains info on a confirmation code message sent via SMS, phone call or Telegram.
 
     Constructors:

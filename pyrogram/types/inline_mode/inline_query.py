@@ -58,13 +58,13 @@ class InlineQuery(Object, Update):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         id: str,
         from_user: "types.User",
         query: str,
         offset: str,
         chat_type: "enums.ChatType",
-        location: typing.Optional["types.Location"] = None,
+        location: typing.Optional[typing.Optional["types.Location"]] = None,
         matches: List[Match] = None
     ):
         super().__init__(client)

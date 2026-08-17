@@ -31,8 +31,8 @@ class EditInlineText:
         self,
         inline_message_id: str,
         text: str,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        disable_web_page_preview: typing.Optional[bool] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[bool]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:
         """Edit the text of inline messages.

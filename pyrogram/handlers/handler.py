@@ -26,7 +26,7 @@ from pyrogram.types import Update
 
 
 class Handler:
-    def __init__(self, callback: Callable, filters: typing.Optional[Filter] = None):
+    def __init__(self, callback: Callable, filters: typing.Optional[typing.Optional[Filter]] = None):
         self.callback = callback
         self.filters = filters
 

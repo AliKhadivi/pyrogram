@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-SendAsPeers = Union[raw.types.channels.SendAsPeers]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    SendAsPeers = Any
+else:
+    SendAsPeers = Union[raw.types.channels.SendAsPeers]
+
 _doc = """A list of peers that can be used to send messages in a specific group
 
     Constructors:

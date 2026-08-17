@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-GroupCallDonor = Union[raw.types.GroupCallDonor]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    GroupCallDonor = Any
+else:
+    GroupCallDonor = Union[raw.types.GroupCallDonor]
+
 _doc = """Describes a live story donor in the donation leaderboard ».
 
     Constructors:

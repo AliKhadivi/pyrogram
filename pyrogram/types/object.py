@@ -25,7 +25,7 @@ import pyrogram
 
 
 class Object:
-    def __init__(self, client: typing.Optional["pyrogram.Client"] = None):
+    def __init__(self, client: typing.Optional[typing.Optional["pyrogram.Client"]] = None):
         self._client = client
 
     def bind(self, client: "pyrogram.Client"):

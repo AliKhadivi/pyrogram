@@ -38,21 +38,21 @@ class SendDocument:
         document: Union[str, BinaryIO],
         thumb: Union[str, BinaryIO] = None,
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
-        file_name: typing.Optional[str] = None,
-        force_document: typing.Optional[bool] = None,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        schedule_date: typing.Optional[datetime] = None,
-        protect_content: typing.Optional[bool] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        file_name: typing.Optional[typing.Optional[str]] = None,
+        force_document: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
+        protect_content: typing.Optional[typing.Optional[bool]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> Optional["types.Message"]:
         """Send generic files.

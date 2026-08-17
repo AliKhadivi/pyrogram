@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-SavedReactionTags = Union[raw.types.messages.SavedReactionTags, raw.types.messages.SavedReactionTagsNotModified]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    SavedReactionTags = Any
+else:
+    SavedReactionTags = Union[raw.types.messages.SavedReactionTags, raw.types.messages.SavedReactionTagsNotModified]
+
 _doc = """List of reaction tag » names assigned by the user.
 
     Constructors:

@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-StarGiftAttributeRarity = Union[raw.types.StarGiftAttributeRarity, raw.types.StarGiftAttributeRarityEpic, raw.types.StarGiftAttributeRarityLegendary, raw.types.StarGiftAttributeRarityRare, raw.types.StarGiftAttributeRarityUncommon]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    StarGiftAttributeRarity = Any
+else:
+    StarGiftAttributeRarity = Union[raw.types.StarGiftAttributeRarity, raw.types.StarGiftAttributeRarityEpic, raw.types.StarGiftAttributeRarityLegendary, raw.types.StarGiftAttributeRarityRare, raw.types.StarGiftAttributeRarityUncommon]
+
 _doc = """Rarity of a collectible gift » attribute, either as an exact permille value or as one of the named rarity tiers (uncommon, rare, epic, legendary).
 
     Constructors:

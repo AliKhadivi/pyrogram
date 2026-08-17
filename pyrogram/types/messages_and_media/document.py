@@ -57,13 +57,13 @@ class Document(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         file_id: str,
         file_unique_id: str,
-        file_name: typing.Optional[str] = None,
-        mime_type: typing.Optional[str] = None,
-        file_size: typing.Optional[int] = None,
-        date: typing.Optional[datetime] = None,
+        file_name: typing.Optional[typing.Optional[str]] = None,
+        mime_type: typing.Optional[typing.Optional[str]] = None,
+        file_size: typing.Optional[typing.Optional[int]] = None,
+        date: typing.Optional[typing.Optional[datetime]] = None,
         thumbs: List["types.Thumbnail"] = None
     ):
         super().__init__(client)

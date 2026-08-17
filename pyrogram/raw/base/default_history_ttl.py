@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-DefaultHistoryTTL = Union[raw.types.DefaultHistoryTTL]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    DefaultHistoryTTL = Any
+else:
+    DefaultHistoryTTL = Union[raw.types.DefaultHistoryTTL]
+
 _doc = """Contains info about the default value of the Time-To-Live setting, applied to all new chats.
 
     Constructors:

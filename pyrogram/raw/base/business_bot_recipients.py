@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-BusinessBotRecipients = Union[raw.types.BusinessBotRecipients]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    BusinessBotRecipients = Any
+else:
+    BusinessBotRecipients = Union[raw.types.BusinessBotRecipients]
+
 _doc = """Specifies the private chats that a connected business bot » may receive messages and interact with.
 
     Constructors:

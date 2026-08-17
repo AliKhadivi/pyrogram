@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-ContactBirthdays = Union[raw.types.contacts.ContactBirthdays]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    ContactBirthdays = Any
+else:
+    ContactBirthdays = Union[raw.types.contacts.ContactBirthdays]
+
 _doc = """Birthday information of our contacts.
 
     Constructors:

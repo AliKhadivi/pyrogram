@@ -50,11 +50,11 @@ class ChatJoinRequest(Object, Update):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         chat: "types.Chat",
         from_user: "types.User",
         date: datetime,
-        bio: typing.Optional[str] = None,
+        bio: typing.Optional[typing.Optional[str]] = None,
         invite_link: "types.ChatInviteLink" = None
     ):
         super().__init__(client)

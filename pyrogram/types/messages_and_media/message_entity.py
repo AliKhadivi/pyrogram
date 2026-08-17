@@ -57,13 +57,13 @@ class MessageEntity(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         type: "enums.MessageEntityType",
         offset: int,
         length: int,
-        url: typing.Optional[str] = None,
-        user: typing.Optional["types.User"] = None,
-        language: typing.Optional[str] = None,
+        url: typing.Optional[typing.Optional[str]] = None,
+        user: typing.Optional[typing.Optional["types.User"]] = None,
+        language: typing.Optional[typing.Optional[str]] = None,
         custom_emoji_id: int = None
     ):
         super().__init__(client)

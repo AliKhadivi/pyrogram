@@ -59,13 +59,13 @@ class ChatPermissions(Object):
     def __init__(
         self,
         *,
-        can_send_messages: typing.Optional[bool] = None,  # Text, contacts, locations and venues
-        can_send_media_messages: typing.Optional[bool] = None,  # Audio files, documents, photos, videos, video notes and voice notes
-        can_send_other_messages: typing.Optional[bool] = None,  # Stickers, animations, games, inline bots
-        can_send_polls: typing.Optional[bool] = None,
-        can_add_web_page_previews: typing.Optional[bool] = None,
-        can_change_info: typing.Optional[bool] = None,
-        can_invite_users: typing.Optional[bool] = None,
+        can_send_messages: typing.Optional[typing.Optional[bool]] = None,  # Text, contacts, locations and venues
+        can_send_media_messages: typing.Optional[typing.Optional[bool]] = None,  # Audio files, documents, photos, videos, video notes and voice notes
+        can_send_other_messages: typing.Optional[typing.Optional[bool]] = None,  # Stickers, animations, games, inline bots
+        can_send_polls: typing.Optional[typing.Optional[bool]] = None,
+        can_add_web_page_previews: typing.Optional[typing.Optional[bool]] = None,
+        can_change_info: typing.Optional[typing.Optional[bool]] = None,
+        can_invite_users: typing.Optional[typing.Optional[bool]] = None,
         can_pin_messages: bool = None
     ):
         super().__init__(None)

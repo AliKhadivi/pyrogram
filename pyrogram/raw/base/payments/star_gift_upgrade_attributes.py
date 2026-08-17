@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-StarGiftUpgradeAttributes = Union[raw.types.payments.StarGiftUpgradeAttributes]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    StarGiftUpgradeAttributes = Any
+else:
+    StarGiftUpgradeAttributes = Union[raw.types.payments.StarGiftUpgradeAttributes]
+
 _doc = """List of just the collectible attributes that may appear for a gift type once it's upgraded to a collectible gift ».
 
     Constructors:

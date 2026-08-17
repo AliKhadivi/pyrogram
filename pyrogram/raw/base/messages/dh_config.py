@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-DhConfig = Union[raw.types.messages.DhConfig, raw.types.messages.DhConfigNotModified]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    DhConfig = Any
+else:
+    DhConfig = Union[raw.types.messages.DhConfig, raw.types.messages.DhConfigNotModified]
+
 _doc = """Contains Diffie-Hellman key generation protocol parameters.
 
     Constructors:

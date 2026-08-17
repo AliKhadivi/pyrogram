@@ -30,7 +30,7 @@ class GetInlineBotResults:
         bot: Union[int, str],
         query: str = "",
         offset: str = "",
-        latitude: typing.Optional[float] = None,
+        latitude: typing.Optional[typing.Optional[float]] = None,
         longitude: float = None
     ):
         """Get bot results via inline queries.

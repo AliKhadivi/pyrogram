@@ -50,7 +50,7 @@ class Dialog(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         chat: "types.Chat",
         top_message: "types.Message",
         unread_messages_count: int,

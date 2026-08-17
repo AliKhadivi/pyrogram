@@ -29,8 +29,8 @@ class EditMessageCaption:
         chat_id: Union[int, str],
         message_id: int,
         caption: str,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "types.Message":
         """Edit the caption of media messages.

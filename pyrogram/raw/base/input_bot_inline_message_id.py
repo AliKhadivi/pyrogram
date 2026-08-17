@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-InputBotInlineMessageID = Union[raw.types.InputBotInlineMessageID, raw.types.InputBotInlineMessageID64]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    InputBotInlineMessageID = Any
+else:
+    InputBotInlineMessageID = Union[raw.types.InputBotInlineMessageID, raw.types.InputBotInlineMessageID64]
+
 _doc = """Represents a sent inline message from the perspective of a bot
 
     Constructors:

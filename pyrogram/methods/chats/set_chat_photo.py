@@ -33,7 +33,7 @@ class SetChatPhoto:
         *,
         photo: Union[str, BinaryIO] = None,
         video: Union[str, BinaryIO] = None,
-        video_start_ts: typing.Optional[float] = None,
+        video_start_ts: typing.Optional[typing.Optional[float]] = None,
     ) -> bool:
         """Set a new chat photo or video (H.264/MPEG-4 AVC video, max 5 seconds).
 

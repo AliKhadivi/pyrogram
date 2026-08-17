@@ -60,14 +60,14 @@ class Photo(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         file_id: str,
         file_unique_id: str,
         width: int,
         height: int,
         file_size: int,
         date: datetime,
-        ttl_seconds: typing.Optional[int] = None,
+        ttl_seconds: typing.Optional[typing.Optional[int]] = None,
         thumbs: List["types.Thumbnail"] = None
     ):
         super().__init__(client)
@@ -82,7 +82,7 @@ class Photo(Object):
         self.thumbs = thumbs
 
     @staticmethod
-    def _parse(client, photo: "raw.types.Photo", ttl_seconds: typing.Optional[int] = None) -> "Photo":
+    def _parse(client, photo: "raw.types.Photo", ttl_seconds: typing.Optional[typing.Optional[int]] = None) -> "Photo":
         if isinstance(photo, raw.types.Photo):
             photos: List[raw.types.PhotoSize] = []
 

@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-BusinessGreetingMessage = Union[raw.types.BusinessGreetingMessage]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    BusinessGreetingMessage = Any
+else:
+    BusinessGreetingMessage = Union[raw.types.BusinessGreetingMessage]
+
 _doc = """Describes a Telegram Business greeting, automatically sent to new users writing to us in private for the first time, or after a certain inactivity period.
 
     Constructors:

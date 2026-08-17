@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-InlineBotSwitchPM = Union[raw.types.InlineBotSwitchPM]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    InlineBotSwitchPM = Any
+else:
+    InlineBotSwitchPM = Union[raw.types.InlineBotSwitchPM]
+
 _doc = """The bot requested the user to message them in private
 
     Constructors:

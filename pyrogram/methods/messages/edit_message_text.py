@@ -31,9 +31,9 @@ class EditMessageText:
         chat_id: Union[int, str],
         message_id: int,
         text: str,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        entities: typing.Optional[List["types.MessageEntity"]] = None,
-        disable_web_page_preview: typing.Optional[bool] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[bool]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> "types.Message":
         """Edit the text of messages.

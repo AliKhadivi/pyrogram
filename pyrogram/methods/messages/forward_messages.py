@@ -31,8 +31,8 @@ class ForwardMessages:
         chat_id: Union[int, str],
         from_chat_id: Union[int, str],
         message_ids: Union[int, Iterable[int]],
-        disable_notification: typing.Optional[bool] = None,
-        schedule_date: typing.Optional[datetime] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
         protect_content: bool = None
     ) -> Union["types.Message", List["types.Message"]]:
         """Forward messages of any kind.

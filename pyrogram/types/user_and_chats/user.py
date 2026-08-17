@@ -53,7 +53,7 @@ class Link(str):
     def __new__(cls, url, text, style):
         return str.__new__(cls, Link.format(url, text, style))
 
-    def __call__(self, other: typing.Optional[str] = None, *, style: typing.Optional[str] = None):
+    def __call__(self, other: typing.Optional[typing.Optional[str]] = None, *, style: typing.Optional[typing.Optional[str]] = None):
         return Link.format(self.url, other or self.text, style or self.style)
 
     def __str__(self):
@@ -151,30 +151,30 @@ class User(Object, Update):
     def __init__(
         self,
         *,
-        client: typing.Optional["pyrogram.Client"] = None,
+        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
         id: int,
-        is_self: typing.Optional[bool] = None,
-        is_contact: typing.Optional[bool] = None,
-        is_mutual_contact: typing.Optional[bool] = None,
-        is_deleted: typing.Optional[bool] = None,
-        is_bot: typing.Optional[bool] = None,
-        is_verified: typing.Optional[bool] = None,
-        is_restricted: typing.Optional[bool] = None,
-        is_scam: typing.Optional[bool] = None,
-        is_fake: typing.Optional[bool] = None,
-        is_support: typing.Optional[bool] = None,
-        is_premium: typing.Optional[bool] = None,
-        first_name: typing.Optional[str] = None,
-        last_name: typing.Optional[str] = None,
-        status: typing.Optional["enums.UserStatus"] = None,
-        last_online_date: typing.Optional[datetime] = None,
-        next_offline_date: typing.Optional[datetime] = None,
-        username: typing.Optional[str] = None,
-        language_code: typing.Optional[str] = None,
-        emoji_status: typing.Optional[Optional["types.EmojiStatus"]] = None,
-        dc_id: typing.Optional[int] = None,
-        phone_number: typing.Optional[str] = None,
-        photo: typing.Optional["types.ChatPhoto"] = None,
+        is_self: typing.Optional[typing.Optional[bool]] = None,
+        is_contact: typing.Optional[typing.Optional[bool]] = None,
+        is_mutual_contact: typing.Optional[typing.Optional[bool]] = None,
+        is_deleted: typing.Optional[typing.Optional[bool]] = None,
+        is_bot: typing.Optional[typing.Optional[bool]] = None,
+        is_verified: typing.Optional[typing.Optional[bool]] = None,
+        is_restricted: typing.Optional[typing.Optional[bool]] = None,
+        is_scam: typing.Optional[typing.Optional[bool]] = None,
+        is_fake: typing.Optional[typing.Optional[bool]] = None,
+        is_support: typing.Optional[typing.Optional[bool]] = None,
+        is_premium: typing.Optional[typing.Optional[bool]] = None,
+        first_name: typing.Optional[typing.Optional[str]] = None,
+        last_name: typing.Optional[typing.Optional[str]] = None,
+        status: typing.Optional[typing.Optional["enums.UserStatus"]] = None,
+        last_online_date: typing.Optional[typing.Optional[datetime]] = None,
+        next_offline_date: typing.Optional[typing.Optional[datetime]] = None,
+        username: typing.Optional[typing.Optional[str]] = None,
+        language_code: typing.Optional[typing.Optional[str]] = None,
+        emoji_status: typing.Optional[typing.Optional[Optional["types.EmojiStatus"]]] = None,
+        dc_id: typing.Optional[typing.Optional[int]] = None,
+        phone_number: typing.Optional[typing.Optional[str]] = None,
+        photo: typing.Optional[typing.Optional["types.ChatPhoto"]] = None,
         restrictions: List["types.Restriction"] = None
     ):
         super().__init__(client)

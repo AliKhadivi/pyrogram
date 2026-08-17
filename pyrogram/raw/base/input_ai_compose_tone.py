@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-InputAiComposeTone = Union[raw.types.InputAiComposeToneDefault, raw.types.InputAiComposeToneID, raw.types.InputAiComposeToneSingleUse, raw.types.InputAiComposeToneSlug]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    InputAiComposeTone = Any
+else:
+    InputAiComposeTone = Union[raw.types.InputAiComposeToneDefault, raw.types.InputAiComposeToneID, raw.types.InputAiComposeToneSingleUse, raw.types.InputAiComposeToneSlug]
+
 _doc = """References an AI composer tone », either a built-in default tone or a custom one (by ID or slug).
 
     Constructors:

@@ -61,11 +61,11 @@ class InlineQueryResultArticle(InlineQueryResult):
         self,
         title: str,
         input_message_content: "types.InputMessageContent",
-        id: typing.Optional[str] = None,
-        url: typing.Optional[str] = None,
-        description: typing.Optional[str] = None,
-        reply_markup: typing.Optional["types.InlineKeyboardMarkup"] = None,
-        thumb_url: typing.Optional[str] = None,
+        id: typing.Optional[typing.Optional[str]] = None,
+        url: typing.Optional[typing.Optional[str]] = None,
+        description: typing.Optional[typing.Optional[str]] = None,
+        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
+        thumb_url: typing.Optional[typing.Optional[str]] = None,
         thumb_width: int = 0,
         thumb_height: int = 0
     ):

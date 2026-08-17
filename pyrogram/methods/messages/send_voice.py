@@ -37,20 +37,20 @@ class SendVoice:
         chat_id: Union[int, str],
         voice: Union[str, BinaryIO],
         caption: str = "",
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
-        caption_entities: typing.Optional[List["types.MessageEntity"]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
         duration: int = 0,
-        disable_notification: typing.Optional[bool] = None,
-        reply_to_message_id: typing.Optional[int] = None,
-        schedule_date: typing.Optional[datetime] = None,
-        protect_content: typing.Optional[bool] = None,
+        disable_notification: typing.Optional[typing.Optional[bool]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
+        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
+        protect_content: typing.Optional[typing.Optional[bool]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[Callable] = None,
+        progress: typing.Optional[typing.Optional[Callable]] = None,
         progress_args: tuple = ()
     ) -> Optional["types.Message"]:
         """Send audio files.

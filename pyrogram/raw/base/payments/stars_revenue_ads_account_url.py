@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-StarsRevenueAdsAccountUrl = Union[raw.types.payments.StarsRevenueAdsAccountUrl]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    StarsRevenueAdsAccountUrl = Any
+else:
+    StarsRevenueAdsAccountUrl = Union[raw.types.payments.StarsRevenueAdsAccountUrl]
+
 _doc = """Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using Telegram Stars.
 
     Constructors:

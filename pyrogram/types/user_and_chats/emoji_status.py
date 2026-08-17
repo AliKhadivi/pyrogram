@@ -40,7 +40,7 @@ class EmojiStatus(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[Optional["pyrogram.Client"]]] = None,
         custom_emoji_id: int,
         until_date: Optional[datetime] = None
     ):

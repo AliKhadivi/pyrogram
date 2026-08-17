@@ -28,7 +28,7 @@ class EditInlineCaption:
         self,
         inline_message_id: str,
         caption: str,
-        parse_mode: typing.Optional[Optional["enums.ParseMode"]] = None,
+        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:
         """Edit the caption of inline media messages.

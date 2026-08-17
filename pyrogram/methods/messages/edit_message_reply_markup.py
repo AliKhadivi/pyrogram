@@ -29,7 +29,7 @@ class EditMessageReplyMarkup:
         self,
         chat_id: Union[int, str],
         message_id: int,
-        reply_markup: typing.Optional["types.InlineKeyboardMarkup"] = None,
+        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
     ) -> "types.Message":
         """Edit only the reply markup of messages sent by the bot.
 

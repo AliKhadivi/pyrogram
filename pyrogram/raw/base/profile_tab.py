@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-ProfileTab = Union[raw.types.ProfileTabFiles, raw.types.ProfileTabGifs, raw.types.ProfileTabGifts, raw.types.ProfileTabLinks, raw.types.ProfileTabMedia, raw.types.ProfileTabMusic, raw.types.ProfileTabPosts, raw.types.ProfileTabVoice]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    ProfileTab = Any
+else:
+    ProfileTab = Union[raw.types.ProfileTabFiles, raw.types.ProfileTabGifs, raw.types.ProfileTabGifts, raw.types.ProfileTabLinks, raw.types.ProfileTabMedia, raw.types.ProfileTabMusic, raw.types.ProfileTabPosts, raw.types.ProfileTabVoice]
+
 _doc = """Represents a tab of a profile page ».
 
     Constructors:

@@ -140,57 +140,57 @@ class ChatEvent(Object):
         user: "types.User",
         action: str,
 
-        old_description: typing.Optional[str] = None,
-        new_description: typing.Optional[str] = None,
+        old_description: typing.Optional[typing.Optional[str]] = None,
+        new_description: typing.Optional[typing.Optional[str]] = None,
 
-        old_history_ttl: typing.Optional[int] = None,
-        new_history_ttl: typing.Optional[int] = None,
+        old_history_ttl: typing.Optional[typing.Optional[int]] = None,
+        new_history_ttl: typing.Optional[typing.Optional[int]] = None,
 
-        old_linked_chat: typing.Optional["types.Chat"] = None,
-        new_linked_chat: typing.Optional["types.Chat"] = None,
+        old_linked_chat: typing.Optional[typing.Optional["types.Chat"]] = None,
+        new_linked_chat: typing.Optional[typing.Optional["types.Chat"]] = None,
 
-        old_photo: typing.Optional["types.Photo"] = None,
-        new_photo: typing.Optional["types.Photo"] = None,
+        old_photo: typing.Optional[typing.Optional["types.Photo"]] = None,
+        new_photo: typing.Optional[typing.Optional["types.Photo"]] = None,
 
-        old_title: typing.Optional[str] = None,
-        new_title: typing.Optional[str] = None,
+        old_title: typing.Optional[typing.Optional[str]] = None,
+        new_title: typing.Optional[typing.Optional[str]] = None,
 
-        old_username: typing.Optional[str] = None,
-        new_username: typing.Optional[str] = None,
+        old_username: typing.Optional[typing.Optional[str]] = None,
+        new_username: typing.Optional[typing.Optional[str]] = None,
 
-        old_chat_permissions: typing.Optional["types.ChatPermissions"] = None,
-        new_chat_permissions: typing.Optional["types.ChatPermissions"] = None,
+        old_chat_permissions: typing.Optional[typing.Optional["types.ChatPermissions"]] = None,
+        new_chat_permissions: typing.Optional[typing.Optional["types.ChatPermissions"]] = None,
 
-        deleted_message: typing.Optional["types.Message"] = None,
+        deleted_message: typing.Optional[typing.Optional["types.Message"]] = None,
 
-        old_message: typing.Optional["types.Message"] = None,
-        new_message: typing.Optional["types.Message"] = None,
+        old_message: typing.Optional[typing.Optional["types.Message"]] = None,
+        new_message: typing.Optional[typing.Optional["types.Message"]] = None,
 
-        invited_member: typing.Optional["types.ChatMember"] = None,
+        invited_member: typing.Optional[typing.Optional["types.ChatMember"]] = None,
 
-        old_administrator_privileges: typing.Optional["types.ChatMember"] = None,
-        new_administrator_privileges: typing.Optional["types.ChatMember"] = None,
+        old_administrator_privileges: typing.Optional[typing.Optional["types.ChatMember"]] = None,
+        new_administrator_privileges: typing.Optional[typing.Optional["types.ChatMember"]] = None,
 
-        old_member_permissions: typing.Optional["types.ChatMember"] = None,
-        new_member_permissions: typing.Optional["types.ChatMember"] = None,
+        old_member_permissions: typing.Optional[typing.Optional["types.ChatMember"]] = None,
+        new_member_permissions: typing.Optional[typing.Optional["types.ChatMember"]] = None,
 
-        stopped_poll: typing.Optional["types.Message"] = None,
+        stopped_poll: typing.Optional[typing.Optional["types.Message"]] = None,
 
-        invites_enabled: typing.Optional["types.ChatMember"] = None,
+        invites_enabled: typing.Optional[typing.Optional["types.ChatMember"]] = None,
 
-        history_hidden: typing.Optional[bool] = None,
+        history_hidden: typing.Optional[typing.Optional[bool]] = None,
 
-        signatures_enabled: typing.Optional[bool] = None,
+        signatures_enabled: typing.Optional[typing.Optional[bool]] = None,
 
-        old_slow_mode: typing.Optional[int] = None,
-        new_slow_mode: typing.Optional[int] = None,
+        old_slow_mode: typing.Optional[typing.Optional[int]] = None,
+        new_slow_mode: typing.Optional[typing.Optional[int]] = None,
 
-        pinned_message: typing.Optional["types.Message"] = None,
-        unpinned_message: typing.Optional["types.Message"] = None,
+        pinned_message: typing.Optional[typing.Optional["types.Message"]] = None,
+        unpinned_message: typing.Optional[typing.Optional["types.Message"]] = None,
 
-        old_invite_link: typing.Optional["types.ChatInviteLink"] = None,
-        new_invite_link: typing.Optional["types.ChatInviteLink"] = None,
-        revoked_invite_link: typing.Optional["types.ChatInviteLink"] = None,
+        old_invite_link: typing.Optional[typing.Optional["types.ChatInviteLink"]] = None,
+        new_invite_link: typing.Optional[typing.Optional["types.ChatInviteLink"]] = None,
+        revoked_invite_link: typing.Optional[typing.Optional["types.ChatInviteLink"]] = None,
         deleted_invite_link: "types.ChatInviteLink" = None
     ):
         super().__init__()

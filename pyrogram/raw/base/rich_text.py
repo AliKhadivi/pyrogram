@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-RichText = Union[raw.types.TextAnchor, raw.types.TextAutoEmail, raw.types.TextAutoPhone, raw.types.TextAutoUrl, raw.types.TextBankCard, raw.types.TextBold, raw.types.TextBotCommand, raw.types.TextCashtag, raw.types.TextConcat, raw.types.TextCustomEmoji, raw.types.TextDate, raw.types.TextDiff, raw.types.TextEmail, raw.types.TextEmpty, raw.types.TextFixed, raw.types.TextHashtag, raw.types.TextImage, raw.types.TextItalic, raw.types.TextMarked, raw.types.TextMath, raw.types.TextMention, raw.types.TextMentionName, raw.types.TextPhone, raw.types.TextPlain, raw.types.TextSpoiler, raw.types.TextStrike, raw.types.TextSubscript, raw.types.TextSuperscript, raw.types.TextUnderline, raw.types.TextUrl]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    RichText = Any
+else:
+    RichText = Union[raw.types.TextAnchor, raw.types.TextAutoEmail, raw.types.TextAutoPhone, raw.types.TextAutoUrl, raw.types.TextBankCard, raw.types.TextBold, raw.types.TextBotCommand, raw.types.TextCashtag, raw.types.TextConcat, raw.types.TextCustomEmoji, raw.types.TextDate, raw.types.TextDiff, raw.types.TextEmail, raw.types.TextEmpty, raw.types.TextFixed, raw.types.TextHashtag, raw.types.TextImage, raw.types.TextItalic, raw.types.TextMarked, raw.types.TextMath, raw.types.TextMention, raw.types.TextMentionName, raw.types.TextPhone, raw.types.TextPlain, raw.types.TextSpoiler, raw.types.TextStrike, raw.types.TextSubscript, raw.types.TextSuperscript, raw.types.TextUnderline, raw.types.TextUrl]
+
 _doc = """Rich text
 
     Constructors:

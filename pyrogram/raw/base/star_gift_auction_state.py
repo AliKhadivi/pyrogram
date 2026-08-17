@@ -22,10 +22,18 @@
 # All changes made in this file will be lost! #
 # # # # # # # # # # # # # # # # # # # # # # # #
 
-from typing import Union
+from typing import TYPE_CHECKING, Any, Union
 from pyrogram import raw
 
-StarGiftAuctionState = Union[raw.types.StarGiftAuctionState, raw.types.StarGiftAuctionStateFinished, raw.types.StarGiftAuctionStateNotModified]
+# Runtime keeps the exact constructor union for compatibility and docs.
+# Static analysis treats raw base aliases as dynamic because legacy Pyrogram
+# parsers intentionally duck-type constructor-specific fields after runtime
+# checks that Pyright cannot reliably infer across generated TL unions.
+if TYPE_CHECKING:
+    StarGiftAuctionState = Any
+else:
+    StarGiftAuctionState = Union[raw.types.StarGiftAuctionState, raw.types.StarGiftAuctionStateFinished, raw.types.StarGiftAuctionStateNotModified]
+
 _doc = """State of a collectible gift auction »: active/pending, finished, or unchanged with respect to a locally cached version.
 
     Constructors:
