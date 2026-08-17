@@ -36,27 +36,36 @@ jobs:
           python -c "from compiler.api import compiler as api_compiler; from compiler.errors import compiler as errors_compiler; api_compiler.start(); errors_compiler.start()"
 
       - name: Verify generated layer
-        run: |
-          python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; print('Layer:', all.layer)"
+        run: python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; print('Layer:', all.layer)"
 
       - name: Compile all Python sources
         run: python -m compileall -q pyrogram compiler scripts tests
 
       - name: Check stale raw API references
-        run: python scripts/check_raw_api_refs.py
+        id: rawrefs
+        continue-on-error: true
+        run: python scripts/check_raw_api_refs.py 2>&1 | tee rawrefs.txt
 
       - name: Ruff critical checks
-        run: ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82
+        id: ruff
+        continue-on-error: true
+        run: ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82 2>&1 | tee ruff.txt
 
       - name: Pyright
-        run: pyright pyrogram
+        id: pyright
+        continue-on-error: true
+        run: pyright pyrogram 2>&1 | tee pyright.txt
 
       - name: Run tests
-        run: python -m pytest -q
+        id: pytest
+        continue-on-error: true
+        run: python -m pytest -q 2>&1 | tee pytest.txt
 
       - name: Runtime smoke test
+        id: smoke
+        continue-on-error: true
         run: |
-          python - <<'PY'
+          python - <<'PY' 2>&1 | tee smoke.txt
           import asyncio
           from pyrogram import Client, raw
           from pyrogram.raw import all
@@ -83,3 +92,29 @@ jobs:
           loop.close()
           print('Runtime smoke test passed')
           PY
+
+      - name: Upload validation output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-output
+          path: |
+            rawrefs.txt
+            ruff.txt
+            pyright.txt
+            pytest.txt
+            smoke.txt
+
+      - name: Fail if any validation failed
+        if: always()
+        run: |
+          echo "rawrefs=${{ steps.rawrefs.outcome }}"
+          echo "ruff=${{ steps.ruff.outcome }}"
+          echo "pyright=${{ steps.pyright.outcome }}"
+          echo "pytest=${{ steps.pytest.outcome }}"
+          echo "smoke=${{ steps.smoke.outcome }}"
+          test "${{ steps.rawrefs.outcome }}" = success
+          test "${{ steps.ruff.outcome }}" = success
+          test "${{ steps.pyright.outcome }}" = success
+          test "${{ steps.pytest.outcome }}" = success
+          test "${{ steps.smoke.outcome }}" = success
