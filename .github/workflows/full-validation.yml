@@ -6,6 +6,9 @@ on:
       - agent/ci-full-validation
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -115,6 +118,19 @@ jobs:
       - name: Save typing diff
         if: always()
         run: git diff -- pyrogram > typing-modernization.patch
+
+      - name: Persist validated typing cleanup
+        if: ${{ steps.rawrefs.outcome == 'success' && steps.ruff.outcome == 'success' && steps.pytest.outcome == 'success' && steps.smoke.outcome == 'success' }}
+        run: |
+          if git diff --quiet -- pyrogram; then
+            echo "No source typing changes to persist."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add pyrogram
+            git commit -m "Modernize generated and legacy typing"
+            git push origin HEAD:agent/ci-full-validation
+          fi
 
       - name: Upload validation output
         if: always()
