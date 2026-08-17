@@ -1,0 +1,85 @@
+name: Full Validation
+
+on:
+  push:
+    branches:
+      - agent/ci-full-validation
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            dev-requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install -r dev-requirements.txt
+          python -m pip install pyright ruff
+
+      - name: Regenerate Layer 228 API
+        run: |
+          rm -rf pyrogram/raw/types pyrogram/raw/functions pyrogram/raw/base pyrogram/raw/all.py pyrogram/errors/exceptions
+          python -c "from compiler.api import compiler as api_compiler; from compiler.errors import compiler as errors_compiler; api_compiler.start(); errors_compiler.start()"
+
+      - name: Verify generated layer
+        run: |
+          python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; print('Layer:', all.layer)"
+
+      - name: Compile all Python sources
+        run: python -m compileall -q pyrogram compiler scripts tests
+
+      - name: Check stale raw API references
+        run: python scripts/check_raw_api_refs.py
+
+      - name: Ruff critical checks
+        run: ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82
+
+      - name: Pyright
+        run: pyright pyrogram
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Runtime smoke test
+        run: |
+          python - <<'PY'
+          import asyncio
+          from pyrogram import Client, raw
+          from pyrogram.raw import all
+          from pyrogram.types import EmojiStatus
+
+          assert all.layer == 228
+          assert hasattr(raw.types, 'EmojiStatus')
+          assert not hasattr(raw.types, 'EmojiStatusUntil')
+
+          parsed = EmojiStatus._parse(None, raw.types.EmojiStatus(document_id=123, until=456))
+          assert parsed is not None
+          assert parsed.custom_emoji_id == 123
+          assert parsed.until_date is not None
+
+          written = EmojiStatus(custom_emoji_id=123).write()
+          assert isinstance(written, raw.types.EmojiStatus)
+
+          loop = asyncio.new_event_loop()
+          asyncio.set_event_loop(loop)
+          client = Client('ci-smoke', api_id=1, api_hash='0' * 32, in_memory=True)
+          assert client.device_model == 'Jalgo Desktop'
+          assert client.app_version.startswith('Jalgo Desktop ')
+          client.executor.shutdown(wait=False)
+          loop.close()
+          print('Runtime smoke test passed')
+          PY
