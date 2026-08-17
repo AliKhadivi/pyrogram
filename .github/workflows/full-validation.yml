@@ -36,6 +36,9 @@ jobs:
           python -c "from compiler.api import compiler as api_compiler; from compiler.errors import compiler as errors_compiler; api_compiler.start(); errors_compiler.start()"
           python scripts/normalize_generated_typing.py
 
+      - name: Modernize legacy typing
+        run: python scripts/modernize_legacy_typing.py
+
       - name: Verify generated layer
         run: python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; print('Layer:', all.layer)"
 
@@ -109,6 +112,10 @@ jobs:
           print('Runtime smoke test passed')
           PY
 
+      - name: Save typing diff
+        if: always()
+        run: git diff -- pyrogram > typing-modernization.patch
+
       - name: Upload validation output
         if: always()
         uses: actions/upload-artifact@v4
@@ -120,6 +127,7 @@ jobs:
             pyright.txt
             pytest.txt
             smoke.txt
+            typing-modernization.patch
 
       - name: Fail if any validation failed
         if: always()
