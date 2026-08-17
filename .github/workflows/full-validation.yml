@@ -44,27 +44,36 @@ jobs:
       - name: Check stale raw API references
         id: rawrefs
         continue-on-error: true
-        run: python scripts/check_raw_api_refs.py 2>&1 | tee rawrefs.txt
+        run: |
+          set -o pipefail
+          python scripts/check_raw_api_refs.py 2>&1 | tee rawrefs.txt
 
       - name: Ruff critical checks
         id: ruff
         continue-on-error: true
-        run: ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82 2>&1 | tee ruff.txt
+        run: |
+          set -o pipefail
+          ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82 2>&1 | tee ruff.txt
 
       - name: Pyright
         id: pyright
         continue-on-error: true
-        run: pyright pyrogram 2>&1 | tee pyright.txt
+        run: |
+          set -o pipefail
+          pyright pyrogram 2>&1 | tee pyright.txt
 
       - name: Run tests
         id: pytest
         continue-on-error: true
-        run: python -m pytest -q 2>&1 | tee pytest.txt
+        run: |
+          set -o pipefail
+          python -m pytest -q 2>&1 | tee pytest.txt
 
       - name: Runtime smoke test
         id: smoke
         continue-on-error: true
         run: |
+          set -o pipefail
           python - <<'PY' 2>&1 | tee smoke.txt
           import asyncio
           from pyrogram import Client, raw
@@ -89,6 +98,7 @@ jobs:
           assert client.device_model == 'Jalgo Desktop'
           assert client.app_version.startswith('Jalgo Desktop ')
           client.executor.shutdown(wait=False)
+          asyncio.set_event_loop(None)
           loop.close()
           print('Runtime smoke test passed')
           PY
