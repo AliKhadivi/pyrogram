@@ -13,8 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PKG = ROOT / "pyrogram"
 
 # Matches common legacy signatures such as `foo: str = None`.
+# Horizontal whitespace is intentional: never allow a match to cross lines.
 NONE_DEFAULT = re.compile(
-    r'(?P<name>\b[A-Za-z_]\w*)\s*:\s*(?P<type>(?!typing\.Optional\[|Optional\[)[^,\n=]+?)\s*=\s*None(?P<tail>\s*[,\)])'
+    r'(?P<name>\b[A-Za-z_]\w*)[ \t]*:[ \t]*(?P<type>(?!typing\.Optional\[|Optional\[)[^,\n=]+?)[ \t]*=[ \t]*None(?P<tail>[ \t]*[,\)])'
 )
 
 
@@ -49,7 +50,7 @@ def normalize(path: Path) -> bool:
             return match.group(0)
         return f'{match.group("name")}: typing.Optional[{annotation}] = None{match.group("tail")}'
 
-    updated, count = NONE_DEFAULT.subn(repl, updated)
+    updated = NONE_DEFAULT.sub(repl, updated)
 
     # Pyrogram method mixins deliberately annotate self as Client even though
     # the containing class is a mixin. Modern Pyright treats that as an
