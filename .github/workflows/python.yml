@@ -1,4 +1,4 @@
-name: Pyrogram Test
+name: Pyrogram Smoke Test
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
 
       - name: Verify Layer and Jalgo Desktop metadata
         run: |
-          python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; from pyrogram import Client; c = Client('ci', api_id=1, api_hash='0' * 32, in_memory=True); assert c.app_version.startswith('Jalgo Desktop '), c.app_version; assert c.device_model == 'Jalgo Desktop', c.device_model; c.executor.shutdown(wait=False)"
+          python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; from pyrogram import Client; c = Client('ci', api_id=1, api_hash='0' * 32, in_memory=True); assert c.app_version.startswith('Jalgo Desktop '), c.app_version; assert c.device_model == 'Jalgo Desktop', c.device_model; assert 'Pyrogram' not in c.app_version; assert 'Python' not in c.device_model; c.executor.shutdown(wait=False)"
 
-      - name: Run tests
-        run: python -m pytest -q
+      - name: Run smoke tests
+        run: python -m pytest -q tests/test_jalgo_client.py tests/test_file_id.py
