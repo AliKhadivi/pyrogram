@@ -63,9 +63,9 @@ namespaces_to_constructors = {}
 namespaces_to_functions = {}
 
 try:
-    with open("docs.json") as f:
+    with open(HOME_PATH / "docs.json") as f:
         docs = json.load(f)
-except FileNotFoundError:
+except (FileNotFoundError, json.JSONDecodeError):
     try:
         with urllib.request.urlopen("https://github.com/PyrogramMod/PyrogramMod/raw/refs/heads/main/compiler/api/docs.json") as r:
             docs = json.load(r)
