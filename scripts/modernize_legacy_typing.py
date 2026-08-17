@@ -26,8 +26,6 @@ def add_typing_import(source: str) -> str:
     lines = source.splitlines(keepends=True)
     insert_at = 0
 
-    # Keep license/comments and module docstring area intact; insert before
-    # the first normal import/from statement.
     for i, line in enumerate(lines):
         stripped = line.strip()
         if stripped.startswith("import ") or stripped.startswith("from "):
@@ -52,15 +50,29 @@ def normalize(path: Path) -> bool:
 
     updated = NONE_DEFAULT.sub(repl, updated)
 
-    # Pyrogram method mixins deliberately annotate self as Client even though
-    # the containing class is a mixin. Modern Pyright treats that as an
-    # invalid self type. Removing only this annotation preserves behavior.
-    if "pyrogram/methods/" in path.as_posix():
-        updated = updated.replace('self: "pyrogram.Client"', 'self')
-        updated = updated.replace("self: 'pyrogram.Client'", 'self')
+    posix = path.as_posix()
+
+    # Client methods are composed from many independent mixin classes. Inside
+    # those mixins, `self` is the final Client instance at runtime, but static
+    # analyzers otherwise see only the narrow mixin class. Model it as dynamic
+    # rather than emitting hundreds of false missing-member errors.
+    if "/pyrogram/methods/" in posix:
+        updated = updated.replace('self: "pyrogram.Client"', 'self: typing.Any')
+        updated = updated.replace("self: 'pyrogram.Client'", 'self: typing.Any')
+        updated = re.sub(r'(?P<prefix>\b(?:async[ \t]+)?def[ \t]+\w+\([ \t]*)self(?P<tail>[ \t]*[,\)])',
+                         r'\g<prefix>self: typing.Any\g<tail>', updated)
+        updated = re.sub(r'(?P<prefix>\n[ \t]+)self(?P<tail>[ \t]*,)',
+                         r'\g<prefix>self: typing.Any\g<tail>', updated)
+
+    # Pyrogram Object instances may be deserialized before they are rebound to
+    # a Client. Bound helper methods intentionally assume a client exists once
+    # invoked. Keep that runtime behavior but avoid propagating Optional[Client]
+    # through every high-level type.
+    if posix.endswith("/pyrogram/types/object.py"):
+        updated = updated.replace("self._client = client", "self._client: typing.Any = client")
 
     if updated != source:
-        if "typing.Optional[" in updated:
+        if "typing." in updated:
             updated = add_typing_import(updated)
         path.write_text(updated, encoding="utf-8")
         return True
