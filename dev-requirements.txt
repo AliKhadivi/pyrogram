@@ -1,6 +1,6 @@
 -r requirements.txt
 
-pytest
-pytest-asyncio
-pytest-cov
-twine
+pytest==9.1.1
+pytest-asyncio==1.4.0
+pytest-cov==7.1.0
+twine==6.2.0
