@@ -25,8 +25,8 @@ import pyrogram
 
 
 class Object:
-    def __init__(self, client: typing.Optional[typing.Optional["pyrogram.Client"]] = None):
-        self._client = client
+    def __init__(self, client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None):
+        self._client: typing.Any = client
 
     def bind(self, client: "pyrogram.Client"):
         """Bind a Client instance to this and to all nested Pyrogram objects.
@@ -36,7 +36,7 @@ class Object:
                 The Client instance to bind this object with. Useful to re-enable bound methods after serializing and
                 deserializing Pyrogram objects with ``repr`` and ``eval``.
         """
-        self._client = client
+        self._client: typing.Any = client
 
         for i in self.__dict__:
             o = getattr(self, i)

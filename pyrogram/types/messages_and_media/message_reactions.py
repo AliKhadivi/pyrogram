@@ -35,8 +35,8 @@ class MessageReactions(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
-        reactions: typing.Optional[typing.Optional[Optional[List["types.Reaction"]]]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
+        reactions: typing.Optional[typing.Optional[typing.Optional[Optional[List["types.Reaction"]]]]] = None,
     ):
         super().__init__(client)
 

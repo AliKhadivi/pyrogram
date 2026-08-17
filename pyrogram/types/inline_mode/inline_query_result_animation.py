@@ -83,15 +83,15 @@ class InlineQueryResultAnimation(InlineQueryResult):
         animation_width: int = 0,
         animation_height: int = 0,
         animation_duration: int = 0,
-        thumb_url: typing.Optional[typing.Optional[str]] = None,
+        thumb_url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         thumb_mime_type: str = "image/jpeg",
-        id: typing.Optional[typing.Optional[str]] = None,
-        title: typing.Optional[typing.Optional[str]] = None,
-        description: typing.Optional[typing.Optional[str]] = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        title: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        description: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
-        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
         input_message_content: "types.InputMessageContent" = None
     ):
         super().__init__("gif", id, input_message_content, reply_markup)

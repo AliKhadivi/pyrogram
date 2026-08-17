@@ -32,25 +32,25 @@ from pyrogram.file_id import FileType
 
 class SendPhoto:
     async def send_photo(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         photo: Union[str, BinaryIO],
         caption: str = "",
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
-        has_spoiler: typing.Optional[typing.Optional[bool]] = None,
-        ttl_seconds: typing.Optional[typing.Optional[int]] = None,
-        disable_notification: typing.Optional[typing.Optional[bool]] = None,
-        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
-        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
-        protect_content: typing.Optional[typing.Optional[bool]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        has_spoiler: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        ttl_seconds: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[typing.Optional[Callable]] = None,
+        progress: typing.Optional[typing.Optional[typing.Optional[Callable]]] = None,
         progress_args: tuple = ()
     ) -> Optional["types.Message"]:
         """Send photos.

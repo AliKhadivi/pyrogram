@@ -39,7 +39,7 @@ class PollOption(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         text: str,
         voter_count: int,
         data: bytes

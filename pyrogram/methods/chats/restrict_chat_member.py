@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from datetime import datetime
 from typing import Union
 
@@ -26,7 +27,7 @@ from pyrogram import types
 
 class RestrictChatMember:
     async def restrict_chat_member(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         user_id: Union[int, str],
         permissions: "types.ChatPermissions",

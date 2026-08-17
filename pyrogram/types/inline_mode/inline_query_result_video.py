@@ -84,16 +84,16 @@ class InlineQueryResultVideo(InlineQueryResult):
         video_url: str,
         thumb_url: str,
         title: str,
-        id: typing.Optional[typing.Optional[str]] = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         mime_type: str = "video/mp4",
         video_width: int = 0,
         video_height: int = 0,
         video_duration: int = 0,
-        description: typing.Optional[typing.Optional[str]] = None,
+        description: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         caption: str = "",
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
-        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
         input_message_content: "types.InputMessageContent" = None
     ):
         super().__init__("video", id, input_message_content, reply_markup)

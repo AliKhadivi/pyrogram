@@ -31,11 +31,11 @@ from pyrogram.file_id import FileType
 
 class EditMessageMedia:
     async def edit_message_media(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         message_id: int,
         media: "types.InputMedia",
-        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
         file_name: str = None
     ) -> "types.Message":
         """Edit animation, audio, document, photo or video messages.

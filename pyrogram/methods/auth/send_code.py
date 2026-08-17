@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 
 import pyrogram
@@ -29,7 +30,7 @@ log = logging.getLogger(__name__)
 
 class SendCode:
     async def send_code(
-        self,
+        self: typing.Any,
         phone_number: str
     ) -> "types.SentCode":
         """Send the confirmation code to the given phone number.

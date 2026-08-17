@@ -40,7 +40,7 @@ class GameHighScore(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         user: "types.User",
         score: int,
         position: int = None

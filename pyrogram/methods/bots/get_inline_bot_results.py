@@ -26,11 +26,11 @@ from pyrogram.errors import UnknownError
 
 class GetInlineBotResults:
     async def get_inline_bot_results(
-        self,
+        self: typing.Any,
         bot: Union[int, str],
         query: str = "",
         offset: str = "",
-        latitude: typing.Optional[typing.Optional[float]] = None,
+        latitude: typing.Optional[typing.Optional[typing.Optional[float]]] = None,
         longitude: float = None
     ):
         """Get bot results via inline queries.

@@ -33,7 +33,7 @@ class StrippedThumbnail(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         data: bytes
     ):
         super().__init__(client)

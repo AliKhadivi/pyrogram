@@ -50,10 +50,10 @@ class ChatJoiner(Object):
         *,
         client: "pyrogram.Client",
         user: "types.User",
-        date: typing.Optional[typing.Optional[datetime]] = None,
-        bio: typing.Optional[typing.Optional[str]] = None,
-        pending: typing.Optional[typing.Optional[bool]] = None,
-        approved_by: typing.Optional[typing.Optional["types.User"]] = None,
+        date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        bio: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        pending: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        approved_by: typing.Optional[typing.Optional[typing.Optional["types.User"]]] = None,
     ):
         super().__init__(client)
 

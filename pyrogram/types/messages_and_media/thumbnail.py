@@ -49,7 +49,7 @@ class Thumbnail(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         file_id: str,
         file_unique_id: str,
         width: int,

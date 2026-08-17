@@ -60,14 +60,14 @@ class VideoNote(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         file_id: str,
         file_unique_id: str,
         length: int,
         duration: int,
-        thumbs: typing.Optional[typing.Optional[List["types.Thumbnail"]]] = None,
-        mime_type: typing.Optional[typing.Optional[str]] = None,
-        file_size: typing.Optional[typing.Optional[int]] = None,
+        thumbs: typing.Optional[typing.Optional[typing.Optional[List["types.Thumbnail"]]]] = None,
+        mime_type: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        file_size: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
         date: datetime = None
     ):
         super().__init__(client)

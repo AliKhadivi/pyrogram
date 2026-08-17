@@ -31,7 +31,7 @@ class Parser:
         self.html = HTML(client)
         self.markdown = Markdown(client)
 
-    async def parse(self, text: str, mode: typing.Optional[typing.Optional[Optional[enums.ParseMode]]] = None):
+    async def parse(self, text: str, mode: typing.Optional[typing.Optional[typing.Optional[Optional[enums.ParseMode]]]] = None):
         text = str(text if text else "").strip()
 
         if mode is None:

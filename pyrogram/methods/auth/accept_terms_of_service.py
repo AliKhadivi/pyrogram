@@ -16,13 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 
 
 class AcceptTermsOfService:
     async def accept_terms_of_service(
-        self,
+        self: typing.Any,
         terms_of_service_id: str
     ) -> bool:
         """Accept the given terms of service.

@@ -38,11 +38,11 @@ log = logging.getLogger(__name__)
 
 class SaveFile:
     async def save_file(
-        self,
+        self: typing.Any,
         path: Union[str, BinaryIO],
-        file_id: typing.Optional[typing.Optional[int]] = None,
+        file_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
         file_part: int = 0,
-        progress: typing.Optional[typing.Optional[Callable]] = None,
+        progress: typing.Optional[typing.Optional[typing.Optional[Callable]]] = None,
         progress_args: tuple = ()
     ):
         """Upload a file onto Telegram servers, without actually sending the message to anyone.

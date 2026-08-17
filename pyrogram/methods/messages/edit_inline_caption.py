@@ -25,10 +25,10 @@ from pyrogram import types, enums
 
 class EditInlineCaption:
     async def edit_inline_caption(
-        self,
+        self: typing.Any,
         inline_message_id: str,
         caption: str,
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> bool:
         """Edit the caption of inline media messages.

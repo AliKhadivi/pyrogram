@@ -57,11 +57,11 @@ class ChosenInlineResult(Object, Update):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         result_id: str,
         from_user: "types.User",
         query: str,
-        location: typing.Optional[typing.Optional["types.Location"]] = None,
+        location: typing.Optional[typing.Optional[typing.Optional["types.Location"]]] = None,
         inline_message_id: str = None
     ):
         super().__init__(client)

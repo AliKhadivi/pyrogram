@@ -16,12 +16,13 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 
 
 class Restart:
     async def restart(
-        self,
+        self: typing.Any,
         block: bool = True
     ):
         """Restart the Client.

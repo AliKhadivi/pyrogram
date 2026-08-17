@@ -35,7 +35,7 @@ log = logging.getLogger(__name__)
 class SendMediaGroup:
     # TODO: Add progress parameter
     async def send_media_group(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         media: List[Union[
             "types.InputMediaPhoto",
@@ -43,10 +43,10 @@ class SendMediaGroup:
             "types.InputMediaAudio",
             "types.InputMediaDocument"
         ]],
-        disable_notification: typing.Optional[typing.Optional[bool]] = None,
-        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
-        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
-        protect_content: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
     ) -> List["types.Message"]:
         """Send a group of photos or videos as an album.
 

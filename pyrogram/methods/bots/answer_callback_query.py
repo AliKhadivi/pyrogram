@@ -23,11 +23,11 @@ from pyrogram import raw
 
 class AnswerCallbackQuery:
     async def answer_callback_query(
-        self,
+        self: typing.Any,
         callback_query_id: str,
-        text: typing.Optional[typing.Optional[str]] = None,
-        show_alert: typing.Optional[typing.Optional[bool]] = None,
-        url: typing.Optional[typing.Optional[str]] = None,
+        text: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        show_alert: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         cache_time: int = 0
     ):
         """Send answers to callback queries sent from inline keyboards.

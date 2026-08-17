@@ -26,12 +26,12 @@ from pyrogram import types
 
 class SendGame:
     async def send_game(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         game_short_name: str,
-        disable_notification: typing.Optional[typing.Optional[bool]] = None,
-        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
-        protect_content: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

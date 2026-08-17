@@ -68,10 +68,10 @@ class InlineQueryResultContact(InlineQueryResult):
         first_name: str,
         last_name: str = "",
         vcard: str = "",
-        id: typing.Optional[typing.Optional[str]] = None,
-        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
-        input_message_content: typing.Optional[typing.Optional["types.InputMessageContent"]] = None,
-        thumb_url: typing.Optional[typing.Optional[str]] = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
+        input_message_content: typing.Optional[typing.Optional[typing.Optional["types.InputMessageContent"]]] = None,
+        thumb_url: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         thumb_width: int = 0,
         thumb_height: int = 0
     ):

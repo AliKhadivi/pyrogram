@@ -60,9 +60,9 @@ class LoginUrl(Object):
     def __init__(
         self, *,
         url: str,
-        forward_text: typing.Optional[typing.Optional[str]] = None,
-        bot_username: typing.Optional[typing.Optional[str]] = None,
-        request_write_access: typing.Optional[typing.Optional[str]] = None,
+        forward_text: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        bot_username: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        request_write_access: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         button_id: int = None
     ):
         super().__init__()

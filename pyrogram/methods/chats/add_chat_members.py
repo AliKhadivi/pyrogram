@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union, List
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw
 
 class AddChatMembers:
     async def add_chat_members(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         user_ids: Union[Union[int, str], List[Union[int, str]]],
         forward_limit: int = 100

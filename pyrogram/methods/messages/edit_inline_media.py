@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import asyncio
 import io
 import os
@@ -34,7 +35,7 @@ class EditInlineMedia:
     MAX_RETRIES = 3
 
     async def edit_inline_media(
-        self,
+        self: typing.Any,
         inline_message_id: str,
         media: "types.InputMedia",
         reply_markup: "types.InlineKeyboardMarkup" = None

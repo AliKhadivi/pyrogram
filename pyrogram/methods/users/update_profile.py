@@ -23,9 +23,9 @@ from pyrogram import raw
 
 class UpdateProfile:
     async def update_profile(
-        self,
-        first_name: typing.Optional[typing.Optional[str]] = None,
-        last_name: typing.Optional[typing.Optional[str]] = None,
+        self: typing.Any,
+        first_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        last_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         bio: str = None
     ) -> bool:
         """Update your profile details such as first name, last name and bio.

@@ -49,8 +49,8 @@ class KeyboardButton(Object):
     def __init__(
         self,
         text: str,
-        request_contact: typing.Optional[typing.Optional[bool]] = None,
-        request_location: typing.Optional[typing.Optional[bool]] = None,
+        request_contact: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        request_location: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         web_app: "types.WebAppInfo" = None
     ):
         super().__init__()

@@ -55,12 +55,12 @@ class SecurityError(Exception):
 class SecurityCheckMismatch(SecurityError):
     """Raised when a security check mismatch occurs."""
 
-    def __init__(self, msg: typing.Optional[typing.Optional[str]] = None):
+    def __init__(self, msg: typing.Optional[typing.Optional[typing.Optional[str]]] = None):
         super().__init__("A security check mismatch has occurred." if msg is None else msg)
 
 
 class CDNFileHashMismatch(SecurityError):
     """Raised when a CDN file hash mismatch occurs."""
 
-    def __init__(self, msg: typing.Optional[typing.Optional[str]] = None):
+    def __init__(self, msg: typing.Optional[typing.Optional[typing.Optional[str]]] = None):
         super().__init__("A CDN file hash mismatch has occurred." if msg is None else msg)

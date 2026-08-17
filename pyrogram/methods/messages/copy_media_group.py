@@ -26,14 +26,14 @@ from pyrogram import types, utils, raw
 
 class CopyMediaGroup:
     async def copy_media_group(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         from_chat_id: Union[int, str],
         message_id: int,
         captions: Union[List[str], str] = None,
-        disable_notification: typing.Optional[typing.Optional[bool]] = None,
-        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
-        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
     ) -> List["types.Message"]:
         """Copy a media group by providing one of the message ids.
 

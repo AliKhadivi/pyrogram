@@ -39,7 +39,7 @@ class InputMedia(Object):
         self,
         media: Union[str, BinaryIO],
         caption: str = "",
-        parse_mode: typing.Optional[typing.Optional[str]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         caption_entities: List[MessageEntity] = None
     ):
         super().__init__()

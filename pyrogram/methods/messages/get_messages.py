@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 from typing import Union, List, Iterable
 
@@ -32,7 +33,7 @@ log = logging.getLogger(__name__)
 
 class GetMessages:
     async def get_messages(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         message_ids: Union[int, Iterable[int]] = None,
         reply_to_message_ids: Union[int, Iterable[int]] = None,

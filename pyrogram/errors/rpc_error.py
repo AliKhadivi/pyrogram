@@ -36,7 +36,7 @@ class RPCError(Exception):
     def __init__(
         self,
         value: Union[int, str, raw.types.RpcError] = None,
-        rpc_name: typing.Optional[typing.Optional[str]] = None,
+        rpc_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         is_unknown: bool = False,
         is_signed: bool = False
     ):

@@ -47,8 +47,8 @@ class InlineQueryResultCachedSticker(InlineQueryResult):
     def __init__(
         self,
         sticker_file_id: str,
-        id: typing.Optional[typing.Optional[str]] = None,
-        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
         input_message_content: "types.InputMessageContent" = None
     ):
         super().__init__("sticker", id, input_message_content, reply_markup)

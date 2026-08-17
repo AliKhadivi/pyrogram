@@ -78,19 +78,19 @@ class Sticker(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         file_id: str,
         file_unique_id: str,
         width: int,
         height: int,
         is_animated: bool,
         is_video: bool,
-        file_name: typing.Optional[typing.Optional[str]] = None,
-        mime_type: typing.Optional[typing.Optional[str]] = None,
-        file_size: typing.Optional[typing.Optional[int]] = None,
-        date: typing.Optional[typing.Optional[datetime]] = None,
-        emoji: typing.Optional[typing.Optional[str]] = None,
-        set_name: typing.Optional[typing.Optional[str]] = None,
+        file_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        mime_type: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        file_size: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        emoji: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        set_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         thumbs: List["types.Thumbnail"] = None
     ):
         super().__init__(client)

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List, Union
 
 import pyrogram
@@ -25,7 +26,7 @@ from pyrogram import types
 
 class GetSendAsChats:
     async def get_send_as_chats(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str]
     ) -> List["types.Chat"]:
         """Get the list of "send_as" chats available.

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 from typing import Union
 
@@ -28,7 +29,7 @@ log = logging.getLogger(__name__)
 
 class SignIn:
     async def sign_in(
-        self,
+        self: typing.Any,
         phone_number: str,
         phone_code_hash: str,
         phone_code: str

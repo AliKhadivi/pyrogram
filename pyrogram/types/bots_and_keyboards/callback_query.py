@@ -66,14 +66,14 @@ class CallbackQuery(Object, Update):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         id: str,
         from_user: "types.User",
         chat_instance: str,
-        message: typing.Optional[typing.Optional["types.Message"]] = None,
-        inline_message_id: typing.Optional[typing.Optional[str]] = None,
+        message: typing.Optional[typing.Optional[typing.Optional["types.Message"]]] = None,
+        inline_message_id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         data: Union[str, bytes] = None,
-        game_short_name: typing.Optional[typing.Optional[str]] = None,
+        game_short_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         matches: List[Match] = None
     ):
         super().__init__(client)
@@ -121,7 +121,7 @@ class CallbackQuery(Object, Update):
             client=client
         )
 
-    async def answer(self, text: typing.Optional[typing.Optional[str]] = None, show_alert: typing.Optional[typing.Optional[bool]] = None, url: typing.Optional[typing.Optional[str]] = None, cache_time: int = 0):
+    async def answer(self, text: typing.Optional[typing.Optional[typing.Optional[str]]] = None, show_alert: typing.Optional[typing.Optional[typing.Optional[bool]]] = None, url: typing.Optional[typing.Optional[typing.Optional[str]]] = None, cache_time: int = 0):
         """Bound method *answer* of :obj:`~pyrogram.types.CallbackQuery`.
 
         Use this method as a shortcut for:
@@ -168,8 +168,8 @@ class CallbackQuery(Object, Update):
     async def edit_message_text(
         self,
         text: str,
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        disable_web_page_preview: typing.Optional[typing.Optional[bool]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> Union["types.Message", bool]:
         """Edit the text of messages attached to callback queries.
@@ -218,7 +218,7 @@ class CallbackQuery(Object, Update):
     async def edit_message_caption(
         self,
         caption: str,
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
         reply_markup: "types.InlineKeyboardMarkup" = None
     ) -> Union["types.Message", bool]:
         """Edit the caption of media messages attached to callback queries.

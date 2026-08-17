@@ -60,10 +60,10 @@ class ReplyKeyboardMarkup(Object):
     def __init__(
         self,
         keyboard: List[List[Union["types.KeyboardButton", str]]],
-        is_persistent: typing.Optional[typing.Optional[bool]] = None,
-        resize_keyboard: typing.Optional[typing.Optional[bool]] = None,
-        one_time_keyboard: typing.Optional[typing.Optional[bool]] = None,
-        selective: typing.Optional[typing.Optional[bool]] = None,
+        is_persistent: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        resize_keyboard: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        one_time_keyboard: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        selective: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         placeholder: str = None
     ):
         super().__init__()

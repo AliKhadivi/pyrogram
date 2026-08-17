@@ -27,16 +27,16 @@ from pyrogram import types
 
 class SendMessage:
     async def send_message(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         text: str,
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
-        disable_web_page_preview: typing.Optional[typing.Optional[bool]] = None,
-        disable_notification: typing.Optional[typing.Optional[bool]] = None,
-        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
-        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
-        protect_content: typing.Optional[typing.Optional[bool]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        disable_web_page_preview: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram.handlers import DisconnectHandler
 from pyrogram.handlers.handler import Handler
@@ -23,7 +24,7 @@ from pyrogram.handlers.handler import Handler
 
 class AddHandler:
     def add_handler(
-        self,
+        self: typing.Any,
         handler: "Handler",
         group: int = 0
     ):

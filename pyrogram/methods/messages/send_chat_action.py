@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw, enums
 
 class SendChatAction:
     async def send_chat_action(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         action: "enums.ChatAction"
     ) -> bool:

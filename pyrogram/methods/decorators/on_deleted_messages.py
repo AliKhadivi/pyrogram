@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Callable
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram.filters import Filter
 
 class OnDeletedMessages:
     def on_deleted_messages(
-        self=None,
+        self: typing.Any=None,
         filters=None,
         group: int = 0
     ) -> Callable:

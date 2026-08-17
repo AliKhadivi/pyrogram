@@ -27,7 +27,7 @@ from pyrogram import types
 
 class SendVenue:
     async def send_venue(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         latitude: float,
         longitude: float,
@@ -35,10 +35,10 @@ class SendVenue:
         address: str,
         foursquare_id: str = "",
         foursquare_type: str = "",
-        disable_notification: typing.Optional[typing.Optional[bool]] = None,
-        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
-        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
-        protect_content: typing.Optional[typing.Optional[bool]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",

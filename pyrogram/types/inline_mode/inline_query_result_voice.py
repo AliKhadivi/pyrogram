@@ -66,12 +66,12 @@ class InlineQueryResultVoice(InlineQueryResult):
         self,
         voice_url: str,
         title: str,
-        id: typing.Optional[typing.Optional[str]] = None,
+        id: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
         voice_duration: int = 0,
         caption: str = "",
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
-        reply_markup: typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        reply_markup: typing.Optional[typing.Optional[typing.Optional["types.InlineKeyboardMarkup"]]] = None,
         input_message_content: "types.InputMessageContent" = None
     ):
         super().__init__("voice", id, input_message_content, reply_markup)

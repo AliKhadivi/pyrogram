@@ -16,11 +16,12 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 
 
 class StopTransmission:
-    def stop_transmission(self):
+    def stop_transmission(self: typing.Any):
         """Stop downloading or uploading a file.
 
         This method must be called inside a progress callback function in order to stop the transmission at the

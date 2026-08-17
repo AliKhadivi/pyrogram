@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw, types
 
 class GetBotCommands:
     async def get_bot_commands(
-        self,
+        self: typing.Any,
         scope: "types.BotCommandScope" = types.BotCommandScopeDefault(),
         language_code: str = "",
     ) -> List["types.BotCommand"]:

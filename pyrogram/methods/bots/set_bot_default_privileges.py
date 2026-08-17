@@ -24,8 +24,8 @@ from pyrogram import types
 
 class SetBotDefaultPrivileges:
     async def set_bot_default_privileges(
-        self,
-        privileges: typing.Optional[typing.Optional["types.ChatPrivileges"]] = None,
+        self: typing.Any,
+        privileges: typing.Optional[typing.Optional[typing.Optional["types.ChatPrivileges"]]] = None,
         for_channels: bool = None
     ) -> bool:
         """Change the default privileges requested by the bot when it's added as an administrator to groups or channels.

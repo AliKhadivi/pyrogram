@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import asyncio
 import inspect
 
@@ -25,7 +26,7 @@ from pyrogram.methods.utilities.idle import idle
 
 class Run:
     def run(
-        self,
+        self: typing.Any,
         coroutine=None
     ):
         """Start the client, idle the main script and finally stop the client.

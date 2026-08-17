@@ -43,7 +43,7 @@ class SentCode(Object):
         self, *,
         type: "enums.SentCodeType",
         phone_code_hash: str,
-        next_type: typing.Optional[typing.Optional["enums.NextCodeType"]] = None,
+        next_type: typing.Optional[typing.Optional[typing.Optional["enums.NextCodeType"]]] = None,
         timeout: int = None
     ):
         super().__init__()

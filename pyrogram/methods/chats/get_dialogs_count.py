@@ -16,13 +16,14 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 
 
 class GetDialogsCount:
     async def get_dialogs_count(
-        self,
+        self: typing.Any,
         pinned_only: bool = False
     ) -> int:
         """Get the total count of your dialogs.

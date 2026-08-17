@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List
 
 import pyrogram
@@ -25,7 +26,7 @@ from pyrogram import types
 
 class GetCustomEmojiStickers:
     async def get_custom_emoji_stickers(
-        self,
+        self: typing.Any,
         custom_emoji_ids: List[int],
     ) -> List["types.Sticker"]:
         """Get information about custom emoji stickers by their identifiers.

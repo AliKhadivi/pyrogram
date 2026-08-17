@@ -43,7 +43,7 @@ async def ainput(prompt: str = "", *, hide: bool = False):
 
 def get_input_media_from_file_id(
     file_id: str,
-    expected_file_type: typing.Optional[typing.Optional[FileType]] = None,
+    expected_file_type: typing.Optional[typing.Optional[typing.Optional[FileType]]] = None,
     ttl_seconds: int = None
 ) -> Union["raw.types.InputMediaPhoto", "raw.types.InputMediaDocument"]:
     try:

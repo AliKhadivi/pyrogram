@@ -26,15 +26,15 @@ from pyrogram import types
 
 class SetGameScore:
     async def set_game_score(
-        self,
+        self: typing.Any,
         user_id: Union[int, str],
         score: int,
-        force: typing.Optional[typing.Optional[bool]] = None,
-        disable_edit_message: typing.Optional[typing.Optional[bool]] = None,
+        force: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        disable_edit_message: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         chat_id: Union[int, str] = None,
         message_id: int = None
     ) -> Union["types.Message", bool]:
-        # inline_message_id: typing.Optional[typing.Optional[str]] = None):  TODO Add inline_message_id
+        # inline_message_id: typing.Optional[typing.Optional[typing.Optional[str]]] = None):  TODO Add inline_message_id
         """Set the score of the specified user in a game.
 
         .. include:: /_includes/usable-by/bots.rst

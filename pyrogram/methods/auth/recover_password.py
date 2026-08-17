@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import logging
 
 import pyrogram
@@ -27,7 +28,7 @@ log = logging.getLogger(__name__)
 
 class RecoverPassword:
     async def recover_password(
-        self,
+        self: typing.Any,
         recovery_code: str
     ) -> "types.User":
         """Recover your password with a recovery code and log in.

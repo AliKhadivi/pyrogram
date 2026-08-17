@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List
 
 import pyrogram
@@ -25,7 +26,7 @@ from pyrogram import types
 
 class ImportContacts:
     async def import_contacts(
-        self,
+        self: typing.Any,
         contacts: List["types.InputPhoneContact"]
     ):
         """Import contacts to your Telegram address book.

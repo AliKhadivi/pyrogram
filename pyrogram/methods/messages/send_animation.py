@@ -33,30 +33,30 @@ from pyrogram.file_id import FileType
 
 class SendAnimation:
     async def send_animation(
-        self,
+        self: typing.Any,
         chat_id: Union[int, str],
         animation: Union[str, BinaryIO],
         caption: str = "",
         unsave: bool = False,
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        caption_entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
-        has_spoiler: typing.Optional[typing.Optional[bool]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        caption_entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
+        has_spoiler: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         duration: int = 0,
         width: int = 0,
         height: int = 0,
         thumb: Union[str, BinaryIO] = None,
-        file_name: typing.Optional[typing.Optional[str]] = None,
-        disable_notification: typing.Optional[typing.Optional[bool]] = None,
-        reply_to_message_id: typing.Optional[typing.Optional[int]] = None,
-        schedule_date: typing.Optional[typing.Optional[datetime]] = None,
-        protect_content: typing.Optional[typing.Optional[bool]] = None,
+        file_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        disable_notification: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
+        reply_to_message_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
+        schedule_date: typing.Optional[typing.Optional[typing.Optional[datetime]]] = None,
+        protect_content: typing.Optional[typing.Optional[typing.Optional[bool]]] = None,
         reply_markup: Union[
             "types.InlineKeyboardMarkup",
             "types.ReplyKeyboardMarkup",
             "types.ReplyKeyboardRemove",
             "types.ForceReply"
         ] = None,
-        progress: typing.Optional[typing.Optional[Callable]] = None,
+        progress: typing.Optional[typing.Optional[typing.Optional[Callable]]] = None,
         progress_args: tuple = ()
     ) -> Optional["types.Message"]:
         """Send animation files (animation or H.264/MPEG-4 AVC video without sound).

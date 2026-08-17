@@ -45,11 +45,11 @@ class Contact(Object):
     def __init__(
         self,
         *,
-        client: typing.Optional[typing.Optional["pyrogram.Client"]] = None,
+        client: typing.Optional[typing.Optional[typing.Optional["pyrogram.Client"]]] = None,
         phone_number: str,
         first_name: str,
-        last_name: typing.Optional[typing.Optional[str]] = None,
-        user_id: typing.Optional[typing.Optional[int]] = None,
+        last_name: typing.Optional[typing.Optional[typing.Optional[str]]] = None,
+        user_id: typing.Optional[typing.Optional[typing.Optional[int]]] = None,
         vcard: str = None
     ):
         super().__init__(client)

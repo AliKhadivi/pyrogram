@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import List, Union
 
 import pyrogram
@@ -26,7 +27,7 @@ from pyrogram.file_id import FileType
 
 class DeleteProfilePhotos:
     async def delete_profile_photos(
-        self,
+        self: typing.Any,
         photo_ids: Union[str, List[str]]
     ) -> bool:
         """Delete your own profile photos.

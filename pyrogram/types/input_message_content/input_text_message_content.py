@@ -45,8 +45,8 @@ class InputTextMessageContent(InputMessageContent):
     def __init__(
         self,
         message_text: str,
-        parse_mode: typing.Optional[typing.Optional[Optional["enums.ParseMode"]]] = None,
-        entities: typing.Optional[typing.Optional[List["types.MessageEntity"]]] = None,
+        parse_mode: typing.Optional[typing.Optional[typing.Optional[Optional["enums.ParseMode"]]]] = None,
+        entities: typing.Optional[typing.Optional[typing.Optional[List["types.MessageEntity"]]]] = None,
         disable_web_page_preview: bool = None
     ):
         super().__init__()

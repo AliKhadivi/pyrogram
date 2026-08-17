@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw
 
 class UnblockUser:
     async def unblock_user(
-        self,
+        self: typing.Any,
         user_id: Union[int, str]
     ) -> bool:
         """Unblock a user.

@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 from typing import Union, BinaryIO
 
 import pyrogram
@@ -24,7 +25,7 @@ from pyrogram import raw
 
 class SetProfilePhoto:
     async def set_profile_photo(
-        self,
+        self: typing.Any,
         *,
         photo: Union[str, BinaryIO] = None,
         video: Union[str, BinaryIO] = None

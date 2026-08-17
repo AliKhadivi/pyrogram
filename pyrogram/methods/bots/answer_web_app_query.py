@@ -16,6 +16,7 @@
 #  You should have received a copy of the GNU Lesser General Public License
 #  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
 
+import typing
 import pyrogram
 from pyrogram import raw
 from pyrogram import types
@@ -23,7 +24,7 @@ from pyrogram import types
 
 class AnswerWebAppQuery:
     async def answer_web_app_query(
-        self,
+        self: typing.Any,
         web_app_query_id: str,
         result: "types.InlineQueryResult"
     ) -> "types.SentWebAppMessage":
