@@ -1,0 +1,66 @@
+#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Copyright (C) 2017-present Dan <https://github.com/delivrance>
+#
+#  This file is part of Pyrogram.
+#
+#  Pyrogram is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Lesser General Public License as published
+#  by the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  Pyrogram is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public License
+#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+#               !!! WARNING !!!               #
+#          This is a generated file!          #
+# All changes made in this file will be lost! #
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+from typing import Union
+from pyrogram import raw
+
+SendMessageAction = Union[raw.types.InputSendMessageRichMessageDraftAction, raw.types.SendMessageCancelAction, raw.types.SendMessageChooseContactAction, raw.types.SendMessageChooseStickerAction, raw.types.SendMessageEmojiInteraction, raw.types.SendMessageEmojiInteractionSeen, raw.types.SendMessageGamePlayAction, raw.types.SendMessageGeoLocationAction, raw.types.SendMessageHistoryImportAction, raw.types.SendMessageRecordAudioAction, raw.types.SendMessageRecordRoundAction, raw.types.SendMessageRecordVideoAction, raw.types.SendMessageRichMessageDraftAction, raw.types.SendMessageTextDraftAction, raw.types.SendMessageTypingAction, raw.types.SendMessageUploadAudioAction, raw.types.SendMessageUploadDocumentAction, raw.types.SendMessageUploadPhotoAction, raw.types.SendMessageUploadRoundAction, raw.types.SendMessageUploadVideoAction, raw.types.SpeakingInGroupCallAction]
+_doc = """User actions. Use this to provide users with detailed info about their chat partner's actions: typing or sending attachments of all kinds.
+
+    Constructors:
+        This base type has 21 constructors available.
+
+        .. currentmodule:: pyrogram.raw.types
+
+        .. autosummary::
+            :nosignatures:
+
+            InputSendMessageRichMessageDraftAction
+            SendMessageCancelAction
+            SendMessageChooseContactAction
+            SendMessageChooseStickerAction
+            SendMessageEmojiInteraction
+            SendMessageEmojiInteractionSeen
+            SendMessageGamePlayAction
+            SendMessageGeoLocationAction
+            SendMessageHistoryImportAction
+            SendMessageRecordAudioAction
+            SendMessageRecordRoundAction
+            SendMessageRecordVideoAction
+            SendMessageRichMessageDraftAction
+            SendMessageTextDraftAction
+            SendMessageTypingAction
+            SendMessageUploadAudioAction
+            SendMessageUploadDocumentAction
+            SendMessageUploadPhotoAction
+            SendMessageUploadRoundAction
+            SendMessageUploadVideoAction
+            SpeakingInGroupCallAction"""
+try:
+    _t = type(SendMessageAction)
+    # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
+    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+        SendMessageAction.__doc__ = _doc
+except (AttributeError, TypeError):
+    pass

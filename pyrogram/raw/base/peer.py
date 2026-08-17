@@ -1,0 +1,58 @@
+#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Copyright (C) 2017-present Dan <https://github.com/delivrance>
+#
+#  This file is part of Pyrogram.
+#
+#  Pyrogram is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Lesser General Public License as published
+#  by the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  Pyrogram is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public License
+#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+#               !!! WARNING !!!               #
+#          This is a generated file!          #
+# All changes made in this file will be lost! #
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+from typing import Union
+from pyrogram import raw
+
+Peer = Union[raw.types.PeerChannel, raw.types.PeerChat, raw.types.PeerUser]
+_doc = """Identifier of a private chat, basic group, group or channel (see here » for more info).
+
+    Constructors:
+        This base type has 3 constructors available.
+
+        .. currentmodule:: pyrogram.raw.types
+
+        .. autosummary::
+            :nosignatures:
+
+            PeerChannel
+            PeerChat
+            PeerUser
+
+    Functions:
+        This object can be returned by 1 function.
+
+        .. currentmodule:: pyrogram.raw.functions
+
+        .. autosummary::
+            :nosignatures:
+
+            chatlists.GetLeaveChatlistSuggestions"""
+try:
+    _t = type(Peer)
+    # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
+    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+        Peer.__doc__ = _doc
+except (AttributeError, TypeError):
+    pass

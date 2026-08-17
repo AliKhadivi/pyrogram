@@ -1,0 +1,84 @@
+#  Pyrogram - Telegram MTProto API Client Library for Python
+#  Copyright (C) 2017-present Dan <https://github.com/delivrance>
+#
+#  This file is part of Pyrogram.
+#
+#  Pyrogram is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Lesser General Public License as published
+#  by the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  Pyrogram is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Lesser General Public License for more details.
+#
+#  You should have received a copy of the GNU Lesser General Public License
+#  along with Pyrogram.  If not, see <http://www.gnu.org/licenses/>.
+
+# # # # # # # # # # # # # # # # # # # # # # # #
+#               !!! WARNING !!!               #
+#          This is a generated file!          #
+# All changes made in this file will be lost! #
+# # # # # # # # # # # # # # # # # # # # # # # #
+
+from typing import Union
+from pyrogram import raw
+
+PageBlock = Union[raw.types.InputPageBlockMap, raw.types.PageBlockAnchor, raw.types.PageBlockAudio, raw.types.PageBlockAuthorDate, raw.types.PageBlockBlockquote, raw.types.PageBlockBlockquoteBlocks, raw.types.PageBlockChannel, raw.types.PageBlockCollage, raw.types.PageBlockCover, raw.types.PageBlockDetails, raw.types.PageBlockDivider, raw.types.PageBlockEmbed, raw.types.PageBlockEmbedPost, raw.types.PageBlockFooter, raw.types.PageBlockHeader, raw.types.PageBlockHeading1, raw.types.PageBlockHeading2, raw.types.PageBlockHeading3, raw.types.PageBlockHeading4, raw.types.PageBlockHeading5, raw.types.PageBlockHeading6, raw.types.PageBlockKicker, raw.types.PageBlockList, raw.types.PageBlockMap, raw.types.PageBlockMath, raw.types.PageBlockOrderedList, raw.types.PageBlockParagraph, raw.types.PageBlockPhoto, raw.types.PageBlockPreformatted, raw.types.PageBlockPullquote, raw.types.PageBlockRelatedArticles, raw.types.PageBlockSlideshow, raw.types.PageBlockSubheader, raw.types.PageBlockSubtitle, raw.types.PageBlockTable, raw.types.PageBlockThinking, raw.types.PageBlockTitle, raw.types.PageBlockUnsupported, raw.types.PageBlockVideo]
+_doc = """Represents an instant view page element
+
+    Constructors:
+        This base type has 39 constructors available.
+
+        .. currentmodule:: pyrogram.raw.types
+
+        .. autosummary::
+            :nosignatures:
+
+            InputPageBlockMap
+            PageBlockAnchor
+            PageBlockAudio
+            PageBlockAuthorDate
+            PageBlockBlockquote
+            PageBlockBlockquoteBlocks
+            PageBlockChannel
+            PageBlockCollage
+            PageBlockCover
+            PageBlockDetails
+            PageBlockDivider
+            PageBlockEmbed
+            PageBlockEmbedPost
+            PageBlockFooter
+            PageBlockHeader
+            PageBlockHeading1
+            PageBlockHeading2
+            PageBlockHeading3
+            PageBlockHeading4
+            PageBlockHeading5
+            PageBlockHeading6
+            PageBlockKicker
+            PageBlockList
+            PageBlockMap
+            PageBlockMath
+            PageBlockOrderedList
+            PageBlockParagraph
+            PageBlockPhoto
+            PageBlockPreformatted
+            PageBlockPullquote
+            PageBlockRelatedArticles
+            PageBlockSlideshow
+            PageBlockSubheader
+            PageBlockSubtitle
+            PageBlockTable
+            PageBlockThinking
+            PageBlockTitle
+            PageBlockUnsupported
+            PageBlockVideo"""
+try:
+    _t = type(PageBlock)
+    # typing.Union (and UnionType) can have a read-only __doc__ on newer Python versions
+    if _t.__module__ != "typing" and not (_t.__module__ == "types" and _t.__name__ == "UnionType"):
+        PageBlock.__doc__ = _doc
+except (AttributeError, TypeError):
+    pass
