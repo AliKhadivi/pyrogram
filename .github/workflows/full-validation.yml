@@ -1,4 +1,3 @@
-# Branch-only validation workflow
 name: Full Validation
 
 on:
@@ -7,8 +6,9 @@ on:
       - agent/ci-full-validation
   workflow_dispatch:
 
-permissions:
-  contents: write
+concurrency:
+  group: pyrogram-full-validation
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -43,6 +43,9 @@ jobs:
       - name: Modernize legacy typing
         run: python scripts/modernize_legacy_typing.py
 
+      - name: Verify generated sources are committed
+        run: git diff --exit-code -- pyrogram
+
       - name: Verify generated layer
         run: python -c "from pyrogram.raw import all; assert all.layer == 228, all.layer; print('Layer:', all.layer)"
 
@@ -50,44 +53,20 @@ jobs:
         run: python -m compileall -q pyrogram compiler scripts tests
 
       - name: Check stale raw API references
-        id: rawrefs
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -o pipefail
-          python scripts/check_raw_api_refs.py 2>&1 | tee rawrefs.txt
+        run: python scripts/check_raw_api_refs.py
 
       - name: Ruff critical checks
-        id: ruff
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -o pipefail
-          ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82 2>&1 | tee ruff.txt
+        run: ruff check pyrogram compiler scripts tests --select E9,F63,F7,F82
 
       - name: Pyright
-        id: pyright
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -o pipefail
-          pyright pyrogram 2>&1 | tee pyright.txt
+        run: pyright pyrogram
 
       - name: Run tests
-        id: pytest
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -o pipefail
-          python -m pytest -q 2>&1 | tee pytest.txt
+        run: python -m pytest -q
 
       - name: Runtime smoke test
-        id: smoke
-        continue-on-error: true
-        shell: bash
         run: |
-          set -o pipefail
-          python - <<'PY' 2>&1 | tee smoke.txt
+          python - <<'PY'
           import asyncio
           from pyrogram import Client, raw
           from pyrogram.raw import all
@@ -115,47 +94,3 @@ jobs:
           loop.close()
           print('Runtime smoke test passed')
           PY
-
-      - name: Save typing diff
-        if: always()
-        run: git diff -- pyrogram > typing-modernization.patch
-
-      - name: Persist validated typing cleanup
-        if: ${{ steps.rawrefs.outcome == 'success' && steps.ruff.outcome == 'success' && steps.pytest.outcome == 'success' && steps.smoke.outcome == 'success' }}
-        run: |
-          if git diff --quiet -- pyrogram; then
-            echo "No source typing changes to persist."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add pyrogram
-            git commit -m "Modernize generated and legacy typing"
-            git push origin HEAD:agent/ci-full-validation
-          fi
-
-      - name: Upload validation output
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: validation-output
-          path: |
-            rawrefs.txt
-            ruff.txt
-            pyright.txt
-            pytest.txt
-            smoke.txt
-            typing-modernization.patch
-
-      - name: Fail if any validation failed
-        if: always()
-        run: |
-          echo "rawrefs=${{ steps.rawrefs.outcome }}"
-          echo "ruff=${{ steps.ruff.outcome }}"
-          echo "pyright=${{ steps.pyright.outcome }}"
-          echo "pytest=${{ steps.pytest.outcome }}"
-          echo "smoke=${{ steps.smoke.outcome }}"
-          test "${{ steps.rawrefs.outcome }}" = success
-          test "${{ steps.ruff.outcome }}" = success
-          test "${{ steps.pyright.outcome }}" = success
-          test "${{ steps.pytest.outcome }}" = success
-          test "${{ steps.smoke.outcome }}" = success
